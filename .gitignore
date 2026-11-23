@@ -1,0 +1,24 @@
+# This folder is complete on disk; the public GitHub copy leaves these out. See README.md, "The GitHub copy".
+
+# Contains the entire private pointcloud-motion-planning repository, not only the data-free code.
+/code/git/data_free_branches.bundle
+
+# Plain-text extracts of the working conversations (used to build the runs summary page).
+/session_scratch/ce6bff81_sphere-latent-space-prior-work/
+
+# Notes about other projects and general working preferences, and the private repository's instruction file.
+/notes/claude_memory/MEMORY.md
+/notes/claude_memory/decoder-object-db-and-cleanup.md
+/notes/claude_memory/latent-set-encoder-status.md
+/notes/claude_memory/geometry-encoder-priorities.md
+/notes/claude_memory/feedback-gpu-capped-training.md
+/notes/claude_memory/feedback-images-and-reporting.md
+/notes/claude_memory/feedback-report-own-runs-only.md
+/notes/CLAUDE.md
+
+# Over GitHub's 100 MB file limit; anchors.pt.xz next to it is tracked instead.
+/data/data_free_anchors_procedural_thick_plus_thin_20261113_v6/anchors.pt
+
+__pycache__/
+.pytest_cache/
+*.pyc

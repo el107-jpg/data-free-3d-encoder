@@ -1,0 +1,5 @@
+[gpu_capped] memory capped at 22% (~3.4 of 15.5 GiB); busy time throttled to ~70%
+fit_S6_5000 held-out objects: {"count": 225, "mean": 0.7676113843917847, "median": 0.7874692678451538, "worst": 0.3486238420009613, "best": 0.9669540524482727, "share_at_or_above_0.70": 0.7377777695655823}
+fit_S6_5000 the 64 anchor objects, found by search from random starts: {"count": 64, "mean": 0.677047073841095, "median": 0.673232913017273, "worst": 0.3471074402332306, "best": 0.8824531435966492, "share_at_or_above_0.70": 0.359375}
+fit_S6_5000 the anchor objects at their trained codes: {"count": 96, "mean": 0.6438866853713989, "median": 0.6871508359909058, "worst": 0.16153846681118011, "best": 0.9129999876022339, "share_at_or_above_0.70": 0.4479166567325592}
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/analysis_scripts/followup/fit_S6_5000.json

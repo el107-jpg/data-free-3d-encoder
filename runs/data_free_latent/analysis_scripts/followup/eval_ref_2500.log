@@ -1,0 +1,6 @@
+[gpu_capped] memory capped at 25% (~3.9 of 15.5 GiB); busy time throttled to ~70%
+ref_2500 spectrum: {'total_variance': 0.0843, 'effective_directions': 7.0527, 'above_0.02': 12, 'above_0.01': 15, 'above_0.005': 19} | top 16: 0.175 0.133 0.098 0.085 0.072 0.063 0.056 0.048 0.041 0.033 0.027 0.020 0.016 0.013 0.010 0.009
+ref_2500 pose: {'centroid_offset_mean': 0.0093, 'centroid_offset_max': 0.0181, 'common_shift': 0.0023, 'trace_mean': 0.149, 'trace_target': 0.1555, 'trace_rel_std': 0.0377}
+ref_2500 topology: {'codes': 128, 'clean_at_96': 128, 'flagged': 0, 'defective_at_128_and_160': 0, 'clean_on_fine_grids': 128}
+ref_2500 anchors: {'distance_mean': 0.01, 'distance_max': 0.016, 'iou_mean': 0.906, 'iou_min': 0.789, 'code_cos_abs_mean': 0.029, 'code_cos_max': 0.079}
+saved /home/eric-luo/.claude/jobs/8dde3c62/tmp/followup/ref_2500.json

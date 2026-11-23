@@ -1,0 +1,92 @@
+[gpu_capped] memory capped at 50% (~7.7 of 15.5 GiB); busy time throttled to ~70%
+
+no base 500 (update 500): code directions injected at each layer and how many reach the shape
+               scale & shift    layer output                  field     surface (pose removed)
+  layer            eff / >1%       eff / >1%      eff / >1% / share          eff / >1% / share
+  main 1       31.0 /   63     21.7 /   63      4.9 /   61 /  0.41        4.5 /   57 /  0.39
+  main 2       41.4 /   63     19.8 /   63      4.2 /   60 /  0.21        3.7 /   56 /  0.25
+  main 3       47.0 /   63     19.8 /   63      3.5 /   59 /  0.13        3.2 /   54 /  0.16
+  main 4       49.6 /   63     19.1 /   63      3.6 /   59 /  0.09        2.8 /   54 /  0.10
+  main 5       50.3 /   63     22.4 /   63      2.4 /   50 /  0.09        2.2 /   49 /  0.07
+  main 6       50.8 /   63     26.3 /   63      2.6 /   54 /  0.04        2.3 /   56 /  0.02
+  main 7       49.5 /   63     31.4 /   63      2.7 /   58 /  0.02        2.3 /   61 /  0.01
+  main 8       48.1 /   63     35.9 /   63      2.1 /   46 /  0.01        2.4 /   61 /  0.00
+  all layers   48.1 /   63      5.4 /   63      4.2 /   41 /     -        3.3 /   33 /     -
+
+no base 1000 (update 1000): code directions injected at each layer and how many reach the shape
+               scale & shift    layer output                  field     surface (pose removed)
+  layer            eff / >1%       eff / >1%      eff / >1% / share          eff / >1% / share
+  main 1       22.8 /   63     15.7 /   63      3.4 /   43 /  0.28        2.7 /   28 /  0.33
+  main 2       31.8 /   63     10.2 /   63      2.6 /   30 /  0.23        2.1 /   20 /  0.27
+  main 3       41.5 /   63     10.0 /   63      2.6 /   27 /  0.15        2.2 /   22 /  0.14
+  main 4       46.8 /   63      7.6 /   63      2.5 /   22 /  0.15        2.1 /   20 /  0.14
+  main 5       49.8 /   63     12.0 /   63      2.3 /   24 /  0.09        2.0 /   26 /  0.07
+  main 6       50.8 /   63     16.2 /   63      1.6 /   18 /  0.05        1.6 /   25 /  0.03
+  main 7       49.3 /   63     20.2 /   63      1.2 /   14 /  0.03        1.2 /   25 /  0.01
+  main 8       47.9 /   63     17.6 /   63      1.0 /    9 /  0.03        1.0 /   13 /  0.01
+  all layers   47.9 /   63      3.2 /   63      2.8 /   20 /     -        2.2 /   15 /     -
+
+no base 5000 (update 5000): code directions injected at each layer and how many reach the shape
+               scale & shift    layer output                  field     surface (pose removed)
+  layer            eff / >1%       eff / >1%      eff / >1% / share          eff / >1% / share
+  main 1       15.5 /   63     13.1 /   63      5.9 /   43 /  0.31        5.3 /   35 /  0.31
+  main 2       20.5 /   63      8.5 /   63      4.2 /   33 /  0.52        3.7 /   28 /  0.57
+  main 3       37.6 /   63     11.3 /   63      5.4 /   47 /  0.06        5.3 /   44 /  0.06
+  main 4       45.7 /   63      6.3 /   63      3.2 /   38 /  0.04        3.2 /   35 /  0.05
+  main 5       48.0 /   63     16.2 /   63      2.0 /   45 /  0.01        4.0 /   57 /  0.01
+  main 6       46.9 /   63     18.5 /   63      1.4 /   28 /  0.00        1.8 /   47 /  0.00
+  main 7       46.5 /   63     13.2 /   63      1.1 /   11 /  0.01        1.2 /   22 /  0.00
+  main 8       46.5 /   63      6.5 /   63      1.0 /    6 /  0.04        1.1 /    8 /  0.00
+  all layers   46.5 /   63      5.1 /   63      4.7 /   33 /     -        4.5 /   29 /     -
+
+no base 10000 (update 10000): code directions injected at each layer and how many reach the shape
+               scale & shift    layer output                  field     surface (pose removed)
+  layer            eff / >1%       eff / >1%      eff / >1% / share          eff / >1% / share
+  main 1       16.7 /   63     13.9 /   63      5.4 /   47 /  0.10        5.1 /   42 /  0.09
+  main 2       19.4 /   63      9.3 /   63      4.4 /   34 /  0.78        3.6 /   29 /  0.84
+  main 3       34.6 /   63     13.2 /   63      4.7 /   52 /  0.04        5.3 /   52 /  0.03
+  main 4       42.3 /   63     10.3 /   63      3.6 /   52 /  0.04        3.0 /   46 /  0.04
+  main 5       48.5 /   63     16.3 /   63      2.0 /   50 /  0.01        3.5 /   59 /  0.00
+  main 6       48.6 /   63     18.3 /   63      1.6 /   36 /  0.00        2.0 /   55 /  0.00
+  main 7       48.8 /   63     11.8 /   63      1.3 /   14 /  0.01        1.3 /   24 /  0.00
+  main 8       47.6 /   63      6.3 /   63      1.1 /    8 /  0.02        1.1 /    9 /  0.00
+  all layers   47.6 /   63      5.0 /   63      4.5 /   37 /     -        4.1 /   32 /     -
+
+J4 1000 (update 1000): code directions injected at each layer and how many reach the shape
+               scale & shift    layer output                  field     surface (pose removed)
+  layer            eff / >1%       eff / >1%      eff / >1% / share          eff / >1% / share
+  main 1       48.8 /   63     45.5 /   63      6.1 /   63 /  0.05        4.9 /   63 /  0.08
+  main 2       49.2 /   63     36.6 /   63      7.3 /   63 /  0.05        5.9 /   63 /  0.07
+  main 3       49.5 /   63     32.4 /   63      5.3 /   63 /  0.11        4.1 /   63 /  0.12
+  main 4       49.2 /   63     29.0 /   63      3.2 /   63 /  0.22        2.9 /   61 /  0.22
+  main 5       49.6 /   63     35.9 /   63      3.5 /   63 /  0.15        3.0 /   63 /  0.14
+  main 6       49.6 /   63     34.1 /   63      3.4 /   63 /  0.17        2.6 /   61 /  0.17
+  main 7       49.6 /   63     34.4 /   63      3.5 /   63 /  0.12        3.4 /   63 /  0.09
+  main 8       50.4 /   63     26.9 /   63      2.7 /   53 /  0.14        2.6 /   51 /  0.11
+  all layers   50.4 /   63      7.7 /   63      3.5 /   63 /     -        2.9 /   58 /     -
+
+J4 5000 (update 5000): code directions injected at each layer and how many reach the shape
+               scale & shift    layer output                  field     surface (pose removed)
+  layer            eff / >1%       eff / >1%      eff / >1% / share          eff / >1% / share
+  main 1       53.0 /   63     49.2 /   63      9.7 /   63 /  0.01        9.1 /   63 /  0.01
+  main 2       53.3 /   63     33.1 /   63      7.2 /   63 /  0.04        7.0 /   63 /  0.04
+  main 3       53.2 /   63     29.2 /   63      5.9 /   63 /  0.22        5.0 /   63 /  0.22
+  main 4       52.6 /   63     28.3 /   63      6.2 /   63 /  0.41        5.3 /   63 /  0.42
+  main 5       53.0 /   63     34.7 /   63      5.5 /   63 /  0.18        5.2 /   62 /  0.19
+  main 6       53.2 /   63     36.3 /   63      5.0 /   63 /  0.08        5.4 /   63 /  0.07
+  main 7       53.7 /   63     37.6 /   63      4.8 /   63 /  0.04        5.6 /   63 /  0.03
+  main 8       54.1 /   63     28.8 /   63      2.4 /   59 /  0.02        3.5 /   60 /  0.01
+  all layers   54.1 /   63     10.6 /   63      6.4 /   63 /     -        5.7 /   63 /     -
+
+J7 11000 (update 11000): code directions injected at each layer and how many reach the shape
+               scale & shift    layer output                  field     surface (pose removed)
+  layer            eff / >1%       eff / >1%      eff / >1% / share          eff / >1% / share
+  main 1       53.7 /   63     48.6 /   63      9.4 /   63 /  0.01        8.2 /   63 /  0.01
+  main 2       54.2 /   63     32.3 /   63      6.9 /   63 /  0.03        5.9 /   61 /  0.04
+  main 3       53.8 /   63     24.7 /   63      5.2 /   63 /  0.24        4.4 /   60 /  0.21
+  main 4       52.5 /   63     23.6 /   63      5.3 /   62 /  0.45        4.4 /   58 /  0.45
+  main 5       53.1 /   63     27.4 /   63      3.3 /   62 /  0.19        3.6 /   57 /  0.23
+  main 6       53.4 /   63     34.3 /   63      4.0 /   63 /  0.04        4.5 /   63 /  0.04
+  main 7       54.3 /   63     32.4 /   63      3.5 /   63 /  0.02        4.2 /   63 /  0.02
+  main 8       53.8 /   63     26.6 /   63      2.2 /   56 /  0.02        2.7 /   56 /  0.01
+  all layers   53.8 /   63      7.2 /   63      4.7 /   62 /     -        4.4 /   58 /     -

@@ -1,0 +1,17 @@
+resumed from /home/eric-luo/.claude/jobs/8dde3c62/tmp/df_train/d_resume_cap1e4/checkpoint_last.pt at step 10000
+diag  10000  clean 0.00 (1 piece 0.00, no cavity 1.00, no handle 0.56)  graph=grid 0.44  live 3.2  wobble 0.50  descriptor spread 0.109  probe distance 0.0520  2.9 s
+step  10000  loss 0.8181  div 0.1024 (ratio 0.546, dead zone 0.15)  eik 0.00171  cons 0.00438  pose c 0.00026 s 0.0011 a 0.0002  e 0.000718  graph full [frag 43+0 cav 0 gap 40 wall 1019]  lr 1.50e-05  |g| 47.6  265 ms
+step  10200  loss 21.1  div 0.146 (ratio 0.456, dead zone 0.15)  eik 0.0055  cons 0.00843  pose c 0.00074 s 0.00045 a 0.00033  e 0.000675  graph full [frag 53+0 cav 0 gap 0 wall 220]  lr 1.02e-04  |g| 494  241 ms
+step  10400  loss 16.04  div 0.3461 (ratio 0.169, dead zone 0.00)  eik 0.00697  cons 0.00494  pose c 0.00062 s 1.7e-06 a 1.3e-05  e 0.000201  graph full [frag 33+0 cav 0 gap 3 wall 83]  lr 9.99e-05  |g| 437  232 ms
+diag  10500  clean 0.19 (1 piece 0.19, no cavity 1.00, no handle 0.56)  graph=grid 0.62  live 2.2  wobble 0.09  descriptor spread 0.058  probe distance 0.0122  2.6 s
+step  10600  loss 5.939  div 0.4531 (ratio 0.078, dead zone 0.00)  eik 0.000585  cons 0.0043  pose c -0.00083 s 2.4e-05 a 4.3e-05  e 9.53e-05  graph full [frag 8+0 cav 0 gap 0 wall 6]  lr 9.76e-05  |g| 838  217 ms
+step  10800  loss -0.01264  div 0.476 (ratio 0.061, dead zone 0.00)  eik 0.0042  cons 0.00458  pose c -0.00032 s 4.1e-05 a 5.1e-05  e 0.00014  graph full [frag 13+0 cav 0 gap 0 wall 0]  lr 9.56e-05  |g| 382  224 ms
+diag  11000  clean 0.00 (1 piece 0.00, no cavity 1.00, no handle 0.94)  graph=grid 0.56  live 1.0  wobble 0.09  descriptor spread 0.051  probe distance 0.0070  2.6 s
+step  11000  loss 8.125  div 0.4793 (ratio 0.058, dead zone 0.00)  eik 0.00312  cons 0.00361  pose c 0.00041 s 9e-06 a 3.2e-05  e 0.000103  graph full [frag 17+0 cav 0 gap 0 wall 11]  lr 9.39e-05  |g| 268  231 ms
+step  11200  loss 1.447  div 0.4835 (ratio 0.056, dead zone 0.00)  eik 0.00187  cons 0.00544  pose c -8.8e-06 s 4.2e-05 a 6e-06  e 0.000722  graph full [frag 0+0 cav 0 gap 0 wall 0]  lr 9.25e-05  |g| 188  214 ms
+step  11400  loss 1.457  div 0.4919 (ratio 0.049, dead zone 0.00)  eik 0.00105  cons 0.00336  pose c 4.7e-05 s 1.9e-05 a 5.9e-06  e 5.39e-05  graph full [frag 0+0 cav 0 gap 0 wall 0]  lr 9.14e-05  |g| 50.7  213 ms
+diag  11500  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 0.5  wobble 0.02  descriptor spread 0.014  probe distance 0.0057  2.6 s
+step  11600  loss 1.505  div 0.43 (ratio 0.098, dead zone 0.00)  eik 0.000912  cons 0.00186  pose c 0.0008 s 6e-05 a -1.6e-05  e 0.00019  graph full [frag 0+0 cav 0 gap 0 wall 0]  lr 9.06e-05  |g| 10.3  221 ms
+step  11800  loss 0.3396  div 0.3811 (ratio 0.140, dead zone 0.00)  eik 0.00192  cons 0.00246  pose c -0.00031 s 5.5e-05 a 2.3e-05  e 0.00021  graph full [frag 0+0 cav 0 gap 0 wall 0]  lr 9.02e-05  |g| 14.8  215 ms
+step  11999  loss 1.322  div 0.4147 (ratio 0.111, dead zone 0.00)  eik 0.00184  cons 0.00448  pose c 0.00079 s 4.2e-05 a -2.9e-05  e 0.00079  graph full [frag 0+0 cav 0 gap 0 wall 0]  lr 9.00e-05  |g| 28.6  208 ms
+diag  12000  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 0.0  wobble 0.08  descriptor spread 0.049  probe distance 0.0112  2.6 s

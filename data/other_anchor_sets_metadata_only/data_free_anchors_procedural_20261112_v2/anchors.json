@@ -1,0 +1,3355 @@
+{
+ "source": "procedural (scripts/build_data_free_procedural_anchors.py)",
+ "arguments": {
+  "output_dir": "/home/eric-luo/Downloads/pointcloud-motion-planning/datasets/data_free_anchors_procedural_20261112_v2",
+  "count": 64,
+  "resolution": 96,
+  "outer": 0.83,
+  "thin_limit": 0.06,
+  "min_gap": 0.14,
+  "seed": 0,
+  "workers": 12,
+  "sheet": "/home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_procedural_anchors_v2.png"
+ },
+ "candidates": 163,
+ "eligible": 145,
+ "rejected": {
+  "nearest gap narrower than the margin": 4,
+  "by family": {
+   "spiral": [
+    "nearest gap narrower than the margin",
+    "nearest gap narrower than the margin",
+    "nearest gap narrower than the margin"
+   ],
+   "club": [
+    "outside the outer radius",
+    "outside the outer radius",
+    "outside the outer radius"
+   ],
+   "paddle": [
+    "outside the outer radius",
+    "outside the outer radius",
+    "outside the outer radius",
+    "outside the outer radius",
+    "outside the outer radius"
+   ],
+   "spoon": [
+    "outside the outer radius",
+    "outside the outer radius",
+    "outside the outer radius"
+   ],
+   "ball on a stick": [
+    "outside the outer radius"
+   ],
+   "ball with limbs": [
+    "outside the outer radius"
+   ],
+   "plate with a hook": [
+    "nearest gap narrower than the margin"
+   ],
+   "clover": [
+    "not one simple piece on the grid"
+   ]
+  },
+  "outside the outer radius": 13,
+  "not one simple piece on the grid": 1
+ },
+ "cov_trace_target": 0.15552697846461008,
+ "soft_tau": 0.02,
+ "descriptor_keys": [
+  "linear",
+  "planar",
+  "round",
+  "thickness",
+  "ray_crossings",
+  "star_fraction",
+  "fold",
+  "solidity",
+  "branches",
+  "gap"
+ ],
+ "anchors": [
+  {
+   "rank": 0,
+   "file_id": 9000030,
+   "kind": "rod",
+   "family": "3-D crank",
+   "note": "",
+   "descriptor": {
+    "linear": 0.5632110767514285,
+    "planar": 0.21563804331290692,
+    "round": 0.22115087993566437,
+    "thickness": 0.15502150356769562,
+    "ray_crossings": 0.5773333333333334,
+    "star_fraction": 0.0,
+    "fold": 1.4480872926529205,
+    "solidity": 0.2733363928407525,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6423139416345897,
+   "thin_fraction": 0.004029550033579583,
+   "gap_fraction": 0.0008954555630176853,
+   "volume_fraction": 0.005048963758680556,
+   "centroid_offset": 5.859821276099971e-06,
+   "trace": 0.15552864480237458,
+   "offdiag_max": 1.191192705569842e-06,
+   "axes": [
+    0.3430496864260197,
+    0.15282375412440935,
+    0.12037631669355155
+   ]
+  },
+  {
+   "rank": 1,
+   "file_id": 9000032,
+   "kind": "rod",
+   "family": "3-D crank",
+   "note": "",
+   "descriptor": {
+    "linear": 0.6416272331870881,
+    "planar": 0.15625061848442146,
+    "round": 0.20212214832848985,
+    "thickness": 0.11272193491458893,
+    "ray_crossings": 0.38133333333333336,
+    "star_fraction": 0.0,
+    "fold": 1.5546018586482202,
+    "solidity": 0.18892107168718333,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6612960817153963,
+   "thin_fraction": 0.010348792640858567,
+   "gap_fraction": 0.0011498658489842851,
+   "volume_fraction": 0.002948902271412037,
+   "centroid_offset": 3.3568868630290387e-06,
+   "trace": 0.15552816545877962,
+   "offdiag_max": 1.005950975991434e-06,
+   "axes": [
+    0.3389363072481479,
+    0.1640781702177365,
+    0.11716953164440055
+   ]
+  },
+  {
+   "rank": 2,
+   "file_id": 9000009,
+   "kind": "rod",
+   "family": "C arc",
+   "note": "272 deg",
+   "descriptor": {
+    "linear": 0.6396084627340509,
+    "planar": 0.15036435495709377,
+    "round": 0.21002718230885523,
+    "thickness": 0.1482265144586563,
+    "ray_crossings": 0.4026666666666667,
+    "star_fraction": 0.0,
+    "fold": 1.9088359018480698,
+    "solidity": 0.42068483577917537,
+    "branches": 1.0,
+    "gap": 0.36
+   },
+   "max_radius": 0.5354806008697206,
+   "thin_fraction": 0.0024916943521594683,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.005443431712962963,
+   "centroid_offset": 6.877930307026683e-06,
+   "trace": 0.15552646481702387,
+   "offdiag_max": 6.201750745496288e-18,
+   "axes": [
+    0.30582497331734504,
+    0.24201929333501507,
+    0.05851676824713583
+   ]
+  },
+  {
+   "rank": 3,
+   "file_id": 9000048,
+   "kind": "rod",
+   "family": "F branch",
+   "note": "",
+   "descriptor": {
+    "linear": 0.4786294518786563,
+    "planar": 0.2998245419789908,
+    "round": 0.22154600614235273,
+    "thickness": 0.14757730066776276,
+    "ray_crossings": 0.7933333333333333,
+    "star_fraction": 0.0,
+    "fold": 1.3020794030038036,
+    "solidity": 0.4918259267787243,
+    "branches": 2.0,
+    "gap": 0.32
+   },
+   "max_radius": 0.7385863959382821,
+   "thin_fraction": 0.0016051364365971107,
+   "gap_fraction": 0.0020064205457463883,
+   "volume_fraction": 0.00563331886574074,
+   "centroid_offset": 1.4741967690303084e-05,
+   "trace": 0.1555106475107563,
+   "offdiag_max": 1.4804201008286247e-06,
+   "axes": [
+    0.3533469696379429,
+    0.1650163603652562,
+    0.05853347222096839
+   ]
+  },
+  {
+   "rank": 4,
+   "file_id": 9000049,
+   "kind": "rod",
+   "family": "F branch",
+   "note": "",
+   "descriptor": {
+    "linear": 0.5057022538021139,
+    "planar": 0.2737544348445832,
+    "round": 0.22054331135330296,
+    "thickness": 0.12772752344608307,
+    "ray_crossings": 1.1906666666666668,
+    "star_fraction": 0.9046666666666666,
+    "fold": 1.29537530430777,
+    "solidity": 0.4251534418758499,
+    "branches": 2.0,
+    "gap": 0.28
+   },
+   "max_radius": 0.7581952761464344,
+   "thin_fraction": 0.0015560165975103733,
+   "gap_fraction": 0.0031120331950207467,
+   "volume_fraction": 0.004358362268518518,
+   "centroid_offset": 8.111700342655116e-06,
+   "trace": 0.15553020959769245,
+   "offdiag_max": 2.1961348221547478e-06,
+   "axes": [
+    0.3606868049457801,
+    0.14968784110274702,
+    0.0550344306929396
+   ]
+  },
+  {
+   "rank": 5,
+   "file_id": 9000003,
+   "kind": "rod",
+   "family": "L",
+   "note": "84 deg",
+   "descriptor": {
+    "linear": 0.6368220606050878,
+    "planar": 0.14357581237402414,
+    "round": 0.2196021270208877,
+    "thickness": 0.14720147848129272,
+    "ray_crossings": 0.6306666666666667,
+    "star_fraction": 0.0,
+    "fold": 1.3184161358825184,
+    "solidity": 0.45046404587640565,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.7194793303702731,
+   "thin_fraction": 0.0010050251256281408,
+   "gap_fraction": 0.0005025125628140704,
+   "volume_fraction": 0.00449851707175926,
+   "centroid_offset": 1.1632032755455583e-05,
+   "trace": 0.15553027507565642,
+   "offdiag_max": 1.1102051539381412e-06,
+   "axes": [
+    0.356730727334292,
+    0.1576427048013012,
+    0.05849992200108666
+   ]
+  },
+  {
+   "rank": 6,
+   "file_id": 9000004,
+   "kind": "rod",
+   "family": "L",
+   "note": "106 deg",
+   "descriptor": {
+    "linear": 0.7198517733921612,
+    "planar": 0.0678828206440909,
+    "round": 0.21226540596374727,
+    "thickness": 0.12770181894302368,
+    "ray_crossings": 0.5106666666666667,
+    "star_fraction": 0.0,
+    "fold": 1.216586474648275,
+    "solidity": 0.3879124820659971,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6949908813484277,
+   "thin_fraction": 0.0159500693481276,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.0032597294560185184,
+   "centroid_offset": 1.598022055508094e-05,
+   "trace": 0.15552691191437756,
+   "offdiag_max": 3.3336679002524137e-06,
+   "axes": [
+    0.3663953602749432,
+    0.1351084252450153,
+    0.05501877235257319
+   ]
+  },
+  {
+   "rank": 7,
+   "file_id": 9000018,
+   "kind": "rod",
+   "family": "S",
+   "note": "171 deg arcs",
+   "descriptor": {
+    "linear": 0.5421766731960773,
+    "planar": 0.2327644625974754,
+    "round": 0.2250588642064472,
+    "thickness": 0.14812874794006348,
+    "ray_crossings": 1.096,
+    "star_fraction": 0.952,
+    "fold": 1.2715666434135373,
+    "solidity": 0.45711759504862953,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6070410872152587,
+   "thin_fraction": 0.006769825918762089,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.004674840856481482,
+   "centroid_offset": 1.4509431436966789e-16,
+   "trace": 0.15552698233971515,
+   "offdiag_max": 1.3139943837681252e-06,
+   "axes": [
+    0.36563126772017224,
+    0.13571384676690273,
+    0.058502223896058456
+   ]
+  },
+  {
+   "rank": 8,
+   "file_id": 9000020,
+   "kind": "rod",
+   "family": "S",
+   "note": "187 deg arcs",
+   "descriptor": {
+    "linear": 0.6331097650075107,
+    "planar": 0.15052715071851386,
+    "round": 0.21636308427397513,
+    "thickness": 0.1064879447221756,
+    "ray_crossings": 1.0933333333333333,
+    "star_fraction": 0.9533333333333334,
+    "fold": 1.4269384465174717,
+    "solidity": 0.3727002967359052,
+    "branches": 1.0,
+    "gap": 0.36
+   },
+   "max_radius": 0.5770518611602529,
+   "thin_fraction": 0.009554140127388535,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.0028392650462962963,
+   "centroid_offset": 5.662317180467228e-17,
+   "trace": 0.15552375801216484,
+   "offdiag_max": 2.167201376675745e-06,
+   "axes": [
+    0.364114641030039,
+    0.14250712044276218,
+    0.05134205705698543
+   ]
+  },
+  {
+   "rank": 9,
+   "file_id": 9000036,
+   "kind": "rod",
+   "family": "T",
+   "note": "",
+   "descriptor": {
+    "linear": 0.562730988334749,
+    "planar": 0.2151955478064726,
+    "round": 0.22207346385877813,
+    "thickness": 0.14750926196575165,
+    "ray_crossings": 1.1226666666666667,
+    "star_fraction": 0.9386666666666666,
+    "fold": 1.265801879339946,
+    "solidity": 0.39196725364687796,
+    "branches": 2.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.7166343728947469,
+   "thin_fraction": 0.002523128679562658,
+   "gap_fraction": 0.0021026072329688814,
+   "volume_fraction": 0.005375614872685185,
+   "centroid_offset": 8.047932398572004e-06,
+   "trace": 0.1555282059534389,
+   "offdiag_max": 2.5326428599826894e-07,
+   "axes": [
+    0.30047299923189696,
+    0.24863428259503695,
+    0.058525004950693266
+   ]
+  },
+  {
+   "rank": 10,
+   "file_id": 9000012,
+   "kind": "rod",
+   "family": "U",
+   "note": "",
+   "descriptor": {
+    "linear": 0.5677508859163535,
+    "planar": 0.22478511619536018,
+    "round": 0.2074639978882864,
+    "thickness": 0.14683428406715393,
+    "ray_crossings": 0.47333333333333333,
+    "star_fraction": 0.0,
+    "fold": 1.9037637743076066,
+    "solidity": 0.4663406868319308,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6228638407258641,
+   "thin_fraction": 0.000731528895391368,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.006180374710648148,
+   "centroid_offset": 2.3782548910226016e-05,
+   "trace": 0.15551890474428925,
+   "offdiag_max": 3.0372184326615163e-18,
+   "axes": [
+    0.31189648914732976,
+    0.2341245162160874,
+    0.05852517157977318
+   ]
+  },
+  {
+   "rank": 11,
+   "file_id": 9000014,
+   "kind": "rod",
+   "family": "U",
+   "note": "",
+   "descriptor": {
+    "linear": 0.718382886465989,
+    "planar": 0.06557695500712145,
+    "round": 0.2160401585268896,
+    "thickness": 0.10292386263608932,
+    "ray_crossings": 0.3466666666666667,
+    "star_fraction": 0.0,
+    "fold": 2.004410274485851,
+    "solidity": 0.40048721071863586,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6139400838003992,
+   "thin_fraction": 0.0036496350364963502,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.003716362847222222,
+   "centroid_offset": 1.5188328385773382e-05,
+   "trace": 0.15551635674657938,
+   "offdiag_max": 1.2781871862803537e-18,
+   "axes": [
+    0.310129049312031,
+    0.23811950010130276,
+    0.05133647037828854
+   ]
+  },
+  {
+   "rank": 12,
+   "file_id": 9000006,
+   "kind": "rod",
+   "family": "V",
+   "note": "35 deg",
+   "descriptor": {
+    "linear": 0.4858784699552555,
+    "planar": 0.2720287529272183,
+    "round": 0.24209277711752644,
+    "thickness": 0.14653202891349792,
+    "ray_crossings": 0.6346666666666667,
+    "star_fraction": 0.0,
+    "fold": 1.5554832074024567,
+    "solidity": 0.5087686911574668,
+    "branches": 2.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6629849658228272,
+   "thin_fraction": 0.002902757619738752,
+   "gap_fraction": 0.0050798258345428155,
+   "volume_fraction": 0.006230107060185185,
+   "centroid_offset": 0.00013854563624579724,
+   "trace": 0.1555418338123602,
+   "offdiag_max": 3.497175015633651e-18,
+   "axes": [
+    0.3245617110307139,
+    0.21626848869655152,
+    0.05856167980928415
+   ]
+  },
+  {
+   "rank": 13,
+   "file_id": 9000007,
+   "kind": "rod",
+   "family": "V",
+   "note": "47 deg",
+   "descriptor": {
+    "linear": 0.5660018360337463,
+    "planar": 0.20662869078749346,
+    "round": 0.22736947317876036,
+    "thickness": 0.1272852122783661,
+    "ray_crossings": 0.45866666666666667,
+    "star_fraction": 0.0,
+    "fold": 1.7175614992142156,
+    "solidity": 0.3765302337084208,
+    "branches": 2.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6665669323257749,
+   "thin_fraction": 0.007881773399014778,
+   "gap_fraction": 0.0049261083743842365,
+   "volume_fraction": 0.004588939525462963,
+   "centroid_offset": 0.00011978999935888895,
+   "trace": 0.15554122924588026,
+   "offdiag_max": 6.927584368498172e-18,
+   "axes": [
+    0.29108935191223384,
+    0.26034454024620274,
+    0.05503579574412699
+   ]
+  },
+  {
+   "rank": 14,
+   "file_id": 9000035,
+   "kind": "rod",
+   "family": "Y",
+   "note": "",
+   "descriptor": {
+    "linear": 0.6554554844946443,
+    "planar": 0.125518770229698,
+    "round": 0.21902574527565813,
+    "thickness": 0.10572115331888199,
+    "ray_crossings": 1.0186666666666666,
+    "star_fraction": 0.9906666666666667,
+    "fold": 1.1723389760487462,
+    "solidity": 0.29896083133493206,
+    "branches": 2.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6977703890309066,
+   "thin_fraction": 0.0030557677616501145,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.0029590747974537037,
+   "centroid_offset": 0.0001443707685448659,
+   "trace": 0.15550211815710438,
+   "offdiag_max": 2.6865062581637797e-05,
+   "axes": [
+    0.30595648849830276,
+    0.24342782407890565,
+    0.05133848232176001
+   ]
+  },
+  {
+   "rank": 15,
+   "file_id": 9000042,
+   "kind": "rod",
+   "family": "corner frame",
+   "note": "",
+   "descriptor": {
+    "linear": 0.5446025146561821,
+    "planar": 0.1386555334426036,
+    "round": 0.31674195190121407,
+    "thickness": 0.15387599170207977,
+    "ray_crossings": 0.6626666666666666,
+    "star_fraction": 0.0,
+    "fold": 1.31818945865922,
+    "solidity": 0.23916045291355967,
+    "branches": 2.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.7003407884125749,
+   "thin_fraction": 0.00596612779060816,
+   "gap_fraction": 0.001539645881447267,
+   "volume_fraction": 0.005872938368055556,
+   "centroid_offset": 4.0939212265030225e-07,
+   "trace": 0.15552730577079424,
+   "offdiag_max": 3.7871625142280745e-07,
+   "axes": [
+    0.282651477110581,
+    0.2408752988510368,
+    0.13271977494489903
+   ]
+  },
+  {
+   "rank": 16,
+   "file_id": 9000044,
+   "kind": "rod",
+   "family": "corner frame",
+   "note": "",
+   "descriptor": {
+    "linear": 0.6366520835483819,
+    "planar": 0.09418020970943512,
+    "round": 0.2691677067421829,
+    "thickness": 0.11174925416707993,
+    "ray_crossings": 0.49333333333333335,
+    "star_fraction": 0.0,
+    "fold": 1.4029440225524314,
+    "solidity": 0.16725925650142398,
+    "branches": 2.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6789740435419819,
+   "thin_fraction": 0.012353923205342237,
+   "gap_fraction": 0.003005008347245409,
+   "volume_fraction": 0.0033851906105324073,
+   "centroid_offset": 2.3059307289619488e-05,
+   "trace": 0.1555435194143195,
+   "offdiag_max": 1.3880746547875872e-06,
+   "axes": [
+    0.2764711699156879,
+    0.24818940122458566,
+    0.1323224574271199
+   ]
+  },
+  {
+   "rank": 17,
+   "file_id": 9000053,
+   "kind": "rod",
+   "family": "dumbbell",
+   "note": "thick ends",
+   "descriptor": {
+    "linear": 0.32760632550627916,
+    "planar": 0.004572597459772866,
+    "round": 0.667821077033948,
+    "thickness": 0.09936705976724625,
+    "ray_crossings": 1.1013333333333333,
+    "star_fraction": 0.9493333333333334,
+    "fold": 1.0345941415366675,
+    "solidity": 0.459766963673749,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.5602617648602862,
+   "thin_fraction": 0.0,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.005054615162037037,
+   "centroid_offset": 2.806411249701932e-17,
+   "trace": 0.15551891582020314,
+   "offdiag_max": 4.270590515634844e-18,
+   "axes": [
+    0.3783011796358004,
+    0.07876272375421331,
+    0.07876272375421327
+   ]
+  },
+  {
+   "rank": 18,
+   "file_id": 9000021,
+   "kind": "rod",
+   "family": "fold-back",
+   "note": "three passes",
+   "descriptor": {
+    "linear": 0.26504913947618053,
+    "planar": 0.5212301619760786,
+    "round": 0.213720698547741,
+    "thickness": 0.14816813170909882,
+    "ray_crossings": 1.3093333333333332,
+    "star_fraction": 0.8453333333333334,
+    "fold": 2.30388200519201,
+    "solidity": 0.5218516388729152,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.5884274639888374,
+   "thin_fraction": 0.0,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.008205837673611112,
+   "centroid_offset": 4.0212942141550095e-17,
+   "trace": 0.15552677983543903,
+   "offdiag_max": 8.559409519228555e-08,
+   "axes": [
+    0.31037159561536604,
+    0.23615813897279936,
+    0.058528504743541
+   ]
+  },
+  {
+   "rank": 19,
+   "file_id": 9000022,
+   "kind": "rod",
+   "family": "fold-back",
+   "note": "three passes",
+   "descriptor": {
+    "linear": 0.343147317938068,
+    "planar": 0.4432491310380721,
+    "round": 0.21360355102386014,
+    "thickness": 0.1286495327949524,
+    "ray_crossings": 1.224,
+    "star_fraction": 0.888,
+    "fold": 2.2083840922173437,
+    "solidity": 0.39893700171955626,
+    "branches": 1.0,
+    "gap": 0.2
+   },
+   "max_radius": 0.5564091307870318,
+   "thin_fraction": 0.014106583072100314,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.005768952546296296,
+   "centroid_offset": 3.904776630536718e-17,
+   "trace": 0.15552639340362617,
+   "offdiag_max": 8.961217014902878e-07,
+   "axes": [
+    0.31824919104095273,
+    0.22630828127466784,
+    0.05503096975259608
+   ]
+  },
+  {
+   "rank": 20,
+   "file_id": 9000028,
+   "kind": "rod",
+   "family": "helix",
+   "note": "1.0 turns",
+   "descriptor": {
+    "linear": 0.6392981970712288,
+    "planar": 0.1587624942370832,
+    "round": 0.20193930869168752,
+    "thickness": 0.13495248556137085,
+    "ray_crossings": 0.39066666666666666,
+    "star_fraction": 0.0,
+    "fold": 2.418643375726478,
+    "solidity": 0.22437700964630256,
+    "branches": 1.0,
+    "gap": 0.32
+   },
+   "max_radius": 0.49039937727394345,
+   "thin_fraction": 0.004030452306314375,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.00504783347800926,
+   "centroid_offset": 3.590158697595964e-06,
+   "trace": 0.15552704998197012,
+   "offdiag_max": 1.3893864489828014e-07,
+   "axes": [
+    0.275875804800497,
+    0.25924111904274416,
+    0.1105153043931652
+   ]
+  },
+  {
+   "rank": 21,
+   "file_id": 9000029,
+   "kind": "rod",
+   "family": "helix",
+   "note": "1.4 turns",
+   "descriptor": {
+    "linear": 0.6846322958908516,
+    "planar": 0.12240690393594766,
+    "round": 0.1929608001732007,
+    "thickness": 0.11071828752756119,
+    "ray_crossings": 0.44666666666666666,
+    "star_fraction": 0.0,
+    "fold": 2.7670345530412996,
+    "solidity": 0.15977927039376774,
+    "branches": 1.0,
+    "gap": 0.36
+   },
+   "max_radius": 0.5274391783309935,
+   "thin_fraction": 0.011251758087201125,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.00482177734375,
+   "centroid_offset": 5.275973035852465e-06,
+   "trace": 0.1555269617167007,
+   "offdiag_max": 4.328405652311922e-07,
+   "axes": [
+    0.23760840628315402,
+    0.23362064365462165,
+    0.2109279541423578
+   ]
+  },
+  {
+   "rank": 22,
+   "file_id": 9000015,
+   "kind": "rod",
+   "family": "hook",
+   "note": "",
+   "descriptor": {
+    "linear": 0.46849909865828,
+    "planar": 0.3100856090591731,
+    "round": 0.22141529228254717,
+    "thickness": 0.14818476140499115,
+    "ray_crossings": 0.5733333333333334,
+    "star_fraction": 0.0,
+    "fold": 1.403163126669554,
+    "solidity": 0.4825961229516974,
+    "branches": 1.0,
+    "gap": 0.24000000000000002
+   },
+   "max_radius": 0.7507868840876046,
+   "thin_fraction": 0.005770084332001775,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.005093044704861111,
+   "centroid_offset": 9.034831896382303e-06,
+   "trace": 0.1555265327783745,
+   "offdiag_max": 9.521818478673829e-07,
+   "axes": [
+    0.3562694033497107,
+    0.15866777713172373,
+    0.058507961127467895
+   ]
+  },
+  {
+   "rank": 23,
+   "file_id": 9000016,
+   "kind": "rod",
+   "family": "hook",
+   "note": "",
+   "descriptor": {
+    "linear": 0.6019142110383908,
+    "planar": 0.18534438424710087,
+    "round": 0.21274140471450867,
+    "thickness": 0.1285405457019806,
+    "ray_crossings": 0.49333333333333335,
+    "star_fraction": 0.0,
+    "fold": 1.474273815283782,
+    "solidity": 0.4025803547987851,
+    "branches": 1.0,
+    "gap": 0.28
+   },
+   "max_radius": 0.750856000706192,
+   "thin_fraction": 0.004471771939631079,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.004044144241898148,
+   "centroid_offset": 1.6758785463981838e-05,
+   "trace": 0.1555215133867666,
+   "offdiag_max": 2.1561666416601743e-06,
+   "axes": [
+    0.35500540656550544,
+    0.16267955147036037,
+    0.05502761333575305
+   ]
+  },
+  {
+   "rank": 24,
+   "file_id": 9000040,
+   "kind": "rod",
+   "family": "plus",
+   "note": "",
+   "descriptor": {
+    "linear": 0.4710047861467521,
+    "planar": 0.3047612153061316,
+    "round": 0.22423399854711623,
+    "thickness": 0.12841129302978516,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0890877856873709,
+    "solidity": 0.2852048415179039,
+    "branches": 3.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.68643454520372,
+   "thin_fraction": 0.003971756398940865,
+   "gap_fraction": 0.00264783759929391,
+   "volume_fraction": 0.005122432002314815,
+   "centroid_offset": 5.069200921716265e-06,
+   "trace": 0.15553692217109755,
+   "offdiag_max": 1.4197245287260566e-07,
+   "axes": [
+    0.28142846537140837,
+    0.27074993120833946,
+    0.05504012900122064
+   ]
+  },
+  {
+   "rank": 25,
+   "file_id": 9000002,
+   "kind": "rod",
+   "family": "straight rod",
+   "note": "",
+   "descriptor": {
+    "linear": 0.7600229742243502,
+    "planar": 0.0011238772198110094,
+    "round": 0.23885314855583875,
+    "thickness": 0.09671437740325928,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.011365070088865,
+    "solidity": 0.9297912713472486,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6689185980247017,
+   "thin_fraction": 0.0,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.002215350115740741,
+   "centroid_offset": 9.452404125057889e-17,
+   "trace": 0.15550940795414914,
+   "offdiag_max": 2.4202880306724025e-19,
+   "axes": [
+    0.38760336905110726,
+    0.0513470362064858,
+    0.05134703620648578
+   ]
+  },
+  {
+   "rank": 26,
+   "file_id": 9000045,
+   "kind": "rod",
+   "family": "tetrapod",
+   "note": "",
+   "descriptor": {
+    "linear": 0.5383887130976571,
+    "planar": 0.05525560202444159,
+    "round": 0.4063556848779012,
+    "thickness": 0.15218237042427063,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.181791350013564,
+    "solidity": 0.19264973630472437,
+    "branches": 3.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6924291730087729,
+   "thin_fraction": 0.007238883143743537,
+   "gap_fraction": 0.0022406066873491897,
+   "volume_fraction": 0.006557888454861111,
+   "centroid_offset": 5.5084764877772e-06,
+   "trace": 0.1555420720702066,
+   "offdiag_max": 1.2206445489073426e-06,
+   "axes": [
+    0.2498191978131346,
+    0.22227481203020572,
+    0.20910846087890667
+   ]
+  },
+  {
+   "rank": 27,
+   "file_id": 9000047,
+   "kind": "rod",
+   "family": "tetrapod",
+   "note": "",
+   "descriptor": {
+    "linear": 0.6346483373255367,
+    "planar": 0.03720579138368207,
+    "round": 0.328145871290781,
+    "thickness": 0.10915198922157288,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.201754629166633,
+    "solidity": 0.12913413904206406,
+    "branches": 3.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.7035004869902487,
+   "thin_fraction": 0.014497041420118343,
+   "gap_fraction": 0.0014792899408284023,
+   "volume_fraction": 0.0038203486689814816,
+   "centroid_offset": 1.3611331444015356e-05,
+   "trace": 0.15553258281493135,
+   "offdiag_max": 5.48712995459202e-07,
+   "axes": [
+    0.25953636147116277,
+    0.21935954157842988,
+    0.20013708154098375
+   ]
+  },
+  {
+   "rank": 28,
+   "file_id": 9000069,
+   "kind": "sheet",
+   "family": "C sheet",
+   "note": "194 deg",
+   "descriptor": {
+    "linear": 0.2179349402914681,
+    "planar": 0.44360915395526984,
+    "round": 0.338455905753262,
+    "thickness": 0.1393548846244812,
+    "ray_crossings": 1.308,
+    "star_fraction": 0.0,
+    "fold": 1.3093936549962413,
+    "solidity": 0.4753347632021332,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6049185072985789,
+   "thin_fraction": 0.0004878048780487805,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.01853660300925926,
+   "centroid_offset": 2.918371807968401e-05,
+   "trace": 0.15554308398341193,
+   "offdiag_max": 5.1567610188372596e-18,
+   "axes": [
+    0.2743073028880454,
+    0.2380690647468532,
+    0.15369355216227085
+   ]
+  },
+  {
+   "rank": 29,
+   "file_id": 9000072,
+   "kind": "sheet",
+   "family": "S sheet",
+   "note": "",
+   "descriptor": {
+    "linear": 0.22488347562097769,
+    "planar": 0.3667408204709259,
+    "round": 0.40837570390809674,
+    "thickness": 0.13647016882896423,
+    "ray_crossings": 1.28,
+    "star_fraction": 0.86,
+    "fold": 1.1484236804822885,
+    "solidity": 0.5530153266506963,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6181385067239175,
+   "thin_fraction": 0.0027756749936916477,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.017917209201388888,
+   "centroid_offset": 1.2216004888882357e-17,
+   "trace": 0.1555307383422247,
+   "offdiag_max": 3.24777007973151e-06,
+   "axes": [
+    0.304103709196211,
+    0.22885663840940118,
+    0.10332623796151498
+   ]
+  },
+  {
+   "rank": 30,
+   "file_id": 9000092,
+   "kind": "sheet",
+   "family": "T plates",
+   "note": "",
+   "descriptor": {
+    "linear": 0.21894926461740583,
+    "planar": 0.28118335934553707,
+    "round": 0.4998673760370565,
+    "thickness": 0.1497376263141632,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.012711442896487,
+    "solidity": 0.637189208252513,
+    "branches": 2.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.660567835069233,
+   "thin_fraction": 0.00020755500207555002,
+   "gap_fraction": 0.0043586550435865505,
+   "volume_fraction": 0.021782769097222224,
+   "centroid_offset": 2.7405807397680973e-05,
+   "trace": 0.15553271679687247,
+   "offdiag_max": 5.005234520662703e-18,
+   "axes": [
+    0.28204526489241427,
+    0.2473500780414393,
+    0.1216598711224627
+   ]
+  },
+  {
+   "rank": 31,
+   "file_id": 9000066,
+   "kind": "sheet",
+   "family": "U channel",
+   "note": "",
+   "descriptor": {
+    "linear": 0.1806325864805807,
+    "planar": 0.39917674721499313,
+    "round": 0.42019066630442636,
+    "thickness": 0.13946962356567383,
+    "ray_crossings": 1.5213333333333334,
+    "star_fraction": 0.0,
+    "fold": 1.5247058583492386,
+    "solidity": 0.5328930395748409,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6065321082043279,
+   "thin_fraction": 0.00019364833462432224,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.023347077546296297,
+   "centroid_offset": 6.959284077291424e-05,
+   "trace": 0.15553530620989306,
+   "offdiag_max": 1.2914783372259883e-17,
+   "axes": [
+    0.25836102788238097,
+    0.21548533419071966,
+    0.2057934795618328
+   ]
+  },
+  {
+   "rank": 32,
+   "file_id": 9000068,
+   "kind": "sheet",
+   "family": "U channel",
+   "note": "",
+   "descriptor": {
+    "linear": 0.21230305404322505,
+    "planar": 0.4107184076920985,
+    "round": 0.37697853826467675,
+    "thickness": 0.14338141679763794,
+    "ray_crossings": 1.3746666666666667,
+    "star_fraction": 0.0,
+    "fold": 1.6810251413962076,
+    "solidity": 0.5232022912475713,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.596926911478838,
+   "thin_fraction": 0.0005865102639296188,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.023125542534722224,
+   "centroid_offset": 3.757674457303554e-05,
+   "trace": 0.1555296944811406,
+   "offdiag_max": 4.586925137609e-19,
+   "axes": [
+    0.24336276135284274,
+    0.22748084298897736,
+    0.21108464401960686
+   ]
+  },
+  {
+   "rank": 33,
+   "file_id": 9000093,
+   "kind": "sheet",
+   "family": "X plates",
+   "note": "",
+   "descriptor": {
+    "linear": 0.18444068619968415,
+    "planar": 0.20478669252480217,
+    "round": 0.6107726212755132,
+    "thickness": 0.12863261997699738,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0391319438884032,
+    "solidity": 0.49419791693587994,
+    "branches": 2.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6456090695624073,
+   "thin_fraction": 0.0009413241292751804,
+   "gap_fraction": 0.0006275494195167869,
+   "volume_fraction": 0.02881763599537037,
+   "centroid_offset": 4.0487365752153105e-17,
+   "trace": 0.15546240191548308,
+   "offdiag_max": 1.9496580531896204e-19,
+   "axes": [
+    0.2535874622838097,
+    0.22982896565354813,
+    0.19579184721167703
+   ]
+  },
+  {
+   "rank": 34,
+   "file_id": 9000095,
+   "kind": "sheet",
+   "family": "X plates",
+   "note": "",
+   "descriptor": {
+    "linear": 0.18416877082885505,
+    "planar": 0.1615515166782957,
+    "round": 0.654279712492849,
+    "thickness": 0.1373119354248047,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0325749287575654,
+    "solidity": 0.5386458623572025,
+    "branches": 3.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6527886737076611,
+   "thin_fraction": 0.000931098696461825,
+   "gap_fraction": 0.006517690875232775,
+   "volume_fraction": 0.029134114583333332,
+   "centroid_offset": 4.7372970545968076e-17,
+   "trace": 0.15547974708256276,
+   "offdiag_max": 1.2990363963000262e-17,
+   "axes": [
+    0.28003937993425526,
+    0.2216026549479385,
+    0.1671824036453165
+   ]
+  },
+  {
+   "rank": 35,
+   "file_id": 9000075,
+   "kind": "sheet",
+   "family": "Z fold sheet",
+   "note": "",
+   "descriptor": {
+    "linear": 0.1439427844926814,
+    "planar": 0.20254254159251392,
+    "round": 0.653514673914805,
+    "thickness": 0.13918046653270721,
+    "ray_crossings": 1.992,
+    "star_fraction": 0.504,
+    "fold": 2.039309029597219,
+    "solidity": 0.5842393746068832,
+    "branches": 1.0,
+    "gap": 0.16
+   },
+   "max_radius": 0.5773716940651709,
+   "thin_fraction": 0.004152568440479852,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.029396339699074073,
+   "centroid_offset": 1.0559625459036381e-16,
+   "trace": 0.15553994327328374,
+   "offdiag_max": 1.5401657466162295e-06,
+   "axes": [
+    0.2678862867749359,
+    0.20481440912621696,
+    0.20451879729134714
+   ]
+  },
+  {
+   "rank": 36,
+   "file_id": 9000077,
+   "kind": "sheet",
+   "family": "Z fold sheet",
+   "note": "",
+   "descriptor": {
+    "linear": 0.2244934856628971,
+    "planar": 0.16105607755811127,
+    "round": 0.6144504367789915,
+    "thickness": 0.14994032680988312,
+    "ray_crossings": 1.7666666666666666,
+    "star_fraction": 0.6166666666666667,
+    "fold": 2.1979055435863573,
+    "solidity": 0.5553049828178689,
+    "branches": 1.0,
+    "gap": 0.16
+   },
+   "max_radius": 0.5691525093873655,
+   "thin_fraction": 0.0058015857667762525,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.02337872540509259,
+   "centroid_offset": 6.545460908592513e-17,
+   "trace": 0.15552200099467023,
+   "offdiag_max": 1.4277416804832623e-06,
+   "axes": [
+    0.29201834747636746,
+    0.22245702098976985,
+    0.1440838628861638
+   ]
+  },
+  {
+   "rank": 37,
+   "file_id": 9000065,
+   "kind": "sheet",
+   "family": "angle plate",
+   "note": "106 deg",
+   "descriptor": {
+    "linear": 0.20766937473346578,
+    "planar": 0.45642585291535454,
+    "round": 0.3359047723511802,
+    "thickness": 0.1487237513065338,
+    "ray_crossings": 1.284,
+    "star_fraction": 0.0,
+    "fold": 1.116409032164246,
+    "solidity": 0.5831891108096733,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6446308149303651,
+   "thin_fraction": 0.00024061597690086623,
+   "gap_fraction": 0.004331087584215592,
+   "volume_fraction": 0.01878978587962963,
+   "centroid_offset": 7.095490015165148e-06,
+   "trace": 0.15553272854783742,
+   "offdiag_max": 2.8155443647112434e-18,
+   "axes": [
+    0.2688300221832287,
+    0.26484676538442714,
+    0.114539681273384
+   ]
+  },
+  {
+   "rank": 38,
+   "file_id": 9000079,
+   "kind": "sheet",
+   "family": "bowl",
+   "note": "108 deg half-angle",
+   "descriptor": {
+    "linear": 0.17179458698361852,
+    "planar": 0.4267380312725924,
+    "round": 0.4014673817437892,
+    "thickness": 0.1491236388683319,
+    "ray_crossings": 1.6626666666666667,
+    "star_fraction": 0.0,
+    "fold": 1.3244323401549023,
+    "solidity": 0.6132442136084761,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.511014213379958,
+   "thin_fraction": 0.00017052479004135227,
+   "gap_fraction": 0.0005115743701240568,
+   "volume_fraction": 0.026512993706597224,
+   "centroid_offset": 5.015927611305324e-06,
+   "trace": 0.15552903544256355,
+   "offdiag_max": 2.167776142034885e-07,
+   "axes": [
+    0.24967925003611197,
+    0.2496792077769362,
+    0.1756405441458485
+   ]
+  },
+  {
+   "rank": 39,
+   "file_id": 9000089,
+   "kind": "sheet",
+   "family": "cone shell",
+   "note": "",
+   "descriptor": {
+    "linear": 0.2238539307770092,
+    "planar": 0.2886131098761299,
+    "round": 0.48753295934686064,
+    "thickness": 0.1489354372024536,
+    "ray_crossings": 1.6986666666666668,
+    "star_fraction": 0.0,
+    "fold": 1.1241402675313352,
+    "solidity": 0.6290071417064926,
+    "branches": 2.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.7193596127918979,
+   "thin_fraction": 0.0006829434864264982,
+   "gap_fraction": 0.0010244152296397474,
+   "volume_fraction": 0.02648021556712963,
+   "centroid_offset": 3.1064902455383063e-06,
+   "trace": 0.15552481646655403,
+   "offdiag_max": 3.391687657362294e-07,
+   "axes": [
+    0.24570074200400788,
+    0.2181237956312552,
+    0.21812375300422557
+   ]
+  },
+  {
+   "rank": 40,
+   "file_id": 9000098,
+   "kind": "sheet",
+   "family": "corner plates",
+   "note": "",
+   "descriptor": {
+    "linear": 0.18841606708654215,
+    "planar": 0.3757496688622719,
+    "round": 0.43583426405118575,
+    "thickness": 0.1486716866493225,
+    "ray_crossings": 1.46,
+    "star_fraction": 0.0,
+    "fold": 1.227089870206078,
+    "solidity": 0.5144949501073027,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6440179638719641,
+   "thin_fraction": 0.0009426403355799595,
+   "gap_fraction": 0.003629165291982844,
+   "volume_fraction": 0.023981165002893517,
+   "centroid_offset": 1.3493941957353144e-05,
+   "trace": 0.15552876255994375,
+   "offdiag_max": 1.3179613680434877e-06,
+   "axes": [
+    0.2519256534541728,
+    0.2519191677537992,
+    0.16911227220360137
+   ]
+  },
+  {
+   "rank": 41,
+   "file_id": 9000062,
+   "kind": "sheet",
+   "family": "disc plate",
+   "note": "",
+   "descriptor": {
+    "linear": 0.25370306180304325,
+    "planar": 0.4989563651066632,
+    "round": 0.2473405730902936,
+    "thickness": 0.13758496940135956,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0434785715542445,
+    "solidity": 0.946518492793888,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6521746598530208,
+   "thin_fraction": 0.000550357732526142,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.01642975983796296,
+   "centroid_offset": 4.133062988484692e-17,
+   "trace": 0.15552142506411343,
+   "offdiag_max": 7.816480766527989e-19,
+   "axes": [
+    0.326802257586504,
+    0.21301406773998197,
+    0.057850811967889514
+   ]
+  },
+  {
+   "rank": 42,
+   "file_id": 9000099,
+   "kind": "sheet",
+   "family": "open box",
+   "note": "",
+   "descriptor": {
+    "linear": 0.1702697516530241,
+    "planar": 0.33296934557464075,
+    "round": 0.4967609027723352,
+    "thickness": 0.13673055171966553,
+    "ray_crossings": 1.7533333333333334,
+    "star_fraction": 0.0,
+    "fold": 1.2058239143548548,
+    "solidity": 0.6689524465885595,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.5776315382239714,
+   "thin_fraction": 0.0015453562046051615,
+   "gap_fraction": 0.011126564673157162,
+   "volume_fraction": 0.029256184895833332,
+   "centroid_offset": 5.105432619085189e-05,
+   "trace": 0.15553000626913827,
+   "offdiag_max": 4.917570038732008e-18,
+   "axes": [
+    0.24503669579578455,
+    0.2450366957957839,
+    0.18826588032914207
+   ]
+  },
+  {
+   "rank": 43,
+   "file_id": 9000058,
+   "kind": "sheet",
+   "family": "plate",
+   "note": "2.6 : 1",
+   "descriptor": {
+    "linear": 0.27539039065457405,
+    "planar": 0.4686031004309694,
+    "round": 0.2560065089144571,
+    "thickness": 0.13741357624530792,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0873737687025908,
+    "solidity": 0.9536555690742173,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6522394260231663,
+   "thin_fraction": 0.0020876826722338203,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.012993706597222222,
+   "centroid_offset": 3.5751428522208294e-17,
+   "trace": 0.1555415248824977,
+   "offdiag_max": 6.804256291985525e-19,
+   "axes": [
+    0.35239766758150964,
+    0.16743317162366184,
+    0.057650167438186406
+   ]
+  },
+  {
+   "rank": 44,
+   "file_id": 9000081,
+   "kind": "sheet",
+   "family": "saddle",
+   "note": "",
+   "descriptor": {
+    "linear": 0.2374811974881772,
+    "planar": 0.376820848045141,
+    "round": 0.38569795446668204,
+    "thickness": 0.1404586285352707,
+    "ray_crossings": 1.0373333333333334,
+    "star_fraction": 0.9813333333333333,
+    "fold": 1.1365209342067266,
+    "solidity": 0.40953380302803116,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6017249579683638,
+   "thin_fraction": 0.006832601268911664,
+   "gap_fraction": 0.0007320644216691069,
+   "volume_fraction": 0.018527560763888888,
+   "centroid_offset": 1.156590551833002e-15,
+   "trace": 0.15552715442144316,
+   "offdiag_max": 6.170673199532406e-18,
+   "axes": [
+    0.24599741758876562,
+    0.24599741758876553,
+    0.18573555260304944
+   ]
+  },
+  {
+   "rank": 45,
+   "file_id": 9000082,
+   "kind": "sheet",
+   "family": "saddle",
+   "note": "",
+   "descriptor": {
+    "linear": 0.24296736603376934,
+    "planar": 0.35019099164202055,
+    "round": 0.40684164232421,
+    "thickness": 0.14849746227264404,
+    "ray_crossings": 1.0373333333333334,
+    "star_fraction": 0.9813333333333333,
+    "fold": 1.1301188620712972,
+    "solidity": 0.42564279042328285,
+    "branches": 2.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.606223111512846,
+   "thin_fraction": 0.004389004389004389,
+   "gap_fraction": 0.001386001386001386,
+   "volume_fraction": 0.019571940104166668,
+   "centroid_offset": 1.209987358461266e-15,
+   "trace": 0.1555277975068438,
+   "offdiag_max": 1.3453155562590122e-17,
+   "axes": [
+    0.2433627946749342,
+    0.24336279467493405,
+    0.192553623291943
+   ]
+  },
+  {
+   "rank": 46,
+   "file_id": 9000103,
+   "kind": "sheet",
+   "family": "three-fin fan",
+   "note": "",
+   "descriptor": {
+    "linear": 0.21568426474242514,
+    "planar": 0.2974185529453297,
+    "round": 0.48689718231224505,
+    "thickness": 0.1513862907886505,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0955771454179641,
+    "solidity": 0.5005574800200862,
+    "branches": 2.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6414762678439152,
+   "thin_fraction": 0.00040807998367680065,
+   "gap_fraction": 0.00010201999591920016,
+   "volume_fraction": 0.02215802228009259,
+   "centroid_offset": 2.9775479350201844e-05,
+   "trace": 0.1555275969017347,
+   "offdiag_max": 7.29517275543727e-08,
+   "axes": [
+    0.27106073836417127,
+    0.20899031938583487,
+    0.19589976881612625
+   ]
+  },
+  {
+   "rank": 47,
+   "file_id": 9000085,
+   "kind": "sheet",
+   "family": "twisted ribbon",
+   "note": "232 deg twist",
+   "descriptor": {
+    "linear": 0.3111434921213029,
+    "planar": 0.184979521626418,
+    "round": 0.5038769862522792,
+    "thickness": 0.1481073498725891,
+    "ray_crossings": 1.0733333333333333,
+    "star_fraction": 0.9633333333333334,
+    "fold": 1.1018710569704742,
+    "solidity": 0.444554245782452,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6529634650009168,
+   "thin_fraction": 0.0022229279136233727,
+   "gap_fraction": 0.0006351222610352493,
+   "volume_fraction": 0.014237015335648149,
+   "centroid_offset": 2.6931746691751603e-17,
+   "trace": 0.1555298752353874,
+   "offdiag_max": 3.3401505305115236e-18,
+   "axes": [
+    0.34695869682221525,
+    0.14417914781983066,
+    0.11984119186976128
+   ]
+  },
+  {
+   "rank": 48,
+   "file_id": 9000123,
+   "kind": "mixed",
+   "family": "ball on a stick",
+   "note": "",
+   "descriptor": {
+    "linear": 0.01625301208667669,
+    "planar": 0.3190915046984975,
+    "round": 0.6646554832148255,
+    "thickness": 0.14993025362491608,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0754055374687148,
+    "solidity": 0.9253196424841427,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.5650483698275042,
+   "thin_fraction": 0.0,
+   "gap_fraction": 0.00014257199885942402,
+   "volume_fraction": 0.06342230902777778,
+   "centroid_offset": 3.7694631112954428e-06,
+   "trace": 0.1555277510956899,
+   "offdiag_max": 1.107628642673821e-18,
+   "axes": [
+    0.22855852124658083,
+    0.2272539916715065,
+    0.22725399167150623
+   ]
+  },
+  {
+   "rank": 49,
+   "file_id": 9000126,
+   "kind": "mixed",
+   "family": "ball with limbs",
+   "note": "",
+   "descriptor": {
+    "linear": 0.04190929998705447,
+    "planar": 0.18521168148540268,
+    "round": 0.7728790185275413,
+    "thickness": 0.15632344782352448,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0873479535692077,
+    "solidity": 0.8019699693616585,
+    "branches": 2.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.7586703356888793,
+   "thin_fraction": 0.0006440979786689905,
+   "gap_fraction": 0.0007388182696497243,
+   "volume_fraction": 0.059664125795717594,
+   "centroid_offset": 5.762256659248804e-06,
+   "trace": 0.15552708898644868,
+   "offdiag_max": 1.3475003918202708e-06,
+   "axes": [
+    0.23936021340743835,
+    0.22574315323248023,
+    0.21742540328271487
+   ]
+  },
+  {
+   "rank": 50,
+   "file_id": 9000143,
+   "kind": "mixed",
+   "family": "plate with a hook",
+   "note": "nearly a handle",
+   "descriptor": {
+    "linear": 0.28754928581061934,
+    "planar": 0.3606623873413571,
+    "round": 0.3517883268480237,
+    "thickness": 0.12973667681217194,
+    "ray_crossings": 1.0253333333333334,
+    "star_fraction": 0.0,
+    "fold": 1.993204273278781,
+    "solidity": 0.3469472997891183,
+    "branches": 2.0,
+    "gap": 0.2
+   },
+   "max_radius": 0.6975286920838819,
+   "thin_fraction": 0.0017618040873854828,
+   "gap_fraction": 0.002642706131078224,
+   "volume_fraction": 0.012830946180555556,
+   "centroid_offset": 2.8017060575014327e-05,
+   "trace": 0.15552328151147454,
+   "offdiag_max": 1.6247618119274466e-06,
+   "axes": [
+    0.2504267184677965,
+    0.24513584667927862,
+    0.18088161007067222
+   ]
+  },
+  {
+   "rank": 51,
+   "file_id": 9000138,
+   "kind": "mixed",
+   "family": "plate with a post",
+   "note": "plate + rod",
+   "descriptor": {
+    "linear": 0.2252677659511275,
+    "planar": 0.4848714863617805,
+    "round": 0.28986074768709197,
+    "thickness": 0.12742750346660614,
+    "ray_crossings": 1.0333333333333334,
+    "star_fraction": 0.9833333333333333,
+    "fold": 1.0760294561766781,
+    "solidity": 0.5806539716258251,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6587052769292409,
+   "thin_fraction": 0.0,
+   "gap_fraction": 0.0021950454687989967,
+   "volume_fraction": 0.014417860243055556,
+   "centroid_offset": 9.945385213304135e-05,
+   "trace": 0.15553484043009125,
+   "offdiag_max": 5.303694441570581e-07,
+   "axes": [
+    0.3178784989691983,
+    0.2219484476419144,
+    0.07229790392898715
+   ]
+  },
+  {
+   "rank": 52,
+   "file_id": 9000119,
+   "kind": "mixed",
+   "family": "spoon",
+   "note": "bowl + rod",
+   "descriptor": {
+    "linear": 0.20013969412245292,
+    "planar": 0.45163632992917324,
+    "round": 0.34822397594837384,
+    "thickness": 0.1336052268743515,
+    "ray_crossings": 1.4853333333333334,
+    "star_fraction": 0.0,
+    "fold": 1.240814789543397,
+    "solidity": 0.5421720097189902,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.753114448094561,
+   "thin_fraction": 0.0011345586566825505,
+   "gap_fraction": 0.0009076469253460404,
+   "volume_fraction": 0.019924587673611112,
+   "centroid_offset": 2.1036753909316013e-06,
+   "trace": 0.15552586917237735,
+   "offdiag_max": 3.930252245733531e-09,
+   "axes": [
+    0.2725240572343221,
+    0.2511226041254108,
+    0.13488493280642389
+   ]
+  },
+  {
+   "rank": 53,
+   "file_id": 9000131,
+   "kind": "mixed",
+   "family": "stool",
+   "note": "plate + 3 legs",
+   "descriptor": {
+    "linear": 0.27170398607066665,
+    "planar": 0.2471659595742901,
+    "round": 0.48113005435504314,
+    "thickness": 0.16040682792663574,
+    "ray_crossings": 1.232,
+    "star_fraction": 0.884,
+    "fold": 1.4365299639459783,
+    "solidity": 0.37542724523524873,
+    "branches": 3.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6815565054852154,
+   "thin_fraction": 0.0022479487467685737,
+   "gap_fraction": 0.005395076992244577,
+   "volume_fraction": 0.020112214265046297,
+   "centroid_offset": 1.9230740545827907e-05,
+   "trace": 0.15552838308760064,
+   "offdiag_max": 6.483173444701265e-07,
+   "axes": [
+    0.25006761858923277,
+    0.2477204929332861,
+    0.1778457944445142
+   ]
+  },
+  {
+   "rank": 54,
+   "file_id": 9000132,
+   "kind": "mixed",
+   "family": "stool",
+   "note": "plate + 3 legs",
+   "descriptor": {
+    "linear": 0.3046030802645164,
+    "planar": 0.28554974213860795,
+    "round": 0.4098471775968754,
+    "thickness": 0.12884125113487244,
+    "ray_crossings": 1.1626666666666667,
+    "star_fraction": 0.0,
+    "fold": 1.5044498609889079,
+    "solidity": 0.3078861924443059,
+    "branches": 3.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6999702131221863,
+   "thin_fraction": 0.0019109632670394224,
+   "gap_fraction": 0.005166678462736217,
+   "volume_fraction": 0.01596973560474537,
+   "centroid_offset": 8.008161617392296e-05,
+   "trace": 0.15552587762316789,
+   "offdiag_max": 5.150903309489326e-06,
+   "axes": [
+    0.2499163252131773,
+    0.24790232686229058,
+    0.1777980437220031
+   ]
+  },
+  {
+   "rank": 55,
+   "file_id": 9000114,
+   "kind": "mixed",
+   "family": "table",
+   "note": "plate + stem",
+   "descriptor": {
+    "linear": 0.23303838840315924,
+    "planar": 0.5085061248555568,
+    "round": 0.2584554867412839,
+    "thickness": 0.1224384531378746,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0830027339348016,
+    "solidity": 0.4262781252014705,
+    "branches": 2.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.55858697629428,
+   "thin_fraction": 0.0015124016938898972,
+   "gap_fraction": 0.0024198427102238356,
+   "volume_fraction": 0.014946831597222222,
+   "centroid_offset": 2.155650175466263e-05,
+   "trace": 0.15555130933129574,
+   "offdiag_max": 3.258563079324303e-07,
+   "axes": [
+    0.26874245471363367,
+    0.2687424169161284,
+    0.10538650632725288
+   ]
+  },
+  {
+   "rank": 56,
+   "file_id": 9000145,
+   "kind": "blob",
+   "family": "capsule",
+   "note": "",
+   "descriptor": {
+    "linear": 0.5988197789244812,
+    "planar": 0.0011492514392687507,
+    "round": 0.4000309696362479,
+    "thickness": 0.5261458158493042,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0700070124456749,
+    "solidity": 0.9424687980851425,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6631560703692929,
+   "thin_fraction": 0.0,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.03323025173611111,
+   "centroid_offset": 3.7955753886356343e-16,
+   "trace": 0.15552674332024796,
+   "offdiag_max": 1.0607312003660216e-18,
+   "axes": [
+    0.34065860092573325,
+    0.14049637172462873,
+    0.14049637172462828
+   ]
+  },
+  {
+   "rank": 57,
+   "file_id": 9000147,
+   "kind": "blob",
+   "family": "capsule",
+   "note": "",
+   "descriptor": {
+    "linear": 0.4099153728069488,
+    "planar": 0.007922811171709112,
+    "round": 0.5821618160213411,
+    "thickness": 0.7132170796394348,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0852368369849879,
+    "solidity": 0.9359933957072087,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.614098161450739,
+   "thin_fraction": 0.0,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.05126048900462963,
+   "centroid_offset": 1.1759833159130307e-16,
+   "trace": 0.15552726252923937,
+   "offdiag_max": 2.7218524449339527e-19,
+   "axes": [
+    0.3001146074592421,
+    0.18091225071678324,
+    0.180912250716783
+   ]
+  },
+  {
+   "rank": 58,
+   "file_id": 9000158,
+   "kind": "blob",
+   "family": "clover",
+   "note": "3 lobes",
+   "descriptor": {
+    "linear": 0.048486364397061416,
+    "planar": 0.3468355533262786,
+    "round": 0.6046780822766599,
+    "thickness": 0.32176584005355835,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.105343335926809,
+    "solidity": 0.8241264625210352,
+    "branches": 2.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6070711313293395,
+   "thin_fraction": 0.0010611614894848543,
+   "gap_fraction": 0.001736446073702489,
+   "volume_fraction": 0.04686595775462963,
+   "centroid_offset": 4.0723049769587516e-05,
+   "trace": 0.15551517791022978,
+   "offdiag_max": 1.6397820839425914e-16,
+   "axes": [
+    0.2565299700323346,
+    0.2565245135954101,
+    0.15460506560290183
+   ]
+  },
+  {
+   "rank": 59,
+   "file_id": 9000148,
+   "kind": "blob",
+   "family": "lentil",
+   "note": "",
+   "descriptor": {
+    "linear": 0.16785720221808675,
+    "planar": 0.43976338606978593,
+    "round": 0.3923794117121274,
+    "thickness": 0.4143226146697998,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0762058361492204,
+    "solidity": 0.9435835105844208,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6032993720290077,
+   "thin_fraction": 0.0017174753112924003,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.04211877893518518,
+   "centroid_offset": 5.687966909760881e-17,
+   "trace": 0.15552263297639915,
+   "offdiag_max": 7.954674029665649e-19,
+   "axes": [
+    0.28830739422888313,
+    0.24013279148498187,
+    0.12139901920106584
+   ]
+  },
+  {
+   "rank": 60,
+   "file_id": 9000149,
+   "kind": "blob",
+   "family": "lentil",
+   "note": "",
+   "descriptor": {
+    "linear": 0.056205638706512545,
+    "planar": 0.5657289245839902,
+    "round": 0.37806543670949644,
+    "thickness": 0.3591610789299011,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.093615350333388,
+    "solidity": 0.9448870696586499,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.575507395866117,
+   "thin_fraction": 0.0,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.03896303530092592,
+   "centroid_offset": 1.916788530436526e-17,
+   "trace": 0.15552571750190136,
+   "offdiag_max": 3.198756787386574e-19,
+   "axes": [
+    0.2760547152626484,
+    0.25975673494840745,
+    0.10883910295524436
+   ]
+  },
+  {
+   "rank": 61,
+   "file_id": 9000156,
+   "kind": "blob",
+   "family": "pear",
+   "note": "",
+   "descriptor": {
+    "linear": 0.2377768312690497,
+    "planar": 0.0015914450352510934,
+    "round": 0.7606317236956971,
+    "thickness": 0.42680275440216064,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.072180103115286,
+    "solidity": 0.9208383361666215,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.7364484975594194,
+   "thin_fraction": 0.00046475600309837337,
+   "gap_fraction": 7.745933384972889e-05,
+   "volume_fraction": 0.05836769386574074,
+   "centroid_offset": 1.1244790273898908e-06,
+   "trace": 0.15552638989703624,
+   "offdiag_max": 4.1701253504264655e-18,
+   "axes": [
+    0.26753979672875333,
+    0.20487660562320656,
+    0.20487660562320598
+   ]
+  },
+  {
+   "rank": 62,
+   "file_id": 9000151,
+   "kind": "blob",
+   "family": "rounded box",
+   "note": "",
+   "descriptor": {
+    "linear": 0.13273892015567046,
+    "planar": 0.17038956080042142,
+    "round": 0.6968715190439084,
+    "thickness": 0.2262914925813675,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0719235625137697,
+    "solidity": 0.9843362197341566,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.6042735875365299,
+   "thin_fraction": 0.0005042864346949068,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.053792317708333336,
+   "centroid_offset": 8.08707208777477e-17,
+   "trace": 0.15550838062596975,
+   "offdiag_max": 3.621359899864472e-18,
+   "axes": [
+    0.2578610837172399,
+    0.23817482686455874,
+    0.17969082886496415
+   ]
+  },
+  {
+   "rank": 63,
+   "file_id": 9000160,
+   "kind": "blob",
+   "family": "wedge",
+   "note": "",
+   "descriptor": {
+    "linear": 0.145855767327262,
+    "planar": 0.2645824319345797,
+    "round": 0.5895618007381583,
+    "thickness": 0.2364972084760666,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0394646825816094,
+    "solidity": 0.9648720885834282,
+    "branches": 1.0,
+    "gap": 0.0
+   },
+   "max_radius": 0.653834949912449,
+   "thin_fraction": 0.0033636723387415906,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.04569950810185185,
+   "centroid_offset": 7.081939378317353e-06,
+   "trace": 0.15552732089384427,
+   "offdiag_max": 4.944556014379177e-18,
+   "axes": [
+    0.26715211928181043,
+    0.24575389013700188,
+    0.15414957521709877
+   ]
+  }
+ ],
+ "unused": [
+  {
+   "kind": "rod",
+   "family": "straight rod",
+   "descriptor": {
+    "linear": 0.774239421318603,
+    "planar": 0.0006775299729648746,
+    "round": 0.2250830487084313,
+    "thickness": 0.1386575847864151,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0325208935984198,
+    "solidity": 0.916030534351145,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "straight rod",
+   "descriptor": {
+    "linear": 0.7650093869919413,
+    "planar": 0.0007892782738724955,
+    "round": 0.23420133473418717,
+    "thickness": 0.11893627047538757,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0234809584903348,
+    "solidity": 0.8354745130542894,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "L",
+   "descriptor": {
+    "linear": 0.7224929401185121,
+    "planar": 0.06488855897131247,
+    "round": 0.2126185009101759,
+    "thickness": 0.10641051828861237,
+    "ray_crossings": 0.34,
+    "star_fraction": 0.0,
+    "fold": 1.278271551946905,
+    "solidity": 0.36246025655081704,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "V",
+   "descriptor": {
+    "linear": 0.6083883044499457,
+    "planar": 0.16857343413929105,
+    "round": 0.22303826141076327,
+    "thickness": 0.10475781559944153,
+    "ray_crossings": 0.36,
+    "star_fraction": 0.0,
+    "fold": 1.80257856989491,
+    "solidity": 0.3627765580138491,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "C arc",
+   "descriptor": {
+    "linear": 0.723093707656933,
+    "planar": 0.0630026995001901,
+    "round": 0.21390359284287716,
+    "thickness": 0.12875889241695404,
+    "ray_crossings": 0.4,
+    "star_fraction": 0.0,
+    "fold": 1.3440839276191543,
+    "solidity": 0.336555293401324,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "C arc",
+   "descriptor": {
+    "linear": 0.7455683425000011,
+    "planar": 0.04118898783210223,
+    "round": 0.21324266966789665,
+    "thickness": 0.10679192841053009,
+    "ray_crossings": 0.34933333333333333,
+    "star_fraction": 0.0,
+    "fold": 1.3167691793931158,
+    "solidity": 0.33408000000000015,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "U",
+   "descriptor": {
+    "linear": 0.703383662758352,
+    "planar": 0.08988916104213844,
+    "round": 0.2067271761995098,
+    "thickness": 0.12528733909130096,
+    "ray_crossings": 0.408,
+    "star_fraction": 0.0,
+    "fold": 1.9789605483026032,
+    "solidity": 0.3788377521096417,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "hook",
+   "descriptor": {
+    "linear": 0.7004128296598554,
+    "planar": 0.09294019216132106,
+    "round": 0.20664697817882355,
+    "thickness": 0.10626761615276337,
+    "ray_crossings": 0.408,
+    "star_fraction": 0.0,
+    "fold": 1.5555627990530538,
+    "solidity": 0.40114133910562316,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "S",
+   "descriptor": {
+    "linear": 0.655414353586146,
+    "planar": 0.12672817133989164,
+    "round": 0.21785747507396266,
+    "thickness": 0.1288217008113861,
+    "ray_crossings": 1.0573333333333332,
+    "star_fraction": 0.9713333333333334,
+    "fold": 1.1514907561053742,
+    "solidity": 0.40481400437636766,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "fold-back",
+   "descriptor": {
+    "linear": 0.33695747606510634,
+    "planar": 0.4493068507406646,
+    "round": 0.21373567319422898,
+    "thickness": 0.10630761086940765,
+    "ray_crossings": 1.2453333333333334,
+    "star_fraction": 0.8773333333333333,
+    "fold": 2.528027726722027,
+    "solidity": 0.4369565217391307,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "helix",
+   "descriptor": {
+    "linear": 0.6160019052786675,
+    "planar": 0.1756563262100908,
+    "round": 0.20834176851124128,
+    "thickness": 0.1549394577741623,
+    "ray_crossings": 0.4186666666666667,
+    "star_fraction": 0.0,
+    "fold": 2.1945901486476074,
+    "solidity": 0.26363020656959,
+    "branches": 1.0,
+    "gap": 0.39999999999999997
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "3-D crank",
+   "descriptor": {
+    "linear": 0.6341750401664754,
+    "planar": 0.14479157949332216,
+    "round": 0.2210333803402025,
+    "thickness": 0.13318875432014465,
+    "ray_crossings": 0.42533333333333334,
+    "star_fraction": 0.0,
+    "fold": 1.4967827218197447,
+    "solidity": 0.24252872259586505,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "Y",
+   "descriptor": {
+    "linear": 0.5646500977936696,
+    "planar": 0.21201221353249486,
+    "round": 0.2233376886738359,
+    "thickness": 0.14771443605422974,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.1676693556329762,
+    "solidity": 0.3721287631383957,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "Y",
+   "descriptor": {
+    "linear": 0.6290416944543477,
+    "planar": 0.15166460017992942,
+    "round": 0.21929370536572315,
+    "thickness": 0.1274021714925766,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.1331831373124834,
+    "solidity": 0.30211598746081514,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "T",
+   "descriptor": {
+    "linear": 0.5987652177114599,
+    "planar": 0.17932893606217595,
+    "round": 0.2219058462263645,
+    "thickness": 0.12764911353588104,
+    "ray_crossings": 1.124,
+    "star_fraction": 0.938,
+    "fold": 1.300346094639753,
+    "solidity": 0.32212804947886825,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "T",
+   "descriptor": {
+    "linear": 0.6263112162660278,
+    "planar": 0.15289072847999094,
+    "round": 0.22079805525398152,
+    "thickness": 0.10602881014347076,
+    "ray_crossings": 1.1253333333333333,
+    "star_fraction": 0.9373333333333334,
+    "fold": 1.341045449323062,
+    "solidity": 0.32013123974689467,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "plus",
+   "descriptor": {
+    "linear": 0.41722791912321694,
+    "planar": 0.34962336154239454,
+    "round": 0.23314871933438894,
+    "thickness": 0.14619708061218262,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.028132139220807,
+    "solidity": 0.34963137000729155,
+    "branches": 3.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "plus",
+   "descriptor": {
+    "linear": 0.5302616843178799,
+    "planar": 0.24554912192257367,
+    "round": 0.22418919375954643,
+    "thickness": 0.105609230697155,
+    "ray_crossings": 1.0053333333333334,
+    "star_fraction": 0.9973333333333333,
+    "fold": 1.0490880531428741,
+    "solidity": 0.28472642406430976,
+    "branches": 3.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "corner frame",
+   "descriptor": {
+    "linear": 0.5921134123280194,
+    "planar": 0.1128090663759208,
+    "round": 0.29507752129606046,
+    "thickness": 0.13454006612300873,
+    "ray_crossings": 0.588,
+    "star_fraction": 0.0,
+    "fold": 1.345649560120767,
+    "solidity": 0.20536235023579028,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "tetrapod",
+   "descriptor": {
+    "linear": 0.5923707558827522,
+    "planar": 0.04338219814415044,
+    "round": 0.3642470459730969,
+    "thickness": 0.1326657235622406,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.1860578202038852,
+    "solidity": 0.15832856126468495,
+    "branches": 3.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "F branch",
+   "descriptor": {
+    "linear": 0.5599459391428315,
+    "planar": 0.21660466733289732,
+    "round": 0.22344939352427198,
+    "thickness": 0.10604283958673477,
+    "ray_crossings": 0.5693333333333334,
+    "star_fraction": 0.0,
+    "fold": 1.3345808383061384,
+    "solidity": 0.4234678164459503,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "dumbbell",
+   "descriptor": {
+    "linear": 0.3134191258059562,
+    "planar": 0.0029117240637192934,
+    "round": 0.6836691501303245,
+    "thickness": 0.1410415768623352,
+    "ray_crossings": 1.1333333333333333,
+    "star_fraction": 0.9333333333333333,
+    "fold": 1.044903382880605,
+    "solidity": 0.5631629701060747,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "rod",
+   "family": "dumbbell",
+   "descriptor": {
+    "linear": 0.28536864956838504,
+    "planar": 0.0032178325586205894,
+    "round": 0.7114135178729942,
+    "thickness": 0.12145013362169266,
+    "ray_crossings": 1.1426666666666667,
+    "star_fraction": 0.9286666666666666,
+    "fold": 1.0562139937767725,
+    "solidity": 0.5284172318272996,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "plate",
+   "descriptor": {
+    "linear": 0.25665995153167737,
+    "planar": 0.47530203931305975,
+    "round": 0.26803800915526255,
+    "thickness": 0.1288820505142212,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0852433819407918,
+    "solidity": 0.9611434621492845,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "plate",
+   "descriptor": {
+    "linear": 0.2531241430517536,
+    "planar": 0.4888128334404932,
+    "round": 0.258063023507753,
+    "thickness": 0.137570321559906,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0852433819407918,
+    "solidity": 0.9731424391263451,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "disc plate",
+   "descriptor": {
+    "linear": 0.2579634335641301,
+    "planar": 0.4866389083255996,
+    "round": 0.2553976581102704,
+    "thickness": 0.1289764642715454,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0484138856962522,
+    "solidity": 0.9428001330229483,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "disc plate",
+   "descriptor": {
+    "linear": 0.2612106144242931,
+    "planar": 0.49465583052050316,
+    "round": 0.24413355505520368,
+    "thickness": 0.13731348514556885,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0656881221529069,
+    "solidity": 0.9530023953084996,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "angle plate",
+   "descriptor": {
+    "linear": 0.19914968739176553,
+    "planar": 0.4134833511992869,
+    "round": 0.3873669614089475,
+    "thickness": 0.1386304646730423,
+    "ray_crossings": 1.34,
+    "star_fraction": 0.0,
+    "fold": 1.1825444560182439,
+    "solidity": 0.555536626916525,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "angle plate",
+   "descriptor": {
+    "linear": 0.21479006856920752,
+    "planar": 0.36882594932252416,
+    "round": 0.416383982108268,
+    "thickness": 0.14777791500091553,
+    "ray_crossings": 1.4026666666666667,
+    "star_fraction": 0.0,
+    "fold": 1.220373657083348,
+    "solidity": 0.5745707196029778,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "U channel",
+   "descriptor": {
+    "linear": 0.18996837253442217,
+    "planar": 0.35470239164462497,
+    "round": 0.455329235820953,
+    "thickness": 0.1473855823278427,
+    "ray_crossings": 1.4426666666666668,
+    "star_fraction": 0.0,
+    "fold": 1.7005111031898092,
+    "solidity": 0.5401075791343403,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "C sheet",
+   "descriptor": {
+    "linear": 0.21009044229814983,
+    "planar": 0.4090504772791536,
+    "round": 0.38085908042269684,
+    "thickness": 0.14981302618980408,
+    "ray_crossings": 1.3893333333333333,
+    "star_fraction": 0.0,
+    "fold": 1.2037485239574028,
+    "solidity": 0.5361631491581692,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "C sheet",
+   "descriptor": {
+    "linear": 0.2172438475467753,
+    "planar": 0.4386298498693019,
+    "round": 0.34412630258392246,
+    "thickness": 0.1479472815990448,
+    "ray_crossings": 1.3346666666666667,
+    "star_fraction": 0.0,
+    "fold": 1.171298124250245,
+    "solidity": 0.5320061063593973,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "S sheet",
+   "descriptor": {
+    "linear": 0.2377153657013439,
+    "planar": 0.3817421939313453,
+    "round": 0.38054244036731116,
+    "thickness": 0.1491020917892456,
+    "ray_crossings": 1.196,
+    "star_fraction": 0.902,
+    "fold": 1.153338435747974,
+    "solidity": 0.5468950310240501,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "S sheet",
+   "descriptor": {
+    "linear": 0.23146481819092338,
+    "planar": 0.3995108079912998,
+    "round": 0.36902437381777625,
+    "thickness": 0.14671894907951355,
+    "ray_crossings": 1.1946666666666668,
+    "star_fraction": 0.9026666666666666,
+    "fold": 1.1127569297165922,
+    "solidity": 0.5952175458191603,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "Z fold sheet",
+   "descriptor": {
+    "linear": 0.1644785769618688,
+    "planar": 0.18459725327043566,
+    "round": 0.6509241697676958,
+    "thickness": 0.1473647505044937,
+    "ray_crossings": 1.8466666666666667,
+    "star_fraction": 0.5766666666666667,
+    "fold": 2.0817815539184257,
+    "solidity": 0.5794065741947186,
+    "branches": 1.0,
+    "gap": 0.16
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "bowl",
+   "descriptor": {
+    "linear": 0.24653743639713877,
+    "planar": 0.46922555823076595,
+    "round": 0.284237005372095,
+    "thickness": 0.13976165652275085,
+    "ray_crossings": 1.344,
+    "star_fraction": 0.0,
+    "fold": 1.1634497793772762,
+    "solidity": 0.6298078159973238,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "bowl",
+   "descriptor": {
+    "linear": 0.1996752474994003,
+    "planar": 0.44678534320530616,
+    "round": 0.3535394092952938,
+    "thickness": 0.14836622774600983,
+    "ray_crossings": 1.4893333333333334,
+    "star_fraction": 0.0,
+    "fold": 1.2722437158544904,
+    "solidity": 0.6065872630043749,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "saddle",
+   "descriptor": {
+    "linear": 0.23361112276791943,
+    "planar": 0.36775113490925526,
+    "round": 0.39863774232282523,
+    "thickness": 0.14907360076904297,
+    "ray_crossings": 1.032,
+    "star_fraction": 0.984,
+    "fold": 1.1400567770653502,
+    "solidity": 0.42470915942978904,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "twisted ribbon",
+   "descriptor": {
+    "linear": 0.28997165964117133,
+    "planar": 0.29315972134293866,
+    "round": 0.41686861901588973,
+    "thickness": 0.1396643966436386,
+    "ray_crossings": 1.0493333333333332,
+    "star_fraction": 0.9753333333333334,
+    "fold": 1.092110669898993,
+    "solidity": 0.4407958178957523,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "twisted ribbon",
+   "descriptor": {
+    "linear": 0.26733250762237004,
+    "planar": 0.3442986992709163,
+    "round": 0.38836879310671396,
+    "thickness": 0.1487235724925995,
+    "ray_crossings": 1.0306666666666666,
+    "star_fraction": 0.9846666666666667,
+    "fold": 1.0916930040216808,
+    "solidity": 0.4519414980608376,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "cone shell",
+   "descriptor": {
+    "linear": 0.21233148103145427,
+    "planar": 0.32625289619418724,
+    "round": 0.4614156227743584,
+    "thickness": 0.13980171084403992,
+    "ray_crossings": 1.708,
+    "star_fraction": 0.0,
+    "fold": 1.1225687508162774,
+    "solidity": 0.6227625048792724,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "cone shell",
+   "descriptor": {
+    "linear": 0.2077066832264565,
+    "planar": 0.3170299074459461,
+    "round": 0.4752634093275976,
+    "thickness": 0.1489207148551941,
+    "ray_crossings": 1.6413333333333333,
+    "star_fraction": 0.0,
+    "fold": 1.1711310525842928,
+    "solidity": 0.632699147002624,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "T plates",
+   "descriptor": {
+    "linear": 0.23208313538243572,
+    "planar": 0.2971768193114894,
+    "round": 0.47074004530607444,
+    "thickness": 0.1337800770998001,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.045315898939988,
+    "solidity": 0.6039741913356625,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "T plates",
+   "descriptor": {
+    "linear": 0.2027698730710798,
+    "planar": 0.3163076164075161,
+    "round": 0.48092251052140406,
+    "thickness": 0.13682423532009125,
+    "ray_crossings": 1.1146666666666667,
+    "star_fraction": 0.9426666666666667,
+    "fold": 1.0689991527303586,
+    "solidity": 0.543897952517664,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "X plates",
+   "descriptor": {
+    "linear": 0.1693220330411356,
+    "planar": 0.19892580753860545,
+    "round": 0.6317521594202583,
+    "thickness": 0.13684605062007904,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0689991527303586,
+    "solidity": 0.47935902327355984,
+    "branches": 3.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "corner plates",
+   "descriptor": {
+    "linear": 0.18326511239734497,
+    "planar": 0.39797696187009135,
+    "round": 0.41875792573256393,
+    "thickness": 0.139383465051651,
+    "ray_crossings": 1.4613333333333334,
+    "star_fraction": 0.0,
+    "fold": 1.2216541716980043,
+    "solidity": 0.4949394704898128,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "corner plates",
+   "descriptor": {
+    "linear": 0.18262217083569224,
+    "planar": 0.38094691166579453,
+    "round": 0.4364309174985129,
+    "thickness": 0.1476622223854065,
+    "ray_crossings": 1.464,
+    "star_fraction": 0.0,
+    "fold": 1.1876983546221433,
+    "solidity": 0.516020688645642,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "open box",
+   "descriptor": {
+    "linear": 0.1757433055153591,
+    "planar": 0.31354658841151745,
+    "round": 0.5107101060731238,
+    "thickness": 0.14788785576820374,
+    "ray_crossings": 1.7093333333333334,
+    "star_fraction": 0.0,
+    "fold": 1.2032898911941134,
+    "solidity": 0.6978740143401218,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "open box",
+   "descriptor": {
+    "linear": 0.17366645808260958,
+    "planar": 0.30954054963531213,
+    "round": 0.516792992282078,
+    "thickness": 0.1468709409236908,
+    "ray_crossings": 1.724,
+    "star_fraction": 0.0,
+    "fold": 1.1929884909123616,
+    "solidity": 0.6895150966905049,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "three-fin fan",
+   "descriptor": {
+    "linear": 0.2183846881934726,
+    "planar": 0.3302747424012145,
+    "round": 0.4513405694053127,
+    "thickness": 0.13894538581371307,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0854502121724816,
+    "solidity": 0.49184526921066396,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "sheet",
+   "family": "three-fin fan",
+   "descriptor": {
+    "linear": 0.21593725398744734,
+    "planar": 0.2948408870437931,
+    "round": 0.489221858968759,
+    "thickness": 0.1491018533706665,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0652441653058202,
+    "solidity": 0.5129547014413178,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "table",
+   "descriptor": {
+    "linear": 0.26142149097064404,
+    "planar": 0.4488727038493147,
+    "round": 0.2897058051800413,
+    "thickness": 0.14724114537239075,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.081580690887618,
+    "solidity": 0.4473430324547525,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "table",
+   "descriptor": {
+    "linear": 0.24054415194330228,
+    "planar": 0.4039894948979243,
+    "round": 0.3554663531587733,
+    "thickness": 0.168638214468956,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0831596416419642,
+    "solidity": 0.5034788108791904,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "table",
+   "descriptor": {
+    "linear": 0.24294324140314202,
+    "planar": 0.49730650339551585,
+    "round": 0.259750255201342,
+    "thickness": 0.12309300899505615,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0844353742253194,
+    "solidity": 0.4364139627864056,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "table",
+   "descriptor": {
+    "linear": 0.2613474734249386,
+    "planar": 0.4665831198417415,
+    "round": 0.27206940673331975,
+    "thickness": 0.13730794191360474,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0914760995862016,
+    "solidity": 0.42107445805843574,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "spoon",
+   "descriptor": {
+    "linear": 0.21129238781709425,
+    "planar": 0.4460581777546657,
+    "round": 0.34264943442823986,
+    "thickness": 0.13364100456237793,
+    "ray_crossings": 1.4586666666666666,
+    "star_fraction": 0.0,
+    "fold": 1.1909701419683463,
+    "solidity": 0.5295177865612652,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "ball on a stick",
+   "descriptor": {
+    "linear": 0.024565199096917387,
+    "planar": 0.3097879010224816,
+    "round": 0.665646899880601,
+    "thickness": 0.14930316805839539,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0696513339076141,
+    "solidity": 0.8836222676860132,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "ball on a stick",
+   "descriptor": {
+    "linear": 0.02639219672628951,
+    "planar": 0.30837023312428863,
+    "round": 0.6652375701494212,
+    "thickness": 0.14889197051525116,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0650217457524858,
+    "solidity": 0.8992764516931459,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "ball on a stick",
+   "descriptor": {
+    "linear": 0.011274662975870908,
+    "planar": 0.002113346204623446,
+    "round": 0.9866119908195063,
+    "thickness": 0.963535726070404,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.124363361700303,
+    "solidity": 0.9289457971206793,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "ball with limbs",
+   "descriptor": {
+    "linear": 0.025216990992773896,
+    "planar": 0.17865995083581956,
+    "round": 0.7961230581714044,
+    "thickness": 0.16433200240135193,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0787309200941742,
+    "solidity": 0.8708873617217132,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "ball with limbs",
+   "descriptor": {
+    "linear": 0.02076427642985398,
+    "planar": 0.3148215150918428,
+    "round": 0.6644142084783028,
+    "thickness": 0.15479440987110138,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0913550890833035,
+    "solidity": 0.9265539212176956,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "ball with limbs",
+   "descriptor": {
+    "linear": 0.01974097576666379,
+    "planar": 0.003994280162598863,
+    "round": 0.9762647440707374,
+    "thickness": 0.963535726070404,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.124363361700303,
+    "solidity": 0.9289457971206793,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "stool",
+   "descriptor": {
+    "linear": 0.2959439596961577,
+    "planar": 0.26698300062991254,
+    "round": 0.43707303967393024,
+    "thickness": 0.14365164935588837,
+    "ray_crossings": 1.1933333333333334,
+    "star_fraction": 0.0,
+    "fold": 1.4962385271068552,
+    "solidity": 0.33827253623578846,
+    "branches": 3.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "stool",
+   "descriptor": {
+    "linear": 0.3041326879347266,
+    "planar": 0.28398144648739054,
+    "round": 0.41188586557788304,
+    "thickness": 0.12965872883796692,
+    "ray_crossings": 1.1693333333333333,
+    "star_fraction": 0.0,
+    "fold": 1.488945764532709,
+    "solidity": 0.30975586642270275,
+    "branches": 3.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "stool",
+   "descriptor": {
+    "linear": 0.3220825739202197,
+    "planar": 0.2818961505328225,
+    "round": 0.39602127554695776,
+    "thickness": 0.12892597913742065,
+    "ray_crossings": 1.1693333333333333,
+    "star_fraction": 0.9153333333333333,
+    "fold": 1.4256689384996466,
+    "solidity": 0.3222673580561225,
+    "branches": 3.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "plate with a post",
+   "descriptor": {
+    "linear": 0.246626865661104,
+    "planar": 0.41118655487345457,
+    "round": 0.3421865794654411,
+    "thickness": 0.1428370177745819,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0896754985594466,
+    "solidity": 0.46438583009535384,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "plate with a post",
+   "descriptor": {
+    "linear": 0.21611436244988189,
+    "planar": 0.41425462945508823,
+    "round": 0.36963100809503,
+    "thickness": 0.16267241537570953,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0638289964312184,
+    "solidity": 0.5082941223383043,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "plate with a post",
+   "descriptor": {
+    "linear": 0.22807869228855368,
+    "planar": 0.46685269930804796,
+    "round": 0.30506860840339856,
+    "thickness": 0.127433180809021,
+    "ray_crossings": 1.004,
+    "star_fraction": 0.998,
+    "fold": 1.0751521536097288,
+    "solidity": 0.5170803766915507,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "plate with a post",
+   "descriptor": {
+    "linear": 0.215550916017734,
+    "planar": 0.49471102627696384,
+    "round": 0.28973805770530203,
+    "thickness": 0.13231989741325378,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0661019130029956,
+    "solidity": 0.6839722203309051,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "plate with a hook",
+   "descriptor": {
+    "linear": 0.29323318238049934,
+    "planar": 0.3017783750417482,
+    "round": 0.4049884425777522,
+    "thickness": 0.14535227417945862,
+    "ray_crossings": 1.0546666666666666,
+    "star_fraction": 0.0,
+    "fold": 1.8758613959943196,
+    "solidity": 0.3788371680369081,
+    "branches": 2.0,
+    "gap": 0.2
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "plate with a hook",
+   "descriptor": {
+    "linear": 0.2835626851608602,
+    "planar": 0.34417964299771736,
+    "round": 0.3722576718414221,
+    "thickness": 0.12936529517173767,
+    "ray_crossings": 1.0386666666666666,
+    "star_fraction": 0.0,
+    "fold": 1.9835521711726338,
+    "solidity": 0.35086081831001664,
+    "branches": 2.0,
+    "gap": 0.2
+   }
+  },
+  {
+   "kind": "mixed",
+   "family": "plate with a hook",
+   "descriptor": {
+    "linear": 0.28029551962593147,
+    "planar": 0.3739117367582392,
+    "round": 0.3457927436158294,
+    "thickness": 0.12924279272556305,
+    "ray_crossings": 1.0253333333333334,
+    "star_fraction": 0.0,
+    "fold": 1.9253956799430265,
+    "solidity": 0.3479191977431378,
+    "branches": 2.0,
+    "gap": 0.2
+   }
+  },
+  {
+   "kind": "blob",
+   "family": "capsule",
+   "descriptor": {
+    "linear": 0.4380713360191214,
+    "planar": 0.0033494350146776384,
+    "round": 0.5585792289662007,
+    "thickness": 0.6847288012504578,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.070418020027451,
+    "solidity": 0.939763211088651,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "blob",
+   "family": "lentil",
+   "descriptor": {
+    "linear": 0.18447574117139148,
+    "planar": 0.4595486599605725,
+    "round": 0.35597559886803365,
+    "thickness": 0.3715251386165619,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0730174027925659,
+    "solidity": 0.9447875448393185,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "blob",
+   "family": "rounded box",
+   "descriptor": {
+    "linear": 0.16974004923304611,
+    "planar": 0.2847966640935842,
+    "round": 0.5454632866733703,
+    "thickness": 0.24936941266059875,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0933895766549193,
+    "solidity": 0.9813101875316784,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "blob",
+   "family": "rounded box",
+   "descriptor": {
+    "linear": 0.16354238909259464,
+    "planar": 0.2858336954032619,
+    "round": 0.5506239155041428,
+    "thickness": 0.2542613744735718,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0840593694133167,
+    "solidity": 0.9812757654907645,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "blob",
+   "family": "pear",
+   "descriptor": {
+    "linear": 0.23012017255357828,
+    "planar": 0.00746964696893255,
+    "round": 0.7624101804774944,
+    "thickness": 0.42680275440216064,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.072180103115286,
+    "solidity": 0.9208383361666208,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "blob",
+   "family": "pear",
+   "descriptor": {
+    "linear": 0.22686723202259879,
+    "planar": 0.004421676875428365,
+    "round": 0.7687110911019757,
+    "thickness": 0.42680275440216064,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.072180103115286,
+    "solidity": 0.9208383361666208,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "blob",
+   "family": "clover",
+   "descriptor": {
+    "linear": 0.18428585654149748,
+    "planar": 0.25098486572068623,
+    "round": 0.564729277737817,
+    "thickness": 0.17208465933799744,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.059423928790409,
+    "solidity": 0.7263753276414421,
+    "branches": 2.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "blob",
+   "family": "wedge",
+   "descriptor": {
+    "linear": 0.14627286792235522,
+    "planar": 0.2619202207273573,
+    "round": 0.591806911350288,
+    "thickness": 0.2364972084760666,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0394646825816094,
+    "solidity": 0.9648720885834289,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  },
+  {
+   "kind": "blob",
+   "family": "wedge",
+   "descriptor": {
+    "linear": 0.14443841733485974,
+    "planar": 0.2579677338744222,
+    "round": 0.5975938487907178,
+    "thickness": 0.2364972084760666,
+    "ray_crossings": 1.0,
+    "star_fraction": 1.0,
+    "fold": 1.0394646825816094,
+    "solidity": 0.9648720885834269,
+    "branches": 1.0,
+    "gap": 0.0
+   }
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "fourier_bands": 3,
+ "updates": 30,
+ "seconds": 0.9721653461456299,
+ "regions": {
+  "within 0.03 of the surface": {
+   "value_error_mean": 0.028664391487836838,
+   "value_error_max": 0.12810981273651123,
+   "slope_error_mean": 0.27483323216438293,
+   "slope_error_p99": 0.8321151733398438
+  },
+  "centre (radius < 0.1)": {
+   "value_error_mean": 0.2819308340549469,
+   "value_error_max": 0.32542580366134644,
+   "slope_error_mean": 0.6933451890945435,
+   "slope_error_p99": 0.9368829131126404
+  },
+  "rest of the ball (radius < 0.9)": {
+   "value_error_mean": 0.06562575697898865,
+   "value_error_max": 0.40787601470947266,
+   "slope_error_mean": 0.39819276332855225,
+   "slope_error_p99": 1.2437222003936768
+  },
+  "outside radius 0.9 (corners of the box)": {
+   "value_error_mean": 0.12608514726161957,
+   "value_error_max": 0.5216577053070068,
+   "slope_error_mean": 0.3523244857788086,
+   "slope_error_p99": 1.1738361120224
+  }
+ },
+ "surface_radius": {
+  "mean": 0.5061718821525574,
+  "std": 0.03792644292116165,
+  "max_deviation": 1.0670931339263916
+ },
+ "grid_pieces_inside_outside": [
+  4,
+  1
+ ],
+ "history": [
+  [
+   0,
+   0.2890133857727051,
+   0.9979427456855774
+  ],
+  [
+   29,
+   0.10508058965206146,
+   0.6973258256912231
+  ]
+ ],
+ "current_start_mean_difference_between_codes": 0.0011149835772812366,
+ "codes": {
+  "starting spread x1.0": {
+   "film_std": 0.10000000000000002,
+   "mean_difference_between_codes": 0.03638812527060509,
+   "mean_difference_from_sphere": 0.0865129753947258,
+   "clean_of_32": 3,
+   "empty": 0
+  },
+  "starting spread x0.3": {
+   "film_std": 0.03,
+   "mean_difference_between_codes": 0.01138454582542181,
+   "mean_difference_from_sphere": 0.08422757685184479,
+   "clean_of_32": 0,
+   "empty": 0
+  },
+  "starting spread x0.1": {
+   "film_std": 0.010000000000000002,
+   "mean_difference_between_codes": 0.0038417589385062456,
+   "mean_difference_from_sphere": 0.08384021371603012,
+   "clean_of_32": 0,
+   "empty": 0
+  },
+  "starting spread x0.03": {
+   "film_std": 0.003,
+   "mean_difference_between_codes": 0.0011564746964722872,
+   "mean_difference_from_sphere": 0.08372869342565536,
+   "clean_of_32": 0,
+   "empty": 0
+  }
+ }
+}

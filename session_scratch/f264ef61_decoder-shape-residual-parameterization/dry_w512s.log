@@ -1,0 +1,7 @@
+[gpu_capped] memory capped at 75% (~11.6 of 15.5 GiB); busy time throttled to ~70%
+diag      0  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 0.0  wobble 0.28  descriptor spread 0.007  probe distance 0.0012  8.6 s  anchors iou 0.29 (min 0.02) code cos max 0.00
+step      0  loss 56.12  div 41.63 (ratio 0.005, dead zone 0.00)  eik 0.000207  cons 0.00274  pose c 0.00029 s -1.4e-06 a 1.4e-05  e 0.00145  graph full [frag 0.0+0.0 cav 0.0 gap 0.0 wall 0.0]  lr 5.09e-06  |g| 1.01e+03  2460 ms  anchors d 0.1706 iou 0.28
+step      1  loss 58.51  div 41.39 (ratio 0.006, dead zone 0.00)  eik 0.000214  cons 0.00283  pose c -4.8e-05 s -7.2e-06 a -4.8e-06  e 0.00149  graph full [frag 0.0+0.0 cav 0.0 gap 0.0 wall 0.0]  lr 1.02e-05  |g| 1.27e+03  1964 ms  anchors d 0.1614 iou 0.31
+step      2  loss 58.01  div 41.36 (ratio 0.006, dead zone 0.00)  eik 0.000233  cons 0.00293  pose c -0.00041 s -1.5e-06 a 6.4e-06  e 0.00153  graph full [frag 0.0+0.0 cav 0.0 gap 0.0 wall 0.0]  lr 1.53e-05  |g| 1.35e+03  1954 ms  anchors d 0.1516 iou 0.33
+step      3  loss 60.62  div 40.86 (ratio 0.006, dead zone 0.00)  eik 0.000268  cons 0.0032  pose c -0.00011 s 5.5e-06 a -1.2e-06  e 0.0017  graph full [frag 0.0+0.0 cav 0.0 gap 0.0 wall 0.0]  lr 2.04e-05  |g| 1.56e+03  1964 ms  anchors d 0.1760 iou 0.29
+diag      4  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 0.0  wobble 0.27  descriptor spread 0.009  probe distance 0.0015  8.3 s  anchors iou 0.30 (min 0.02) code cos max 0.00

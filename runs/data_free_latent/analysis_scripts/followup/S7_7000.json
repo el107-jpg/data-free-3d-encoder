@@ -1,0 +1,417 @@
+{
+ "checkpoint": "/home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/S7_S6_continued_to_10k/checkpoint_7000.pt",
+ "update": 7000,
+ "latent_dim": 64,
+ "spectrum": {
+  "rms": [
+   0.5475392937660217,
+   0.3697700500488281,
+   0.2358582615852356,
+   0.20144906640052795,
+   0.17477825284004211,
+   0.15201415121555328,
+   0.13514713943004608,
+   0.12012626975774765,
+   0.10664864629507065,
+   0.08999336510896683,
+   0.0701884776353836,
+   0.046679649502038956,
+   0.0333995446562767,
+   0.02664039470255375,
+   0.02260734513401985,
+   0.020031867548823357,
+   0.017691077664494514,
+   0.015862537547945976,
+   0.014448682777583599,
+   0.012781900353729725,
+   0.011464265175163746,
+   0.010474282316863537,
+   0.00957075972110033,
+   0.008700286038219929,
+   0.008070945739746094,
+   0.007330954074859619,
+   0.006830426864326,
+   0.0063279494643211365,
+   0.00589130911976099,
+   0.005521292332559824,
+   0.005165696144104004,
+   0.004811985418200493,
+   0.004551887046545744,
+   0.004322948399931192,
+   0.004108085297048092,
+   0.003869680454954505,
+   0.003652665065601468,
+   0.003440552856773138,
+   0.003280946984887123,
+   0.0031446674838662148,
+   0.0029983290005475283,
+   0.0028572739101946354,
+   0.0027196432929486036,
+   0.002597186714410782,
+   0.002486170968040824,
+   0.002377015771344304,
+   0.0023005136754363775,
+   0.00221331138163805,
+   0.0021275938488543034,
+   0.0020574238151311874,
+   0.00197623111307621,
+   0.001900964300148189,
+   0.0018218646291643381,
+   0.0017476611537858844,
+   0.0016855491558089852,
+   0.0016279243864119053,
+   0.0015485145850107074,
+   0.001486289664171636,
+   0.0014071868499740958,
+   0.001342830597423017,
+   0.001270984299480915,
+   0.0011897881049662828,
+   0.0010533480672165751
+  ],
+  "total_variance": 0.6502834558486938,
+  "effective_directions": 5.758501052856445,
+  "above_0.02": 16,
+  "above_0.01": 22,
+  "above_0.005": 31
+ },
+ "pose": {
+  "centroid_offset_mean": 0.024509740993380547,
+  "centroid_offset_max": 0.05445293337106705,
+  "common_shift": 0.01928115077316761,
+  "trace_mean": 0.1474863439798355,
+  "trace_target": 0.15552697846461008,
+  "trace_rel_std": 0.05499615902000885
+ },
+ "topology": {
+  "codes": 128,
+  "clean_at_96": 113,
+  "flagged": 15,
+  "defective_at_128_and_160": 15,
+  "clean_on_fine_grids": 113,
+  "detail": [
+   {
+    "code": 8,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": -1,
+     "handles": 2,
+     "volume_fraction": 0.027360704210069444,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 2
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 2
+    }
+   },
+   {
+    "code": 9,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": -1,
+     "handles": 2,
+     "volume_fraction": 0.023030598958333332,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 2
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 2
+    }
+   },
+   {
+    "code": 10,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": -1,
+     "handles": 2,
+     "volume_fraction": 0.03299854419849537,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 2
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 2
+    }
+   },
+   {
+    "code": 17,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": 0,
+     "handles": 1,
+     "volume_fraction": 0.03031638816550926,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    }
+   },
+   {
+    "code": 33,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": 0,
+     "handles": 1,
+     "volume_fraction": 0.03209884078414352,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    }
+   },
+   {
+    "code": 36,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": 0,
+     "handles": 1,
+     "volume_fraction": 0.019739221643518517,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    }
+   },
+   {
+    "code": 45,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": 0,
+     "handles": 1,
+     "volume_fraction": 0.03161055953414352,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    }
+   },
+   {
+    "code": 56,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": 0,
+     "handles": 1,
+     "volume_fraction": 0.01936735930266204,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    }
+   },
+   {
+    "code": 79,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": 0,
+     "handles": 1,
+     "volume_fraction": 0.034788908781828706,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    }
+   },
+   {
+    "code": 85,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": 0,
+     "handles": 1,
+     "volume_fraction": 0.014865451388888888,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    }
+   },
+   {
+    "code": 93,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": 0,
+     "handles": 1,
+     "volume_fraction": 0.025605378327546297,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    }
+   },
+   {
+    "code": 96,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": -1,
+     "handles": 2,
+     "volume_fraction": 0.04348415798611111,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 2
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 2
+    }
+   },
+   {
+    "code": 98,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": 0,
+     "handles": 1,
+     "volume_fraction": 0.033967194733796294,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    }
+   },
+   {
+    "code": 109,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": 0,
+     "handles": 1,
+     "volume_fraction": 0.02205177589699074,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    }
+   },
+   {
+    "code": 120,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": 0,
+     "handles": 1,
+     "volume_fraction": 0.023085982711226853,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    }
+   }
+  ]
+ },
+ "anchors": {
+  "distance_mean": 0.03342827409505844,
+  "distance_max": 0.08309952914714813,
+  "iou_mean": 0.6659389138221741,
+  "iou_min": 0.14130434393882751,
+  "code_cos_abs_mean": 0.007017574273049831,
+  "code_cos_max": 1.8998980522155762e-07
+ }
+}

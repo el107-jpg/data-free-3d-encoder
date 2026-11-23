@@ -1,0 +1,46 @@
+[gpu_capped] memory capped at 75% (~11.6 of 15.5 GiB); busy time throttled to ~70%
+diag      0  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 0.0  wobble 0.05  descriptor spread 0.007  probe distance 0.0010  7.0 s  anchors iou 0.35 (min 0.03) code cos max 0.00
+step      0  loss 32.8  div 22.62 (ratio 0.003, dead zone 0.00)  eik 3.51e-06  cons 0.00141  pose c 0.00034 s -5.2e-05 a -2e-05  e 0.00102  graph full [frag 0.0+0.0 cav 0.0 gap 0.0 wall 0.0]  lr 5.09e-06  |g| 618  1975 ms  anchors d 0.1263 iou 0.36
+step     25  loss 20.04  div 11.1 (ratio 0.070, dead zone 0.00)  eik 0.00236  cons 0.0441  pose c -0.0012 s 0.0058 a 0.0001  e 0.0429  graph sign [frag 0.0+0.0 cav 0.0 gap 0.0 wall 0.0]  lr 1.32e-04  |g| 79.2  1377 ms  anchors d 0.1006 iou 0.42
+step     50  loss 15.7  div 6.952 (ratio 0.209, dead zone 0.00)  eik 0.0107  cons 0.044  pose c 0.005 s 0.004 a 0.00014  e 0.0335  graph sign [frag 0.0+0.0 cav 0.0 gap 109.75 wall 256.5]  lr 2.60e-04  |g| 73.7  1461 ms  anchors d 0.0923 iou 0.41
+step     75  loss 18.68  div 9.71 (ratio 0.107, dead zone 0.00)  eik 0.000869  cons 0.0173  pose c 0.00061 s 0.0031 a 3.2e-05  e 0.014  graph full [frag 0.0+0.0 cav 0.0 gap 0.0 wall 0.0]  lr 3.87e-04  |g| 270  1399 ms  anchors d 0.0869 iou 0.42
+step    100  loss 22.48  div 9.141 (ratio 0.122, dead zone 0.00)  eik 0.00197  cons 0.028  pose c 0.0035 s 0.0089 a -2.2e-05  e 0.0225  graph sign [frag 0.0+0.0 cav 0.0 gap 28.75 wall 109.0]  lr 5.14e-04  |g| 932  1581 ms  anchors d 0.1253 iou 0.34
+step    125  loss 22.76  div 14.66 (ratio 0.033, dead zone 0.00)  eik 0.000129  cons 0.00816  pose c 0.00087 s 0.0011 a -1.2e-05  e 0.006  graph full [frag 0.0+0.0 cav 0.0 gap 0.0 wall 0.0]  lr 6.36e-04  |g| 265  1372 ms  anchors d 0.0940 iou 0.37
+step    150  loss 20.51  div 15.69 (ratio 0.024, dead zone 0.00)  eik 7.96e-05  cons 0.0071  pose c 0.00058 s 0.0026 a -5.2e-05  e 0.00552  graph full [frag 0.0+0.0 cav 0.0 gap 0.0 wall 0.0]  lr 6.36e-04  |g| 67.8  1384 ms  anchors d 0.0834 iou 0.51
+Traceback (most recent call last):
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/scripts/gpu_capped.py", line 102, in <module>
+    main()
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/scripts/gpu_capped.py", line 98, in main
+    runpy.run_path(script, run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "scripts/train_data_free_latent.py", line 22, in <module>
+    main()
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/data-free-connectivity-plan/arm_planner/data_free/train.py", line 1445, in main
+    trainer.run(verbose=not args.quiet)
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/data-free-connectivity-plan/arm_planner/data_free/train.py", line 1298, in run
+    record = self.step()
+             ^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/data-free-connectivity-plan/arm_planner/data_free/train.py", line 907, in step
+    return self._accumulated_step()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/data-free-connectivity-plan/arm_planner/data_free/train.py", line 760, in _accumulated_step
+    graph = build_graph(fb, e, cfg, mode=mode)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/data-free-connectivity-plan/arm_planner/data_free/graph.py", line 673, in build_graph
+    cut_ball, cut_surf = cut_tests(ka, kb, kl, o_pts, o_shape, o_rad, cut_free2)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/data-free-connectivity-plan/arm_planner/data_free/graph.py", line 642, in cut_tests
+    surf = _surfel_cut(pka, pkb, kl, ksh, f_pts, f_shape, f_normal, tol_c, cos_cut)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/data-free-connectivity-plan/arm_planner/data_free/graph.py", line 191, in _surfel_cut
+    dist, t = point_segment_distance(s_pts[i_s], a[i_e], b[i_e])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/data-free-connectivity-plan/arm_planner/data_free/spatial.py", line 185, in point_segment_distance
+    ap = p - a
+         ~~^~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 644.00 MiB. GPU 0 has a total capacity of 15.47 GiB of which 3.68 GiB is free. Including non-PyTorch memory, this process has 11.77 GiB memory in use. 11.60 GiB allowed; Of the allocated memory 11.27 GiB is allocated by PyTorch, and 97.27 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

@@ -1,0 +1,753 @@
+{
+ "checkpoint": "/home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/S10_S9_continued_to_20k/checkpoint_16000.pt",
+ "update": 16000,
+ "latent_dim": 64,
+ "spectrum": {
+  "rms": [
+   0.810099720954895,
+   0.4787686765193939,
+   0.3518694341182709,
+   0.26059821248054504,
+   0.21945089101791382,
+   0.17566817998886108,
+   0.14541982114315033,
+   0.12231236696243286,
+   0.10350384563207626,
+   0.08443911373615265,
+   0.0708196610212326,
+   0.059210870414972305,
+   0.0492638424038887,
+   0.044354237616062164,
+   0.03925790637731552,
+   0.0357816107571125,
+   0.03273525834083557,
+   0.03031124547123909,
+   0.028308486565947533,
+   0.026448598131537437,
+   0.02482411451637745,
+   0.023348504677414894,
+   0.022128721699118614,
+   0.021056341007351875,
+   0.019939227029681206,
+   0.01900559850037098,
+   0.018284188583493233,
+   0.017505653202533722,
+   0.01661817729473114,
+   0.01589387282729149,
+   0.01542742270976305,
+   0.01489255204796791,
+   0.014377125538885593,
+   0.01393369771540165,
+   0.013575898483395576,
+   0.013172325678169727,
+   0.012675213627517223,
+   0.012300447560846806,
+   0.011913190595805645,
+   0.011535216122865677,
+   0.011256002821028233,
+   0.01094402838498354,
+   0.01067695114761591,
+   0.010330455377697945,
+   0.01008728425949812,
+   0.009810925461351871,
+   0.009548851288855076,
+   0.009312293492257595,
+   0.009084648452699184,
+   0.008868131786584854,
+   0.00862742681056261,
+   0.008433314971625805,
+   0.008195462636649609,
+   0.007971891202032566,
+   0.007736292667686939,
+   0.007502288557589054,
+   0.0072982823476195335,
+   0.007061439100652933,
+   0.006833529099822044,
+   0.006633692886680365,
+   0.00632484070956707,
+   0.005958295427262783,
+   0.005419122986495495
+  ],
+  "total_variance": 1.236924648284912,
+  "effective_directions": 4.953476428985596,
+  "above_0.02": 24,
+  "above_0.01": 45,
+  "above_0.005": 63
+ },
+ "pose": {
+  "centroid_offset_mean": 0.04360251873731613,
+  "centroid_offset_max": 0.15605515241622925,
+  "common_shift": 0.004039997700601816,
+  "trace_mean": 0.1523668486624956,
+  "trace_target": 0.15552697846461008,
+  "trace_rel_std": 0.07933745376834725
+ },
+ "topology": {
+  "codes": 128,
+  "clean_at_96": 97,
+  "flagged": 31,
+  "defective_at_128_and_160": 29,
+  "clean_on_fine_grids": 99,
+  "detail": [
+   {
+    "code": 10,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": 0,
+     "handles": 1,
+     "volume_fraction": 0.016123453776041668,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    }
+   },
+   {
+    "code": 12,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.001514576099537037,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 17,
+    "at_96": {
+     "pieces": 3,
+     "cavities": 0,
+     "euler": 3,
+     "handles": 0,
+     "volume_fraction": 0.003414577907986111,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 3,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 21,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.009217438874421295,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 23,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.0003345630787037037,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 24,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.012208161530671295,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 27,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.012016013816550927,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 28,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.003837302879050926,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 31,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.007621482566550926,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 32,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.005258065682870371,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 36,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.006196198640046296,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 37,
+    "at_96": {
+     "pieces": 3,
+     "cavities": 0,
+     "euler": 3,
+     "handles": 0,
+     "volume_fraction": 0.0011302806712962963,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 3,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 3,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 41,
+    "at_96": {
+     "pieces": 3,
+     "cavities": 0,
+     "euler": 3,
+     "handles": 0,
+     "volume_fraction": 0.00010963722511574074,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 48,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.0010172526041666667,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 54,
+    "at_96": {
+     "pieces": 3,
+     "cavities": 0,
+     "euler": 3,
+     "handles": 0,
+     "volume_fraction": 0.0005289713541666666,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 3,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 3,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 58,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": 0,
+     "handles": 1,
+     "volume_fraction": 0.02255475079571759,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    }
+   },
+   {
+    "code": 59,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.00371410228587963,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 64,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.0037864402488425927,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 75,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 4.1820384837962966e-05,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 4,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 4,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 78,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": 0,
+     "handles": 1,
+     "volume_fraction": 0.014275444878472222,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    }
+   },
+   {
+    "code": 80,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": 0,
+     "handles": 1,
+     "volume_fraction": 0.009184660734953705,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    }
+   },
+   {
+    "code": 94,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.003623679832175926,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 97,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.00870655201099537,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 101,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.001503273292824074,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 107,
+    "at_96": {
+     "pieces": 3,
+     "cavities": 0,
+     "euler": 3,
+     "handles": 0,
+     "volume_fraction": 0.0023543746383101853,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 3,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 3,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 109,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.0023973253038194445,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 110,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.001506664134837963,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 3,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 111,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.00498679832175926,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 116,
+    "at_96": {
+     "pieces": 3,
+     "cavities": 0,
+     "euler": 3,
+     "handles": 0,
+     "volume_fraction": 0.001373291015625,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 3,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 3,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 123,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.0006001790364583334,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 127,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.00011415834780092593,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   }
+  ]
+ },
+ "anchors": {
+  "distance_mean": 0.00714220991358161,
+  "distance_max": 0.012057752348482609,
+  "iou_mean": 0.8735389709472656,
+  "iou_min": 0.5,
+  "code_cos_abs_mean": 0.007017574273049831,
+  "code_cos_max": 1.8998980522155762e-07
+ }
+}

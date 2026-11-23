@@ -1,0 +1,312 @@
+{
+ "checkpoint": "/home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/S10_S9_continued_to_20k/checkpoint_20000.pt",
+ "update": 20000,
+ "latent_dim": 64,
+ "spectrum": {
+  "rms": [
+   0.7739052772521973,
+   0.47018685936927795,
+   0.3491500914096832,
+   0.2658882141113281,
+   0.22539101541042328,
+   0.1822199821472168,
+   0.1556115448474884,
+   0.12982510030269623,
+   0.104714535176754,
+   0.08698183298110962,
+   0.07489233464002609,
+   0.0586434081196785,
+   0.0483127124607563,
+   0.043647415935993195,
+   0.03804035112261772,
+   0.03443693369626999,
+   0.03174714744091034,
+   0.029510140419006348,
+   0.027292370796203613,
+   0.02527499943971634,
+   0.02378445491194725,
+   0.022471459582448006,
+   0.021399378776550293,
+   0.020231690257787704,
+   0.019339730963110924,
+   0.0186447836458683,
+   0.017651496455073357,
+   0.016895100474357605,
+   0.016120953485369682,
+   0.015440599992871284,
+   0.014918049797415733,
+   0.01436560321599245,
+   0.013907563872635365,
+   0.013341406360268593,
+   0.01283984910696745,
+   0.01246038731187582,
+   0.01200139056891203,
+   0.0116556566208601,
+   0.011279885657131672,
+   0.011038792319595814,
+   0.010719506070017815,
+   0.01042205560952425,
+   0.010151093825697899,
+   0.009883387014269829,
+   0.009663442149758339,
+   0.009443886578083038,
+   0.009149229153990746,
+   0.008948695845901966,
+   0.008712555281817913,
+   0.008480748161673546,
+   0.00827938225120306,
+   0.0080586401745677,
+   0.007810898125171661,
+   0.00761371199041605,
+   0.007390009704977274,
+   0.007199258077889681,
+   0.007002254016697407,
+   0.006811124738305807,
+   0.006615752819925547,
+   0.006405310705304146,
+   0.006138879340142012,
+   0.005848984234035015,
+   0.005447449628263712
+  ],
+  "total_variance": 1.182358980178833,
+  "effective_directions": 5.275387287139893,
+  "above_0.02": 24,
+  "above_0.01": 43,
+  "above_0.005": 63
+ },
+ "pose": {
+  "centroid_offset_mean": 0.03143920749425888,
+  "centroid_offset_max": 0.14464886486530304,
+  "common_shift": 0.009497235529124737,
+  "trace_mean": 0.141506165266037,
+  "trace_target": 0.15552697846461008,
+  "trace_rel_std": 0.08828189255886001
+ },
+ "topology": {
+  "codes": 128,
+  "clean_at_96": 118,
+  "flagged": 10,
+  "defective_at_128_and_160": 10,
+  "clean_on_fine_grids": 118,
+  "detail": [
+   {
+    "code": 5,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.002666332103587963,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 12,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.005420826099537037,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 23,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.00250244140625,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 37,
+    "at_96": {
+     "pieces": 4,
+     "cavities": 0,
+     "euler": 4,
+     "handles": 0,
+     "volume_fraction": 0.0011438440393518518,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 5,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 5,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 41,
+    "at_96": {
+     "pieces": 3,
+     "cavities": 0,
+     "euler": 3,
+     "handles": 0,
+     "volume_fraction": 0.00017745406539351852,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 3,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 3,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 54,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.002398455584490741,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 64,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.004827428747106482,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 75,
+    "at_96": {
+     "pieces": 0,
+     "cavities": 0,
+     "euler": 0,
+     "handles": 0,
+     "volume_fraction": 0.0,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 0,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 0,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 123,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.001255741825810185,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 127,
+    "at_96": {
+     "pieces": 3,
+     "cavities": 0,
+     "euler": 3,
+     "handles": 0,
+     "volume_fraction": 0.00026109483506944444,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 3,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 3,
+     "cavities": 0,
+     "handles": 0
+    }
+   }
+  ]
+ },
+ "anchors": {
+  "distance_mean": 0.10787588357925415,
+  "distance_max": 9.695047378540039,
+  "iou_mean": 0.8746983408927917,
+  "iou_min": 0.40625,
+  "code_cos_abs_mean": 0.007017574273049831,
+  "code_cos_max": 1.8998980522155762e-07
+ }
+}

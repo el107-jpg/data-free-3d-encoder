@@ -1,0 +1,37 @@
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_field_sphere_start_S1_update0.png
+  code 1: mean |error| in the slice 0.0009, within 0.1 of the surface 0.0011, worst 0.009
+  code 2: mean |error| in the slice 0.0008, within 0.1 of the surface 0.0011, worst 0.009
+  code 3: mean |error| in the slice 0.0008, within 0.1 of the surface 0.0011, worst 0.009
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_field_sphere_start_S1_update25.png
+  code 1: mean |error| in the slice 0.1598, within 0.1 of the surface 0.0225, worst 0.333
+  code 2: mean |error| in the slice 0.1598, within 0.1 of the surface 0.0223, worst 0.331
+  code 3: mean |error| in the slice 0.1633, within 0.1 of the surface 0.0226, worst 0.336
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_field_sphere_start_S1_update500.png
+  code 1: mean |error| in the slice 0.0301, within 0.1 of the surface 0.0122, worst 0.127
+  code 2: mean |error| in the slice 0.0245, within 0.1 of the surface 0.0091, worst 0.165
+  code 3: mean |error| in the slice 0.0571, within 0.1 of the surface 0.0066, worst 0.216
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_field_sphere_start_S1_update1000.png
+  code 1: mean |error| in the slice 0.0232, within 0.1 of the surface 0.0161, worst 0.098
+  code 2: mean |error| in the slice 0.0376, within 0.1 of the surface 0.0137, worst 0.187
+  code 3: mean |error| in the slice 0.0500, within 0.1 of the surface 0.0053, worst 0.161
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_field_sphere_start_S2_update1000.png
+  code 1: mean |error| in the slice 0.0277, within 0.1 of the surface 0.0147, worst 0.166
+  code 2: mean |error| in the slice 0.0242, within 0.1 of the surface 0.0063, worst 0.121
+  code 3: mean |error| in the slice 0.0646, within 0.1 of the surface 0.0107, worst 0.254
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_field_sphere_start_S3_update300.png
+  code 1: mean |error| in the slice 0.0465, within 0.1 of the surface 0.0204, worst 0.201
+  code 2: mean |error| in the slice 0.0487, within 0.1 of the surface 0.0194, worst 0.213
+  code 3: mean |error| in the slice 0.0564, within 0.1 of the surface 0.0228, worst 0.236
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_field_sphere_start_S3_update1000.png
+  code 1: mean |error| in the slice 0.0526, within 0.1 of the surface 0.0105, worst 0.244
+  code 2: mean |error| in the slice 0.0685, within 0.1 of the surface 0.0115, worst 0.299
+  code 3: mean |error| in the slice 0.0707, within 0.1 of the surface 0.0203, worst 0.329
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_field_fixed_base_J4_update25.png
+  code 1: mean |error| in the slice 0.0101, within 0.1 of the surface 0.0052, worst 0.050
+  code 2: mean |error| in the slice 0.0116, within 0.1 of the surface 0.0056, worst 0.047
+  code 3: mean |error| in the slice 0.0091, within 0.1 of the surface 0.0040, worst 0.041
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_field_fixed_base_J4_update1000.png
+  code 1: mean |error| in the slice 0.0103, within 0.1 of the surface 0.0055, worst 0.087
+  code 2: mean |error| in the slice 0.0280, within 0.1 of the surface 0.0104, worst 0.095
+  code 3: mean |error| in the slice 0.0180, within 0.1 of the surface 0.0099, worst 0.072
+done Sat 14 Nov 2026 08:49:51 PM CST

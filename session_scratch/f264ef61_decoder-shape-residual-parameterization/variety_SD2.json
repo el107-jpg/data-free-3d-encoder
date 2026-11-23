@@ -1,0 +1,31 @@
+{
+ "SD2_5000": {
+  "update": 5000,
+  "overlap": {
+   "mean_pair": 0.5783083438873291,
+   "nearest_mean": 0.4039835035800934,
+   "nearest_se": 0.004272783666242977
+  },
+  "surface": {
+   "mean_pair": 0.10187289217985317,
+   "nearest_mean": 0.06240268792801847,
+   "nearest_se": 0.0007097195562098506
+  },
+  "field": {
+   "mean_pair": 0.10577251017093658,
+   "nearest_mean": 0.06216592714190483,
+   "nearest_se": 0.0008225751456042232
+  },
+  "shape": {
+   "fill_mean": 0.12403389341542592,
+   "area_mean": 3.489430390677041,
+   "compactness_median": 0.38555384753266864,
+   "compactness_p10": 0.28589241388859704,
+   "half_thickness_median": 0.30050793290138245,
+   "half_thickness_p10": 0.23516317456960678,
+   "volume_rel_std": 0.14792883978659974,
+   "area_rel_std": 0.0899132688864513,
+   "compactness_std": 0.08051933984382889
+  }
+ }
+}

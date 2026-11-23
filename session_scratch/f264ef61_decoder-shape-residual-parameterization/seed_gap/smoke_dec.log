@@ -1,0 +1,4 @@
+[gpu_capped] memory capped at 75% (~11.6 of 15.5 GiB); busy time throttled to ~70%
+shape 0
+shape 1
+saved /home/eric-luo/.claude/jobs/f264ef61/tmp/seed_gap/smoke_dec.json

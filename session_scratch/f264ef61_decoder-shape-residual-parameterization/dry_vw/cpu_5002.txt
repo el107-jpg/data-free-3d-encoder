@@ -1,0 +1,5 @@
+resumed from /home/eric-luo/.claude/jobs/f264ef61/tmp/dry_vw/checkpoint_last.pt at step 5000
+step   5000  loss 9.811  div 7.726 (ratio 0.464, dead zone 0.00)  eik 0.0075  cons 0.0171  pose c 0.00063 s 3.6e-05 a 8e-05  e 0.00982  graph full [frag 0.0+0.25 cav 0.0 gap 1.0 wall 53.125]  lr 6.36e-04  |g| 89.1  65522 ms  anchors d 0.0127 iou 0.85
+step   5001  loss 9.43  div 7.369 (ratio 0.481, dead zone 0.00)  eik 0.00807  cons 0.0179  pose c 0.00032 s 4.3e-05 a 9.4e-05  e 0.0104  graph full [frag 0.0+0.125 cav 0.0 gap 2.125 wall 59.25]  lr 6.36e-04  |g| 74.5  65246 ms  anchors d 0.0134 iou 0.84
+diag   5002  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 6.5  wobble 0.07  descriptor spread 0.279  probe distance 0.1049  137.8 s  anchors iou 0.86 (min 0.53) code cos max 0.00
+exit 0

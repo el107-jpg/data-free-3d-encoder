@@ -1,0 +1,4 @@
+[gpu_capped] memory capped at 75% (~11.6 of 15.5 GiB); busy time throttled to ~70%
+diag      0  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 0.0  wobble 0.27  descriptor spread 0.010  probe distance 0.0013  8.3 s  anchors iou 0.35 (min 0.09) code cos max 0.00
+step      0  loss 33.54  div 20.87 (ratio 0.005, dead zone 0.00)  eik 0.000198  cons 0.00577  pose c 0.00028 s -5.7e-05 a -2.3e-05  e 0.004  graph full [frag 0.0+0.0 cav 0.0 gap 0.0 wall 0.0]  lr 5.09e-06  |g| 921  2343 ms  anchors d 0.1233 iou 0.43
+step     25  loss 23.45  div 12.02 (ratio 0.059, dead zone 0.00)  eik 0.0263  cons 0.0585  pose c -1.5e-05 s 0.0052 a -1.1e-05  e 0.0455  graph sign [frag 0.0+0.0 cav 0.0 gap 40.25 wall 119.75]  lr 1.32e-04  |g| 99.5  1790 ms  anchors d 0.0920 iou 0.35

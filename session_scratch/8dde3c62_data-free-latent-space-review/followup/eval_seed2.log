@@ -1,0 +1,6 @@
+[gpu_capped] memory capped at 25% (~3.9 of 15.5 GiB); busy time throttled to ~70%
+seed2_1000 spectrum: {'total_variance': 0.0841, 'effective_directions': 6.6825, 'above_0.02': 11, 'above_0.01': 14, 'above_0.005': 18} | top 16: 0.181 0.131 0.094 0.082 0.072 0.064 0.055 0.048 0.039 0.032 0.025 0.019 0.013 0.010 0.009 0.007
+seed2_1000 pose: {'centroid_offset_mean': 0.0112, 'centroid_offset_max': 0.0227, 'common_shift': 0.007, 'trace_mean': 0.1416, 'trace_target': 0.1555, 'trace_rel_std': 0.041}
+seed2_1000 topology: {'codes': 128, 'clean_at_96': 128, 'flagged': 0, 'defective_at_128_and_160': 0, 'clean_on_fine_grids': 128}
+seed2_1000 anchors: {'distance_mean': 0.026, 'distance_max': 0.081, 'iou_mean': 0.815, 'iou_min': 0.533, 'code_cos_abs_mean': 0.02, 'code_cos_max': 0.019}
+saved /home/eric-luo/.claude/jobs/8dde3c62/tmp/followup/seed2_1000.json

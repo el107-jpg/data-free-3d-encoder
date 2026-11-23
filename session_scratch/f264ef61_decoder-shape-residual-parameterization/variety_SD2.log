@@ -1,0 +1,7 @@
+[gpu_capped] memory capped at 75% (~11.6 of 15.5 GiB); busy time throttled to ~70%
+
+SD2_5000 (update 5000)
+  1 - overlap      : mean over pairs 0.5783; to the nearest other shape 0.4040 +/- 0.0043
+  surface distance : mean over pairs 0.1019; to the nearest other shape 0.0624 +/- 0.0007
+  field difference : mean over pairs 0.1058; to the nearest other shape 0.0622 +/- 0.0008
+  shapes: fill 0.124 of the ball; surface area 3.49; compactness median 0.39 (thinnest tenth 0.29); half-thickness median 0.301 (thinnest tenth 0.235); spread between shapes: volume 0.15, area 0.09, compactness 0.08

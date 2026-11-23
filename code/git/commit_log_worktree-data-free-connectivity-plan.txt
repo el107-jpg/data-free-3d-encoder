@@ -1,0 +1,1055 @@
+commit 6e3965e1a671c6af9eb8c955c687038ea211b4fb
+Date:   2026-11-17 12:07:49 -0600
+
+    Add distillation into a changed decoder form (scripts/distill_data_free.py)
+    
+    arm_planner/data_free/distill.py trains a student decoder to reproduce a
+    teacher's field, value and slope, at fresh random codes and the anchor codes,
+    on points half uniform and half near the teacher's surface. The script loads
+    the teacher's checkpoint with changed settings (e.g. sphere_base=False) as the
+    student, so it starts from the teacher's weights, anchor codes and
+    multipliers, distils, clears the optimiser state and saves a checkpoint that
+    training continues from. Used to give the base-free decoder a start with the
+    fixed-base model's shapes and code directions.
+    
+    Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/distill.py | 112 +++++++++++++++++++++++++++++++++++++++
+ scripts/distill_data_free.py     |  58 ++++++++++++++++++++
+ tests/test_data_free_train.py    |  29 ++++++++++
+ 3 files changed, 199 insertions(+)
+commit 082db17e131896c2cff978ddb5a935712c5f8d2e
+Date:   2026-11-14 21:49:46 -0600
+
+    Add anchor_weight_hold_steps and eikonal_all_points
+    
+    - anchor_weight_hold_steps keeps the anchor pull at its starting weight (zero
+      with anchor_weight_start = 0) before the ramp begins. On the base-free
+      decoder the full pull shrinks every shape to 3% of its volume within 25
+      updates, while all codes still give the same field.
+    - eikonal_all_points makes the slope term count the near-surface samples that
+      the fixed-surface consistency setting leaves out of both field terms; the
+      consistency term is unchanged. Without the sphere base the slope at the
+      surface otherwise runs to about 2.
+    
+    Both off by default.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/config.py |  9 +++++++++
+ arm_planner/data_free/train.py  | 10 +++++++---
+ tests/test_data_free_train.py   | 22 ++++++++++++++++++++++
+ 3 files changed, 38 insertions(+), 3 deletions(-)
+commit 2a36fe0513a97052b6dfca030f777982e0223024
+Date:   2026-11-14 20:52:05 -0600
+
+    Add outer_limit: cut a base-free decoder off with the bounding ball instead of blending
+    
+    Blending the network into R - rho near the bounding radius pins the field
+    there to a sphere of radius R, which is wrong for every other shape: contour
+    charts of the sphere-start runs show a slope of about 0.5 between a shrunken
+    surface and the pinned ring, and the slope term at its weight ceiling for the
+    whole run. outer_limit="min" takes the smooth minimum of the network's output
+    and R_b - rho (the shape cut off by the ball), so nothing is pinned inside.
+    The default stays "blend" so saved runs load unchanged.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/config.py  |  8 ++++++++
+ arm_planner/data_free/decoder.py |  9 +++++++++
+ tests/test_data_free_core.py     | 25 +++++++++++++++++++++++++
+ 3 files changed, 42 insertions(+)
+commit 394cccbdcd2d3bde3048a5620015da0b11f349ea
+Date:   2026-11-14 20:21:04 -0600
+
+    Add anchor_weight_ramp_steps: bring the anchor pull in gradually
+    
+    The anchor pull's weight can rise linearly from anchor_weight_start times its
+    value to the full value over the first updates. At update 0 the anchor pull is
+    70 to 90% of the gradient, before the slope and consistency weights have
+    risen; without the fixed sphere in the formula that knocks the field off at
+    once. The weight in use is logged as anchor/weight. Off by default.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/config.py |  5 +++++
+ arm_planner/data_free/train.py  | 12 +++++++++++-
+ tests/test_data_free_train.py   | 15 +++++++++++++++
+ 3 files changed, 31 insertions(+), 1 deletion(-)
+commit 5efc02e906594e81f4f20e779af9fec67c26b91a
+Date:   2026-11-14 19:27:08 -0600
+
+    Add sphere_base and init_main_from: train without the fixed sphere in the formula
+    
+    With sphere_base off the main network's own output is the field, blended into
+    the sphere's field between window_start and the bounding radius so nothing can
+    reach beyond it. A new run then starts its main network from saved weights
+    (init_main_from), fitted to a sphere beforehand; a resume does not need the
+    file. Motivation: with the sphere as a fixed base, a surface that does not
+    face away from the centre has to cancel the sphere's slope first, and measured
+    slope errors follow that order. Both off by default.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/config.py  | 12 ++++++++++++
+ arm_planner/data_free/decoder.py | 13 ++++++++++---
+ arm_planner/data_free/train.py   | 13 +++++++++++++
+ tests/test_data_free_core.py     | 29 +++++++++++++++++++++++++++++
+ tests/test_data_free_train.py    | 25 +++++++++++++++++++++++++
+ 5 files changed, 89 insertions(+), 3 deletions(-)
+commit eec4a4b366f4cb61dcf9b2543d477b92b60f9674
+Date:   2026-11-14 17:19:30 -0600
+
+    Add out_lr_scale, lr_decay_start and weight_average_decay
+    
+    - out_lr_scale: the main network's final layer gets its own learning rate as
+      a fraction of lr (a second optimiser group). Resuming a one-group checkpoint
+      into two groups, or back, carries each parameter's Adam state over.
+    - lr_decay_start: hold the rate until this step, then cosine down to the floor.
+    - weight_average_decay: a running average of the weights that does not take
+      part in training; every save also writes checkpoint_average_last.pt with the
+      averaged weights as the model.
+    
+    All off by default.
+    
+    Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/config.py | 13 ++++++
+ arm_planner/data_free/train.py  | 92 +++++++++++++++++++++++++++++++++++++----
+ tests/test_data_free_train.py   | 72 ++++++++++++++++++++++++++++++++
+ 3 files changed, 168 insertions(+), 9 deletions(-)
+commit a9fa1ce4e818cacc7cccac868917109d57b51804
+Date:   2026-11-14 16:04:06 -0600
+
+    Add weight_norm: direction and size of each unit's weights learned separately
+    
+    The main network's hidden layers and output layer can store their weights as
+    w = g v / |v| (as DeepSDF does). The function at the start is unchanged. All
+    direction vectors start at the same length, so an optimiser step turns a unit
+    of the output layer (weights about 0.004) by the same angle as a unit of a
+    hidden layer; without it the output layer changes about ten times faster in
+    relative terms and takes nearly all of the variety gradient. Off by default.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/config.py  |  7 +++++++
+ arm_planner/data_free/decoder.py | 11 +++++++++++
+ tests/test_data_free_core.py     | 29 +++++++++++++++++++++++++++++
+ tests/test_data_free_train.py    | 16 ++++++++++++++++
+ 4 files changed, 63 insertions(+)
+commit 371fb21bb981e330b0eb6c560b917e44dc7eafb1
+Date:   2026-11-14 14:24:47 -0600
+
+    Add crease_weight: a sparse-curvature term that favours flat faces and sharp edges
+    
+    losses.crease measures how fast the surface normal turns over a short step
+    along the surface and costs it turn^2 / (turn^2 + scale^2). Flat is free and
+    the cost levels off at 1, so packing a turn into an edge is cheaper than
+    spreading it over a bend: 0 on a plane, 0.41 on a ball of radius 0.4, 0.04 on
+    a cube of the same size, falling steadily along the ball-to-cube family.
+    Anchor codes are left out unless crease_on_anchors. Off by default.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/config.py | 17 ++++++++++
+ arm_planner/data_free/losses.py | 71 +++++++++++++++++++++++++++++++++++++++++
+ arm_planner/data_free/train.py  | 11 +++++++
+ tests/test_data_free_losses.py  | 69 +++++++++++++++++++++++++++++++++++++++
+ tests/test_data_free_train.py   | 10 ++++++
+ 5 files changed, 178 insertions(+)
+commit f34780e1ff0940de41c330822de6283287212405
+Date:   2026-11-13 18:42:06 -0600
+
+    Add variety_surface_band: the variety push can compare shapes by surface distance
+    
+    With a band the distance between two shapes is the mean field difference over the shared sample points
+    within that distance of either surface, where it equals the distance from one surface to the other. Features
+    then count by surface area instead of volume, and field differences far from both surfaces count for nothing.
+    No extra evaluations. Off by default (0 = the whole ball, unchanged).
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/config.py |  7 ++++++
+ arm_planner/data_free/losses.py | 29 +++++++++++++++++++------
+ tests/test_data_free_losses.py  | 47 +++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 77 insertions(+), 6 deletions(-)
+commit 41a23fa9af6a04d1a45db9ebb1bd0b889ddbd5a6
+Date:   2026-11-13 11:04:08 -0600
+
+    Add fourier_bands: sines and cosines of the coordinates as extra input to the main network
+    
+    sin and cos of pi 2^k x for k < n, at the input and at the halfway skip. Lets the smooth network draw finer
+    detail (3 bands: period 0.5; 5 bands: 0.125), at the price of making ripple as easy. Off by default (raw
+    coordinates, as the design note asks); old checkpoints load unchanged.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/config.py  |  6 ++++++
+ arm_planner/data_free/decoder.py | 23 ++++++++++++++++++++---
+ tests/test_data_free_core.py     | 23 +++++++++++++++++++++++
+ 3 files changed, 49 insertions(+), 3 deletions(-)
+commit c63f3040f28a02bf8d541a1366fc7f0a6c03c800
+Date:   2026-11-13 10:57:24 -0600
+
+    Procedural anchors: extend an existing set, restrict to chosen kinds
+    
+    --extend-from keeps the anchors of an existing set and chooses new ones as different as possible from them
+    and from each other; --kinds restricts the candidates; --tag labels the new ones; --id-base keeps their ids
+    apart. Used to add 16 thin rods and 16 thin sheets to the 64 thick anchors
+    (datasets/data_free_anchors_procedural_thick_plus_thin_20261113_v6).
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ scripts/build_data_free_procedural_anchors.py | 49 ++++++++++++++++++++++-----
+ 1 file changed, 41 insertions(+), 8 deletions(-)
+commit a4d1dc887a66b41b61631335354906da8b432880
+Date:   2026-11-13 02:04:10 -0600
+
+    Layer norm: apply the code's scale and shift in one operation
+    
+    Saves one stored tensor per normalised layer. The all-layers run still needs fewer points per pass to fit
+    in 75% of the GPU.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/decoder.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+commit aab837f0dc75f910260cd35c09b14f51184f38bf
+Date:   2026-11-13 01:03:03 -0600
+
+    Add layer_norm_layers: layer norm on the last n hidden layers of the main network
+    
+    At every point the layer's values are brought to mean 0 and variance 1 across the units, before the code's
+    scale and shift. A candidate remedy for the dead units of the last hidden layer. Normalising across units
+    keeps the field a plain function of code and position, as the derivative terms need. Off by default.
+    The forward pass can also hand back every layer's input to the activation, for unit-activity measurements.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/config.py  |  6 ++++++
+ arm_planner/data_free/decoder.py | 28 ++++++++++++++++++++++------
+ tests/test_data_free_core.py     | 29 +++++++++++++++++++++++++++++
+ 3 files changed, 57 insertions(+), 6 deletions(-)
+commit 879a6c5912a306e7c9befe0b127c857e3a3a90da
+Date:   2026-11-13 01:01:33 -0600
+
+    Leaky activation: no temporaries
+    
+    The first form (leak * x + (1 - leak) * softplus) made three extra tensors per layer and ran out of GPU
+    memory in the start-up evaluation pass. Use lerp, in place when no gradient is being recorded.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/decoder.py | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+commit ca74de95bcd74a017db5e586d9526a09cb58490c
+Date:   2026-11-13 00:56:22 -0600
+
+    Add activation_leak: a softplus that keeps a slope when a unit is off
+    
+    leak * x + (1 - leak) * softplus(x) in the main network. Measured with the plain activation: 99 of the 512
+    units of the last hidden layer are dead by update 1,000 and 405 by update 7,000, held at inputs around -1.7
+    where softplus passes no gradient. Off by default (0 = plain softplus, unchanged).
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/config.py  |  5 +++++
+ arm_planner/data_free/decoder.py | 10 +++++++++-
+ tests/test_data_free_core.py     | 22 ++++++++++++++++++++++
+ 3 files changed, 36 insertions(+), 1 deletion(-)
+commit 73044d8b53dd6a90063c9e9fb988378e3e7c04c0
+Date:   2026-11-13 00:28:01 -0600
+
+    Merge branch 'procedural-anchors': procedural anchor objects and anchor_exempt_size
+    
+    Brings the procedural anchor builder, shape descriptors, the pose_power option (default 2, the mass rule)
+    and anchor_exempt_size together with code_isotropy_weight, so one run can use procedural anchors and the
+    even-code penalty. All 285 data-free tests pass on the merged code.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+commit e671377ee39c7422ed635a4c69cc088ba5fc486f
+Date:   2026-11-12 18:48:04 -0600
+
+    Add code_isotropy_weight: every code direction should reach the main network equally
+    
+    losses.code_isotropy pushes random unit directions through the side network (code -> scales and shifts)
+    with a forward-mode derivative and penalises the variance of the log change over directions. Zero when a
+    step in any direction changes the scales and shifts by the same amount; only the side network is evaluated.
+    Off by default.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py |  7 +++++++
+ arm_planner/data_free/losses.py | 27 +++++++++++++++++++++++++++
+ arm_planner/data_free/train.py  |  7 +++++++
+ tests/test_data_free_train.py   | 30 ++++++++++++++++++++++++++++++
+ 4 files changed, 71 insertions(+)
+commit 5be9168434176149679c169e2ef2a24f8fe58f6e
+Date:   2026-11-12 17:07:07 -0600
+
+    Descriptors of decoded shapes, at random codes or at a set distance from the anchor codes
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ scripts/describe_data_free_shapes.py | 82 ++++++++++++++++++++++++++++++++++++
+ 1 file changed, 82 insertions(+)
+commit 7f19302d3820e16c3e8dafa09f4b3a853add1cf5
+Date:   2026-11-12 15:55:14 -0600
+
+    Procedural anchors: a thickness multiplier, wider folds
+    
+    At the first thicknesses (rods 0.12 to 0.20 across) three quarters of the anchors were under 0.16 across and
+    the decoder reproduced the rods as strings of beads; by update 1,500 of run P3 random shapes were breaking
+    up and emptying. --thickness scales the rod radii and sheet half-thicknesses; at 1.8 the set matches the
+    Thingi anchors that worked in volume (1.1 to 4.5% of the box) and none is under 0.16 across.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ scripts/build_data_free_procedural_anchors.py | 22 +++++++++++++---------
+ scripts/data_free_queue/queue_run2.sh         |  2 +-
+ 2 files changed, 14 insertions(+), 10 deletions(-)
+commit b9257eb0b6ff51f9f620cfd4aaffb4f74b80ee91
+Date:   2026-11-12 15:05:26 -0600
+
+    Launcher: default to the scale-to-fit procedural anchors
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ scripts/data_free_queue/queue_run2.sh | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+commit 4257b66462a7e145a29c2235ccee945ec7607fc9
+Date:   2026-11-12 15:05:15 -0600
+
+    Mass rule is the default again; far-reaching anchors are scaled down to fit
+    
+    pose_power 6 does not train with the anchor recipe: three runs (P1, P2, X2) ended with a quarter to a half
+    of the random codes decoding to an empty shape, with either size-weight ceiling, while the same recipe
+    and anchors with pose_power 2 stayed clean (X1). Under the extent rule a shape that is too small can only
+    grow by reaching further out, which the decoder does last; shapes were at 0.69 of the target size by
+    update 100 and never recovered. pose_power stays as an option, with the finding recorded next to it.
+    
+    To admit far-reaching anchor shapes anyway: build_data_free_procedural_anchors.py --fit-reach scales a
+    shape that would leave the outer radius down until it fits (it is then smaller than the size target), and
+    anchor_exempt_size leaves the anchor rows out of the size term. repose_data_free_anchors.py puts an
+    existing anchor file into another pose rule from its stored grids.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py               | 26 +++++--
+ arm_planner/data_free/train.py                |  9 ++-
+ scripts/build_data_free_procedural_anchors.py | 47 ++++++++++---
+ scripts/repose_data_free_anchors.py           | 97 +++++++++++++++++++++++++++
+ tests/test_data_free_losses.py                | 16 ++---
+ tests/test_data_free_train.py                 | 30 +++++++--
+ 6 files changed, 196 insertions(+), 29 deletions(-)
+commit 700cea2ca78af75aa5fd9c2bb8bd597206a50765
+Date:   2026-11-12 13:36:56 -0600
+
+    Extent size term: error of size^2, not linear in the moment
+    
+    The first version took the size error linear in the p-th moment. The moment goes like size^p, so it
+    hardly changes when a small shape shrinks further, and the pull back on a shape that is too small faded
+    like size^(p-2). In run P1 half of the random codes decoded to an empty shape after 1,000 updates and
+    the rest were 5 to 17% too small. The term is now (s1 - T)(s2 - T) with s = moment^(2/p) from each half,
+    which goes like size^2 as the covariance trace does, with the first-order low bias of the root divided
+    out. Measured at N = 2048: a ball reads 1.001 of its true size^2, a thin rod 1.144 against 1.142; the
+    pull back on a ball of 0.8, 0.5 and 0.3 of the target radius is 1.25, 1.10 and 0.68 times the mass rule's.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/losses.py | 40 +++++++++++++++++++++++++++++++++-------
+ tests/test_data_free_losses.py  | 33 +++++++++++++++++++++++++--------
+ 2 files changed, 58 insertions(+), 15 deletions(-)
+commit 870fcd6d3b9970e83242ef9d17c20621812a974f
+Date:   2026-11-12 12:58:08 -0600
+
+    Launcher for runs from this worktree (waits for the GPU to be free)
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ scripts/data_free_queue/queue_run2.sh | 44 +++++++++++++++++++++++++++++++++++
+ 1 file changed, 44 insertions(+)
+commit ea72962ef71334f95d98c489c8006393e5fa0fe8
+Date:   2026-11-12 12:54:28 -0600
+
+    Extent-based position and size (pose_power, default 6)
+    
+    The centre and size terms weighed a shape by its mass, so a thin far part hardly counted: a ball with a
+    long rod was sized by the ball alone and the rod left the decoder's outer radius. pose_power p measures
+    both with the p-th power of the distance from the origin: the centre is the point minimising the weighted
+    p-th moment (its offset from the origin by one Newton step) and the size is (p-th moment)^(1/p), matched
+    to the ball of radius R. p = 2 is the old rule exactly, and configs saved without the field load as 2.
+    Orientation is unchanged. The anchor loader refuses a file posed under another rule; the procedural
+    anchor builder poses under the trainer's rule and stamps the file. The probe readout reports the new
+    centre offset and size next to the mass-based numbers.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py               | 19 ++++++
+ arm_planner/data_free/losses.py               | 90 +++++++++++++++++++++++++--
+ arm_planner/data_free/train.py                | 15 +++++
+ scripts/build_data_free_procedural_anchors.py | 60 +++++++++++++-----
+ tests/test_data_free_losses.py                | 53 +++++++++++++++-
+ tests/test_data_free_train.py                 | 17 ++++-
+ 6 files changed, 227 insertions(+), 27 deletions(-)
+commit df76fe0189ca82d8dc9d9db3e629ecf1a6c01cc3
+Date:   2026-11-12 12:15:14 -0600
+
+    Procedural anchor objects chosen by kind of geometry, and shape descriptors
+    
+    build_data_free_procedural_anchors.py makes anchors as skeletons grown by a radius (rods, sheets, plates
+    or balls with rods, thick lumps), puts them in the trainer's pose convention, applies the same thin-feature
+    and thin-gap test as the Thingi anchors plus a gap margin, and picks a set that covers the families and is
+    spread out in descriptor space. data_free_shape_descriptors.py measures, from a field grid, how rod-like,
+    sheet-like or blob-like a solid is, whether it is star-shaped, how folded, how solid, how branched and how
+    close to having a handle. No tests yet.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ scripts/build_data_free_procedural_anchors.py | 463 ++++++++++++++++++++++++++
+ scripts/data_free_shape_descriptors.py        | 167 ++++++++++
+ 2 files changed, 630 insertions(+)
+commit 135cf43ef08949bfbc0afe1bce9fc0adc95cbb8b
+Date:   2026-11-12 02:33:02 -0600
+
+    Add field_ramp_steps: ramp in the eikonal and consistency weights
+    
+    The upper limits of the two multipliers rise geometrically from field_ramp_start to their configured
+    values over field_ramp_steps updates, so variety can develop before the field-accuracy terms are back at
+    full strength. Off by default.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py |  6 ++++++
+ arm_planner/data_free/train.py  | 22 ++++++++++++++++++++++
+ tests/test_data_free_train.py   | 17 +++++++++++++++++
+ 3 files changed, 45 insertions(+)
+commit b7d3add3cec2a4c0ac6a64b0a110e829b51b0fa2
+Date:   2026-11-12 01:46:18 -0600
+
+    Tidy-up stage: pin the surface itself, and a field-only switch
+    
+    shape_hold_newton slides the sample points onto the frozen copy's surface with Newton steps and asks the
+    decoder to stay at zero there, so the field next to the surface is free to change (the band version holds
+    the old values there). field_only leaves only the eikonal and consistency terms in the loss; the pose,
+    barrier and graph terms are still measured but push nothing.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py | 10 ++++++++++
+ arm_planner/data_free/train.py  | 32 +++++++++++++++++++++++++++-----
+ tests/test_data_free_train.py   | 31 +++++++++++++++++++++++++++++++
+ 3 files changed, 68 insertions(+), 5 deletions(-)
+commit 396a4793e1408aa99bdc7d273ba56fa42f912176
+Date:   2026-11-12 00:54:44 -0600
+
+    Resume: make a learning-rate override take effect
+    
+    The saved optimiser and scheduler state kept the old base rate, so `--set lr=...` on a resume was ignored.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/train.py | 6 ++++++
+ 1 file changed, 6 insertions(+)
+commit 80ccee956bd5a3d1e8d89698f85d61eb16254473
+Date:   2026-11-12 00:37:52 -0600
+
+    Add a tidy-up stage: hold the shapes against a frozen copy while the field terms repair the field
+    
+    shape_hold_weight keeps a frozen copy of the decoder from the start of the stage and penalises field change near its surfaces; variety_weight scales the variety objective (0 = off). Eikonal now leaves out the same near-surface starting points that the fixed-surface consistency term leaves out.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py | 10 ++++++++++
+ arm_planner/data_free/losses.py | 14 ++++++++++++--
+ arm_planner/data_free/train.py  | 16 ++++++++++++++++
+ tests/test_data_free_train.py   | 26 ++++++++++++++++++++++++++
+ 4 files changed, 64 insertions(+), 2 deletions(-)
+commit cc24598cebc1bc99c137aadd433fa744c16e2bce
+Date:   2026-11-11 23:59:22 -0600
+
+    Graph cut tests: handle point-segment pairs in blocks to bound memory
+    
+    A burst of thin features produced tens of millions of pairs and ran a training out of GPU memory. Results are unchanged.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/graph.py | 23 +++++++++++++++--------
+ 1 file changed, 15 insertions(+), 8 deletions(-)
+commit 7d979247aad78f5fd17eff36cf7e904e8fc54897
+Date:   2026-11-11 23:53:12 -0600
+
+    Add consistency_surface_scale: a dial on how strongly consistency may move the surface
+    
+    The landing-route gradient is multiplied by the scale (1 = ordinary, 0 = fixed surface), at the cost of ordinary consistency. Cutting the route completely made training grow shapes and fall back to the sphere.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py |  6 ++++++
+ arm_planner/data_free/field.py  | 12 +++++++++++-
+ tests/test_data_free_core.py    |  7 +++++++
+ 3 files changed, 24 insertions(+), 1 deletion(-)
+commit e0e9fe261460310be4d13e5dd6020f50f315e895
+Date:   2026-11-11 23:19:34 -0600
+
+    Add field_moves_surface: a push on the field at a point also moves the surface it belongs to
+    
+    With the consistency landing route blocked, pushes on far-field values no longer reached the shape. The neighbour term and the anchor pull now read a copy of the field whose gradient also lands on the field at each point's surface guess. Values are unchanged. Off by default.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py |  8 ++++++++
+ arm_planner/data_free/field.py  | 23 ++++++++++++++++++++++-
+ arm_planner/data_free/losses.py |  5 +++--
+ arm_planner/data_free/train.py  |  3 ++-
+ tests/test_data_free_core.py    | 15 ++++++++++++++-
+ tests/test_data_free_train.py   | 19 +++++++++++++++++++
+ 6 files changed, 68 insertions(+), 5 deletions(-)
+commit 7fb1d0ed198039851933f54db010a07f2f3d4eff
+Date:   2026-11-11 23:01:02 -0600
+
+    Anchor build: count an unreadable metadata file as rejected instead of crashing
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ scripts/build_data_free_anchors.py | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+commit 9d466a9c187399cc58457b6638e93a302750dade
+Date:   2026-11-11 22:15:50 -0600
+
+    Add a consistency tolerance schedule and a consistency term that cannot move the surface
+    
+    consistency_tolerance_start with hold and tighten steps starts the tolerance loose and tightens it geometrically to the configured value. consistency_fixed_surface computes the landing value with the network's weights held fixed, so the term's gradient reaches the parameters only through the starting point; consistency_min_depth leaves out starting points near the surface. Both off by default.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/config.py | 18 ++++++++++++++++++
+ arm_planner/data_free/field.py  | 15 ++++++++++++++-
+ arm_planner/data_free/losses.py | 12 ++++++++++--
+ arm_planner/data_free/train.py  | 25 ++++++++++++++++++++++++-
+ tests/test_data_free_core.py    | 34 ++++++++++++++++++++++++++++++++++
+ tests/test_data_free_train.py   | 22 ++++++++++++++++++++++
+ 6 files changed, 122 insertions(+), 4 deletions(-)
+commit f88a4b3bb431ba30171acff68f4dbbe18fea3e01
+Date:   2026-11-11 22:06:38 -0600
+
+    Add correction_bound_inner: let the decoder's field leave the centre empty
+    
+    The symmetric bound made every shape contain the ball of radius R - A around the origin, which capped plates at about 3:1 and forbade shapes whose centroid lies outside them. A separate inward bound removes that limit and keeps the outer one (shape inside radius R + A). Off by default.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/config.py  | 13 ++++++++++++-
+ arm_planner/data_free/decoder.py | 16 +++++++++++++---
+ tests/test_data_free_core.py     | 31 +++++++++++++++++++++++++++++++
+ 3 files changed, 56 insertions(+), 4 deletions(-)
+commit 2995317fa44a96efda10c9c837dbf7ee604d6e92
+Date:   2026-11-11 12:08:25 -0600
+
+    Anchor build: save every eligible object, take the size target and base radius as arguments, refuse to overwrite
+    
+    --save-eligible writes eligible.pt (grids of all eligible objects with a flag for the chosen ones) so objects that were not chosen can serve as held-out targets. --cov-trace-target and --base-radius let a build follow a non-default decoder configuration. An output folder that already holds anchors.pt is left alone.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ scripts/build_data_free_anchors.py | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+commit 46724b8265a8b782ec52c0fd14c39aa9888606de
+Date:   2026-11-11 04:23:11 -0600
+
+    Add anchor_exempt_field: leave anchor rows out of the eikonal and consistency constraints
+    
+    Anchor objects carry about twice the consistency error of the decoder's own shapes, which holds the batch-mean constraint at its limit and its multiplier at the cap. The switch computes the two field-accuracy constraints on the other rows only. Off by default.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/config.py |  5 +++++
+ arm_planner/data_free/train.py  | 11 +++++++++--
+ tests/test_data_free_train.py   | 24 ++++++++++++++++++++++++
+ 3 files changed, 38 insertions(+), 2 deletions(-)
+commit 8f5188cfcf50c356338b34ca50b4bf5a9aa3085e
+Date:   2026-11-11 02:18:59 -0600
+
+    Weight passes of unequal size by the mean size in the batch-wide neighbour term
+    
+    A pass that holds few ordinary codes (a frame pass holds one) divided its terms by its own count and so pushed those codes many times too hard. The passes now share one divisor, the mean count, which keeps the summed gradient equal to the whole-update gradient.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/losses.py | 10 ++++++----
+ arm_planner/data_free/train.py  |  6 +++++-
+ tests/test_data_free_losses.py  | 13 +++++++++++++
+ 3 files changed, 24 insertions(+), 5 deletions(-)
+commit 77d9985b8fac7125af41569a0ef141b0fc11314c
+Date:   2026-11-11 02:16:54 -0600
+
+    Add a complete-frame pass that runs beside anchors, and a neighbourhood pull around each anchor
+    
+    weak_frame_full makes the frame the whole tangent frame at the first code of a pass, so no direction usage has to be measured; a frame pass and anchor passes can now share an update. anchor_radius meets each anchor at a random code up to two radii away and weights the pull by a Gaussian of the distance, so an object cannot be reproduced in an isolated spike at its code.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/config.py | 14 ++++++++
+ arm_planner/data_free/losses.py | 22 +++++++++---
+ arm_planner/data_free/train.py  | 78 +++++++++++++++++++++++++++++++----------
+ tests/test_data_free_losses.py  |  5 +++
+ tests/test_data_free_train.py   | 71 +++++++++++++++++++++++++++++++++++--
+ 5 files changed, 166 insertions(+), 24 deletions(-)
+commit 8f74d3fad5988610f1b7d06cc2fa79e403617c6a
+Date:   2026-11-11 02:00:38 -0600
+
+    Show the anchor fit in the periodic diagnostics line
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/train.py | 2 ++
+ 1 file changed, 2 insertions(+)
+commit ef7b02a834a0b54b7ff41b0df519302b45767607
+Date:   2026-11-11 01:53:23 -0600
+
+    Add anchor objects: real shapes the decoder reproduces at fixed, perpendicular codes
+    
+    scripts/build_data_free_anchors.py picks Thingi10K solids that fit the decoder's hard limits and the trainer's pose convention, by farthest-point selection on the trainer's shape distance, and stores their distance grids. In training a few codes per pass are anchor codes; their field is pulled onto the object's grid at the points the pass already samples. Anchor codes start on an orthonormal frame and its negatives, are frozen for anchor_freeze_steps and can then be trained with a ramped learning rate. Off by default (anchor_path empty).
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ
+
+
+ arm_planner/data_free/config.py    |  24 +++
+ arm_planner/data_free/losses.py    |  48 ++++++
+ arm_planner/data_free/train.py     | 138 +++++++++++++++-
+ scripts/build_data_free_anchors.py | 314 +++++++++++++++++++++++++++++++++++++
+ tests/test_data_free_losses.py     |  41 +++++
+ tests/test_data_free_train.py      | 108 +++++++++++++
+ 6 files changed, 668 insertions(+), 5 deletions(-)
+commit 6234dda2ef2a8e8ae24e14c791a756bc7073bf90
+Date:   2026-11-11 01:37:38 -0600
+
+    Add the frame form of the weak-direction push: log-volume of a frame of partners
+    
+    The pair push was met by turning the used axes into the unused set (54% of the usage moved in 500 updates, the count of directions did not). In a frame pass the first code gets one partner along every used direction and a few turned in the unused ones; the term is -log det of the Gram matrix of their pose-corrected field changes, so a change that copies an existing pattern earns nothing. Off by default (weak_frame_passes=0).
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py | 14 ++++++++
+ arm_planner/data_free/losses.py | 54 ++++++++++++++++++++++++++++
+ arm_planner/data_free/train.py  | 80 +++++++++++++++++++++++++++++++++++++----
+ tests/test_data_free_losses.py  | 41 +++++++++++++++++++++
+ tests/test_data_free_train.py   | 64 +++++++++++++++++++++++++++++++++
+ 5 files changed, 247 insertions(+), 6 deletions(-)
+commit 760e61a3134c9708ed33b0a239990d68636cd68c
+Date:   2026-11-11 01:19:35 -0600
+
+    Add weak-direction pairs: push apart codes that differ only along unused code directions
+    
+    Every weak_refresh_every updates the trainer measures how much each direction of code space changes the field. In each pass a few codes become partners of other codes: same used part, unused part turned so the pair sits weak_chord apart. Pairs get a -log push on their pose-corrected distance per unit chord and stay out of the neighbour search. Off by default (weak_pairs=0).
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py |  20 ++++++
+ arm_planner/data_free/losses.py |  35 +++++++++
+ arm_planner/data_free/train.py  | 153 +++++++++++++++++++++++++++++++++++++---
+ tests/test_data_free_losses.py  |  34 +++++++++
+ tests/test_data_free_train.py   | 108 ++++++++++++++++++++++++++++
+ 5 files changed, 342 insertions(+), 8 deletions(-)
+commit 0aba721b6c0af276cca2b2cc0f9c91985b116adc
+Date:   2026-11-10 22:45:42 -0600
+
+    Add batch-wide neighbour search with the exact whole-update gradient
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py |  6 +++++
+ arm_planner/data_free/losses.py | 37 ++++++++++++++++++++++++++++--
+ arm_planner/data_free/train.py  | 51 +++++++++++++++++++++++++++++++++++++++--
+ tests/test_data_free_losses.py  | 34 +++++++++++++++++++++++++++
+ tests/test_data_free_train.py   | 22 ++++++++++++++++++
+ 5 files changed, 146 insertions(+), 4 deletions(-)
+commit f1b9a01de76d430428da3196727af34d74e23256
+Date:   2026-11-10 22:41:18 -0600
+
+    Skip the unused in-batch diversity pass when the neighbour pool is active
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/losses.py | 39 +++++++++++++++++++++++++++++++++++++--
+ arm_planner/data_free/train.py  | 15 ++++++++-------
+ tests/test_data_free_losses.py  | 30 ++++++++++++++++++++++++++++++
+ tests/test_data_free_train.py   | 32 ++++++++++++++++++++++++++++++++
+ 4 files changed, 107 insertions(+), 9 deletions(-)
+commit fe7fb4cd17aa2778122818731ae283a2a8529158
+Date:   2026-11-10 22:25:41 -0600
+
+    Add pooled neighbour search: nearest of the batch plus a no-gradient pool of codes
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py |  7 ++++++
+ arm_planner/data_free/losses.py | 48 +++++++++++++++++++++++++++++++++++++++++
+ arm_planner/data_free/train.py  | 25 +++++++++++++++++++--
+ tests/test_data_free_losses.py  | 21 ++++++++++++++++++
+ tests/test_data_free_train.py   | 12 +++++++++++
+ 5 files changed, 111 insertions(+), 2 deletions(-)
+commit f8938b14f0f77ab74b33cf6571fff2ea65c27abd
+Date:   2026-11-10 20:46:08 -0600
+
+    Log the effective number of latent directions in the periodic diagnostics
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/diagnostics.py | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+commit a72ea6ac4c2b14d89e94a3affecb20eb98193082
+Date:   2026-11-10 20:34:39 -0600
+
+    Add global random codes with nearest-neighbour repulsion
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py |  6 ++++++
+ arm_planner/data_free/losses.py | 23 +++++++++++++++++++++--
+ arm_planner/data_free/train.py  | 15 +++++++++++++--
+ tests/test_data_free_losses.py  | 28 ++++++++++++++++++++++++++++
+ tests/test_data_free_train.py   | 12 ++++++++++++
+ 5 files changed, 80 insertions(+), 4 deletions(-)
+commit ddaf59c15ba423fd8c4c0580609690a884517a98
+Date:   2026-11-10 18:41:14 -0600
+
+    Add local chamfer push between the surfaces of codes in a cluster
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py |  8 ++++
+ arm_planner/data_free/losses.py | 89 +++++++++++++++++++++++++++++++++++++++++
+ arm_planner/data_free/train.py  |  5 +++
+ tests/test_data_free_losses.py  | 58 +++++++++++++++++++++++++++
+ 4 files changed, 160 insertions(+)
+commit a902bddd9c95cf56330b8188dcfccee7fc2d62ae
+Date:   2026-11-10 17:50:16 -0600
+
+    Add repel diversity mode: a logarithmic push weighted by latent distance, no floor or ordering
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/losses.py | 36 ++++++++++++++++++++++++++++++++++--
+ tests/test_data_free_losses.py  | 16 ++++++++++++++++
+ 2 files changed, 50 insertions(+), 2 deletions(-)
+commit e96f68d9f186b5e921bc981c5fd00111cac3e525
+Date:   2026-11-10 17:48:21 -0600
+
+    Add statistic repulsion: push each group of shape statistics apart, no target
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py |  6 ++++++
+ arm_planner/data_free/losses.py | 46 +++++++++++++++++++++++++++++++++++++++++
+ arm_planner/data_free/train.py  | 15 ++++++++++++--
+ tests/test_data_free_losses.py  | 42 +++++++++++++++++++++++++++++++++++++
+ 4 files changed, 107 insertions(+), 2 deletions(-)
+commit 6ed3f92251cf50622fd6a742b374f2b43cd8a307
+Date:   2026-11-10 16:41:39 -0600
+
+    Add a learning-rate decay horizon so the rate can be held at its floor
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py | 4 ++++
+ arm_planner/data_free/train.py  | 3 ++-
+ tests/test_data_free_train.py   | 4 ++++
+ 3 files changed, 10 insertions(+), 1 deletion(-)
+commit e14601c443d105a7528de544461199f6b80f839e
+Date:   2026-11-10 16:33:58 -0600
+
+    Raise the cap on the axes-alignment weight now that shapes are elongated
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py | 6 +++++-
+ tests/test_data_free_losses.py  | 2 +-
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+commit 61a89c384d4213725fd8360d99aaaf14cf5aef4e
+Date:   2026-11-10 12:05:18 -0600
+
+    Add a thickness profile (depth percentiles) to the shape statistics
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/losses.py | 29 +++++++++++++++++++++++++++--
+ tests/test_data_free_losses.py  | 29 ++++++++++++++++++++++++++++-
+ 2 files changed, 55 insertions(+), 3 deletions(-)
+commit d738cf1fa5c84e5e6040eef5efbb9b78f5a3e072
+Date:   2026-11-10 11:32:59 -0600
+
+    Add ordinal diversity mode: a floor plus matching the order of distances
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py | 10 ++++++++
+ arm_planner/data_free/losses.py | 35 ++++++++++++++++++++++++++--
+ arm_planner/data_free/train.py  |  4 ++--
+ tests/test_data_free_losses.py  | 51 +++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 96 insertions(+), 4 deletions(-)
+commit b5fcb569553970907f96c57eff615c801add63f9
+Date:   2026-11-10 05:36:51 -0600
+
+    Add spread term: different latent directions must change the shape differently
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py |  5 ++++
+ arm_planner/data_free/losses.py | 65 +++++++++++++++++++++++++++++++++++++++++
+ arm_planner/data_free/train.py  | 18 ++++++++++--
+ tests/test_data_free_losses.py  | 52 +++++++++++++++++++++++++++++++++
+ 4 files changed, 138 insertions(+), 2 deletions(-)
+commit 64707af0d645ea50bbb6000b866efd8be4d012f8
+Date:   2026-11-10 03:37:52 -0600
+
+    Stop thicken and widen winding up: looser tolerance, lower cap, ignore sites whose midpoint is on the surface
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py       | 12 ++++++++++--
+ arm_planner/data_free/graph_losses.py |  8 ++++++--
+ tests/test_data_free_graph.py         |  6 +++++-
+ tests/test_data_free_losses.py        |  3 ++-
+ 4 files changed, 23 insertions(+), 6 deletions(-)
+commit ebb2c7b1f393937736cfb29bb3c13584bb7c70dd
+Date:   2026-11-10 03:01:42 -0600
+
+    Add gradient accumulation over fresh sub-batches to the data-free trainer
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py |   3 ++
+ arm_planner/data_free/train.py  | 117 ++++++++++++++++++++++++++++++++++++++++
+ tests/test_data_free_train.py   |  26 +++++++++
+ 3 files changed, 146 insertions(+)
+commit 72c6b67028f50c6e4ce97d4983bcf2f2c03c6706
+Date:   2026-11-10 02:53:00 -0600
+
+    Remove translation, rotation and resize from the diversity distance
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py |  9 ++++-
+ arm_planner/data_free/losses.py | 38 +++++++++++++++++-
+ tests/test_data_free_losses.py  | 88 ++++++++++++++++++++++++++++++++++++++++-
+ 3 files changed, 131 insertions(+), 4 deletions(-)
+commit d4e9a0d861d95385f8f7617d70b8ec3a640ae4b4
+Date:   2026-11-10 02:43:19 -0600
+
+    Report thin sites on the main body only; recognise thin detached pieces as fragments
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/graph.py | 26 ++++++++++++++++++++++----
+ tests/test_data_free_graph.py  | 15 +++++++++++++++
+ 2 files changed, 37 insertions(+), 4 deletions(-)
+commit 7c26fd7e3fca70d2821ebf08d926440ba37ee845
+Date:   2026-11-09 23:14:31 -0600
+
+    Sync plan note: bounded correction replaces the window
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ Data-free latent space.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+commit b90fd0fa11348a3f7fb548fd9cf0dd8527114fab
+Date:   2026-11-09 23:14:18 -0600
+
+    Add per-constraint multiplier ranges and rates; normalise barrier over near-surface samples
+    
+    Tests last run by the implementing agent (207 passed); not re-run afterwards
+    because numpy in the shared .venv began segfaulting.
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py      | 42 ++++++++++++++++++--
+ arm_planner/data_free/losses.py      | 10 ++++-
+ arm_planner/data_free/multipliers.py | 58 +++++++++++++++++++++------
+ arm_planner/data_free/train.py       | 13 +++---
+ tests/test_data_free_losses.py       | 77 ++++++++++++++++++++++++++++++++++--
+ tests/test_data_free_train.py        | 24 ++++++++++-
+ 6 files changed, 197 insertions(+), 27 deletions(-)
+commit 87e633e8996bce2252ca08d9fea5b1d7b4fe7e9a
+Date:   2026-11-09 22:08:12 -0600
+
+    Split pose pinning into unbiased centroid, scale and axes constraints
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py      | 29 ++++++++++--
+ arm_planner/data_free/diagnostics.py | 18 +++++++-
+ arm_planner/data_free/losses.py      | 73 +++++++++++++++++++++++++++++-
+ arm_planner/data_free/train.py       | 78 ++++++++++++++++++++++++++++----
+ tests/test_data_free_core.py         |  5 ++-
+ tests/test_data_free_diagnostics.py  | 43 ++++++++++++++++++
+ tests/test_data_free_losses.py       | 86 +++++++++++++++++++++++++++++++++---
+ tests/test_data_free_train.py        | 62 +++++++++++++++++++++++---
+ 8 files changed, 369 insertions(+), 25 deletions(-)
+commit b0c37fb21efaed03eebb62436ed6b732dcae09d7
+Date:   2026-11-09 20:51:45 -0600
+
+    Add data-free latent space trainer, anchor bank and CLI
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ arm_planner/data_free/config.py   |  44 ++-
+ arm_planner/data_free/train.py    | 745 ++++++++++++++++++++++++++++++++++++++
+ scripts/train_data_free_latent.py |  22 ++
+ tests/test_data_free_train.py     | 368 +++++++++++++++++++
+ 4 files changed, 1177 insertions(+), 2 deletions(-)
+commit 217cbacc8dd966147efb778471ad2c0887aa1cee
+Date:   2026-11-09 20:20:27 -0600
+
+    Add data-free latent space package: decoder, losses, point graph, diagnostics
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ Data-free latent space.md                |  34 +-
+ arm_planner/data_free/__init__.py        |   6 +
+ arm_planner/data_free/analytic_shapes.py | 113 ++++
+ arm_planner/data_free/config.py          | 165 ++++++
+ arm_planner/data_free/decoder.py         | 174 ++++++
+ arm_planner/data_free/diagnostics.py     | 480 ++++++++++++++++
+ arm_planner/data_free/field.py           | 111 ++++
+ arm_planner/data_free/graph.py           | 920 +++++++++++++++++++++++++++++++
+ arm_planner/data_free/graph_losses.py    | 291 ++++++++++
+ arm_planner/data_free/latent.py          | 122 ++++
+ arm_planner/data_free/losses.py          | 307 +++++++++++
+ arm_planner/data_free/multipliers.py     | 172 ++++++
+ arm_planner/data_free/spatial.py         | 224 ++++++++
+ docs/data_free_implementation_spec.md    | 374 +++++++++++++
+ scripts/bench_data_free_graph.py         | 138 +++++
+ tests/test_data_free_core.py             | 479 ++++++++++++++++
+ tests/test_data_free_diagnostics.py      | 454 +++++++++++++++
+ tests/test_data_free_graph.py            | 670 ++++++++++++++++++++++
+ tests/test_data_free_losses.py           | 567 +++++++++++++++++++
+ 19 files changed, 5791 insertions(+), 10 deletions(-)
+commit 980e6a5fde884ca08b2526a349a719da400017bc
+Date:   2026-11-09 18:02:50 -0600
+
+    Add learned correction, adaptive multipliers and pose-pinning decision to the note
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ Data-free latent space.md | 12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+commit d00a42dcc1fa8c029bd9d3941eb280e87db3d42f
+Date:   2026-11-09 17:43:11 -0600
+
+    Add spherical latent space section to the data-free latent space note
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ Data-free latent space.md | 93 ++++++++++++++++++++++++++++++++---------------
+ 1 file changed, 63 insertions(+), 30 deletions(-)
+commit 79c005223ae1dd5fa155c435d00802346d40d12b
+Date:   2026-11-09 17:26:07 -0600
+
+    Add merged data-free latent space note with connectivity section
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ Data-free latent space.md | 222 ++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 222 insertions(+)
+commit 7de9bbc3f9b76c0fd1606ce38f7c4f3b63f60aa9
+Date:   2026-11-09 17:15:56 -0600
+
+    Add connectivity and cavity check plan for the data-free latent space
+    
+    Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+
+
+ docs/data_free_connectivity_plan.md | 191 ++++++++++++++++++++++++++++++++++++
+ 1 file changed, 191 insertions(+)

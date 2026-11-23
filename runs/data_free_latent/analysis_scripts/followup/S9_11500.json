@@ -1,0 +1,333 @@
+{
+ "checkpoint": "/home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/S9_S8_lower_lr_to_12k/checkpoint_11500.pt",
+ "update": 11500,
+ "latent_dim": 64,
+ "spectrum": {
+  "rms": [
+   0.8176351189613342,
+   0.5140460729598999,
+   0.3740140497684479,
+   0.2839582860469818,
+   0.2365240901708603,
+   0.19003932178020477,
+   0.1592852771282196,
+   0.1329876333475113,
+   0.11005551367998123,
+   0.09440568834543228,
+   0.07917837798595428,
+   0.06512286514043808,
+   0.054793961346149445,
+   0.04838278889656067,
+   0.041698649525642395,
+   0.03795500844717026,
+   0.034538812935352325,
+   0.03265753760933876,
+   0.030615201219916344,
+   0.028578253462910652,
+   0.026970071718096733,
+   0.025434456765651703,
+   0.02397177740931511,
+   0.022487087175250053,
+   0.02143562026321888,
+   0.020555753260850906,
+   0.01972874253988266,
+   0.01866600289940834,
+   0.017952926456928253,
+   0.017230108380317688,
+   0.016649000346660614,
+   0.015972817316651344,
+   0.01548982597887516,
+   0.015050874091684818,
+   0.014572671614587307,
+   0.014135172590613365,
+   0.01357023511081934,
+   0.013090255670249462,
+   0.01278904639184475,
+   0.012463564984500408,
+   0.01211740542203188,
+   0.011792049743235111,
+   0.011454202234745026,
+   0.011199340224266052,
+   0.0108522092923522,
+   0.010544611141085625,
+   0.010241617448627949,
+   0.009975560940802097,
+   0.009610430337488651,
+   0.0093461312353611,
+   0.00912440475076437,
+   0.008850427344441414,
+   0.008640636689960957,
+   0.008380872197449207,
+   0.008079072460532188,
+   0.007833403535187244,
+   0.007560955360531807,
+   0.0072953118942677975,
+   0.006992812268435955,
+   0.0066789984703063965,
+   0.006297342944890261,
+   0.005883227102458477,
+   0.005375730339437723
+  ],
+  "total_variance": 1.3411508798599243,
+  "effective_directions": 5.312781810760498,
+  "above_0.02": 26,
+  "above_0.01": 47,
+  "above_0.005": 63
+ },
+ "pose": {
+  "centroid_offset_mean": 0.035734232515096664,
+  "centroid_offset_max": 0.10271469503641129,
+  "common_shift": 0.00882376916706562,
+  "trace_mean": 0.1457226431230083,
+  "trace_target": 0.15552697846461008,
+  "trace_rel_std": 0.0963334254143792
+ },
+ "topology": {
+  "codes": 128,
+  "clean_at_96": 117,
+  "flagged": 11,
+  "defective_at_128_and_160": 11,
+  "clean_on_fine_grids": 117,
+  "detail": [
+   {
+    "code": 10,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": 0,
+     "handles": 1,
+     "volume_fraction": 0.018717447916666668,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    }
+   },
+   {
+    "code": 28,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.006111427589699074,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 31,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": 0,
+     "handles": 1,
+     "volume_fraction": 0.010477701822916666,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    }
+   },
+   {
+    "code": 37,
+    "at_96": {
+     "pieces": 4,
+     "cavities": 0,
+     "euler": 4,
+     "handles": 0,
+     "volume_fraction": 0.001774540653935185,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 4,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 4,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 41,
+    "at_96": {
+     "pieces": 4,
+     "cavities": 0,
+     "euler": 4,
+     "handles": 0,
+     "volume_fraction": 0.00243236400462963,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 4,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 4,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 45,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.008882875795717593,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 67,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": 0,
+     "handles": 1,
+     "volume_fraction": 0.014771638093171295,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    }
+   },
+   {
+    "code": 75,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.001365379050925926,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   },
+   {
+    "code": 78,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": 0,
+     "handles": 1,
+     "volume_fraction": 0.01430709273726852,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 1
+    }
+   },
+   {
+    "code": 101,
+    "at_96": {
+     "pieces": 1,
+     "cavities": 0,
+     "euler": -1,
+     "handles": 2,
+     "volume_fraction": 0.004912199797453704,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 2
+    },
+    "at_160": {
+     "pieces": 1,
+     "cavities": 0,
+     "handles": 2
+    }
+   },
+   {
+    "code": 127,
+    "at_96": {
+     "pieces": 2,
+     "cavities": 0,
+     "euler": 2,
+     "handles": 0,
+     "volume_fraction": 0.0013439037181712963,
+     "resolution": 96
+    },
+    "at_128": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    },
+    "at_160": {
+     "pieces": 2,
+     "cavities": 0,
+     "handles": 0
+    }
+   }
+  ]
+ },
+ "anchors": {
+  "distance_mean": 0.009441184811294079,
+  "distance_max": 0.014827289618551731,
+  "iou_mean": 0.8459271192550659,
+  "iou_min": 0.4791666567325592,
+  "code_cos_abs_mean": 0.007017574273049831,
+  "code_cos_max": 1.8998980522155762e-07
+ }
+}

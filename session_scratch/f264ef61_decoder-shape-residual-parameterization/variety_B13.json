@@ -1,0 +1,31 @@
+{
+ "B13": {
+  "update": 11000,
+  "overlap": {
+   "mean_pair": 0.6607898473739624,
+   "nearest_mean": 0.41272369027137756,
+   "nearest_se": 0.006631001154549851
+  },
+  "surface": {
+   "mean_pair": 0.11776407517680669,
+   "nearest_mean": 0.05995995101208488,
+   "nearest_se": 0.0007890744981445249
+  },
+  "field": {
+   "mean_pair": 0.12496763467788696,
+   "nearest_mean": 0.06434676796197891,
+   "nearest_se": 0.0009159786932861647
+  },
+  "shape": {
+   "fill_mean": 0.09900248858278714,
+   "area_mean": 2.9022877961906857,
+   "compactness_median": 0.40099151236466424,
+   "compactness_p10": 0.2541604469815758,
+   "half_thickness_median": 0.23716023564338684,
+   "half_thickness_p10": 0.17264977097511292,
+   "volume_rel_std": 0.308562620943848,
+   "area_rel_std": 0.1327107642196481,
+   "compactness_std": 0.12317562240232267
+  }
+ }
+}

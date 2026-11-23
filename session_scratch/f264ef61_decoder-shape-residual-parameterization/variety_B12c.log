@@ -1,0 +1,10 @@
+[gpu_capped] memory capped at 75% (~11.6 of 15.5 GiB); busy time throttled to ~70%
+
+B12c (update 9000)
+  1 - overlap      : mean over pairs 0.6415; to the nearest other shape 0.4672 +/- 0.0062
+  surface distance : mean over pairs 0.1103; to the nearest other shape 0.0645 +/- 0.0008
+  field difference : mean over pairs 0.1215; to the nearest other shape 0.0708 +/- 0.0010
+  shapes: fill 0.096 of the ball; surface area 3.18; compactness median 0.30 (thinnest tenth 0.21); half-thickness median 0.252 (thinnest tenth 0.188); spread between shapes: volume 0.23, area 0.11, compactness 0.08
+[gpu_capped] memory capped at 75% (~11.6 of 15.5 GiB); busy time throttled to ~70%
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_box_base_B12c_9000.png
+over 1,024 codes: r [0.09, 0.192, 0.306]  largest extent [0.201, 0.296, 0.387]  smallest extent [-0.047, 0.038, 0.182]

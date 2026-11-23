@@ -1,0 +1,31 @@
+Warp 1.18.0 initialized:
+   CUDA Toolkit 13.4, Driver 13.2
+   Devices:
+     "cpu"      : "CPU"
+     "cuda:0"   : "NVIDIA GeForce RTX 5080" (15 GiB, sm_120, mempool enabled)
+   Kernel cache:
+     /home/eric-luo/.cache/warp/1.18.0
+Module arm_planner.object_geometry.warp_oracle a437ba5 load on device 'cuda:0' took 0.40 ms  (cached)
+100 candidates, 21 eligible, 281 s
+200 candidates, 38 eligible, 494 s
+300 candidates, 61 eligible, 706 s
+400 candidates, 85 eligible, 984 s
+500 candidates, 108 eligible, 1188 s
+600 candidates, 131 eligible, 1417 s
+700 candidates, 145 eligible, 1644 s
+800 candidates, 164 eligible, 1874 s
+900 candidates, 181 eligible, 2141 s
+1000 candidates, 200 eligible, 2428 s
+1100 candidates, 224 eligible, 2682 s
+1200 candidates, 242 eligible, 2882 s
+Traceback (most recent call last):
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/data-free-connectivity-plan/scripts/build_data_free_anchors.py", line 337, in <module>
+    main()
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/data-free-connectivity-plan/scripts/build_data_free_anchors.py", line 248, in main
+    meta = json.load(open(paths[index]))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+                 ^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xae in position 1683: invalid start byte

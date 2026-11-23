@@ -1,0 +1,4 @@
+[gpu_capped] memory capped at 75% (~11.6 of 15.5 GiB); busy time throttled to ~70%
+resumed from /home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/S5_follow_capped_long/checkpoint_last.pt at step 1000
+diag   1000  clean 0.94 (1 piece 1.00, no cavity 1.00, no handle 0.94)  graph=grid 1.00  live 8.5  wobble 0.04  descriptor spread 0.377  probe distance 0.1232  7.0 s  anchors iou 0.81 (min 0.56) code cos max 0.00
+step   1000  loss 6.884  div 3.644 (ratio 0.503, dead zone 0.00)  eik 0.00716  cons 0.0366  pose c 0.0011 s 0.0002 a 0.00015  e 0.0258  graph sign [frag 0.0+0.0 cav 0.0 gap 101.25 wall 193.0]  lr 6.36e-04  |g| 24.5  2067 ms  anchors d 0.0271 iou 0.79

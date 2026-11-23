@@ -1,0 +1,6 @@
+[gpu_capped] memory capped at 25% (~3.9 of 15.5 GiB); busy time throttled to ~70%
+F3_tol008_6000 spectrum: {'total_variance': 0.2581, 'effective_directions': 7.2856, 'above_0.02': 14, 'above_0.01': 15, 'above_0.005': 18} | top 16: 0.307 0.216 0.174 0.151 0.132 0.115 0.102 0.085 0.075 0.064 0.052 0.042 0.033 0.023 0.014 0.009
+F3_tol008_6000 pose: {'centroid_offset_mean': 0.018, 'centroid_offset_max': 0.038, 'common_shift': 0.0127, 'trace_mean': 0.1665, 'trace_target': 0.1555, 'trace_rel_std': 0.0457}
+F3_tol008_6000 topology: {'codes': 128, 'clean_at_96': 127, 'flagged': 1, 'defective_at_128_and_160': 1, 'clean_on_fine_grids': 127}
+F3_tol008_6000 anchors: {'distance_mean': 0.012, 'distance_max': 0.033, 'iou_mean': 0.885, 'iou_min': 0.681, 'code_cos_abs_mean': 0.071, 'code_cos_max': 0.304}
+saved /home/eric-luo/.claude/jobs/8dde3c62/tmp/followup/F3_tol008_6000.json

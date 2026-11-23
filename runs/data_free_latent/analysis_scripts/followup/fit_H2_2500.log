@@ -1,0 +1,5 @@
+[gpu_capped] memory capped at 75% (~11.6 of 15.5 GiB); busy time throttled to ~70%
+fit_H2_2500 held-out objects: {"count": 225, "mean": 0.7695178985595703, "median": 0.7959731817245483, "worst": 0.3392857015132904, "best": 0.9883126616477966, "share_at_or_above_0.70": 0.7511110901832581}
+fit_H2_2500 the 64 anchor objects, found by search from random starts: {"count": 64, "mean": 0.8330362439155579, "median": 0.8471023440361023, "worst": 0.5303030014038086, "best": 0.9741302132606506, "share_at_or_above_0.70": 0.9375}
+fit_H2_2500 the anchor objects at their trained codes: {"count": 64, "mean": 0.7468625903129578, "median": 0.7757894992828369, "worst": 0.27272728085517883, "best": 0.9685816764831543, "share_at_or_above_0.70": 0.71875}
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/analysis_scripts/followup/fit_H2_2500.json

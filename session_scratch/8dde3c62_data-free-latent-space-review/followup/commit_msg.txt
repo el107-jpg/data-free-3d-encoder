@@ -1,0 +1,6 @@
+Anchor build: save every eligible object, take the size target and base radius as arguments, refuse to overwrite
+
+--save-eligible writes eligible.pt (grids of all eligible objects with a flag for the chosen ones) so objects that were not chosen can serve as held-out targets. --cov-trace-target and --base-radius let a build follow a non-default decoder configuration. An output folder that already holds anchors.pt is left alone.
+
+Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ

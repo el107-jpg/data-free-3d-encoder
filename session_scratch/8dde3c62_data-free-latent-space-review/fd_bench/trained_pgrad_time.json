@@ -1,0 +1,548 @@
+{
+ "torch": "2.7.0+cu128",
+ "gpu": "NVIDIA GeForce RTX 5080",
+ "box": [
+  -1.0,
+  1.0
+ ],
+ "hs": [
+  0.1,
+  0.03,
+  0.01,
+  0.003,
+  0.001,
+  0.0003
+ ],
+ "time_h": 0.01,
+ "tetra_sanity_linear": {
+  "standard(1,1,1)": [
+   0.30000001192092896,
+   -0.7000000476837158,
+   0.5
+  ],
+  "as_written(1,1,-1)": [
+   0.050000011920928955,
+   -0.9500000476837158,
+   0.699999988079071
+  ],
+  "true": [
+   0.30000001192092896,
+   -0.699999988079071,
+   0.5
+  ]
+ },
+ "cudnn_benchmark": false,
+ "tf32": false,
+ "matmul_precision": "highest",
+ "weights": "trained runs/object_geometry_latent_set16_unpack_d32_phase3nowire_cos3e4_50k_20261105_v1_r4/latest.pt step 32750",
+ "codes": "encoder codes of 32 validation objects (/home/eric-luo/.claude/jobs/8dde3c62/tmp/fd_bench/codes_d32.pt)",
+ "decoder_parameters": 4574977,
+ "code_norm_median": 0.9502471089363098,
+ "param_grad": {
+  "1024": {
+   "ref_norm": 1.899193149147507,
+   "rows": [
+    {
+     "method": "central",
+     "h": 0.1,
+     "cos_params": 0.2355433352250868,
+     "norm_ratio_params": 0.7316416278785571,
+     "rel_err_params": 1.0911612406994353,
+     "cos_codes": 0.5169680859535593,
+     "eik": 0.8749443292617798
+    },
+    {
+     "method": "central",
+     "h": 0.03,
+     "cos_params": 0.30361323752101665,
+     "norm_ratio_params": 0.4036923890707866,
+     "rel_err_params": 0.9580369714039896,
+     "cos_codes": 0.8323798931673132,
+     "eik": 0.8883520364761353
+    },
+    {
+     "method": "central",
+     "h": 0.01,
+     "cos_params": 0.5188062376365418,
+     "norm_ratio_params": 0.394262119951004,
+     "rel_err_params": 0.863916272007586,
+     "cos_codes": 0.8899106126206866,
+     "eik": 0.8912954330444336
+    },
+    {
+     "method": "central",
+     "h": 0.003,
+     "cos_params": 0.9776177707859891,
+     "norm_ratio_params": 0.7786547652421278,
+     "rel_err_params": 0.2895682507086715,
+     "cos_codes": 0.9917032646001859,
+     "eik": 0.8875432014465332
+    },
+    {
+     "method": "central",
+     "h": 0.001,
+     "cos_params": 0.9997868455658498,
+     "norm_ratio_params": 0.9713518209952023,
+     "rel_err_params": 0.03513992111290577,
+     "cos_codes": 0.9998725349087059,
+     "eik": 0.8862947821617126
+    },
+    {
+     "method": "central",
+     "h": 0.0003,
+     "cos_params": 0.9999982704306936,
+     "norm_ratio_params": 0.9973536140719951,
+     "rel_err_params": 0.0032331629833490783,
+     "cos_codes": 0.9999988245420828,
+     "eik": 0.8861417770385742
+    },
+    {
+     "method": "tetra",
+     "h": 0.1,
+     "cos_params": 0.22649238836626875,
+     "norm_ratio_params": 0.8633601307741817,
+     "rel_err_params": 1.163744696800761,
+     "cos_codes": 0.4616314289203427,
+     "eik": 0.8669998645782471
+    },
+    {
+     "method": "tetra",
+     "h": 0.03,
+     "cos_params": 0.2837661621049233,
+     "norm_ratio_params": 0.4776949354599744,
+     "rel_err_params": 0.9783072801422042,
+     "cos_codes": 0.7282204038144621,
+     "eik": 0.882753849029541
+    },
+    {
+     "method": "tetra",
+     "h": 0.01,
+     "cos_params": 0.5121164308109732,
+     "norm_ratio_params": 0.4003472596764901,
+     "rel_err_params": 0.8661576697746889,
+     "cos_codes": 0.8618913400251933,
+     "eik": 0.8901426792144775
+    },
+    {
+     "method": "tetra",
+     "h": 0.003,
+     "cos_params": 0.977169293664817,
+     "norm_ratio_params": 0.7783187242664356,
+     "rel_err_params": 0.29100123791603205,
+     "cos_codes": 0.981805904075356,
+     "eik": 0.8873522281646729
+    },
+    {
+     "method": "tetra",
+     "h": 0.001,
+     "cos_params": 0.9997510602513893,
+     "norm_ratio_params": 0.9713543619167437,
+     "rel_err_params": 0.036113570891447816,
+     "cos_codes": 0.9981189801069886,
+     "eik": 0.8862605094909668
+    },
+    {
+     "method": "tetra",
+     "h": 0.0003,
+     "cos_params": 0.999996264689009,
+     "norm_ratio_params": 0.9973781644610248,
+     "rel_err_params": 0.003784845681563183,
+     "cos_codes": 0.9999071963701958,
+     "eik": 0.8861348032951355
+    },
+    {
+     "method": "forward",
+     "h": 0.1,
+     "cos_params": 0.25609460222491726,
+     "norm_ratio_params": 0.5738940410637946,
+     "rel_err_params": 1.017551982965768,
+     "cos_codes": 0.53850263853693,
+     "eik": 0.8757053017616272
+    },
+    {
+     "method": "forward",
+     "h": 0.03,
+     "cos_params": 0.2630535822609955,
+     "norm_ratio_params": 0.3560726114485161,
+     "rel_err_params": 0.9692550503611763,
+     "cos_codes": 0.8121344802310915,
+     "eik": 0.8896900415420532
+    },
+    {
+     "method": "forward",
+     "h": 0.01,
+     "cos_params": 0.7753382287925268,
+     "norm_ratio_params": 0.5862781272711232,
+     "rel_err_params": 0.6592377059605671,
+     "cos_codes": 0.8868438501507533,
+     "eik": 0.8895716667175293
+    },
+    {
+     "method": "forward",
+     "h": 0.003,
+     "cos_params": 0.9962180842899777,
+     "norm_ratio_params": 0.9378603336044453,
+     "rel_err_params": 0.10466687918669178,
+     "cos_codes": 0.974288636130498,
+     "eik": 0.8872848749160767
+    },
+    {
+     "method": "forward",
+     "h": 0.001,
+     "cos_params": 0.9996375725037634,
+     "norm_ratio_params": 0.9917752531124504,
+     "rel_err_params": 0.02804531520583304,
+     "cos_codes": 0.9970991240607573,
+     "eik": 0.8864626288414001
+    },
+    {
+     "method": "forward",
+     "h": 0.0003,
+     "cos_params": 0.9999707213866368,
+     "norm_ratio_params": 0.9987334758212913,
+     "rel_err_params": 0.0077515899064584054,
+     "cos_codes": 0.9997529606860801,
+     "eik": 0.8862190246582031
+    }
+   ]
+  }
+ },
+ "timing": [
+  {
+   "ms_median": 45.159553999837954,
+   "ms_min": 44.795576999604236,
+   "ms_max": 46.19877900040592,
+   "peak_gb": 2.2500452995300293,
+   "eik": 0.8855856657028198,
+   "proj": 0.0,
+   "iters": 25,
+   "queries": 512,
+   "loss": "eik",
+   "method": "autodiff"
+  },
+  {
+   "ms_median": 97.53983799964772,
+   "ms_min": 96.13536600227235,
+   "ms_max": 108.34365700065973,
+   "peak_gb": 5.079707622528076,
+   "eik": 0.8900121450424194,
+   "proj": 0.0,
+   "iters": 25,
+   "queries": 512,
+   "loss": "eik",
+   "method": "central"
+  },
+  {
+   "ms_median": 76.11019000250963,
+   "ms_min": 75.85304100211943,
+   "ms_max": 78.17902800161391,
+   "peak_gb": 3.406002998352051,
+   "eik": 0.8891803622245789,
+   "proj": 0.0,
+   "iters": 25,
+   "queries": 512,
+   "loss": "eik",
+   "method": "tetra"
+  },
+  {
+   "ms_median": 76.10057000056258,
+   "ms_min": 75.8882009977242,
+   "ms_max": 77.52737199916737,
+   "peak_gb": 3.406002998352051,
+   "eik": 0.8881213665008545,
+   "proj": 0.0,
+   "iters": 25,
+   "queries": 512,
+   "loss": "eik",
+   "method": "forward"
+  },
+  {
+   "ms_median": 96.56999399885535,
+   "ms_min": 96.1952059988107,
+   "ms_max": 97.59773800033145,
+   "peak_gb": 5.168025493621826,
+   "eik": 0.8900120854377747,
+   "proj": 0.0,
+   "iters": 25,
+   "queries": 512,
+   "loss": "eik",
+   "method": "central+math"
+  },
+  {
+   "ms_median": 76.20094899903052,
+   "ms_min": 75.51698299721465,
+   "ms_max": 78.27631699910853,
+   "peak_gb": 3.465023994445801,
+   "eik": 0.8891803026199341,
+   "proj": 0.0,
+   "iters": 25,
+   "queries": 512,
+   "loss": "eik",
+   "method": "tetra+math"
+  },
+  {
+   "ms_median": 75.73340200178791,
+   "ms_min": 75.50899199850392,
+   "ms_max": 76.51466699826415,
+   "peak_gb": 3.465023994445801,
+   "eik": 0.8881213665008545,
+   "proj": 0.0,
+   "iters": 25,
+   "queries": 512,
+   "loss": "eik",
+   "method": "forward+math"
+  },
+  {
+   "ms_median": 64.75606299864012,
+   "ms_min": 63.8843189990439,
+   "ms_max": 71.54605500181788,
+   "peak_gb": 2.8184866905212402,
+   "eik": 0.8855856657028198,
+   "proj": 0.08680127561092377,
+   "iters": 25,
+   "queries": 512,
+   "loss": "eik+proj",
+   "method": "autodiff"
+  },
+  {
+   "ms_median": 135.85921200137818,
+   "ms_min": 134.42167000175687,
+   "ms_max": 136.98397500047577,
+   "peak_gb": 6.668835639953613,
+   "eik": 0.8900121450424194,
+   "proj": 0.0867408812046051,
+   "iters": 25,
+   "queries": 512,
+   "loss": "eik+proj",
+   "method": "central"
+  },
+  {
+   "ms_median": 114.84130099779577,
+   "ms_min": 114.0758649999043,
+   "ms_max": 116.63486099860165,
+   "peak_gb": 5.0274786949157715,
+   "eik": 0.8891803622245789,
+   "proj": 0.08672679960727692,
+   "iters": 25,
+   "queries": 512,
+   "loss": "eik+proj",
+   "method": "tetra"
+  },
+  {
+   "ms_median": 95.26697100227466,
+   "ms_min": 95.04691300026025,
+   "ms_max": 98.56651199879707,
+   "peak_gb": 4.202641487121582,
+   "eik": 0.8881213665008545,
+   "proj": 0.08676031976938248,
+   "iters": 25,
+   "queries": 512,
+   "loss": "eik+proj",
+   "method": "forward"
+  },
+  {
+   "ms_median": 135.07910699991044,
+   "ms_min": 133.90385299862828,
+   "ms_max": 148.2421719992999,
+   "peak_gb": 6.787060737609863,
+   "eik": 0.8900120854377747,
+   "proj": 0.0867408812046051,
+   "iters": 25,
+   "queries": 512,
+   "loss": "eik+proj",
+   "method": "central+math"
+  },
+  {
+   "ms_median": 114.2894240001624,
+   "ms_min": 113.11451000074157,
+   "ms_max": 115.82891500074766,
+   "peak_gb": 5.1148810386657715,
+   "eik": 0.8891803026199341,
+   "proj": 0.08672679960727692,
+   "iters": 25,
+   "queries": 512,
+   "loss": "eik+proj",
+   "method": "tetra+math"
+  },
+  {
+   "ms_median": 94.88689299905673,
+   "ms_min": 94.43156600173097,
+   "ms_max": 96.5146039998217,
+   "peak_gb": 4.276310920715332,
+   "eik": 0.8881213665008545,
+   "proj": 0.08676031976938248,
+   "iters": 25,
+   "queries": 512,
+   "loss": "eik+proj",
+   "method": "forward+math"
+  },
+  {
+   "oom": true,
+   "queries": 4096,
+   "loss": "eik",
+   "method": "autodiff"
+  },
+  {
+   "oom": true,
+   "queries": 4096,
+   "loss": "eik",
+   "method": "central"
+  },
+  {
+   "oom": true,
+   "queries": 4096,
+   "loss": "eik",
+   "method": "tetra"
+  },
+  {
+   "oom": true,
+   "queries": 4096,
+   "loss": "eik",
+   "method": "forward"
+  },
+  {
+   "oom": true,
+   "queries": 4096,
+   "loss": "eik",
+   "method": "central+math"
+  },
+  {
+   "oom": true,
+   "queries": 4096,
+   "loss": "eik",
+   "method": "tetra+math"
+  },
+  {
+   "oom": true,
+   "queries": 4096,
+   "loss": "eik",
+   "method": "forward+math"
+  },
+  {
+   "oom": true,
+   "queries": 4096,
+   "loss": "eik+proj",
+   "method": "autodiff"
+  },
+  {
+   "oom": true,
+   "queries": 4096,
+   "loss": "eik+proj",
+   "method": "central"
+  },
+  {
+   "oom": true,
+   "queries": 4096,
+   "loss": "eik+proj",
+   "method": "tetra"
+  },
+  {
+   "oom": true,
+   "queries": 4096,
+   "loss": "eik+proj",
+   "method": "forward"
+  },
+  {
+   "oom": true,
+   "queries": 4096,
+   "loss": "eik+proj",
+   "method": "central+math"
+  },
+  {
+   "oom": true,
+   "queries": 4096,
+   "loss": "eik+proj",
+   "method": "tetra+math"
+  },
+  {
+   "oom": true,
+   "queries": 4096,
+   "loss": "eik+proj",
+   "method": "forward+math"
+  },
+  {
+   "oom": true,
+   "queries": 16384,
+   "loss": "eik",
+   "method": "autodiff"
+  },
+  {
+   "oom": true,
+   "queries": 16384,
+   "loss": "eik",
+   "method": "central"
+  },
+  {
+   "oom": true,
+   "queries": 16384,
+   "loss": "eik",
+   "method": "tetra"
+  },
+  {
+   "oom": true,
+   "queries": 16384,
+   "loss": "eik",
+   "method": "forward"
+  },
+  {
+   "oom": true,
+   "queries": 16384,
+   "loss": "eik",
+   "method": "central+math"
+  },
+  {
+   "oom": true,
+   "queries": 16384,
+   "loss": "eik",
+   "method": "tetra+math"
+  },
+  {
+   "oom": true,
+   "queries": 16384,
+   "loss": "eik",
+   "method": "forward+math"
+  },
+  {
+   "oom": true,
+   "queries": 16384,
+   "loss": "eik+proj",
+   "method": "autodiff"
+  },
+  {
+   "oom": true,
+   "queries": 16384,
+   "loss": "eik+proj",
+   "method": "central"
+  },
+  {
+   "oom": true,
+   "queries": 16384,
+   "loss": "eik+proj",
+   "method": "tetra"
+  },
+  {
+   "oom": true,
+   "queries": 16384,
+   "loss": "eik+proj",
+   "method": "forward"
+  },
+  {
+   "oom": true,
+   "queries": 16384,
+   "loss": "eik+proj",
+   "method": "central+math"
+  },
+  {
+   "oom": true,
+   "queries": 16384,
+   "loss": "eik+proj",
+   "method": "tetra+math"
+  },
+  {
+   "oom": true,
+   "queries": 16384,
+   "loss": "eik+proj",
+   "method": "forward+math"
+  }
+ ]
+}

@@ -1,0 +1,135 @@
+* 52c2223 2026-11-22  (rounded-box-base) Add a variety-weight controller gated by consistency and topology
+* 48383fe 2026-11-21  Add field_cap: a temporary cap on the eikonal multiplier, released geometrically
+* 5c1c1c2 2026-11-21  Volume-weight the pose and volume estimates for shell samples
+* 607e66c 2026-11-21  Add point_sampling='shells': sample points in four radial bands out to bound_radius, counted equally
+* 37052ad 2026-11-17  Add base repulsion: the main diversity term's nearest-neighbour mechanism on the base parameters
+* 81d6118 2026-11-16  Bound the base spread push and allow resuming into a grown base head
+* 69c15a2 2026-11-16  Add base_deform: six bends and three tapers of the rounded-box base, recentred by soft centroid
+* 2b033aa 2026-11-16  Add correction_cost_weight: weak cost on the correction's size near the surface
+* 67c2202 2026-11-15  Add base_lr_scale: the learned base head gets its own learning-rate group
+* c7fb386 2026-11-15  Add two base-variation regularisers: scaled field gradients into the base, and a base spread constraint
+* 4aa1deb 2026-11-15  Add base_head_net=shared_mlp: the base head reads the side network's features through a tanh layer
+* 05b384f 2026-11-15  Add base_head_net=separate (own small network for the base) and base_param_inputs
+* 1cad02d 2026-11-15  Add the linear base head with a deviation budget (base_head_form=linear, base_budget)
+* 73b3107 2026-11-15  Add base_map=fixed: the rounded-box base as a fixed function of the code, and anchor_base_fit
+* 9474382 2026-11-14  Add --config-from: start a new run from another run's config.json
+* a0e1f09 2026-11-14  Add a code-set rounded-box base (base_shape=rounded_box) and whole-model warm start
+| * 1cdae25 2026-11-19  (experiment/j7-shell-surface) Overlap parallel CPU surface scoring with the first J7 regularizer pass
+| * 864d24c 2026-11-19  Train surface matching through scalar SDF using cached Newton directions
+| * 7a7a275 2026-11-18  Overlap CPU diagnostics with J7 training and batch diversity lookups
+| * 51b3b0c 2026-11-18  Batch J7 diversity replay and record component timing
+| * 5f40367 2026-11-18  Train J7 with shared shell probes and adaptive bidirectional surface matching
+| * cb51ea4 2026-11-18  (experiment/j7-slope-diversity) Add pose-aligned slope diversity to J7's batch-wide distance
+| * 6e3965e 2026-11-17  (worktree-data-free-connectivity-plan) Add distillation into a changed decoder form (scripts/distill_data_free.py)
+|/  
+* 082db17 2026-11-14  Add anchor_weight_hold_steps and eikonal_all_points
+* 2a36fe0 2026-11-14  Add outer_limit: cut a base-free decoder off with the bounding ball instead of blending
+* 394cccb 2026-11-14  Add anchor_weight_ramp_steps: bring the anchor pull in gradually
+* 5efc02e 2026-11-14  Add sphere_base and init_main_from: train without the fixed sphere in the formula
+* eec4a4b 2026-11-14  Add out_lr_scale, lr_decay_start and weight_average_decay
+* a9fa1ce 2026-11-14  Add weight_norm: direction and size of each unit's weights learned separately
+* 371fb21 2026-11-14  Add crease_weight: a sparse-curvature term that favours flat faces and sharp edges
+| * 45a21f9 2026-11-14  (procedural-anchors) Launchers: guarded start (wider memory scan, retry before training), queue script for the trainable-code runs
+| * f5f379d 2026-11-14  Launchers: reuse an earlier run's exact settings, continue a run, scan for memory damage first
+|/  
+* f34780e 2026-11-13  Add variety_surface_band: the variety push can compare shapes by surface distance
+* 41a23fa 2026-11-13  Add fourier_bands: sines and cosines of the coordinates as extra input to the main network
+* c63f304 2026-11-13  Procedural anchors: extend an existing set, restrict to chosen kinds
+* a4d1dc8 2026-11-13  Layer norm: apply the code's scale and shift in one operation
+* aab837f 2026-11-13  Add layer_norm_layers: layer norm on the last n hidden layers of the main network
+* 879a6c5 2026-11-13  Leaky activation: no temporaries
+* ca74de9 2026-11-13  Add activation_leak: a softplus that keeps a slope when a unit is off
+*   73044d8 2026-11-13  Merge branch 'procedural-anchors': procedural anchor objects and anchor_exempt_size
+|\  
+| * 5be9168 2026-11-12  Descriptors of decoded shapes, at random codes or at a set distance from the anchor codes
+| * 7f19302 2026-11-12  Procedural anchors: a thickness multiplier, wider folds
+| * b9257eb 2026-11-12  Launcher: default to the scale-to-fit procedural anchors
+| * 4257b66 2026-11-12  Mass rule is the default again; far-reaching anchors are scaled down to fit
+| * 700cea2 2026-11-12  Extent size term: error of size^2, not linear in the moment
+| * 870fcd6 2026-11-12  Launcher for runs from this worktree (waits for the GPU to be free)
+| * ea72962 2026-11-12  Extent-based position and size (pose_power, default 6)
+| * df76fe0 2026-11-12  Procedural anchor objects chosen by kind of geometry, and shape descriptors
+* | e671377 2026-11-12  Add code_isotropy_weight: every code direction should reach the main network equally
+|/  
+* 135cf43 2026-11-12  Add field_ramp_steps: ramp in the eikonal and consistency weights
+* b7d3add 2026-11-12  Tidy-up stage: pin the surface itself, and a field-only switch
+* 396a479 2026-11-12  Resume: make a learning-rate override take effect
+* 80ccee9 2026-11-12  Add a tidy-up stage: hold the shapes against a frozen copy while the field terms repair the field
+* cc24598 2026-11-11  Graph cut tests: handle point-segment pairs in blocks to bound memory
+* 7d97924 2026-11-11  Add consistency_surface_scale: a dial on how strongly consistency may move the surface
+* e0e9fe2 2026-11-11  Add field_moves_surface: a push on the field at a point also moves the surface it belongs to
+* 7fb1d0e 2026-11-11  Anchor build: count an unreadable metadata file as rejected instead of crashing
+* 9d466a9 2026-11-11  Add a consistency tolerance schedule and a consistency term that cannot move the surface
+* f88a4b3 2026-11-11  Add correction_bound_inner: let the decoder's field leave the centre empty
+* 2995317 2026-11-11  Anchor build: save every eligible object, take the size target and base radius as arguments, refuse to overwrite
+* 46724b8 2026-11-11  Add anchor_exempt_field: leave anchor rows out of the eikonal and consistency constraints
+* 8f5188c 2026-11-11  Weight passes of unequal size by the mean size in the batch-wide neighbour term
+* 77d9985 2026-11-11  Add a complete-frame pass that runs beside anchors, and a neighbourhood pull around each anchor
+* 8f74d3f 2026-11-11  Show the anchor fit in the periodic diagnostics line
+* ef7b02a 2026-11-11  Add anchor objects: real shapes the decoder reproduces at fixed, perpendicular codes
+* 6234dda 2026-11-11  Add the frame form of the weak-direction push: log-volume of a frame of partners
+* 760e61a 2026-11-11  Add weak-direction pairs: push apart codes that differ only along unused code directions
+* 0aba721 2026-11-10  Add batch-wide neighbour search with the exact whole-update gradient
+* f1b9a01 2026-11-10  Skip the unused in-batch diversity pass when the neighbour pool is active
+* fe7fb4c 2026-11-10  Add pooled neighbour search: nearest of the batch plus a no-gradient pool of codes
+* f8938b1 2026-11-10  Log the effective number of latent directions in the periodic diagnostics
+* a72ea6a 2026-11-10  Add global random codes with nearest-neighbour repulsion
+* ddaf59c 2026-11-10  Add local chamfer push between the surfaces of codes in a cluster
+* a902bdd 2026-11-10  Add repel diversity mode: a logarithmic push weighted by latent distance, no floor or ordering
+* e96f68d 2026-11-10  Add statistic repulsion: push each group of shape statistics apart, no target
+* 6ed3f92 2026-11-10  Add a learning-rate decay horizon so the rate can be held at its floor
+* e14601c 2026-11-10  Raise the cap on the axes-alignment weight now that shapes are elongated
+* 61a89c3 2026-11-10  Add a thickness profile (depth percentiles) to the shape statistics
+* d738cf1 2026-11-10  Add ordinal diversity mode: a floor plus matching the order of distances
+* b5fcb56 2026-11-10  Add spread term: different latent directions must change the shape differently
+* 64707af 2026-11-10  Stop thicken and widen winding up: looser tolerance, lower cap, ignore sites whose midpoint is on the surface
+* ebb2c7b 2026-11-10  Add gradient accumulation over fresh sub-batches to the data-free trainer
+* 72c6b67 2026-11-10  Remove translation, rotation and resize from the diversity distance
+* d4e9a0d 2026-11-10  Report thin sites on the main body only; recognise thin detached pieces as fragments
+* 7c26fd7 2026-11-09  Sync plan note: bounded correction replaces the window
+* b90fd0f 2026-11-09  Add per-constraint multiplier ranges and rates; normalise barrier over near-surface samples
+* 87e633e 2026-11-09  Split pose pinning into unbiased centroid, scale and axes constraints
+* b0c37fb 2026-11-09  Add data-free latent space trainer, anchor bank and CLI
+* 217cbac 2026-11-09  Add data-free latent space package: decoder, losses, point graph, diagnostics
+* 980e6a5 2026-11-09  Add learned correction, adaptive multipliers and pose-pinning decision to the note
+* d00a42d 2026-11-09  Add spherical latent space section to the data-free latent space note
+* 79c0052 2026-11-09  Add merged data-free latent space note with connectivity section
+* 7de9bbc 2026-11-09  Add connectivity and cavity check plan for the data-free latent space
+* dd2d9c0 2026-10-31  (HEAD -> codex/pointcloud-motion-planning, origin/codex/pointcloud-motion-planning, origin/HEAD) Update general planner and canonical point-cloud geometry encoding sources
+* f39dc3e 2026-10-20  Train trajectories from supervised actor with selected frozen terminal
+* afbe32b 2026-10-20  Train full terminal encoder with stricter online Armijo and matched control
+* 5b3d273 2026-10-20  Compare stricter Armijo acceptance on matched terminal batches
+* 663987b 2026-10-20  Archive completed learning-rate ablation and encoder diagnostics
+* df99f5f 2026-10-20  Record production ablation verification and final endpoint clearance
+* 1e50ff5 2026-10-20  Ablate terminal and encoder learning rates with preserved training state
+* f146c26 2026-10-20  Train full geometry encoder with frozen retention heads and matched LoRA control
+* d125602 2026-10-20  Sweep LoRA rates with stronger terminal gradients into adapters
+* bdf5445 2026-10-20  Train terminal with encoder LoRA and frozen-head geometry retention
+* cad3f9e 2026-10-19  Extend both terminal ablations by 1000 updates at 1e-6
+* b58526a 2026-10-19  Continue terminal ablations with matched cosine learning rates
+* 2bb9634 2026-10-19  Add matched terminal proposer physical-loss ablation
+* 4811e3a 2026-10-19  Train shared terminal refinement MLP with three differentiable FK passes
+* 599d81e 2026-10-19  Use static terminal inputs and a single full-range tanh output
+* d918439 2026-10-19  Format terminal audit findings as Markdown lists
+* 0e06111 2026-10-19  Audit terminal readout bounds geometry parity and learning gradients
+* 1553f60 2026-10-19  Audit fixed evaluation start and endpoint witnesses against current geometry
+* 6f4b404 2026-10-19  Train matched fresh 128 and 256 width terminal-head ablation
+* 05300c5 2026-10-19  Diagnose terminal endpoint error and continue training at lower rate
+* 58583c9 2026-10-19  Extend identity phase one to five thousand updates at cosine floor
+* 8e352d4 2026-10-18  Launch immediate SaLSa continuation with per-step movement diagnostics
+* d08032c 2026-10-18  Continue arm training at one-fifth learning rate preserving momentum
+* 2ca78aa 2026-10-18  Train two-second planner with 1000-step clean seed identity phase1
+* 20f0000 2026-10-17  Record cancellation of higher AL ceiling experiment
+* b64591a 2026-10-17  Revert "Raise non-acceleration AL multiplier ceilings to 10000"
+* afa3d81 2026-10-17  Raise non-acceleration AL multiplier ceilings to 10000
+* c7e96f2 2026-10-17  Port drummer gradient budget to acceleration with true-objective line search
+* 020c9a6 2026-10-16  Add checkpoint gradient history, Adam attribution, and diagnostic replay
+* 4c70146 2026-10-16  Fix terminal conditioning, phase-one denoising, and SaLSa gradient ordering
+* 27b8676 2026-10-14  Port drummer optimizer for single-arm acceleration planning
+* c313e9d 2026-10-12  Compare explicit tabletop geometry with matched point-cloud models
+* d9f93c3 2026-10-12  Add analytic seed constraint cues and matched tabletop feature trial
+* 12ed343 2026-10-12  Trial one-pass refinement with deterministic probe-only fine-tuning
+* dff9736 2026-10-11  Add stochastic tabletop scenes and launch staged retraining
+* f8e57b3 2026-10-10  Encode arm-workspace surfaces and support weights-only ROI training
+* ec13b39 2026-10-10  Record completed terminal stage and active trajectory training
+* 6bd1934 2026-10-10  Add point-cloud arm planner with pretrained geometry encoding

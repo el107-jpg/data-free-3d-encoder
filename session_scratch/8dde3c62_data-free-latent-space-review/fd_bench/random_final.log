@@ -1,0 +1,11 @@
+accuracy done
+pgrad done
+{'ms_median': 45.418613000947516, 'ms_min': 44.887186002597446, 'ms_max': 50.66015400007018, 'peak_gb': 2.2516932487487793, 'eik': 0.8938939571380615, 'proj': 0.0, 'iters': 25, 'queries': 512, 'microbatch_codes': 32, 'loss': 'eik', 'method': 'autodiff'}
+{'ms_median': 97.86521600108244, 'ms_min': 96.65096399839967, 'ms_max': 109.07384399979492, 'peak_gb': 5.082026958465576, 'eik': 0.9660392999649048, 'proj': 0.0, 'iters': 25, 'queries': 512, 'microbatch_codes': 32, 'loss': 'eik', 'method': 'central'}
+{'ms_median': 77.300313001615, 'ms_min': 75.86288099992089, 'ms_max': 86.2507519996143, 'peak_gb': 3.407345771789551, 'eik': 0.9669305086135864, 'proj': 0.0, 'iters': 25, 'queries': 512, 'microbatch_codes': 32, 'loss': 'eik', 'method': 'tetra'}
+{'ms_median': 84.35173299949383, 'ms_min': 76.48293800230022, 'ms_max': 86.01315300256829, 'peak_gb': 3.407345771789551, 'eik': 0.9398982524871826, 'proj': 0.0, 'iters': 25, 'queries': 512, 'microbatch_codes': 32, 'loss': 'eik', 'method': 'forward'}
+{'ms_median': 69.16511899908073, 'ms_min': 63.94901900057448, 'ms_max': 72.87695800187066, 'peak_gb': 2.8206233978271484, 'eik': 0.8938939571380615, 'proj': 0.000251291086897254, 'iters': 25, 'queries': 512, 'microbatch_codes': 32, 'loss': 'eik+proj', 'method': 'autodiff'}
+{'ms_median': 134.9180069992144, 'ms_min': 134.36130000263802, 'ms_max': 152.25586900123744, 'peak_gb': 6.6701788902282715, 'eik': 0.9660392999649048, 'proj': 0.0002521939459256828, 'iters': 25, 'queries': 512, 'microbatch_codes': 32, 'loss': 'eik+proj', 'method': 'central'}
+{'ms_median': 114.3037940018985, 'ms_min': 114.06057500062161, 'ms_max': 129.20888900043792, 'peak_gb': 5.02747917175293, 'eik': 0.9669305086135864, 'proj': 0.00025219059898518026, 'iters': 25, 'queries': 512, 'microbatch_codes': 32, 'loss': 'eik+proj', 'method': 'tetra'}
+{'ms_median': 95.49921000143513, 'ms_min': 95.10765200320748, 'ms_max': 105.95683000065037, 'peak_gb': 4.20398473739624, 'eik': 0.9398982524871826, 'proj': 0.0002521922579035163, 'iters': 25, 'queries': 512, 'microbatch_codes': 32, 'loss': 'eik+proj', 'method': 'forward'}
+wrote /home/eric-luo/.claude/jobs/8dde3c62/tmp/fd_bench/random_final.json

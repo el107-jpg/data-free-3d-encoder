@@ -1,0 +1,4 @@
+checked 41766 files, 8.92 GB; damaged in memory: 0
+S9_S8_lower_lr_to_12k finished: diag  12000  clean 0.88 (1 piece 0.88, no cavity 1.00, no handle 1.00)  graph=grid 0.88  live 4.8  wobble 0.10  descriptor spread 0.651  probe distance 0.1423  8.2 s  anchors iou 0.85 (min 0.50) code cos max 0.00
+training done Tue 17 Nov 2026 07:05:36 PM CST
+evaluation done Tue 17 Nov 2026 08:07:20 PM CST

@@ -1,0 +1,85 @@
+S5_J4_recipe_sphere_start_no_base_anchor_hold_surface_slope_2500 finished: diag   2500  clean 0.38 (1 piece 0.75, no cavity 1.00, no handle 0.62)  graph=grid 0.75  live 2.8  wobble 0.06  descriptor spread 0.568  probe distance 0.0932  8.0 s  anchors iou 0.52 (min 0.00) code cos max 0.00
+diag      0  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 0.0  wobble 0.26  descriptor spread 0.009  probe distance 0.0009  8.3 s  anchors iou 0.29 (min 0.02) code cos max 0.00
+diag    250  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 0.0  wobble 0.03  descriptor spread 0.115  probe distance 0.0107  7.9 s  anchors iou 0.29 (min 0.02) code cos max 0.00
+diag    500  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 0.0  wobble 0.04  descriptor spread 0.169  probe distance 0.0212  7.9 s  anchors iou 0.27 (min 0.01) code cos max 0.00
+diag    750  clean 0.25 (1 piece 1.00, no cavity 1.00, no handle 0.25)  graph=grid 1.00  live 1.2  wobble 0.04  descriptor spread 0.291  probe distance 0.0326  7.9 s  anchors iou 0.26 (min 0.02) code cos max 0.00
+diag   1000  clean 0.44 (1 piece 0.69, no cavity 1.00, no handle 0.75)  graph=grid 0.69  live 2.0  wobble 0.09  descriptor spread 0.548  probe distance 0.0603  8.2 s  anchors iou 0.24 (min 0.00) code cos max 0.00
+diag   1250  clean 0.94 (1 piece 1.00, no cavity 1.00, no handle 0.94)  graph=grid 1.00  live 1.8  wobble 0.07  descriptor spread 0.428  probe distance 0.0768  8.0 s  anchors iou 0.39 (min 0.01) code cos max 0.00
+diag   1500  clean 0.69 (1 piece 0.81, no cavity 1.00, no handle 0.88)  graph=grid 0.81  live 1.0  wobble 0.04  descriptor spread 0.644  probe distance 0.0767  7.8 s  anchors iou 0.16 (min 0.00) code cos max 0.00
+diag   1750  clean 0.94 (1 piece 0.94, no cavity 1.00, no handle 1.00)  graph=grid 0.94  live 0.5  wobble 0.03  descriptor spread 0.518  probe distance 0.0792  8.0 s  anchors iou 0.33 (min 0.00) code cos max 0.00
+diag   2000  clean 0.94 (1 piece 0.94, no cavity 1.00, no handle 1.00)  graph=grid 0.94  live 2.8  wobble 0.06  descriptor spread 0.467  probe distance 0.0889  7.9 s  anchors iou 0.42 (min 0.02) code cos max 0.00
+diag   2250  clean 0.56 (1 piece 0.81, no cavity 1.00, no handle 0.75)  graph=grid 0.94  live 4.0  wobble 0.07  descriptor spread 0.545  probe distance 0.0876  8.1 s  anchors iou 0.41 (min 0.00) code cos max 0.00
+diag   2500  clean 0.38 (1 piece 0.75, no cavity 1.00, no handle 0.62)  graph=grid 0.75  live 2.8  wobble 0.06  descriptor spread 0.568  probe distance 0.0932  8.0 s  anchors iou 0.52 (min 0.00) code cos max 0.00
+checkpoint_1000.pt
+checkpoint_2000.pt
+checkpoint_2500.pt
+checkpoint_500.pt
+checkpoint_last.pt
+== 1000 evalrun
+S5_1000 spectrum: {'total_variance': 0.2574, 'effective_directions': 2.6758, 'above_0.02': 9, 'above_0.01': 9, 'above_0.005': 14} | top 16: 0.402 0.277 0.082 0.063 0.054 0.046 0.039 0.032 0.025 0.010 0.008 0.007 0.006 0.005 0.004 0.004
+S5_1000 pose: {'centroid_offset_mean': 0.0314, 'centroid_offset_max': 0.088, 'common_shift': 0.0268, 'trace_mean': 0.1179, 'trace_target': 0.1555, 'trace_rel_std': 0.131}
+S5_1000 topology: {'codes': 128, 'clean_at_96': 45, 'flagged': 83, 'defective_at_128_and_160': 82, 'clean_on_fine_grids': 46}
+S5_1000 anchors: {'distance_mean': 0.083, 'distance_max': 0.155, 'iou_mean': 0.244, 'iou_min': 0.0, 'code_cos_abs_mean': 0.007, 'code_cos_max': 0.0}
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/analysis_scripts/followup/S5_1000.json
+== 1000 variance
+S5_J4_recipe_sphere_start_no_base_ @ 1000: total variance over 96 codes: mean 0.244; between codes: std 0.033 (range 0.17 to 0.34); standard error with 24 codes 0.007, with 96 codes 0.003; four groups of 24 would report 0.251, 0.236, 0.250, 0.241; solid directions from the pooled spectrum 9, per code 8.8 (std 0.4)
+== 1000 field quality
+
+S5_J4_recipe_sphere_start_no_base_anchor_hold_surface_slope_2500 (update 1000)
+  anchor codes  slope error mean 0.088 (within 0.1 of the surface 0.161; share of points off by more than 0.2: 0.077); trainer's eikonal term 0.0147; consistency miss mean 0.0332, median 0.0247; field against the object's true distance: mean error 0.0827
+  random codes  slope error mean 0.087 (within 0.1 of the surface 0.166; share of points off by more than 0.2: 0.073); trainer's eikonal term 0.0141; consistency miss mean 0.0323, median 0.0241
+== 1000 facing
+
+S5_J4_recipe_sphere_start_no_base_anchor_hol (update 1000); 77619 points within 0.03 of the surface; slope error 0.175, median slope 0.97; surface below facing 0: 0.265
+    faces outward    : share 0.381, mean radius 0.40, slope error 0.125, median slope 0.99
+    tilted           : share 0.269, mean radius 0.38, slope error 0.171, median slope 0.91
+    nearly side-on   : share 0.086, mean radius 0.35, slope error 0.236, median slope 0.79
+    past side-on     : share 0.092, mean radius 0.30, slope error 0.189, median slope 0.93
+    faces the centre : share 0.173, mean radius 0.24, slope error 0.253, median slope 1.19
+== 2500 evalrun
+S5_2500 spectrum: {'total_variance': 0.5182, 'effective_directions': 5.3819, 'above_0.02': 12, 'above_0.01': 15, 'above_0.005': 22} | top 16: 0.467 0.360 0.227 0.196 0.167 0.142 0.124 0.106 0.051 0.036 0.030 0.022 0.018 0.013 0.011 0.009
+S5_2500 pose: {'centroid_offset_mean': 0.0168, 'centroid_offset_max': 0.0382, 'common_shift': 0.0086, 'trace_mean': 0.1491, 'trace_target': 0.1555, 'trace_rel_std': 0.0892}
+S5_2500 topology: {'codes': 128, 'clean_at_96': 75, 'flagged': 53, 'defective_at_128_and_160': 52, 'clean_on_fine_grids': 76}
+S5_2500 anchors: {'distance_mean': 0.043, 'distance_max': 0.099, 'iou_mean': 0.523, 'iou_min': 0.0, 'code_cos_abs_mean': 0.007, 'code_cos_max': 0.0}
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/analysis_scripts/followup/S5_2500.json
+== 2500 variance
+S5_J4_recipe_sphere_start_no_base_ @ 2500: total variance over 96 codes: mean 0.572; between codes: std 0.146 (range 0.31 to 0.95); standard error with 24 codes 0.030, with 96 codes 0.015; four groups of 24 would report 0.602, 0.563, 0.550, 0.574; solid directions from the pooled spectrum 12, per code 12.0 (std 0.6)
+== 2500 field quality
+
+S5_J4_recipe_sphere_start_no_base_anchor_hold_surface_slope_2500 (update 2500)
+  anchor codes  slope error mean 0.099 (within 0.1 of the surface 0.212; share of points off by more than 0.2: 0.118); trainer's eikonal term 0.0210; consistency miss mean 0.0479, median 0.0373; field against the object's true distance: mean error 0.0426
+  random codes  slope error mean 0.096 (within 0.1 of the surface 0.185; share of points off by more than 0.2: 0.108); trainer's eikonal term 0.0183; consistency miss mean 0.0367, median 0.0310
+== 2500 facing
+
+S5_J4_recipe_sphere_start_no_base_anchor_hol (update 2500); 114369 points within 0.03 of the surface; slope error 0.190, median slope 1.10; surface below facing 0: 0.067
+    faces outward    : share 0.247, mean radius 0.47, slope error 0.164, median slope 1.05
+    tilted           : share 0.524, mean radius 0.43, slope error 0.181, median slope 1.10
+    nearly side-on   : share 0.162, mean radius 0.35, slope error 0.226, median slope 1.15
+    past side-on     : share 0.055, mean radius 0.25, slope error 0.266, median slope 1.18
+    faces the centre : share 0.012, mean radius 0.17, slope error 0.245, median slope 1.10
+== variance at 500 and 2000
+S5_J4_recipe_sphere_start_no_base_ @ 500: total variance over 96 codes: mean 0.026; between codes: std 0.002 (range 0.02 to 0.03); standard error with 24 codes 0.000, with 96 codes 0.000; four groups of 24 would report 0.025, 0.026, 0.027, 0.027; solid directions from the pooled spectrum 7, per code 7.5 (std 0.5)
+S5_J4_recipe_sphere_start_no_base_ @ 2000: total variance over 96 codes: mean 0.463; between codes: std 0.116 (range 0.27 to 0.84); standard error with 24 codes 0.024, with 96 codes 0.012; four groups of 24 would report 0.489, 0.454, 0.443, 0.466; solid directions from the pooled spectrum 10, per code 10.2 (std 1.0)
+== field error over the run
+     0- 250: field error median 0.037 (90%: 0.060); topology terms off 23%; variety loss 15.8; slope weight 135; anchor weight 0; anchor overlap in batch 0.30; wall/gap sites 0/0; thicken weight 1
+   250- 500: field error median 0.046 (90%: 0.093); topology terms off 45%; variety loss 12.8; slope weight 200; anchor weight 0; anchor overlap in batch 0.30; wall/gap sites 1/0; thicken weight 1
+   500- 750: field error median 0.053 (90%: 0.107); topology terms off 55%; variety loss 11.3; slope weight 200; anchor weight 25; anchor overlap in batch 0.29; wall/gap sites 13/4; thicken weight 1
+   750-1000: field error median 0.045 (90%: 0.080); topology terms off 42%; variety loss 9.5; slope weight 200; anchor weight 75; anchor overlap in batch 0.26; wall/gap sites 95/31; thicken weight 1
+  1000-1250: field error median 0.045 (90%: 0.086); topology terms off 43%; variety loss 8.6; slope weight 184; anchor weight 100; anchor overlap in batch 0.32; wall/gap sites 95/39; thicken weight 1
+  1250-1500: field error median 0.039 (90%: 0.058); topology terms off 21%; variety loss 7.2; slope weight 109; anchor weight 100; anchor overlap in batch 0.37; wall/gap sites 139/66; thicken weight 1
+  1500-1750: field error median 0.038 (90%: 0.069); topology terms off 22%; variety loss 7.3; slope weight 133; anchor weight 100; anchor overlap in batch 0.37; wall/gap sites 99/43; thicken weight 1
+  1750-2000: field error median 0.038 (90%: 0.063); topology terms off 23%; variety loss 6.2; slope weight 108; anchor weight 100; anchor overlap in batch 0.44; wall/gap sites 103/40; thicken weight 1
+  2000-2250: field error median 0.039 (90%: 0.066); topology terms off 22%; variety loss 6.2; slope weight 120; anchor weight 100; anchor overlap in batch 0.43; wall/gap sites 114/49; thicken weight 1
+  2250-2500: field error median 0.039 (90%: 0.056); topology terms off 22%; variety loss 5.8; slope weight 118; anchor weight 100; anchor overlap in batch 0.47; wall/gap sites 108/40; thicken weight 1
+== sheets and contours
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_random_shapes_S5_2500.png
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_anchor_fit_S5_2500.png
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_field_sphere_start_S5_update1000.png
+  code 1: mean |error| in the slice 0.0134, within 0.1 of the surface 0.0124, worst 0.058
+  code 2: mean |error| in the slice 0.0398, within 0.1 of the surface 0.0305, worst 0.124
+  code 3: mean |error| in the slice 0.0285, within 0.1 of the surface 0.0100, worst 0.088
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_field_sphere_start_S5_update2500.png
+  code 1: mean |error| in the slice 0.0182, within 0.1 of the surface 0.0090, worst 0.064
+  code 2: mean |error| in the slice 0.0153, within 0.1 of the surface 0.0050, worst 0.059
+  code 3: mean |error| in the slice 0.0361, within 0.1 of the surface 0.0111, worst 0.126
+== done Sat 14 Nov 2026 11:14:11 PM CST

@@ -1,0 +1,56 @@
+{
+ "batchwide128": {
+  "cross_code": {
+   "centroid_offset_mean": 0.04150907322764397,
+   "centroid_offset_max": 0.13385550677776337,
+   "size_trace_mean": 0.15985165536403656,
+   "size_trace_rel_std": 0.052819158881902695,
+   "size_trace_rel_range": [
+    0.8162227272987366,
+    1.1030731201171875
+   ],
+   "elongation_mean": 1.3081741333007812,
+   "flatness_mean": 1.410646915435791,
+   "anisotropy_mean": 1.0370103120803833,
+   "anisotropy_max": 1.9058575630187988,
+   "offdiag_corr_abs_mean": 0.08595359325408936,
+   "offdiag_corr_abs_max": 0.2897101044654846
+  },
+  "motion_shares_mean": {
+   "translation": 0.04665030655451119,
+   "rotation": 0.1861882209777832,
+   "scale": 0.016739694139687344,
+   "deformation": 0.7480096071958542,
+   "rms_motion": 0.09915351960808039,
+   "rotation_signal": 0.1606412585824728,
+   "points": 5161.75
+  }
+ },
+ "global_nearest64": {
+  "cross_code": {
+   "centroid_offset_mean": 0.01375659741461277,
+   "centroid_offset_max": 0.029467890039086342,
+   "size_trace_mean": 0.18754516541957855,
+   "size_trace_rel_std": 0.06074744090437889,
+   "size_trace_rel_range": [
+    0.8826513886451721,
+    1.1811472177505493
+   ],
+   "elongation_mean": 1.2662131786346436,
+   "flatness_mean": 1.476413369178772,
+   "anisotropy_mean": 1.0576348304748535,
+   "anisotropy_max": 1.8546334505081177,
+   "offdiag_corr_abs_mean": 0.1495675891637802,
+   "offdiag_corr_abs_max": 0.5625296831130981
+  },
+  "motion_shares_mean": {
+   "translation": 0.049080954398959875,
+   "rotation": 0.09705234924331307,
+   "scale": 0.07406282192096114,
+   "deformation": 0.7875136509537697,
+   "rms_motion": 0.1216448349878192,
+   "rotation_signal": 0.2021264210343361,
+   "points": 5383.375
+  }
+ }
+}

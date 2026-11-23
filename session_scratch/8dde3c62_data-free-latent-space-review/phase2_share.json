@@ -1,0 +1,34 @@
+{
+ "step": 9000,
+ "mean": {
+  "distance_total": 0.010940271662548184,
+  "distance_from_stats": 0.001703721056401264,
+  "div_loss_on": 0.07918227557092905,
+  "div_loss_off": 0.13978324830532074,
+  "violations_on": 0.1281096781603992,
+  "violations_off": 0.12441452778875828,
+  "spread_weighted": 0.15239612199366093,
+  "constraints_weighted": 0.10681767528876662,
+  "g_div": 8.43882331252098,
+  "g_div_field_path": 6.66249680519104,
+  "g_div_stats_path": 6.229291915893555,
+  "g_spread": 1.1489089354872704,
+  "g_constraints": 19.39155387878418,
+  "g_total": 17.03074222803116,
+  "cos_stats_vs_field": 0.11083868891000748,
+  "cos_stats_vs_total": 0.4150088168680668,
+  "stats_projection_on_total": 0.2028666427358985
+ },
+ "per_stat": {
+  "volume_fraction": 0.039321606629528105,
+  "surface_area": 0.02481902204453945,
+  "sphericity": 0.09981066081672907,
+  "elongation": 0.08581356098875403,
+  "flatness": 0.10695314779877663,
+  "mean_depth": 0.04280786123126745,
+  "offset_growth": 0.10570038668811321,
+  "depth_p25": 0.14702261239290237,
+  "depth_p50": 0.10558786196634173,
+  "depth_p90": 0.0940238325856626
+ }
+}

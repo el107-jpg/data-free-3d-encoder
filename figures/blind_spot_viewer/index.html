@@ -1,0 +1,237 @@
+<title>SDF Blind Spots</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an inspection bench — the 3-D view fills the left, a narrow instrument panel of layers and readings sits to the right (stacks under the view on phones). */
+:root {
+  --bg: #f4f5f2;
+  --panel: #ffffff;
+  --canvas: #eceee9;
+  --ink: #1d2124;
+  --ink-2: #545b61;
+  --rule: #d6d9d3;
+  --accent: #2b6cb0;
+  --surface: #5b84b8;
+  --shell: #1d2124;
+  --ball-out: #1f9e89;
+  --ball-in: #d58a00;
+  --rejected: #9aa09a;
+  --pocket-in: #d1495b;
+  --pocket-out: #7b4fd6;
+  --probe: #e0702d;
+  --landing: #138a3f;
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14171a; --panel: #1b1f23; --canvas: #101316; --ink: #e8eae6; --ink-2: #a3aaa6; --rule: #2c3237;
+    --accent: #6aa5e8; --surface: #7fa3d3; --shell: #f1f3ef; --ball-out: #3cc7ae; --ball-in: #f0a830;
+    --rejected: #6b726d; --pocket-in: #f0657a; --pocket-out: #a78bfa; --probe: #f59a5c; --landing: #34c26b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14171a; --panel: #1b1f23; --canvas: #101316; --ink: #e8eae6; --ink-2: #a3aaa6; --rule: #2c3237;
+  --accent: #6aa5e8; --surface: #7fa3d3; --shell: #f1f3ef; --ball-out: #3cc7ae; --ball-in: #f0a830;
+  --rejected: #6b726d; --pocket-in: #f0657a; --pocket-out: #a78bfa; --probe: #f59a5c; --landing: #34c26b;
+  color-scheme: dark;
+}
+html, body { height: 100%; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 14px; line-height: 1.5; }
+.app { display: flex; gap: 16px; min-height: 100%; box-sizing: border-box;
+  padding-block: 16px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.stage { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+.stage header h1 { font-family: var(--font-display); font-weight: 600; font-size: 22px; margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
+.stage header p { margin: 4px 0 0; color: var(--ink-2); max-width: 72ch; }
+.view { position: relative; flex: 1 1 auto; min-height: 460px; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; background: var(--canvas); }
+.view canvas { display: block; width: 100%; height: 100%; }
+.hint { position: absolute; left: 10px; bottom: 8px; font-size: 12px; color: var(--ink-2); pointer-events: none; }
+.status { position: absolute; inset: 0; display: grid; place-items: center; color: var(--ink-2); }
+.shapes { display: flex; flex-wrap: wrap; gap: 6px; }
+.shapes button { font: 500 13px var(--font-body); color: var(--ink); background: var(--panel); border: 1px solid var(--rule);
+  border-radius: 6px; padding: 6px 10px; cursor: pointer; }
+.shapes button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.shapes button:focus-visible, .layer input:focus-visible, .slice input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+aside { flex: 0 0 320px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+.card { background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; }
+.card h2 { font-family: var(--font-display); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-2); margin: 0; }
+.layer { display: grid; grid-template-columns: auto 12px 1fr auto; align-items: start; gap: 8px; }
+.layer input { margin: 2px 0 0; }
+.sw { width: 12px; height: 12px; border-radius: 3px; margin-top: 3px; }
+.layer .name { font-weight: 600; }
+.layer .what { display: block; color: var(--ink-2); font-size: 12.5px; line-height: 1.4; }
+.layer .n { font-family: var(--font-mono); font-size: 12px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.slice label { display: flex; justify-content: space-between; font-weight: 600; }
+.slice output { font-family: var(--font-mono); font-weight: 400; color: var(--ink-2); }
+.slice input { width: 100%; }
+.slice p, .reading p { margin: 0; color: var(--ink-2); font-size: 12.5px; }
+.stats { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; margin: 0; }
+.stats dt { color: var(--ink-2); }
+.stats dd { margin: 0; font-family: var(--font-mono); font-variant-numeric: tabular-nums; text-align: right; }
+@media (max-width: 860px) {
+  .app { flex-direction: column; }
+  aside { flex-basis: auto; }
+  .view { min-height: 62vh; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
+</style>
+
+<div class="app">
+  <section class="stage">
+    <header>
+      <h1>Where sampling is blind</h1>
+      <p>Each evaluated point proves a ball of radius |f|/L holds no surface. What no ball covers, and no landed point is near, is unproven. Pockets of unproven space enclosed by the shape are probed; unproven space open to the outside is ignored.</p>
+    </header>
+    <div class="shapes" id="shapes" role="group" aria-label="Shape"></div>
+    <div class="view" id="view">
+      <div class="status" id="status">Loading shapes…</div>
+      <div class="hint">Drag to rotate · scroll or pinch to zoom · right-drag to pan</div>
+    </div>
+  </section>
+  <aside>
+    <div class="card" id="layers">
+      <h2>Layers</h2>
+    </div>
+    <div class="card slice">
+      <label for="slice">Slice through the shape <output id="sliceOut">off</output></label>
+      <input id="slice" type="range" min="-0.9" max="0.9" step="0.01" value="0.9">
+      <p>Hides everything in front of a plane (x greater than the slider value) so the inside shows.</p>
+    </div>
+    <div class="card reading">
+      <h2>This shape</h2>
+      <dl class="stats" id="stats"></dl>
+      <p>Grid cells are 1/16 of the box (0.0625 wide). L is the slope bound used to shrink the balls: 1.8 for the decoded fields, whose slope reaches about 1.7 at the surface, and 1.0 for the Thingi distance grids.</p>
+    </div>
+  </aside>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+const LAYERS = [
+  { id: "surface", name: "Surface", token: "--surface", on: true, what: "The decoded shape (or Thingi object), drawn see-through." },
+  { id: "shell", name: "Landed shell points", token: "--shell", on: true, what: "Where the first 192 samples ended up after Newton steps: the surface we already know." },
+  { id: "ballsOut", name: "Proven empty", token: "--ball-out", on: false, what: "Balls from points outside the shape (f < 0), including every Newton step. No surface inside them." },
+  { id: "ballsIn", name: "Proven solid", token: "--ball-in", on: false, what: "Balls from points inside the shape (f > 0). Also no surface inside them." },
+  { id: "rejected", name: "Unproven, open to the outside", token: "--rejected", on: false, what: "Not covered by any ball and far from known surface, but most rays from it escape to proven-empty space. Ignored (sample of 2,500 cells)." },
+  { id: "pocketOut", name: "Blind pocket, outside air", token: "--pocket-out", on: true, what: "Enclosed unproven cells that turn out to lie outside the shape: crevices and recesses." },
+  { id: "pocketIn", name: "Blind pocket, inside the solid", token: "--pocket-in", on: true, what: "Enclosed unproven cells that lie inside the solid. Probes from here land on the inner side of walls and limbs." },
+  { id: "probes", name: "Probes", token: "--probe", on: true, what: "The 128 probes (3 rounds) placed in the pockets, with a line to where each one landed." },
+  { id: "landings", name: "Probe landings", token: "--landing", on: true, what: "New surface found by the probes." },
+];
+const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+const state = Object.fromEntries(LAYERS.map((l) => [l.id, l.on]));
+let shapes = [], current = 0, groups = {}, clipPlane = new THREE.Plane(new THREE.Vector3(-1, 0, 0), 0.9);
+
+const view = document.getElementById("view");
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.localClippingEnabled = true;
+view.prepend(renderer.domElement);
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(40, 1, 0.01, 20);
+camera.position.set(1.7, 1.1, 1.9);
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true; controls.target.set(0, 0, 0);
+scene.add(new THREE.AmbientLight(0xffffff, 0.55));
+const key = new THREE.DirectionalLight(0xffffff, 0.75); key.position.set(2, 3, 2); scene.add(key);
+const fill = new THREE.DirectionalLight(0xffffff, 0.3); fill.position.set(-2, -1, -1.5); scene.add(fill);
+
+function resize() {
+  const w = view.clientWidth, h = view.clientHeight;
+  renderer.setSize(w, h, false); camera.aspect = w / Math.max(h, 1); camera.updateProjectionMatrix();
+}
+new ResizeObserver(resize).observe(view);
+
+function pointsObj(flat, color, size, opacity = 1) {
+  const g = new THREE.BufferGeometry();
+  g.setAttribute("position", new THREE.Float32BufferAttribute(flat, 3));
+  const m = new THREE.PointsMaterial({ color, size, sizeAttenuation: true, transparent: opacity < 1, opacity, clippingPlanes: [clipPlane], depthWrite: opacity >= 1 });
+  return new THREE.Points(g, m);
+}
+function build(i) {
+  Object.values(groups).forEach((o) => { scene.remove(o); o.traverse?.((c) => { c.geometry?.dispose(); c.material?.dispose?.(); }); });
+  groups = {};
+  const s = shapes[i];
+  // surface
+  const g = new THREE.BufferGeometry();
+  g.setAttribute("position", new THREE.Float32BufferAttribute(s.verts, 3));
+  g.setIndex(s.faces); g.computeVertexNormals();
+  const surfMat = new THREE.MeshStandardMaterial({ color: css("--surface"), transparent: true, opacity: 0.32, roughness: 0.6, metalness: 0,
+    side: THREE.DoubleSide, depthWrite: false, clippingPlanes: [clipPlane] });
+  groups.surface = new THREE.Mesh(g, surfMat);
+  groups.shell = pointsObj(s.shell, css("--shell"), 0.022);
+  for (const [id, sign, token] of [["ballsOut", 0, "--ball-out"], ["ballsIn", 1, "--ball-in"]]) {
+    const list = s.balls.filter((b) => b[4] === sign);
+    const geo = new THREE.SphereGeometry(1, 16, 12);
+    const mat = new THREE.MeshStandardMaterial({ color: css(token), transparent: true, opacity: 0.12, depthWrite: false, clippingPlanes: [clipPlane] });
+    const inst = new THREE.InstancedMesh(geo, mat, Math.max(list.length, 1));
+    const m4 = new THREE.Matrix4();
+    list.forEach((b, j) => { m4.makeScale(b[3], b[3], b[3]); m4.setPosition(b[0], b[1], b[2]); inst.setMatrixAt(j, m4); });
+    inst.count = list.length;
+    groups[id] = inst;
+  }
+  groups.rejected = pointsObj(s.rejected, css("--rejected"), 0.016, 0.5);
+  const pin = [], pout = [];
+  s.pocket_inside.forEach((v, j) => (v ? pin : pout).push(s.pockets[3 * j], s.pockets[3 * j + 1], s.pockets[3 * j + 2]));
+  groups.pocketIn = pointsObj(pin, css("--pocket-in"), 0.03, 0.85);
+  groups.pocketOut = pointsObj(pout, css("--pocket-out"), 0.03, 0.9);
+  const seg = [], ends = [], starts = [];
+  s.probes.forEach((p) => { starts.push(...p.s); if (p.ok) { seg.push(...p.s, ...p.e); ends.push(...p.e); } });
+  const lg = new THREE.BufferGeometry(); lg.setAttribute("position", new THREE.Float32BufferAttribute(seg, 3));
+  const probeGroup = new THREE.Group();
+  probeGroup.add(new THREE.LineSegments(lg, new THREE.LineBasicMaterial({ color: css("--probe"), transparent: true, opacity: 0.55, clippingPlanes: [clipPlane] })));
+  probeGroup.add(pointsObj(starts, css("--probe"), 0.026));
+  groups.probes = probeGroup;
+  groups.landings = pointsObj(ends, css("--landing"), 0.03);
+  for (const [id, obj] of Object.entries(groups)) { obj.visible = state[id]; scene.add(obj); }
+  const counts = { surface: `${s.faces.length / 3 | 0} tri`, shell: s.shell.length / 3, ballsOut: s.balls.filter((b) => !b[4]).length,
+    ballsIn: s.balls.filter((b) => b[4]).length, rejected: s.stats.rejected, pocketOut: pout.length / 3, pocketIn: pin.length / 3,
+    probes: s.probes.length, landings: ends.length / 3 };
+  for (const l of LAYERS) document.getElementById("n-" + l.id).textContent = counts[l.id].toLocaleString();
+  const st = s.stats;
+  document.getElementById("stats").innerHTML = [
+    ["Unproven cells after 192 samples", st.unproven], ["Rejected as open to the outside", st.rejected],
+    ["Kept as enclosed pockets", `${st.pocket_cells} in ${st.pockets} pockets`],
+    ["Pocket cells inside the solid", `${Math.round(st.inside_share * 100)}%`], ["Slope bound L", st.L.toFixed(1)],
+  ].map(([k, v]) => `<dt>${k}</dt><dd>${typeof v === "number" ? v.toLocaleString() : v}</dd>`).join("");
+}
+function recolor() {
+  scene.background = new THREE.Color(css("--canvas"));
+  if (shapes.length) build(current);
+}
+// layer controls
+const layersCard = document.getElementById("layers");
+for (const l of LAYERS) {
+  const row = document.createElement("label"); row.className = "layer"; row.htmlFor = "l-" + l.id;
+  row.innerHTML = `<input type="checkbox" id="l-${l.id}" ${l.on ? "checked" : ""}><span class="sw" style="background:var(${l.token})"></span>
+    <span><span class="name">${l.name}</span><span class="what">${l.what}</span></span><span class="n" id="n-${l.id}">–</span>`;
+  row.querySelector("input").addEventListener("change", (e) => { state[l.id] = e.target.checked; if (groups[l.id]) groups[l.id].visible = e.target.checked; });
+  layersCard.append(row);
+}
+const slice = document.getElementById("slice"), sliceOut = document.getElementById("sliceOut");
+slice.addEventListener("input", () => {
+  const v = parseFloat(slice.value); clipPlane.constant = v;
+  sliceOut.textContent = v >= 0.89 ? "off" : `x ≤ ${v.toFixed(2)}`;
+});
+function selectShape(i) {
+  current = i; build(i);
+  document.querySelectorAll("#shapes button").forEach((b, j) => b.setAttribute("aria-pressed", String(j === i)));
+}
+const mq = window.matchMedia("(prefers-color-scheme: dark)");
+mq.addEventListener?.("change", recolor);
+new MutationObserver(recolor).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+scene.background = new THREE.Color(css("--canvas"));
+resize();
+(function loop() { controls.update(); renderer.render(scene, camera); requestAnimationFrame(loop); })();
+fetch("shapes.json").then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }).then((data) => {
+  shapes = data;
+  const bar = document.getElementById("shapes");
+  data.forEach((s, i) => { const b = document.createElement("button"); b.type = "button"; b.textContent = s.name; b.addEventListener("click", () => selectShape(i)); bar.append(b); });
+  document.getElementById("status").hidden = true;
+  selectShape(0);
+}).catch((e) => { document.getElementById("status").textContent = "Could not load the shape data (" + e.message + "). Reload the page to try again."; });
+</script>

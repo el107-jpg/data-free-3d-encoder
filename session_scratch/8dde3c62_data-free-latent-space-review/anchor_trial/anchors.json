@@ -1,0 +1,133 @@
+{
+ "source": "/home/eric-luo/Downloads/pointcloud-motion-planning/datasets/thingi10k_source_v1_5_0/prepared_v2",
+ "arguments": {
+  "source": "/home/eric-luo/Downloads/pointcloud-motion-planning/datasets/thingi10k_source_v1_5_0/prepared_v2",
+  "output_dir": "/home/eric-luo/.claude/jobs/8dde3c62/tmp/anchor_trial",
+  "count": 4,
+  "resolution": 96,
+  "check_resolution": 64,
+  "inner": 0.17,
+  "outer": 0.83,
+  "thin_limit": 0.06,
+  "min_faces": 12,
+  "max_candidates": 40,
+  "device": "cuda:0",
+  "seed": 0,
+  "sheet": "/home/eric-luo/.claude/jobs/8dde3c62/tmp/anchor_trial/sheet.png",
+  "idle": 0.3
+ },
+ "candidates": 40,
+ "eligible": 8,
+ "rejected": {
+  "centre too shallow": 26,
+  "metadata": 73,
+  "thin features": 3,
+  "too long for the outer radius": 3,
+  "no mesh file": 5
+ },
+ "cov_trace_target": 0.15552697846461008,
+ "soft_tau": 0.02,
+ "pairwise_distance": {
+  "min": 0.06423337012529373,
+  "median": 0.07123199105262756,
+  "max": 0.11649488657712936
+ },
+ "anchors": [
+  {
+   "rank": 0,
+   "file_id": 200693,
+   "thing_id": 90727,
+   "name": "Young Derek&#039;s Treasure Safe ",
+   "author": "ssaggers",
+   "license": "Attribution - Non-Commercial - Share Alike",
+   "category": "toys-and-games",
+   "faces": 510,
+   "selection_gap": 0.07319337874650955,
+   "depth_at_centre": 0.3714163601398468,
+   "max_radius": 0.5896104529301659,
+   "thin_fraction": 0.031189083820662766,
+   "gap_fraction": 0.014095066726645674,
+   "volume_fraction": 0.05088043212890625,
+   "centroid_offset": 1.548234763504297e-06,
+   "trace": 0.15552636981010437,
+   "offdiag_max": 2.4653343189129373e-06,
+   "axes": [
+    0.2935730218887329,
+    0.18620169162750244,
+    0.1861993372440338
+   ]
+  },
+  {
+   "rank": 1,
+   "file_id": 104401,
+   "thing_id": 36554,
+   "name": "Advent Calendar ",
+   "author": "pleppik",
+   "license": "Creative Commons - Attribution",
+   "category": "toys-and-games",
+   "faces": 6110,
+   "selection_gap": 0.11649488657712936,
+   "depth_at_centre": 0.28548386693000793,
+   "max_radius": 0.6618401601083451,
+   "thin_fraction": 0.0587515299877601,
+   "gap_fraction": 0.005813953488372093,
+   "volume_fraction": 0.04986572265625,
+   "centroid_offset": 1.1509254363772925e-05,
+   "trace": 0.15551955997943878,
+   "offdiag_max": 1.9848227506003013e-09,
+   "axes": [
+    0.2509453296661377,
+    0.2509452998638153,
+    0.17196646332740784
+   ]
+  },
+  {
+   "rank": 2,
+   "file_id": 1344048,
+   "thing_id": 845449,
+   "name": "Low poly tree sculptures ",
+   "author": "francfalco",
+   "license": "Creative Commons - Attribution - Non-Commercial",
+   "category": "art",
+   "faces": 358,
+   "selection_gap": 0.07123199105262756,
+   "depth_at_centre": 0.20238982141017914,
+   "max_radius": 0.643913265950879,
+   "thin_fraction": 0.0071307540242869245,
+   "gap_fraction": 0.006918949449308105,
+   "volume_fraction": 0.0540313720703125,
+   "centroid_offset": 3.0266863859651494e-07,
+   "trace": 0.15552794933319092,
+   "offdiag_max": 3.394557168689971e-08,
+   "axes": [
+    0.24207046627998352,
+    0.23804430663585663,
+    0.20066078007221222
+   ]
+  },
+  {
+   "rank": 3,
+   "file_id": 472001,
+   "thing_id": 259005,
+   "name": "4-8-8-4 Big Boy Locomotive ",
+   "author": "MakerBot",
+   "license": "Creative Commons - Attribution",
+   "category": "models",
+   "faces": 1132,
+   "selection_gap": 0.06423337012529373,
+   "depth_at_centre": 0.2908884286880493,
+   "max_radius": 0.6095138062440018,
+   "thin_fraction": 0.0,
+   "gap_fraction": 0.0,
+   "volume_fraction": 0.0533294677734375,
+   "centroid_offset": 1.1840547813335434e-06,
+   "trace": 0.15552584826946259,
+   "offdiag_max": 6.765031868027904e-10,
+   "axes": [
+    0.25006601214408875,
+    0.21563030779361725,
+    0.21563024818897247
+   ]
+  }
+ ]
+}

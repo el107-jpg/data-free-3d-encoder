@@ -1,0 +1,25 @@
+== sharpness
+J7_12000 (update 12000, 155341 surface pairs): median bend 9.22 (radius 0.11); flat 1.2%, gently bent 47.5%, tight 51.2%; mean cost 0.820
+C2_12000 (update 12000, 191905 surface pairs): median bend 2.28 (radius 0.44); flat 11.5%, gently bent 83.7%, tight 4.8%; mean cost 0.400
+== evalrun
+C2_12000 spectrum: {'total_variance': 0.1213, 'effective_directions': 6.6537, 'above_0.02': 13, 'above_0.01': 22, 'above_0.005': 42} | top 16: 0.238 0.143 0.108 0.090 0.075 0.064 0.057 0.052 0.047 0.041 0.035 0.024 0.021 0.018 0.016 0.015
+C2_12000 pose: {'centroid_offset_mean': 0.0151, 'centroid_offset_max': 0.0377, 'common_shift': 0.0065, 'trace_mean': 0.1589, 'trace_target': 0.1555, 'trace_rel_std': 0.0466}
+C2_12000 topology: {'codes': 128, 'clean_at_96': 127, 'flagged': 1, 'defective_at_128_and_160': 1, 'clean_on_fine_grids': 127}
+C2_12000 anchors: {'distance_mean': 0.007, 'distance_max': 0.014, 'iou_mean': 0.853, 'iou_min': 0.48, 'code_cos_abs_mean': 0.007, 'code_cos_max': 0.0}
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/analysis_scripts/followup/C2_12000.json
+== variance on 96 codes
+J7_J6_lower_lr_to_12k @ 12000: total variance over 96 codes: mean 1.072; between codes: std 0.514 (range 0.05 to 2.90); standard error with 24 codes 0.105, with 96 codes 0.052; four groups of 24 would report 1.104, 1.021, 1.031, 1.135; solid directions from the pooled spectrum 26, per code 25.9 (std 3.3)
+C2_J7_11000_crease10_to_12k @ 12000: total variance over 96 codes: mean 0.117; between codes: std 0.081 (range 0.03 to 0.51); standard error with 24 codes 0.016, with 96 codes 0.008; four groups of 24 would report 0.106, 0.122, 0.135, 0.107; solid directions from the pooled spectrum 13, per code 12.5 (std 1.6)
+== field quality
+
+J7_J6_lower_lr_to_12k (update 12000)
+  anchor codes  slope error mean 0.056 (within 0.1 of the surface 0.108; share of points off by more than 0.2: 0.046); trainer's eikonal term 0.0225; consistency miss mean 0.0206, median 0.0114; field against the object's true distance: mean error 0.0082
+  random codes  slope error mean 0.102 (within 0.1 of the surface 0.362; share of points off by more than 0.2: 0.105); trainer's eikonal term 0.0448; consistency miss mean 0.0508, median 0.0393
+
+C2_J7_11000_crease10_to_12k (update 12000)
+  anchor codes  slope error mean 0.059 (within 0.1 of the surface 0.120; share of points off by more than 0.2: 0.052); trainer's eikonal term 0.0256; consistency miss mean 0.0213, median 0.0116; field against the object's true distance: mean error 0.0071
+  random codes  slope error mean 0.108 (within 0.1 of the surface 0.164; share of points off by more than 0.2: 0.153); trainer's eikonal term 0.0256; consistency miss mean 0.0344, median 0.0235
+== sheets
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_random_shapes_C2_12000.png
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_anchor_fit_C2_12000.png
+== done Sat 14 Nov 2026 03:39:29 PM CST

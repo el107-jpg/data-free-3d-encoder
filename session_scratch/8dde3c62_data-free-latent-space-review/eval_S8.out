@@ -1,0 +1,150 @@
+checked 41728 files, 9.40 GB; damaged in memory: 0
+Tue 17 Nov 2026 03:18:19 PM CST
+diag   5000  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 5.5  wobble 0.06  descriptor spread 0.253  probe distance 0.1200  8.4 s  anchors iou 0.80 (min 0.33) code cos max 0.00
+diag   5250  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 4.2  wobble 0.09  descriptor spread 0.337  probe distance 0.0981  8.2 s  anchors iou 0.73 (min 0.32) code cos max 0.00
+diag   5500  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 5.5  wobble 0.06  descriptor spread 0.289  probe distance 0.1138  8.2 s  anchors iou 0.70 (min 0.19) code cos max 0.00
+diag   5750  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 6.2  wobble 0.12  descriptor spread 0.362  probe distance 0.1119  8.2 s  anchors iou 0.77 (min 0.20) code cos max 0.00
+diag   6000  clean 0.94 (1 piece 1.00, no cavity 1.00, no handle 0.94)  graph=grid 1.00  live 5.0  wobble 0.04  descriptor spread 0.343  probe distance 0.1049  8.2 s  anchors iou 0.70 (min 0.21) code cos max 0.00
+diag   6250  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 6.2  wobble 0.09  descriptor spread 0.383  probe distance 0.1098  8.1 s  anchors iou 0.72 (min 0.12) code cos max 0.00
+diag   6500  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 3.8  wobble 0.07  descriptor spread 0.262  probe distance 0.0743  8.1 s  anchors iou 0.59 (min 0.18) code cos max 0.00
+diag   6750  clean 0.94 (1 piece 1.00, no cavity 1.00, no handle 0.94)  graph=grid 1.00  live 2.8  wobble 0.06  descriptor spread 0.451  probe distance 0.1087  8.2 s  anchors iou 0.69 (min 0.14) code cos max 0.00
+diag   7000  clean 0.94 (1 piece 1.00, no cavity 1.00, no handle 0.94)  graph=grid 1.00  live 5.5  wobble 0.06  descriptor spread 0.311  probe distance 0.1140  8.2 s  anchors iou 0.72 (min 0.03) code cos max 0.00
+diag   7250  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 5.5  wobble 0.06  descriptor spread 0.342  probe distance 0.1092  8.1 s  anchors iou 0.67 (min 0.11) code cos max 0.00
+diag   7500  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 4.5  wobble 0.03  descriptor spread 0.346  probe distance 0.0973  8.3 s  anchors iou 0.69 (min 0.00) code cos max 0.00
+diag   7750  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 4.5  wobble 0.08  descriptor spread 0.419  probe distance 0.1065  8.2 s  anchors iou 0.67 (min 0.29) code cos max 0.00
+diag   8000  clean 0.94 (1 piece 1.00, no cavity 1.00, no handle 0.94)  graph=grid 1.00  live 2.5  wobble 0.05  descriptor spread 0.408  probe distance 0.1130  8.2 s  anchors iou 0.69 (min 0.08) code cos max 0.00
+diag   8250  clean 0.62 (1 piece 0.94, no cavity 1.00, no handle 0.69)  graph=grid 0.94  live 2.8  wobble 0.12  descriptor spread 0.522  probe distance 0.1191  8.1 s  anchors iou 0.71 (min 0.02) code cos max 0.00
+diag   8500  clean 0.94 (1 piece 1.00, no cavity 1.00, no handle 0.94)  graph=grid 1.00  live 3.5  wobble 0.06  descriptor spread 0.488  probe distance 0.1011  8.2 s  anchors iou 0.72 (min 0.12) code cos max 0.00
+diag   8750  clean 0.81 (1 piece 0.88, no cavity 1.00, no handle 0.94)  graph=grid 0.88  live 5.2  wobble 0.11  descriptor spread 0.651  probe distance 0.1139  8.2 s  anchors iou 0.67 (min 0.12) code cos max 0.00
+diag   9000  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 5.2  wobble 0.06  descriptor spread 0.357  probe distance 0.1122  8.2 s  anchors iou 0.72 (min 0.32) code cos max 0.00
+diag   9250  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 0.5  wobble 0.04  descriptor spread 0.490  probe distance 0.0788  8.2 s  anchors iou 0.58 (min 0.14) code cos max 0.00
+diag   9500  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 6.8  wobble 0.08  descriptor spread 0.490  probe distance 0.1144  8.2 s  anchors iou 0.72 (min 0.07) code cos max 0.00
+diag   9750  clean 0.88 (1 piece 0.88, no cavity 1.00, no handle 1.00)  graph=grid 0.88  live 4.8  wobble 0.09  descriptor spread 0.582  probe distance 0.1231  8.1 s  anchors iou 0.72 (min 0.31) code cos max 0.00
+diag  10000  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 5.8  wobble 0.09  descriptor spread 0.451  probe distance 0.1383  8.1 s  anchors iou 0.74 (min 0.31) code cos max 0.00
+before: {"value_error": 0.21113084256649017, "value_error_near_surface": 0.11617910861968994, "sign_disagreement": 0.3049437403678894, "overlap_mean": 0.10109227895736694, "overlap_worst": 0.06542336940765381}
+after: {"value_error": 0.008520340546965599, "value_error_near_surface": 0.008003335446119308, "sign_disagreement": 0.007283593527972698, "overlap_mean": 0.928826093673706, "overlap_worst": 0.8886297345161438}
+== distilled (5,000)
+S8_5000 topology: {'codes': 128, 'clean_at_96': 128, 'flagged': 0, 'defective_at_128_and_160': 0, 'clean_on_fine_grids': 128}
+S8_5000 anchors: {'distance_mean': 0.013, 'distance_max': 0.028, 'iou_mean': 0.805, 'iou_min': 0.489, 'code_cos_abs_mean': 0.007, 'code_cos_max': 0.0}
+== 6000
+S8_6000 topology: {'codes': 128, 'clean_at_96': 126, 'flagged': 2, 'defective_at_128_and_160': 2, 'clean_on_fine_grids': 126}
+S8_6000 anchors: {'distance_mean': 0.025, 'distance_max': 0.051, 'iou_mean': 0.711, 'iou_min': 0.25, 'code_cos_abs_mean': 0.007, 'code_cos_max': 0.0}
+== 7000
+S8_7000 topology: {'codes': 128, 'clean_at_96': 123, 'flagged': 5, 'defective_at_128_and_160': 5, 'clean_on_fine_grids': 123}
+S8_7000 anchors: {'distance_mean': 0.02, 'distance_max': 0.069, 'iou_mean': 0.722, 'iou_min': 0.115, 'code_cos_abs_mean': 0.007, 'code_cos_max': 0.0}
+== 8000
+S8_8000 topology: {'codes': 128, 'clean_at_96': 127, 'flagged': 1, 'defective_at_128_and_160': 1, 'clean_on_fine_grids': 127}
+S8_8000 anchors: {'distance_mean': 0.024, 'distance_max': 0.042, 'iou_mean': 0.691, 'iou_min': 0.016, 'code_cos_abs_mean': 0.007, 'code_cos_max': 0.0}
+== 9000
+S8_9000 topology: {'codes': 128, 'clean_at_96': 128, 'flagged': 0, 'defective_at_128_and_160': 0, 'clean_on_fine_grids': 128}
+S8_9000 anchors: {'distance_mean': 0.024, 'distance_max': 0.045, 'iou_mean': 0.719, 'iou_min': 0.293, 'code_cos_abs_mean': 0.007, 'code_cos_max': 0.0}
+== 10000
+S8_10000 topology: {'codes': 128, 'clean_at_96': 120, 'flagged': 8, 'defective_at_128_and_160': 8, 'clean_on_fine_grids': 120}
+S8_10000 anchors: {'distance_mean': 0.021, 'distance_max': 0.076, 'iou_mean': 0.74, 'iou_min': 0.267, 'code_cos_abs_mean': 0.007, 'code_cos_max': 0.0}
+== variance on 96 codes
+D0_distill_J4_5000_no_base @ 5000: total variance over 96 codes: mean 1.086; between codes: std 0.438 (range 0.46 to 2.15); standard error with 24 codes 0.089, with 96 codes 0.045; four groups of 24 would report 1.133, 1.062, 1.021, 1.129; solid directions from the pooled spectrum 29, per code 28.7 (std 2.9)
+S8_distilled_no_base_continued_to_ @ 6000: total variance over 96 codes: mean 0.824; between codes: std 0.338 (range 0.23 to 2.17); standard error with 24 codes 0.069, with 96 codes 0.034; four groups of 24 would report 0.780, 0.963, 0.808, 0.744; solid directions from the pooled spectrum 24, per code 24.1 (std 2.5)
+S8_distilled_no_base_continued_to_ @ 7000: total variance over 96 codes: mean 1.084; between codes: std 0.502 (range 0.32 to 2.73); standard error with 24 codes 0.103, with 96 codes 0.051; four groups of 24 would report 1.163, 1.115, 1.011, 1.045; solid directions from the pooled spectrum 24, per code 24.0 (std 2.5)
+S8_distilled_no_base_continued_to_ @ 8000: total variance over 96 codes: mean 1.185; between codes: std 0.592 (range 0.34 to 3.07); standard error with 24 codes 0.121, with 96 codes 0.060; four groups of 24 would report 1.238, 1.263, 1.250, 0.989; solid directions from the pooled spectrum 25, per code 24.5 (std 2.1)
+S8_distilled_no_base_continued_to_ @ 9000: total variance over 96 codes: mean 0.971; between codes: std 0.523 (range 0.12 to 2.94); standard error with 24 codes 0.107, with 96 codes 0.053; four groups of 24 would report 0.926, 1.082, 0.911, 0.965; solid directions from the pooled spectrum 24, per code 23.7 (std 2.9)
+S8_distilled_no_base_continued_to_ @ 10000: total variance over 96 codes: mean 1.323; between codes: std 0.747 (range 0.11 to 3.92); standard error with 24 codes 0.152, with 96 codes 0.076; four groups of 24 would report 1.476, 1.370, 1.233, 1.214; solid directions from the pooled spectrum 27, per code 26.2 (std 3.5)
+== J6 variance at 6,000 and 7,500 already measured (1.09, 1.06); 9,000 0.84; 10,000 1.42
+== layer injection
+
+distilled 5000 (update 5000): code directions injected at each layer and how many reach the shape
+               scale & shift    layer output                  field     surface (pose removed)
+  layer            eff / >1%       eff / >1%      eff / >1% / share          eff / >1% / share
+  main 1       52.2 /   63     48.4 /   63      4.4 /   63 /  0.02       10.0 /   63 /  0.01
+  main 2       52.6 /   63     33.0 /   63      8.6 /   63 /  0.04        6.8 /   63 /  0.04
+  main 3       52.4 /   63     27.9 /   63      5.7 /   63 /  0.23        4.9 /   63 /  0.22
+  main 4       51.5 /   63     26.7 /   63      6.3 /   63 /  0.41        5.0 /   62 /  0.43
+  main 5       52.1 /   63     31.8 /   63      5.0 /   63 /  0.18        4.7 /   62 /  0.20
+  main 6       52.3 /   63     33.4 /   63      4.5 /   63 /  0.07        5.4 /   63 /  0.06
+  main 7       53.0 /   63     35.6 /   63      3.4 /   63 /  0.03        5.2 /   63 /  0.02
+  main 8       54.0 /   63     20.5 /   63      2.0 /   58 /  0.03        2.9 /   61 /  0.01
+  all layers   54.0 /   63     11.8 /   63      6.4 /   63 /     -        5.6 /   62 /     -
+
+S8 7000 (update 7000): code directions injected at each layer and how many reach the shape
+               scale & shift    layer output                  field     surface (pose removed)
+  layer            eff / >1%       eff / >1%      eff / >1% / share          eff / >1% / share
+  main 1       47.6 /   63     43.6 /   63      2.9 /   63 /  0.02        6.0 /   63 /  0.02
+  main 2       48.8 /   63     30.1 /   63      7.6 /   63 /  0.03        5.0 /   63 /  0.03
+  main 3       48.4 /   63     23.7 /   63      5.5 /   62 /  0.21        4.1 /   58 /  0.20
+  main 4       46.9 /   63     22.7 /   63      4.9 /   61 /  0.47        3.9 /   56 /  0.52
+  main 5       47.9 /   63     24.4 /   63      3.4 /   62 /  0.16        2.8 /   58 /  0.18
+  main 6       48.3 /   63     25.9 /   63      3.6 /   63 /  0.05        4.0 /   63 /  0.04
+  main 7       48.9 /   63     23.9 /   63      2.1 /   62 /  0.03        3.5 /   63 /  0.02
+  main 8       50.3 /   63     11.9 /   63      1.4 /   44 /  0.03        3.3 /   60 /  0.00
+  all layers   50.3 /   63      8.3 /   63      4.5 /   60 /     -        3.8 /   52 /     -
+
+S8 10000 (update 10000): code directions injected at each layer and how many reach the shape
+               scale & shift    layer output                  field     surface (pose removed)
+  layer            eff / >1%       eff / >1%      eff / >1% / share          eff / >1% / share
+  main 1       47.0 /   63     42.6 /   63      3.0 /   63 /  0.03        5.8 /   63 /  0.01
+  main 2       47.6 /   63     31.2 /   63      6.9 /   63 /  0.03        4.3 /   62 /  0.03
+  main 3       47.0 /   63     23.7 /   63      4.7 /   61 /  0.23        3.9 /   54 /  0.23
+  main 4       45.9 /   63     22.0 /   63      5.4 /   61 /  0.40        3.6 /   52 /  0.43
+  main 5       46.9 /   63     23.3 /   63      2.9 /   59 /  0.18        2.9 /   52 /  0.23
+  main 6       47.2 /   63     23.8 /   63      3.1 /   62 /  0.06        3.8 /   61 /  0.04
+  main 7       48.3 /   63     19.3 /   63      2.2 /   60 /  0.04        4.3 /   62 /  0.02
+  main 8       48.9 /   63      8.3 /   63      1.4 /   39 /  0.03        2.4 /   50 /  0.01
+  all layers   48.9 /   63      9.4 /   63      4.8 /   61 /     -        3.8 /   50 /     -
+
+J6 10000 (update 10000): code directions injected at each layer and how many reach the shape
+               scale & shift    layer output                  field     surface (pose removed)
+  layer            eff / >1%       eff / >1%      eff / >1% / share          eff / >1% / share
+  main 1       53.2 /   63     48.5 /   63     10.4 /   63 /  0.01        7.5 /   63 /  0.01
+  main 2       53.7 /   63     32.1 /   63      6.5 /   63 /  0.03        5.5 /   63 /  0.03
+  main 3       53.5 /   63     25.2 /   63      5.2 /   63 /  0.26        3.4 /   57 /  0.23
+  main 4       52.3 /   63     24.2 /   63      5.4 /   62 /  0.44        4.0 /   54 /  0.45
+  main 5       52.7 /   63     30.0 /   63      3.6 /   62 /  0.17        3.7 /   57 /  0.21
+  main 6       53.1 /   63     31.3 /   63      4.0 /   63 /  0.05        3.8 /   62 /  0.04
+  main 7       54.0 /   63     30.4 /   63      4.1 /   63 /  0.02        3.3 /   62 /  0.02
+  main 8       53.4 /   63     26.2 /   63      2.2 /   55 /  0.02        2.0 /   51 /  0.01
+  all layers   53.4 /   63      8.2 /   63      5.4 /   63 /     -        4.2 /   56 /     -
+== pairwise variety
+
+S8 at 10,000 (update 10000)
+  1 - overlap      : mean over pairs 0.7857; to the nearest other shape 0.5329 +/- 0.0074
+  surface distance : mean over pairs 0.1222; to the nearest other shape 0.0609 +/- 0.0010
+  field difference : mean over pairs 0.1349; to the nearest other shape 0.0710 +/- 0.0011
+  shapes: fill 0.050 of the ball; surface area 2.08; compactness median 0.26 (thinnest tenth 0.19); half-thickness median 0.148 (thinnest tenth 0.117); spread between shapes: volume 0.44, area 0.26, compactness 0.07
+== facing
+
+D0_distill_J4_5000_no_base (update 5000); 129691 points within 0.03 of the surface; slope error 0.208, median slope 1.09; surface below facing 0: 0.009
+    faces outward    : share 0.201, mean radius 0.43, slope error 0.139, median slope 1.01
+    tilted           : share 0.547, mean radius 0.46, slope error 0.176, median slope 1.08
+    nearly side-on   : share 0.242, mean radius 0.49, slope error 0.325, median slope 1.26
+    past side-on     : share 0.009, mean radius 0.50, slope error 0.496, median slope 1.44
+    faces the centre : share 0.0001
+
+S8_distilled_no_base_continued_to_10k (update 10000); 91340 points within 0.03 of the surface; slope error 0.211, median slope 1.03; surface below facing 0: 0.047
+    faces outward    : share 0.133, mean radius 0.47, slope error 0.153, median slope 0.94
+    tilted           : share 0.434, mean radius 0.41, slope error 0.186, median slope 1.00
+    nearly side-on   : share 0.386, mean radius 0.38, slope error 0.251, median slope 1.11
+    past side-on     : share 0.045, mean radius 0.34, slope error 0.278, median slope 1.11
+    faces the centre : share 0.001, mean radius 0.15, slope error 0.316, median slope 0.98
+== field quality
+
+D0_distill_J4_5000_no_base (update 5000)
+  anchor codes  slope error mean 0.086 (within 0.1 of the surface 0.146; share of points off by more than 0.2: 0.078); trainer's eikonal term 0.0186; consistency miss mean 0.0298, median 0.0191; field against the object's true distance: mean error 0.0134
+  random codes  slope error mean 0.110 (within 0.1 of the surface 0.192; share of points off by more than 0.2: 0.140); trainer's eikonal term 0.0262; consistency miss mean 0.0361, median 0.0273
+
+S8_distilled_no_base_continued_to_10k (update 10000)
+  anchor codes  slope error mean 0.092 (within 0.1 of the surface 0.189; share of points off by more than 0.2: 0.095); trainer's eikonal term 0.0226; consistency miss mean 0.0362, median 0.0254; field against the object's true distance: mean error 0.0211
+  random codes  slope error mean 0.109 (within 0.1 of the surface 0.198; share of points off by more than 0.2: 0.145); trainer's eikonal term 0.0255; consistency miss mean 0.0395, median 0.0293
+== sheets
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_random_shapes_S8_10000.png
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_anchor_fit_S8_10000.png
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_distilled_no_base_vs_J4.png
+== unseen-object fit at 10,000
+Traceback (most recent call last):
+    main()
+    runpy.run_path(script, run_name="__main__")
+Traceback (most recent call last):
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/scripts/gpu_capped.py", line 102, in <module>
+    main()
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/scripts/gpu_capped.py", line 98, in main
+    runpy.run_path(script, run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+== done Tue 17 Nov 2026 03:27:45 PM CST

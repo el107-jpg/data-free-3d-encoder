@@ -1,0 +1,4 @@
+checked 41764 files, 8.80 GB; damaged in memory: 0
+distill exit 0 Tue 17 Nov 2026 12:45:04 PM CST
+S8_distilled_no_base_continued_to_10k finished: diag  10000  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 5.8  wobble 0.09  descriptor spread 0.451  probe distance 0.1383  8.1 s  anchors iou 0.74 (min 0.31) code cos max 0.00
+continuation done Tue 17 Nov 2026 03:17:40 PM CST

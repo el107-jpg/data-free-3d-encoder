@@ -1,0 +1,1 @@
+b9257eb Launcher: default to the scale-to-fit procedural anchors

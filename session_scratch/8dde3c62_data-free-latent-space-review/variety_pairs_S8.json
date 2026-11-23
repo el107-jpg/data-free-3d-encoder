@@ -1,0 +1,31 @@
+{
+ "S8 at 10,000": {
+  "update": 10000,
+  "overlap": {
+   "mean_pair": 0.7856687307357788,
+   "nearest_mean": 0.5329425930976868,
+   "nearest_se": 0.007426076029659851
+  },
+  "surface": {
+   "mean_pair": 0.12220491614323437,
+   "nearest_mean": 0.06092877891690781,
+   "nearest_se": 0.0010481878220495113
+  },
+  "field": {
+   "mean_pair": 0.13493120670318604,
+   "nearest_mean": 0.07100170850753784,
+   "nearest_se": 0.0011146804949542482
+  },
+  "shape": {
+   "fill_mean": 0.04997131225201746,
+   "area_mean": 2.082810321298749,
+   "compactness_median": 0.25831371062925623,
+   "compactness_p10": 0.19056838283745664,
+   "half_thickness_median": 0.1480717584490776,
+   "half_thickness_p10": 0.11688908189535141,
+   "volume_rel_std": 0.44176291770476817,
+   "area_rel_std": 0.2555198765709697,
+   "compactness_std": 0.07416099401132713
+  }
+ }
+}

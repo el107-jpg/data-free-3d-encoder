@@ -1,0 +1,1 @@
+N1_d64_follow_capped_even_code_layernorm_last finished: diag   1000  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 8.5  wobble 0.05  descriptor spread 0.366  probe distance 0.1051  7.8 s  anchors iou 0.80 (min 0.50) code cos max 0.00

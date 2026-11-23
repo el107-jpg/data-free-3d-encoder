@@ -1,0 +1,10 @@
+[gpu_capped] memory capped at 75% (~11.6 of 15.5 GiB); busy time throttled to ~70%
+shape 0 {'uncertified': 9013, 'enclosed': 1008, 'pockets': 11, 'pocket_cells': 977} -> {'uncertified': 8586, 'enclosed': 806, 'pockets': 26, 'pocket_cells': 753}
+shape 1 {'uncertified': 8667, 'enclosed': 911, 'pockets': 5, 'pocket_cells': 887} -> {'uncertified': 8194, 'enclosed': 731, 'pockets': 14, 'pocket_cells': 691}
+shape 2 {'uncertified': 8802, 'enclosed': 1127, 'pockets': 11, 'pocket_cells': 1088} -> {'uncertified': 8336, 'enclosed': 993, 'pockets': 31, 'pocket_cells': 957}
+shape 3 {'uncertified': 8853, 'enclosed': 819, 'pockets': 7, 'pocket_cells': 805} -> {'uncertified': 8502, 'enclosed': 673, 'pockets': 27, 'pocket_cells': 631}
+shape 4 {'uncertified': 8500, 'enclosed': 788, 'pockets': 13, 'pocket_cells': 764} -> {'uncertified': 8161, 'enclosed': 649, 'pockets': 23, 'pocket_cells': 616}
+shape 5 {'uncertified': 8902, 'enclosed': 967, 'pockets': 10, 'pocket_cells': 948} -> {'uncertified': 8490, 'enclosed': 767, 'pockets': 22, 'pocket_cells': 732}
+shape 6 {'uncertified': 9689, 'enclosed': 1413, 'pockets': 10, 'pocket_cells': 1383} -> {'uncertified': 9192, 'enclosed': 1268, 'pockets': 29, 'pocket_cells': 1230}
+shape 7 {'uncertified': 10010, 'enclosed': 1324, 'pockets': 8, 'pocket_cells': 1301} -> {'uncertified': 9425, 'enclosed': 1213, 'pockets': 14, 'pocket_cells': 1179}
+saved /home/eric-luo/.claude/jobs/f264ef61/tmp/seed_gap/cone_1.0_2.json

@@ -1,0 +1,1 @@
+J7_J6_lower_lr_to_12k finished: diag  12000  clean 0.88 (1 piece 0.88, no cavity 1.00, no handle 1.00)  graph=grid 0.88  live 3.8  wobble 0.12  descriptor spread 0.706  probe distance 0.1229  8.1 s  anchors iou 0.84 (min 0.52) code cos max 0.00

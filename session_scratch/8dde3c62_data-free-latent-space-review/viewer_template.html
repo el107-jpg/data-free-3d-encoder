@@ -1,0 +1,197 @@
+<title>Handle Shape Viewer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
+<style>
+  /* Layout: a shape list beside one large 3-D stage; the list stacks above the stage on narrow screens. */
+  :root {
+    --bg: #f3f5f8; --panel: #ffffff; --ink: #18202b; --muted: #5b6676; --line: #d5dbe4;
+    --accent: #1f4f9c; --accent-soft: #e2ebf8; --shape: #7fa6d6; --inner: #d98a5c; --stage: #e9edf3;
+    --warn: #9a4a12; --warn-soft: #fbe9db; --ok: #21633f; --ok-soft: #dff1e6;
+    --display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+    --body: "Inter", "Segoe UI", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12161c; --panel: #1a2029; --ink: #e8edf4; --muted: #9aa6b7; --line: #2c3542;
+      --accent: #8fb6ee; --accent-soft: #223452; --shape: #6f9bd4; --inner: #d98a5c; --stage: #0d1116;
+      --warn: #f0b58a; --warn-soft: #3d2a1c; --ok: #8fd3aa; --ok-soft: #1c3527; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12161c; --panel: #1a2029; --ink: #e8edf4; --muted: #9aa6b7; --line: #2c3542;
+    --accent: #8fb6ee; --accent-soft: #223452; --shape: #6f9bd4; --inner: #d98a5c; --stage: #0d1116;
+    --warn: #f0b58a; --warn-soft: #3d2a1c; --ok: #8fd3aa; --ok-soft: #1c3527; color-scheme: dark;
+  }
+  body { background: var(--bg); color: var(--ink); font-family: var(--body); line-height: 1.5; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding-block: 24px 40px;
+          padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+          display: flex; flex-direction: column; gap: 18px; }
+  h1 { font-family: var(--display); font-size: 1.6rem; font-weight: 600; margin: 0; text-wrap: balance; }
+  .lede { margin: 0; color: var(--muted); max-width: 68ch; }
+  .main { display: grid; grid-template-columns: minmax(230px, 300px) minmax(0, 1fr); gap: 18px; align-items: start; }
+  @media (max-width: 760px) { .main { grid-template-columns: minmax(0, 1fr); } }
+  .list { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  .group h2 { font-family: var(--display); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em;
+              text-transform: uppercase; color: var(--muted); margin: 0 0 6px; }
+  .items { display: flex; flex-direction: column; gap: 6px; }
+  @media (max-width: 760px) { .items { flex-direction: row; flex-wrap: wrap; } }
+  button.shape { font: inherit; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+                 padding: 8px 10px; text-align: left; cursor: pointer; display: flex; gap: 8px; align-items: center;
+                 justify-content: space-between; min-width: 0; }
+  button.shape:hover { border-color: var(--accent); }
+  button.shape:focus-visible, .ctl button:focus-visible, .ctl select:focus-visible, .ctl input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  button.shape[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+  .chip { font-size: 0.74rem; font-weight: 600; border-radius: 999px; padding: 2px 8px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .chip.h { color: var(--warn); background: var(--warn-soft); }
+  .chip.n { color: var(--accent); background: var(--accent-soft); }
+  .chip.c { color: var(--ok); background: var(--ok-soft); }
+  .view { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+  .stage { position: relative; background: var(--stage); border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
+           aspect-ratio: 4 / 3; max-width: 100%; max-height: 72vh; }
+  .stage canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+  .hint { position: absolute; left: 10px; bottom: 8px; font-size: 0.74rem; color: var(--muted); pointer-events: none; }
+  .ctl { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; font-size: 0.86rem; }
+  .ctl label { display: flex; gap: 8px; align-items: center; color: var(--muted); }
+  .ctl input[type="range"] { width: 170px; max-width: 46vw; accent-color: var(--accent); }
+  .ctl select, .ctl button { font: inherit; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 4px 9px; cursor: pointer; }
+  .info { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+  .info h3 { font-family: var(--display); font-size: 1.02rem; font-weight: 600; margin: 0; }
+  .info p { margin: 0; color: var(--muted); max-width: 70ch; }
+  .facts { display: flex; flex-wrap: wrap; gap: 6px 18px; font-variant-numeric: tabular-nums; font-size: 0.9rem; }
+  .facts b { font-weight: 600; }
+  .fallback { padding: 18px; color: var(--muted); }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Handle Shape Viewer</h1>
+    <p class="lede">Generated shapes from three training runs, as surfaces you can turn. A handle is a hole that goes all the way through, like the hole in a mug's handle. Use the cut slider to slice a shape open and look through it.</p>
+  </header>
+  <div class="main">
+    <nav class="list" id="list" aria-label="Shapes"></nav>
+    <section class="view">
+      <div class="stage" id="stage"><div class="hint">Drag to turn · scroll or pinch to zoom · right-drag to pan</div></div>
+      <div class="ctl">
+        <label for="cut">Cut <input type="range" id="cut" min="-100" max="100" value="100"></label>
+        <label for="axis">along <select id="axis"><option value="0">x</option><option value="1">y</option><option value="2" selected>z</option></select></label>
+        <button type="button" id="spin" aria-pressed="false">Spin</button>
+        <button type="button" id="reset">Reset view</button>
+      </div>
+      <div class="info" id="info" aria-live="polite"></div>
+    </section>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+const DATA = /*DATA*/;
+
+(function () {
+  const stage = document.getElementById('stage');
+  const list = document.getElementById('list');
+  const info = document.getElementById('info');
+  if (!window.THREE || !THREE.OrbitControls) {
+    stage.innerHTML = '<div class="fallback">The 3-D library did not load, so the shapes cannot be drawn here.</div>';
+    return;
+  }
+  const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.localClippingEnabled = true;
+  stage.insertBefore(renderer.domElement, stage.firstChild);
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(38, 4 / 3, 0.05, 20);
+  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true; controls.dampingFactor = 0.12; controls.autoRotateSpeed = 1.6;
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x55606e, 0.85));
+  const key = new THREE.DirectionalLight(0xffffff, 0.75); key.position.set(2.2, 3, 2.6); scene.add(key);
+  const fill = new THREE.DirectionalLight(0xffffff, 0.3); fill.position.set(-3, -1.5, -2); scene.add(fill);
+
+  const plane = new THREE.Plane(new THREE.Vector3(0, 0, -1), 1);
+  const outer = new THREE.MeshStandardMaterial({ roughness: 0.62, metalness: 0.04, side: THREE.FrontSide, clippingPlanes: [plane] });
+  const inner = new THREE.MeshStandardMaterial({ roughness: 0.8, metalness: 0, side: THREE.BackSide, clippingPlanes: [plane] });
+  let meshes = [];
+
+  function paint() {
+    outer.color.set(css('--shape')); inner.color.set(css('--inner'));
+    renderer.setClearColor(new THREE.Color(css('--stage')), 1);
+  }
+  function fit() {
+    const w = stage.clientWidth, h = stage.clientHeight;
+    if (!w || !h) return;
+    renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix();
+  }
+  function resetView() { camera.position.set(1.7, 1.25, 2.0); controls.target.set(0, 0, 0); controls.update(); }
+
+  function bytes(b64) { const s = atob(b64), a = new Uint8Array(s.length); for (let i = 0; i < s.length; i++) a[i] = s.charCodeAt(i); return a.buffer; }
+  const cache = new Map();
+  function geometry(k) {
+    if (cache.has(k)) return cache.get(k);
+    const s = DATA.shapes[k];
+    const q = new Int16Array(bytes(s.p)), pos = new Float32Array(q.length), f = DATA.lim / 32767;
+    for (let i = 0; i < q.length; i++) pos[i] = q[i] * f;
+    const g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+    g.setIndex(new THREE.BufferAttribute(s.wide ? new Uint32Array(bytes(s.i)) : new Uint16Array(bytes(s.i)), 1));
+    g.computeVertexNormals();
+    cache.set(k, g); return g;
+  }
+
+  function describe(s) {
+    const facts = '<div class="facts"><span><b>' + s.handles + '</b> handle' + (s.handles === 1 ? '' : 's') + '</span><span><b>' +
+      s.pieces + '</b> piece' + (s.pieces === 1 ? '' : 's') + '</span><span><b>' + s.cavities + '</b> enclosed cavit' + (s.cavities === 1 ? 'y' : 'ies') +
+      '</span><span><b>' + s.tris.toLocaleString() + '</b> triangles</span></div>';
+    let note;
+    if (s.handles > 0 && s.pieces > 1) note = 'Real handles, and it has also come apart into more than one piece. Slice it to see the tunnels.';
+    else if (s.handles > 0) note = 'Real handles: the count holds on a fine grid. Look for places where a limb curls back and rejoins the body, then slice through them.';
+    else if (s.coarse_handles > 0) note = 'No handles. The coarse check used during training counted ' + s.coarse_handles +
+      ' here, because two parts come so close that a coarse grid merges them. On a fine grid the gap is open.';
+    else note = 'A clean single piece with no handles, for comparison.';
+    info.innerHTML = '<h3>' + s.run + ', code ' + s.code + '</h3>' + facts + '<p>' + note + '</p>' +
+      '<p>Counts are from a grid of 160 points per side. The cut face shows the inside in orange.</p>';
+  }
+
+  function show(k) {
+    meshes.forEach(m => scene.remove(m)); meshes = [];
+    const g = geometry(k);
+    [outer, inner].forEach(mat => { const m = new THREE.Mesh(g, mat); scene.add(m); meshes.push(m); });
+    list.querySelectorAll('button.shape').forEach(b => b.setAttribute('aria-pressed', String(Number(b.dataset.k) === k)));
+    describe(DATA.shapes[k]);
+  }
+
+  const groups = [];
+  DATA.shapes.forEach((s, k) => { let g = groups.find(x => x.run === s.run); if (!g) { g = { run: s.run, items: [] }; groups.push(g); } g.items.push(k); });
+  groups.forEach(g => {
+    const box = document.createElement('div'); box.className = 'group';
+    const h = document.createElement('h2'); h.textContent = g.run; box.appendChild(h);
+    const items = document.createElement('div'); items.className = 'items';
+    g.items.forEach(k => {
+      const s = DATA.shapes[k], b = document.createElement('button');
+      b.type = 'button'; b.className = 'shape'; b.dataset.k = k; b.id = 'shape-' + k;
+      const chip = s.handles > 0 ? '<span class="chip h">' + s.handles + ' handle' + (s.handles === 1 ? '' : 's') + '</span>'
+        : s.coarse_handles > 0 ? '<span class="chip n">near touch</span>' : '<span class="chip c">clean</span>';
+      b.innerHTML = '<span>Code ' + s.code + '</span>' + chip;
+      b.addEventListener('click', () => show(k));
+      items.appendChild(b);
+    });
+    box.appendChild(items); list.appendChild(box);
+  });
+
+  const cut = document.getElementById('cut'), axis = document.getElementById('axis');
+  function setCut() {
+    const n = [0, 0, 0]; n[Number(axis.value)] = -1;
+    plane.normal.set(n[0], n[1], n[2]); plane.constant = Number(cut.value) / 100 * 1.0;
+  }
+  cut.addEventListener('input', setCut); axis.addEventListener('change', setCut);
+  const spin = document.getElementById('spin');
+  spin.addEventListener('click', () => { controls.autoRotate = !controls.autoRotate; spin.setAttribute('aria-pressed', String(controls.autoRotate)); spin.textContent = controls.autoRotate ? 'Stop' : 'Spin'; });
+  document.getElementById('reset').addEventListener('click', () => { resetView(); cut.value = 100; setCut(); });
+
+  new ResizeObserver(fit).observe(stage);
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', paint);
+  new MutationObserver(paint).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  paint(); fit(); resetView(); setCut(); show(0);
+  (function loop() { controls.update(); renderer.render(scene, camera); requestAnimationFrame(loop); })();
+})();
+</script>

@@ -1,0 +1,181 @@
+[gpu_capped] memory capped at 12% (~1.9 of 15.5 GiB); busy time throttled to ~30%
+
+no base 500 (update 500): independent code directions at each stage (of 63)
+  stage                                   effective  for 90%  above 1%
+  side network, layer 1                        47.8     46.8      63.0
+  side network, layer 2                        47.7     47.0      63.0
+  scale and shift, all layers                  52.1     48.8      63.0
+  scale and shift for main layer 1             31.1     43.1      63.0
+  scale and shift for main layer 8             48.2     45.2      63.0
+  main network, hidden layer 1                 21.8     37.2      63.0
+  main network, hidden layer 2                 15.5     30.6      63.0
+  main network, hidden layer 3                 11.4     23.2      63.0
+  main network, hidden layer 4                  8.7     17.4      63.0
+  main network, hidden layer 5                  7.2     14.1      63.0
+  main network, hidden layer 6                  6.1     12.0      63.0
+  main network, hidden layer 7                  5.6     10.9      63.0
+  main network, hidden layer 8                  5.4     10.1      63.0
+  field at points in the ball                   4.2      6.0      41.1
+  surface motion (pose removed)                 3.3      5.0      33.1
+
+no base 1000 (update 1000): independent code directions at each stage (of 63)
+  stage                                   effective  for 90%  above 1%
+  side network, layer 1                        52.3     50.0      63.0
+  side network, layer 2                        46.6     48.9      63.0
+  scale and shift, all layers                  51.1     49.6      63.0
+  scale and shift for main layer 1             23.0     40.8      63.0
+  scale and shift for main layer 8             47.9     44.4      63.0
+  main network, hidden layer 1                 15.9     32.5      63.0
+  main network, hidden layer 2                  8.4     17.6      63.0
+  main network, hidden layer 3                  5.8      9.5      63.0
+  main network, hidden layer 4                  4.4      7.9      63.0
+  main network, hidden layer 5                  3.5      6.4      63.0
+  main network, hidden layer 6                  3.2      5.5      63.0
+  main network, hidden layer 7                  3.1      4.6      63.0
+  main network, hidden layer 8                  3.3      4.0      63.0
+  field at points in the ball                   2.9      3.0      19.9
+  surface motion (pose removed)                 2.2      2.2      14.9
+
+no base 2000 (update 2000): independent code directions at each stage (of 63)
+  stage                                   effective  for 90%  above 1%
+  side network, layer 1                        54.3     51.1      63.0
+  side network, layer 2                        37.4     47.2      63.0
+  scale and shift, all layers                  51.1     47.8      63.0
+  scale and shift for main layer 1             15.3     31.4      63.0
+  scale and shift for main layer 8             46.1     42.8      63.0
+  main network, hidden layer 1                 12.0     21.9      63.0
+  main network, hidden layer 2                  7.6      8.9      63.0
+  main network, hidden layer 3                  6.1      7.9      63.0
+  main network, hidden layer 4                  5.0      6.9      62.9
+  main network, hidden layer 5                  4.1      6.6      62.6
+  main network, hidden layer 6                  3.7      6.2      62.4
+  main network, hidden layer 7                  3.8      6.2      62.4
+  main network, hidden layer 8                  3.8      6.5      62.5
+  field at points in the ball                   3.5      5.6      23.1
+  surface motion (pose removed)                 3.0      5.0      17.8
+
+no base 2500 (update 2500): independent code directions at each stage (of 63)
+  stage                                   effective  for 90%  above 1%
+  side network, layer 1                        54.7     51.6      63.0
+  side network, layer 2                        38.2     47.8      63.0
+  scale and shift, all layers                  52.4     48.4      63.0
+  scale and shift for main layer 1             15.1     29.5      63.0
+  scale and shift for main layer 8             46.7     43.0      63.0
+  main network, hidden layer 1                 12.0     20.2      63.0
+  main network, hidden layer 2                  8.1      9.2      63.0
+  main network, hidden layer 3                  7.0      7.9      63.0
+  main network, hidden layer 4                  6.0      7.0      63.0
+  main network, hidden layer 5                  5.3      6.9      63.0
+  main network, hidden layer 6                  4.8      6.8      63.0
+  main network, hidden layer 7                  4.6      6.6      62.9
+  main network, hidden layer 8                  4.6      6.9      63.0
+  field at points in the ball                   4.2      6.1      26.0
+  surface motion (pose removed)                 3.6      5.5      21.4
+
+no base 3000 (update 3000): independent code directions at each stage (of 63)
+  stage                                   effective  for 90%  above 1%
+  side network, layer 1                        54.4     51.6      63.0
+  side network, layer 2                        36.2     47.4      63.0
+  scale and shift, all layers                  52.3     48.4      63.0
+  scale and shift for main layer 1             15.3     26.9      63.0
+  scale and shift for main layer 8             46.4     42.9      63.0
+  main network, hidden layer 1                 12.5     17.9      63.0
+  main network, hidden layer 2                  8.3     10.0      63.0
+  main network, hidden layer 3                  7.1      8.2      63.0
+  main network, hidden layer 4                  6.2      7.4      63.0
+  main network, hidden layer 5                  5.5      7.0      63.0
+  main network, hidden layer 6                  5.0      6.8      62.8
+  main network, hidden layer 7                  4.8      6.6      62.6
+  main network, hidden layer 8                  4.9      7.0      62.9
+  field at points in the ball                   4.5      6.4      28.0
+  surface motion (pose removed)                 3.9      5.9      23.4
+
+no base 4000 (update 4000): independent code directions at each stage (of 63)
+  stage                                   effective  for 90%  above 1%
+  side network, layer 1                        54.3     52.0      63.0
+  side network, layer 2                        35.4     47.8      63.0
+  scale and shift, all layers                  53.2     49.0      63.0
+  scale and shift for main layer 1             16.0     25.6      63.0
+  scale and shift for main layer 8             46.3     42.6      63.0
+  main network, hidden layer 1                 13.3     18.0      63.0
+  main network, hidden layer 2                  8.9     11.0      63.0
+  main network, hidden layer 3                  7.6      9.6      63.0
+  main network, hidden layer 4                  6.1      8.1      63.0
+  main network, hidden layer 5                  5.2      7.9      62.9
+  main network, hidden layer 6                  4.6      7.5      62.8
+  main network, hidden layer 7                  4.5      7.5      62.6
+  main network, hidden layer 8                  4.6      8.0      62.9
+  field at points in the ball                   4.1      6.9      30.4
+  surface motion (pose removed)                 3.7      5.8      25.6
+
+no base 5000 (update 5000): independent code directions at each stage (of 63)
+  stage                                   effective  for 90%  above 1%
+  side network, layer 1                        53.5     52.0      63.0
+  side network, layer 2                        34.0     47.1      63.0
+  scale and shift, all layers                  53.5     49.0      63.0
+  scale and shift for main layer 1             15.9     23.9      63.0
+  scale and shift for main layer 8             46.5     43.0      63.0
+  main network, hidden layer 1                 13.4     17.4      63.0
+  main network, hidden layer 2                  8.7     11.4      63.0
+  main network, hidden layer 3                  7.6      9.8      63.0
+  main network, hidden layer 4                  6.5      8.8      63.0
+  main network, hidden layer 5                  5.9      8.2      62.9
+  main network, hidden layer 6                  5.3      8.0      62.6
+  main network, hidden layer 7                  5.1      7.9      62.5
+  main network, hidden layer 8                  5.1      8.4      62.9
+  field at points in the ball                   4.7      7.0      34.0
+  surface motion (pose removed)                 4.2      6.4      28.5
+
+J4 1000 (update 1000): independent code directions at each stage (of 63)
+  stage                                   effective  for 90%  above 1%
+  side network, layer 1                        54.1     50.4      63.0
+  side network, layer 2                        50.3     48.0      63.0
+  scale and shift, all layers                  51.9     48.6      63.0
+  scale and shift for main layer 1             48.8     47.4      63.0
+  scale and shift for main layer 8             50.5     47.8      63.0
+  main network, hidden layer 1                 45.4     46.0      63.0
+  main network, hidden layer 2                 37.7     43.5      63.0
+  main network, hidden layer 3                 32.8     41.0      63.0
+  main network, hidden layer 4                 27.4     40.5      63.0
+  main network, hidden layer 5                 21.2     39.5      63.0
+  main network, hidden layer 6                 15.9     37.5      63.0
+  main network, hidden layer 7                 10.3     34.0      63.0
+  main network, hidden layer 8                  7.6     27.4      63.0
+  field at points in the ball                   3.6      5.4      62.1
+  surface motion (pose removed)                 3.2      4.6      56.5
+
+J4 2500 (update 2500): independent code directions at each stage (of 63)
+  stage                                   effective  for 90%  above 1%
+  side network, layer 1                        56.1     51.6      63.0
+  side network, layer 2                        53.3     49.8      63.0
+  scale and shift, all layers                  54.9     50.0      63.0
+  scale and shift for main layer 1             51.8     48.9      63.0
+  scale and shift for main layer 8             52.9     49.0      63.0
+  main network, hidden layer 1                 48.3     47.5      63.0
+  main network, hidden layer 2                 36.4     43.1      63.0
+  main network, hidden layer 3                 30.8     41.0      63.0
+  main network, hidden layer 4                 27.5     40.4      63.0
+  main network, hidden layer 5                 22.2     38.9      63.0
+  main network, hidden layer 6                 18.8     37.0      63.0
+  main network, hidden layer 7                 14.9     34.1      63.0
+  main network, hidden layer 8                 12.0     28.9      63.0
+  field at points in the ball                   6.3      8.9      63.0
+  surface motion (pose removed)                 5.8      8.1      62.8
+
+J4 5000 (update 5000): independent code directions at each stage (of 63)
+  stage                                   effective  for 90%  above 1%
+  side network, layer 1                        56.2     52.1      63.0
+  side network, layer 2                        53.6     50.6      63.0
+  scale and shift, all layers                  56.1     51.2      63.0
+  scale and shift for main layer 1             52.8     50.0      63.0
+  scale and shift for main layer 8             54.0     50.0      63.0
+  main network, hidden layer 1                 48.9     48.4      63.0
+  main network, hidden layer 2                 33.9     42.8      63.0
+  main network, hidden layer 3                 29.4     40.5      63.0
+  main network, hidden layer 4                 24.5     39.4      63.0
+  main network, hidden layer 5                 19.3     36.5      63.0
+  main network, hidden layer 6                 15.8     33.5      63.0
+  main network, hidden layer 7                 12.5     29.2      63.0
+  main network, hidden layer 8                 10.8     24.9      63.0
+  field at points in the ball                   6.6      9.2      63.0
+  surface motion (pose removed)                 5.5      7.9      61.9

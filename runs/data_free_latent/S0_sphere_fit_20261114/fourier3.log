@@ -1,0 +1,63 @@
+[gpu_capped] memory capped at 75% (~11.6 of 15.5 GiB); busy time throttled to ~70%
+update     0  value error 0.28901  slope mismatch 0.99794  1 s
+update   250  value error 0.00792  slope mismatch 0.03583  11 s
+update   500  value error 0.00818  slope mismatch 0.02366  21 s
+update   750  value error 0.00493  slope mismatch 0.01611  30 s
+update  1000  value error 0.01570  slope mismatch 0.01690  40 s
+update  1250  value error 0.01335  slope mismatch 0.01368  50 s
+update  1500  value error 0.00386  slope mismatch 0.01056  60 s
+update  1750  value error 0.00236  slope mismatch 0.00934  70 s
+update  2000  value error 0.00709  slope mismatch 0.01005  80 s
+update  2250  value error 0.00365  slope mismatch 0.00817  90 s
+update  2500  value error 0.00126  slope mismatch 0.00769  100 s
+update  2750  value error 0.00100  slope mismatch 0.00725  110 s
+update  3000  value error 0.00107  slope mismatch 0.00679  120 s
+update  3250  value error 0.00079  slope mismatch 0.00665  130 s
+update  3500  value error 0.00072  slope mismatch 0.00639  140 s
+update  3750  value error 0.00063  slope mismatch 0.00621  150 s
+update  3999  value error 0.00061  slope mismatch 0.00607  160 s
+{
+ "fourier_bands": 3,
+ "updates": 4000,
+ "seconds": 159.79549646377563,
+ "regions": {
+  "within 0.03 of the surface": {
+   "value_error_mean": 0.0002665411157067865,
+   "value_error_max": 0.0014311429113149643,
+   "slope_error_mean": 0.026614440605044365,
+   "slope_error_p99": 0.08665761351585388
+  },
+  "centre (radius < 0.1)": {
+   "value_error_mean": 0.0017841621302068233,
+   "value_error_max": 0.011531531810760498,
+   "slope_error_mean": 0.11794999986886978,
+   "slope_error_p99": 0.9078975915908813
+  },
+  "rest of the ball (radius < 0.9)": {
+   "value_error_mean": 0.0006952018011361361,
+   "value_error_max": 0.005133628845214844,
+   "slope_error_mean": 0.0419977605342865,
+   "slope_error_p99": 0.1494675576686859
+  },
+  "outside radius 0.9 (corners of the box)": {
+   "value_error_mean": 0.000995792681351304,
+   "value_error_max": 0.01084601879119873,
+   "slope_error_mean": 0.04789376258850098,
+   "slope_error_p99": 0.16467396914958954
+  }
+ },
+ "surface_radius": {
+  "mean": 0.49979978799819946,
+  "std": 0.0002503647992853075,
+  "max_deviation": 0.0012879669666290283
+ },
+ "grid_pieces_inside_outside": [
+  1,
+  1
+ ]
+}
+code scale and shift at 1.0 x the usual starting spread: mean difference between codes 0.0206 (today's start: 0.0011); from the sphere 0.0181; clean 32/32, empty 0
+code scale and shift at 0.3 x the usual starting spread: mean difference between codes 0.0063 (today's start: 0.0011); from the sphere 0.0047; clean 32/32, empty 0
+code scale and shift at 0.1 x the usual starting spread: mean difference between codes 0.0021 (today's start: 0.0011); from the sphere 0.0017; clean 32/32, empty 0
+code scale and shift at 0.03 x the usual starting spread: mean difference between codes 0.0006 (today's start: 0.0011); from the sphere 0.0009; clean 32/32, empty 0
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/S0_sphere_fit_20261114/fourier3

@@ -1,0 +1,76 @@
+[gpu_capped] memory capped at 75% (~11.6 of 15.5 GiB); busy time throttled to ~70%
+
+J4_d64_nocentre_procedural96_even_code_leak0 (update 5000); whole gradient 105.5 (logged 105.5, clipped to 1.0); field error 0.029; topology terms: sign
+  topology findings per pass: {'graph/fragments_kind0': 0.0, 'graph/fragments_kind1': 0.0, 'graph/cavities': 0.0, 'graph/gap_sites': 167.2, 'graph/wall_sites': 346.8, 'graph/extra_pieces': 0.0, 'graph/cavities_uncapped': 0.0, 'graph/confirm_dropped_kind0': 0.0, 'graph/confirm_dropped_kind1': 0.0, 'graph/confirm_dropped_cavities': 3.8, 'graph/build_ms': 53.5}; action weights: bridge 1, delete 1, fill 1, widen 413, thicken 1000
+  part of the loss                     size  share  along the update   value x weight
+  anchor pull                          97.9   0.41              0.89   anchor 0.016 x 100
+  topology actions                     47.2   0.20              0.12   widen 0.000116 x 344, thicken 0.000138 x 1e+03
+  variety push                         37.0   0.15             -0.26   variety 3.15 x 1
+  size and position                    26.3   0.11              0.06   pose_centroid 0.000917 x 50, pose_scale 0.000117 x 500, pose_axes 0.000138 x 1
+  slope (eikonal)                      20.0   0.08              0.13   eikonal 0.01 x 35.6
+  consistency                           8.7   0.04              0.07   consistency 0.0397 x 20
+  evenness of the code                  1.5   0.01              0.00   iso 0.00362 x 100
+  other (barrier, volume, origin)       0.0   0.00              0.00   barrier 9.61e-05 x 1, origin 0 x 1, volume 3.88e-07 x 1
+
+J6_J4_continued_to_10k (update 10000); whole gradient 54.8 (logged 54.8, clipped to 1.0); field error 0.042; topology terms: sign
+  topology findings per pass: {'graph/fragments_kind0': 0.0, 'graph/fragments_kind1': 0.0, 'graph/cavities': 0.0, 'graph/gap_sites': 405.5, 'graph/wall_sites': 620.2, 'graph/extra_pieces': 0.0, 'graph/cavities_uncapped': 0.0, 'graph/confirm_dropped_kind0': 0.0, 'graph/confirm_dropped_kind1': 0.0, 'graph/confirm_dropped_cavities': 5.5, 'graph/build_ms': 30.0}; action weights: bridge 1, delete 1, fill 1, widen 1000, thicken 1000
+  part of the loss                     size  share  along the update   value x weight
+  anchor pull                          65.9   0.36              1.08   anchor 0.0128 x 100
+  variety push                         40.1   0.22             -0.43   variety 2.98 x 1
+  topology actions                     30.2   0.16             -0.07   widen 0.000132 x 1e+03, thicken 8.5e-05 x 1e+03
+  consistency                          27.3   0.15              0.39   consistency 0.0576 x 20
+  size and position                    15.4   0.08              0.01   pose_centroid 0.000352 x 50, pose_scale -2.3e-05 x 500, pose_axes 0.000113 x 43
+  slope (eikonal)                       2.6   0.01              0.02   eikonal 0.0139 x 3.14
+  evenness of the code                  1.6   0.01              0.00   iso 0.00346 x 100
+  other (barrier, volume, origin)       0.1   0.00              0.00   barrier 0.000233 x 3.58, origin 0 x 1, volume 8.27e-08 x 1
+
+J7_J6_lower_lr_to_12k (update 11000); whole gradient 25.9 (logged 25.9, clipped to 1.0); field error 0.032; topology terms: sign
+  topology findings per pass: {'graph/fragments_kind0': 0.0, 'graph/fragments_kind1': 0.0, 'graph/cavities': 0.0, 'graph/gap_sites': 177.0, 'graph/wall_sites': 476.8, 'graph/extra_pieces': 0.0, 'graph/cavities_uncapped': 2.8, 'graph/confirm_dropped_kind0': 0.2, 'graph/confirm_dropped_kind1': 0.0, 'graph/confirm_dropped_cavities': 36.0, 'graph/build_ms': 36.6}; action weights: bridge 1, delete 1, fill 1, widen 7, thicken 81
+  part of the loss                     size  share  along the update   value x weight
+  variety push                         37.5   0.47              0.87   variety 3.07 x 1
+  anchor pull                          18.4   0.23              0.32   anchor 0.00989 x 100
+  consistency                          13.7   0.17             -0.30   consistency 0.0418 x 20
+  size and position                     4.7   0.06              0.05   pose_centroid 0.00136 x 50, pose_scale 2.21e-05 x 500, pose_axes 0.000123 x 1
+  topology actions                      3.3   0.04              0.09   widen 0.000158 x 5.68, thicken 0.000107 x 67.8
+  evenness of the code                  1.5   0.02              0.00   iso 0.00294 x 100
+  slope (eikonal)                       1.0   0.01             -0.02   eikonal 0.00939 x 1.98
+  other (barrier, volume, origin)       0.0   0.00              0.00   barrier 3.25e-05 x 1.49, origin 0 x 1, volume 8.38e-09 x 7.04
+
+S3_J4_recipe_sphere_start_usual_spread_ancho (update 300); whole gradient 1751.0 (logged 1751.0, clipped to 1.0); field error 0.087; topology terms: sign
+  with graph_sign_error=1.0
+  topology findings per pass: {'graph/fragments_kind0': 0.0, 'graph/fragments_kind1': 0.0, 'graph/cavities': 0.0, 'graph/gap_sites': 29.5, 'graph/wall_sites': 129.5, 'graph/extra_pieces': 0.0, 'graph/cavities_uncapped': 0.0, 'graph/confirm_dropped_kind0': 0.0, 'graph/confirm_dropped_kind1': 0.0, 'graph/confirm_dropped_cavities': 4.0, 'graph/build_ms': 22.5}; action weights: bridge 1, delete 1, fill 1, widen 1, thicken 1
+  part of the loss                     size  share  along the update   value x weight
+  slope (eikonal)                    2300.8   0.69              1.30   eikonal 0.0418 x 200
+  anchor pull                         460.9   0.14             -0.21   anchor 0.114 x 100
+  other (barrier, volume, origin)     293.9   0.09             -0.11   barrier 8.59e-05 x 1e+04, origin 0 x 1, volume 8.78e-10 x 200
+  consistency                         114.3   0.03              0.06   consistency 0.109 x 20
+  variety push                        108.8   0.03             -0.06   variety 11.8 x 1
+  size and position                    60.3   0.02              0.02   pose_centroid 0.000291 x 50, pose_scale 0.000714 x 500, pose_axes 9.02e-05 x 5.01
+  evenness of the code                  5.1   0.00              0.00   iso 0.0182 x 100
+  topology actions                      0.0   0.00              0.00   widen 2.69e-05 x 1, thicken 7.02e-05 x 1
+
+S3_J4_recipe_sphere_start_usual_spread_ancho (update 1000); whole gradient 300.1 (logged 300.1, clipped to 1.0); field error 0.152; topology terms: sign
+  with graph_sign_error=1.0
+  topology findings per pass: {'graph/fragments_kind0': 0.0, 'graph/fragments_kind1': 0.0, 'graph/cavities': 0.0, 'graph/gap_sites': 46.5, 'graph/wall_sites': 178.0, 'graph/extra_pieces': 0.0, 'graph/cavities_uncapped': 0.0, 'graph/confirm_dropped_kind0': 0.0, 'graph/confirm_dropped_kind1': 0.0, 'graph/confirm_dropped_cavities': 0.0, 'graph/build_ms': 18.4}; action weights: bridge 1, delete 1, fill 1, widen 1, thicken 1
+  part of the loss                     size  share  along the update   value x weight
+  anchor pull                         185.9   0.48              0.61   anchor 0.0835 x 100
+  slope (eikonal)                      76.1   0.20              0.21   eikonal 0.061 x 200
+  size and position                    50.1   0.13              0.14   pose_centroid 0.00238 x 50, pose_scale 0.00284 x 500, pose_axes -3.21e-05 x 1
+  consistency                          28.7   0.07              0.09   consistency 0.166 x 20
+  other (barrier, volume, origin)      22.6   0.06             -0.01   barrier 0.000286 x 646, origin 0 x 1, volume 1.36e-05 x 200
+  variety push                         17.9   0.05             -0.04   variety 9.61 x 1
+  evenness of the code                  3.2   0.01              0.00   iso 0.00956 x 100
+  topology actions                      0.0   0.00              0.00   widen 3.38e-05 x 1, thicken 7.54e-05 x 1
+
+S1_J4_recipe_sphere_start_no_base_1k (update 1000); whole gradient 72.8 (logged 72.8, clipped to 1.0); field error 0.066; topology terms: sign
+  with graph_sign_error=1.0
+  topology findings per pass: {'graph/fragments_kind0': 0.0, 'graph/fragments_kind1': 0.0, 'graph/cavities': 0.0, 'graph/gap_sites': 0.5, 'graph/wall_sites': 1.5, 'graph/extra_pieces': 0.0, 'graph/cavities_uncapped': 0.0, 'graph/confirm_dropped_kind0': 0.0, 'graph/confirm_dropped_kind1': 0.0, 'graph/confirm_dropped_cavities': 0.0, 'graph/build_ms': 22.8}; action weights: bridge 1, delete 1, fill 1, widen 1, thicken 1
+  part of the loss                     size  share  along the update   value x weight
+  slope (eikonal)                     103.7   0.39              0.80   eikonal 0.0151 x 200
+  anchor pull                          79.2   0.30             -0.14   anchor 0.0702 x 100
+  size and position                    38.6   0.15              0.34   pose_centroid -0.000223 x 50, pose_scale 0.000989 x 500, pose_axes -1.04e-05 x 1
+  variety push                         37.3   0.14             -0.02   variety 9.36 x 1
+  consistency                           4.6   0.02              0.01   consistency 0.0703 x 20
+  evenness of the code                  2.3   0.01              0.00   iso 0.00694 x 100
+  other (barrier, volume, origin)       0.0   0.00              0.00   barrier 1.19e-05 x 12.7, origin 0 x 1, volume 1.15e-06 x 200
+  topology actions                      0.0   0.00              0.00   thicken 0 x 1, widen 0 x 1

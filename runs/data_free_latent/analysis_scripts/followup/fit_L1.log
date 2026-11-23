@@ -1,0 +1,5 @@
+[gpu_capped] memory capped at 25% (~3.9 of 15.5 GiB); busy time throttled to ~70%
+fit_L1 held-out objects: {"count": 86, "mean": 0.862761378288269, "median": 0.8708827495574951, "worst": 0.6460980176925659, "best": 0.9554716944694519, "share_at_or_above_0.70": 0.9767441749572754}
+fit_L1 the 64 anchor objects, found by search from random starts: {"count": 64, "mean": 0.8899106383323669, "median": 0.8946236371994019, "worst": 0.6848691701889038, "best": 0.9769033193588257, "share_at_or_above_0.70": 0.984375}
+fit_L1 the anchor objects at their trained codes: {"count": 64, "mean": 0.8660876750946045, "median": 0.8749052286148071, "worst": 0.657375156879425, "best": 0.9696428775787354, "share_at_or_above_0.70": 0.984375}
+saved /home/eric-luo/.claude/jobs/8dde3c62/tmp/followup/fit_L1.json

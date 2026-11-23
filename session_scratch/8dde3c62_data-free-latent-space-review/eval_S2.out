@@ -1,0 +1,19 @@
+== evalrun
+S2_1000 spectrum: {'total_variance': 0.1112, 'effective_directions': 4.7489, 'above_0.02': 9, 'above_0.01': 13, 'above_0.005': 17} | top 16: 0.219 0.187 0.098 0.072 0.065 0.059 0.050 0.040 0.024 0.016 0.014 0.012 0.011 0.009 0.007 0.006
+S2_1000 pose: {'centroid_offset_mean': 0.0162, 'centroid_offset_max': 0.0385, 'common_shift': 0.0073, 'trace_mean': 0.1255, 'trace_target': 0.1555, 'trace_rel_std': 0.133}
+S2_1000 topology: {'codes': 128, 'clean_at_96': 128, 'flagged': 0, 'defective_at_128_and_160': 0, 'clean_on_fine_grids': 128}
+S2_1000 anchors: {'distance_mean': 0.094, 'distance_max': 0.218, 'iou_mean': 0.342, 'iou_min': 0.0, 'code_cos_abs_mean': 0.007, 'code_cos_max': 0.0}
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/analysis_scripts/followup/S2_1000.json
+== variance on 96 codes
+S2_J4_recipe_sphere_start_no_base_ @ 1000: total variance over 96 codes: mean 0.110; between codes: std 0.014 (range 0.08 to 0.15); standard error with 24 codes 0.003, with 96 codes 0.001; four groups of 24 would report 0.113, 0.106, 0.112, 0.107; solid directions from the pooled spectrum 9, per code 9.0 (std 0.2)
+== field quality
+
+S2_J4_recipe_sphere_start_no_base_lr_third_1k (update 1000)
+  anchor codes  slope error mean 0.253 (within 0.1 of the surface 0.183; share of points off by more than 0.2: 0.500); trainer's eikonal term 0.1105; consistency miss mean 0.1325, median 0.1131; field against the object's true distance: mean error 0.0938
+  random codes  slope error mean 0.151 (within 0.1 of the surface 0.165; share of points off by more than 0.2: 0.296); trainer's eikonal term 0.0400; consistency miss mean 0.0695, median 0.0557
+== sharpness
+S2_1000 (update 1000, 188657 surface pairs): median bend 10.27 (radius 0.10); flat 0.8%, gently bent 41.7%, tight 57.5%; mean cost 0.848
+== sheets
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_random_shapes_S2_1000.png
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_anchor_fit_S2_1000.png
+== done Sat 14 Nov 2026 08:06:07 PM CST

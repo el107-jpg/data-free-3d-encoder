@@ -1,0 +1,5 @@
+[gpu_capped] memory capped at 25% (~3.9 of 15.5 GiB); busy time throttled to ~70%
+fit_J4_5000 held-out objects: {"count": 225, "mean": 0.8091140389442444, "median": 0.8369098901748657, "worst": 0.3919999897480011, "best": 0.9890190362930298, "share_at_or_above_0.70": 0.8311111330986023}
+fit_J4_5000 the 64 anchor objects, found by search from random starts: {"count": 64, "mean": 0.7201490998268127, "median": 0.7206477522850037, "worst": 0.449438214302063, "best": 0.9335664510726929, "share_at_or_above_0.70": 0.59375}
+fit_J4_5000 the anchor objects at their trained codes: {"count": 96, "mean": 0.8065018653869629, "median": 0.8414633870124817, "worst": 0.4693877696990967, "best": 0.9784037470817566, "share_at_or_above_0.70": 0.8229166865348816}
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/analysis_scripts/followup/fit_J4_5000.json

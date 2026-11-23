@@ -1,0 +1,6 @@
+[gpu_capped] memory capped at 25% (~3.9 of 15.5 GiB); busy time throttled to ~70%
+F3_control_6000 spectrum: {'total_variance': 0.1508, 'effective_directions': 7.3685, 'above_0.02': 13, 'above_0.01': 14, 'above_0.005': 17} | top 16: 0.234 0.169 0.128 0.110 0.100 0.087 0.078 0.068 0.059 0.052 0.043 0.034 0.026 0.018 0.010 0.007
+F3_control_6000 pose: {'centroid_offset_mean': 0.0159, 'centroid_offset_max': 0.0377, 'common_shift': 0.0135, 'trace_mean': 0.1547, 'trace_target': 0.1555, 'trace_rel_std': 0.0263}
+F3_control_6000 topology: {'codes': 128, 'clean_at_96': 128, 'flagged': 0, 'defective_at_128_and_160': 0, 'clean_on_fine_grids': 128}
+F3_control_6000 anchors: {'distance_mean': 0.012, 'distance_max': 0.022, 'iou_mean': 0.888, 'iou_min': 0.743, 'code_cos_abs_mean': 0.072, 'code_cos_max': 0.298}
+saved /home/eric-luo/.claude/jobs/8dde3c62/tmp/followup/F3_control_6000.json

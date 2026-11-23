@@ -1,0 +1,60 @@
+{
+ "J4": {
+  "update": 5000,
+  "overlap": {
+   "mean_pair": 0.6624468564987183,
+   "nearest_mean": 0.47492995858192444,
+   "nearest_se": 0.004743604843880227
+  },
+  "surface": {
+   "mean_pair": 0.11590262855354108,
+   "nearest_mean": 0.0687762952875346,
+   "nearest_se": 0.0007481620829632797
+  },
+  "field": {
+   "mean_pair": 0.12318843603134155,
+   "nearest_mean": 0.07190494984388351,
+   "nearest_se": 0.000964195702412942
+  },
+  "shape": {
+   "fill_mean": 0.09750886955915998,
+   "area_mean": 3.0802490781177325,
+   "compactness_median": 0.3413259551861091,
+   "compactness_p10": 0.26454100132997627,
+   "half_thickness_median": 0.24391546100378036,
+   "half_thickness_p10": 0.20828066021203995,
+   "volume_rel_std": 0.18635485671054766,
+   "area_rel_std": 0.10450592106953627,
+   "compactness_std": 0.06901619197201334
+  }
+ },
+ "B7": {
+  "update": 5000,
+  "overlap": {
+   "mean_pair": 0.6444692015647888,
+   "nearest_mean": 0.4712561368942261,
+   "nearest_se": 0.00509469914602426
+  },
+  "surface": {
+   "mean_pair": 0.1112841650328942,
+   "nearest_mean": 0.06783469607277463,
+   "nearest_se": 0.0007692457413352017
+  },
+  "field": {
+   "mean_pair": 0.11866342276334763,
+   "nearest_mean": 0.07055608928203583,
+   "nearest_se": 0.0008414893046018712
+  },
+  "shape": {
+   "fill_mean": 0.10571107892301952,
+   "area_mean": 3.286681134936129,
+   "compactness_median": 0.3310646848855142,
+   "compactness_p10": 0.25483346018557457,
+   "half_thickness_median": 0.27592046558856964,
+   "half_thickness_p10": 0.22309677302837372,
+   "volume_rel_std": 0.1587973743017302,
+   "area_rel_std": 0.08875865035758772,
+   "compactness_std": 0.06733889469172676
+  }
+ }
+}

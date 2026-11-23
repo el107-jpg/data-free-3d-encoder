@@ -1,0 +1,6 @@
+[gpu_capped] memory capped at 25% (~3.9 of 15.5 GiB); busy time throttled to ~70%
+F4_1000 spectrum: {'total_variance': 0.0856, 'effective_directions': 5.9452, 'above_0.02': 11, 'above_0.01': 13, 'above_0.005': 18} | top 16: 0.188 0.140 0.096 0.078 0.069 0.059 0.050 0.042 0.034 0.025 0.020 0.014 0.012 0.010 0.009 0.007
+F4_1000 pose: {'centroid_offset_mean': 0.0114, 'centroid_offset_max': 0.0259, 'common_shift': 0.0056, 'trace_mean': 0.1352, 'trace_target': 0.1555, 'trace_rel_std': 0.076}
+F4_1000 topology: {'codes': 128, 'clean_at_96': 128, 'flagged': 0, 'defective_at_128_and_160': 0, 'clean_on_fine_grids': 128}
+F4_1000 anchors: {'distance_mean': 0.03, 'distance_max': 0.109, 'iou_mean': 0.715, 'iou_min': 0.0, 'code_cos_abs_mean': 0.021, 'code_cos_max': 0.021}
+saved /home/eric-luo/.claude/jobs/8dde3c62/tmp/followup/F4_1000.json

@@ -1,0 +1,109 @@
+S7_S6_continued_to_10k finished: diag  10000  clean 0.56 (1 piece 0.81, no cavity 1.00, no handle 0.75)  graph=grid 0.81  live 4.2  wobble 0.08  descriptor spread 0.504  probe distance 0.1186  8.2 s  anchors iou 0.70 (min 0.15) code cos max 0.00
+Sun 15 Nov 2026 02:55:48 PM CST
+diag   5000  clean 0.62 (1 piece 0.81, no cavity 1.00, no handle 0.75)  graph=grid 0.81  live 3.5  wobble 0.08  descriptor spread 0.447  probe distance 0.1065  8.3 s  anchors iou 0.64 (min 0.16) code cos max 0.00
+diag   5250  clean 0.69 (1 piece 0.88, no cavity 1.00, no handle 0.81)  graph=grid 0.88  live 4.2  wobble 0.10  descriptor spread 0.534  probe distance 0.1013  8.2 s  anchors iou 0.67 (min 0.16) code cos max 0.00
+diag   5500  clean 0.62 (1 piece 0.88, no cavity 1.00, no handle 0.75)  graph=grid 0.88  live 3.5  wobble 0.07  descriptor spread 0.435  probe distance 0.1095  8.3 s  anchors iou 0.68 (min 0.18) code cos max 0.00
+diag   5750  clean 0.50 (1 piece 0.81, no cavity 1.00, no handle 0.69)  graph=grid 0.81  live 2.8  wobble 0.11  descriptor spread 0.469  probe distance 0.1018  8.3 s  anchors iou 0.66 (min 0.09) code cos max 0.00
+diag   6000  clean 0.56 (1 piece 0.88, no cavity 1.00, no handle 0.69)  graph=grid 0.88  live 2.8  wobble 0.12  descriptor spread 0.496  probe distance 0.1070  8.3 s  anchors iou 0.65 (min 0.15) code cos max 0.00
+diag   6250  clean 0.88 (1 piece 1.00, no cavity 1.00, no handle 0.88)  graph=grid 1.00  live 2.2  wobble 0.09  descriptor spread 0.485  probe distance 0.1051  8.0 s  anchors iou 0.54 (min 0.10) code cos max 0.00
+diag   6500  clean 0.75 (1 piece 0.94, no cavity 1.00, no handle 0.75)  graph=grid 0.94  live 2.2  wobble 0.04  descriptor spread 0.432  probe distance 0.1008  8.0 s  anchors iou 0.66 (min 0.00) code cos max 0.00
+diag   6750  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 3.0  wobble 0.05  descriptor spread 0.388  probe distance 0.1060  8.3 s  anchors iou 0.68 (min 0.21) code cos max 0.00
+diag   7000  clean 0.88 (1 piece 0.94, no cavity 1.00, no handle 0.94)  graph=grid 0.94  live 3.2  wobble 0.05  descriptor spread 0.484  probe distance 0.0974  8.0 s  anchors iou 0.67 (min 0.25) code cos max 0.00
+diag   7250  clean 0.69 (1 piece 0.94, no cavity 0.94, no handle 0.81)  graph=grid 0.88  live 1.8  wobble 0.03  descriptor spread 0.372  probe distance 0.1021  8.0 s  anchors iou 0.66 (min 0.21) code cos max 0.00
+diag   7500  clean 0.81 (1 piece 0.94, no cavity 1.00, no handle 0.88)  graph=grid 0.94  live 4.0  wobble 0.08  descriptor spread 0.422  probe distance 0.1153  8.2 s  anchors iou 0.67 (min 0.27) code cos max 0.00
+diag   7750  clean 0.50 (1 piece 0.81, no cavity 0.94, no handle 0.69)  graph=grid 0.75  live 3.2  wobble 0.12  descriptor spread 0.409  probe distance 0.1174  8.2 s  anchors iou 0.70 (min 0.21) code cos max 0.00
+diag   8000  clean 0.62 (1 piece 0.88, no cavity 1.00, no handle 0.75)  graph=grid 0.88  live 5.0  wobble 0.07  descriptor spread 0.404  probe distance 0.1158  8.2 s  anchors iou 0.78 (min 0.37) code cos max 0.00
+diag   8250  clean 0.75 (1 piece 0.81, no cavity 1.00, no handle 0.94)  graph=grid 0.81  live 5.2  wobble 0.09  descriptor spread 0.335  probe distance 0.1114  8.3 s  anchors iou 0.68 (min 0.26) code cos max 0.00
+diag   8500  clean 0.50 (1 piece 0.75, no cavity 0.94, no handle 0.75)  graph=grid 0.69  live 4.2  wobble 0.06  descriptor spread 0.474  probe distance 0.1030  8.2 s  anchors iou 0.71 (min 0.14) code cos max 0.00
+diag   8750  clean 0.31 (1 piece 0.50, no cavity 1.00, no handle 0.62)  graph=grid 0.50  live 4.0  wobble 0.10  descriptor spread 0.534  probe distance 0.0955  8.0 s  anchors iou 0.64 (min 0.19) code cos max 0.00
+diag   9000  clean 0.38 (1 piece 0.69, no cavity 1.00, no handle 0.62)  graph=grid 0.69  live 4.5  wobble 0.13  descriptor spread 0.539  probe distance 0.1148  8.2 s  anchors iou 0.74 (min 0.21) code cos max 0.00
+diag   9250  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 4.5  wobble 0.11  descriptor spread 0.474  probe distance 0.1211  8.2 s  anchors iou 0.68 (min 0.19) code cos max 0.00
+diag   9500  clean 0.81 (1 piece 1.00, no cavity 1.00, no handle 0.81)  graph=grid 1.00  live 3.0  wobble 0.08  descriptor spread 0.462  probe distance 0.1236  8.2 s  anchors iou 0.71 (min 0.17) code cos max 0.00
+diag   9750  clean 0.94 (1 piece 1.00, no cavity 1.00, no handle 0.94)  graph=grid 1.00  live 5.5  wobble 0.07  descriptor spread 0.370  probe distance 0.1179  8.2 s  anchors iou 0.75 (min 0.23) code cos max 0.00
+diag  10000  clean 0.56 (1 piece 0.81, no cavity 1.00, no handle 0.75)  graph=grid 0.81  live 4.2  wobble 0.08  descriptor spread 0.504  probe distance 0.1186  8.2 s  anchors iou 0.70 (min 0.15) code cos max 0.00
+== 6000
+S7_6000 topology: {'codes': 128, 'clean_at_96': 78, 'flagged': 50, 'defective_at_128_and_160': 50, 'clean_on_fine_grids': 78}
+S7_6000 anchors: {'distance_mean': 0.034, 'distance_max': 0.07, 'iou_mean': 0.652, 'iou_min': 0.229, 'code_cos_abs_mean': 0.007, 'code_cos_max': 0.0}
+== 7000
+S7_7000 topology: {'codes': 128, 'clean_at_96': 113, 'flagged': 15, 'defective_at_128_and_160': 15, 'clean_on_fine_grids': 113}
+S7_7000 anchors: {'distance_mean': 0.033, 'distance_max': 0.083, 'iou_mean': 0.666, 'iou_min': 0.141, 'code_cos_abs_mean': 0.007, 'code_cos_max': 0.0}
+== 8000
+S7_8000 topology: {'codes': 128, 'clean_at_96': 76, 'flagged': 52, 'defective_at_128_and_160': 49, 'clean_on_fine_grids': 79}
+S7_8000 anchors: {'distance_mean': 0.019, 'distance_max': 0.038, 'iou_mean': 0.769, 'iou_min': 0.35, 'code_cos_abs_mean': 0.007, 'code_cos_max': 0.0}
+== 9000
+S7_9000 topology: {'codes': 128, 'clean_at_96': 63, 'flagged': 65, 'defective_at_128_and_160': 64, 'clean_on_fine_grids': 64}
+S7_9000 anchors: {'distance_mean': 0.023, 'distance_max': 0.045, 'iou_mean': 0.729, 'iou_min': 0.204, 'code_cos_abs_mean': 0.007, 'code_cos_max': 0.0}
+== 10000
+S7_10000 topology: {'codes': 128, 'clean_at_96': 85, 'flagged': 43, 'defective_at_128_and_160': 43, 'clean_on_fine_grids': 85}
+S7_10000 anchors: {'distance_mean': 0.029, 'distance_max': 0.074, 'iou_mean': 0.705, 'iou_min': 0.152, 'code_cos_abs_mean': 0.007, 'code_cos_max': 0.0}
+== variance on 96 codes
+S7_S6_continued_to_10k @ 6000: total variance over 96 codes: mean 0.844; between codes: std 0.326 (range 0.28 to 1.93); standard error with 24 codes 0.067, with 96 codes 0.033; four groups of 24 would report 0.858, 0.864, 0.821, 0.832; solid directions from the pooled spectrum 17, per code 16.3 (std 1.4)
+S7_S6_continued_to_10k @ 7000: total variance over 96 codes: mean 0.627; between codes: std 0.252 (range 0.12 to 1.45); standard error with 24 codes 0.051, with 96 codes 0.026; four groups of 24 would report 0.670, 0.606, 0.637, 0.595; solid directions from the pooled spectrum 16, per code 15.6 (std 1.4)
+S7_S6_continued_to_10k @ 8000: total variance over 96 codes: mean 1.090; between codes: std 0.531 (range 0.18 to 2.71); standard error with 24 codes 0.108, with 96 codes 0.054; four groups of 24 would report 1.228, 1.050, 0.994, 1.088; solid directions from the pooled spectrum 20, per code 19.4 (std 1.8)
+S7_S6_continued_to_10k @ 9000: total variance over 96 codes: mean 1.079; between codes: std 0.554 (range 0.20 to 2.95); standard error with 24 codes 0.113, with 96 codes 0.057; four groups of 24 would report 1.170, 0.982, 0.933, 1.229; solid directions from the pooled spectrum 19, per code 18.6 (std 1.8)
+S7_S6_continued_to_10k @ 10000: total variance over 96 codes: mean 1.359; between codes: std 0.745 (range 0.33 to 4.13); standard error with 24 codes 0.152, with 96 codes 0.076; four groups of 24 would report 1.465, 1.434, 1.146, 1.393; solid directions from the pooled spectrum 20, per code 19.4 (std 1.8)
+J6_J4_continued_to_10k @ 10000: total variance over 96 codes: mean 1.416; between codes: std 0.843 (range 0.05 to 5.17); standard error with 24 codes 0.172, with 96 codes 0.086; four groups of 24 would report 1.752, 1.071, 1.394, 1.445; solid directions from the pooled spectrum 32, per code 31.6 (std 4.7)
+== pairwise variety
+
+S7 at 7,000 (update 7000)
+  1 - overlap      : mean over pairs 0.6603; to the nearest other shape 0.4041 +/- 0.0079
+  surface distance : mean over pairs 0.1035; to the nearest other shape 0.0551 +/- 0.0006
+  field difference : mean over pairs 0.1013; to the nearest other shape 0.0494 +/- 0.0006
+  shapes: fill 0.087 of the ball; surface area 2.62; compactness median 0.46 (thinnest tenth 0.23); half-thickness median 0.226 (thinnest tenth 0.154); spread between shapes: volume 0.28, area 0.12, compactness 0.14
+
+S7 at 10,000 (update 10000)
+  1 - overlap      : mean over pairs 0.7995; to the nearest other shape 0.5611 +/- 0.0095
+  surface distance : mean over pairs 0.1230; to the nearest other shape 0.0632 +/- 0.0010
+  field difference : mean over pairs 0.1213; to the nearest other shape 0.0624 +/- 0.0010
+  shapes: fill 0.058 of the ball; surface area 2.31; compactness median 0.26 (thinnest tenth 0.14); half-thickness median 0.169 (thinnest tenth 0.115); spread between shapes: volume 0.45, area 0.24, compactness 0.10
+
+J6 at 7,500 (update 7500)
+  1 - overlap      : mean over pairs 0.6485; to the nearest other shape 0.4611 +/- 0.0054
+  surface distance : mean over pairs 0.1091; to the nearest other shape 0.0626 +/- 0.0008
+  field difference : mean over pairs 0.1185; to the nearest other shape 0.0668 +/- 0.0009
+  shapes: fill 0.089 of the ball; surface area 2.91; compactness median 0.33 (thinnest tenth 0.27); half-thickness median 0.268 (thinnest tenth 0.212); spread between shapes: volume 0.20, area 0.11, compactness 0.06
+
+J6 at 10,000 (update 10000)
+  1 - overlap      : mean over pairs 0.8015; to the nearest other shape 0.5832 +/- 0.0073
+  surface distance : mean over pairs 0.1138; to the nearest other shape 0.0632 +/- 0.0008
+  field difference : mean over pairs 0.1306; to the nearest other shape 0.0744 +/- 0.0010
+  shapes: fill 0.052 of the ball; surface area 2.30; compactness median 0.23 (thinnest tenth 0.16); half-thickness median 0.197 (thinnest tenth 0.160); spread between shapes: volume 0.32, area 0.17, compactness 0.06
+== layer dimensions
+no base 6000 (update 6000): independent code directions at each stage (of 63)
+  scale and shift for main layer 1             16.1     24.0      63.0
+  main network, hidden layer 1                 13.4     18.2      63.0
+  surface motion (pose removed)                 4.2      6.6      30.4
+no base 7000 (update 7000): independent code directions at each stage (of 63)
+  scale and shift for main layer 1             16.7     24.9      63.0
+  main network, hidden layer 1                 14.0     19.5      63.0
+  surface motion (pose removed)                 3.7      6.1      29.1
+no base 8000 (update 8000): independent code directions at each stage (of 63)
+  scale and shift for main layer 1             17.3     25.5      63.0
+  main network, hidden layer 1                 14.3     20.1      63.0
+  surface motion (pose removed)                 4.3      6.6      32.4
+no base 9000 (update 9000): independent code directions at each stage (of 63)
+  scale and shift for main layer 1             17.2     25.5      63.0
+  main network, hidden layer 1                 14.0     20.2      63.0
+  surface motion (pose removed)                 3.4      5.6      29.1
+no base 10000 (update 10000): independent code directions at each stage (of 63)
+  scale and shift for main layer 1             16.9     25.1      63.0
+  main network, hidden layer 1                 13.9     20.0      63.0
+  surface motion (pose removed)                 3.2      5.8      28.5
+J6 10000 (update 10000): independent code directions at each stage (of 63)
+  scale and shift for main layer 1             53.3     50.0      63.0
+  main network, hidden layer 1                 48.5     48.5      63.0
+  surface motion (pose removed)                 4.8      7.0      59.0
+== field quality
+
+S7_S6_continued_to_10k (update 10000)
+  anchor codes  slope error mean 0.102 (within 0.1 of the surface 0.169; share of points off by more than 0.2: 0.109); trainer's eikonal term 0.0211; consistency miss mean 0.0468, median 0.0362; field against the object's true distance: mean error 0.0293
+  random codes  slope error mean 0.100 (within 0.1 of the surface 0.200; share of points off by more than 0.2: 0.119); trainer's eikonal term 0.0210; consistency miss mean 0.0490, median 0.0406
+== sheets
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_random_shapes_S7_10000.png
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_anchor_fit_S7_10000.png
+== unseen-object fit at 10,000
+/home/eric-luo/.claude/jobs/8dde3c62/tmp/eval_s7.sh: line 24: 679832 Segmentation fault         (core dumped) PYTHONPATH=. $M/.venv/bin/python $M/scripts/gpu_capped.py --gpu-fraction 0.22 --gpu-util 0.7 $F/heldout_fit.py $RUN/checkpoint_10000.pt $M/datasets/data_free_anchors_20261112_v3/eligible.pt fit_S7_10000 500 8 4 > $F/fit_S7_10000.log 2>&1
+fit_S7_10000 held-out objects: {"count": 225, "mean": 0.7632918953895569, "median": 0.7978947162628174, "worst": 0.2569444477558136, "best": 0.9732078313827515, "share_at_or_above_0.70": 0.7066666483879089}
+fit_S7_10000 the 64 anchor objects, found by search from random starts: {"count": 64, "mean": 0.6748426556587219, "median": 0.6857962608337402, "worst": 0.40506330132484436, "best": 0.9397163391113281, "share_at_or_above_0.70": 0.4375}
+fit_S7_10000 the anchor objects at their trained codes: {"count": 96, "mean": 0.7011575102806091, "median": 0.7296786308288574, "worst": 0.09677419066429138, "best": 0.9074355363845825, "share_at_or_above_0.70": 0.5833333134651184}
+== done Sun 15 Nov 2026 04:37:40 PM CST

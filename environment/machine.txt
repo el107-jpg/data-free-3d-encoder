@@ -1,0 +1,8 @@
+recorded: 2026-11-22 23:59 CST
+os: Ubuntu 26.04.1 LTS, kernel 7.0.0-43-generic
+python: 3.12.16
+torch: 2.7.0+cu128 cuda build: 12.8
+numpy: 1.26.4
+scipy: 1.17.1
+scikit-image: 0.26.0
+gpu: NVIDIA GeForce RTX 5080, 16303 MiB, 595.99.02

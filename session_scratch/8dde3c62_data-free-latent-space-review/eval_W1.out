@@ -1,0 +1,98 @@
+== evalrun
+W1_1000 spectrum: {'total_variance': 0.5369, 'effective_directions': 3.2813, 'above_0.02': 13, 'above_0.01': 27, 'above_0.005': 51} | top 16: 0.575 0.364 0.165 0.131 0.106 0.087 0.045 0.037 0.031 0.027 0.024 0.022 0.020 0.019 0.018 0.017
+W1_1000 pose: {'centroid_offset_mean': 0.0588, 'centroid_offset_max': 0.2538, 'common_shift': 0.0331, 'trace_mean': 0.1321, 'trace_target': 0.1555, 'trace_rel_std': 0.1324}
+W1_1000 topology: {'codes': 128, 'clean_at_96': 55, 'flagged': 73, 'defective_at_128_and_160': 71, 'clean_on_fine_grids': 57}
+W1_1000 anchors: {'distance_mean': 0.086, 'distance_max': 0.246, 'iou_mean': 0.254, 'iou_min': 0.0, 'code_cos_abs_mean': 0.007, 'code_cos_max': 0.0}
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/analysis_scripts/followup/W1_1000.json
+== variance on 96 codes
+J4_d64_nocentre_procedural96_even_ @ 1000: total variance over 96 codes: mean 0.497; between codes: std 0.223 (range 0.15 to 1.24); standard error with 24 codes 0.045, with 96 codes 0.023; four groups of 24 would report 0.522, 0.489, 0.519, 0.458; solid directions from the pooled spectrum 20, per code 19.5 (std 3.6)
+W1_J4_recipe_weight_norm_1k @ 1000: total variance over 96 codes: mean 0.533; between codes: std 0.417 (range 0.05 to 1.97); standard error with 24 codes 0.085, with 96 codes 0.043; four groups of 24 would report 0.594, 0.427, 0.665, 0.447; solid directions from the pooled spectrum 12, per code 12.0 (std 4.2)
+== gradient by layer
+
+J4_d64_nocentre_procedural96_even_code_leak05_beta100_fourier3_5k (update 1000); mean pair difference 0.0991
+  layer                                                 weights  share of gradient  typical gradient per weight
+  side network, layer 1 (64 to 256)                       16640             0.0059                     1.23e-02
+  side network, layer 2 (256 to 256)                      65792             0.0177                     1.07e-02
+  side network, last layer (to scales and shifts)       2105344             0.0005                     3.19e-04
+  main network, layer 1                                   11264             0.0000                     8.02e-04
+  main network, layer 2                                  262656             0.0001                     4.79e-04
+  main network, layer 3                                  262656             0.0003                     6.95e-04
+  main network, layer 4                                  262656             0.0004                     8.10e-04
+  main network, layer 5                                  273408             0.0005                     8.43e-04
+  main network, layer 6                                  262656             0.0006                     1.00e-03
+  main network, layer 7                                  262656             0.0010                     1.24e-03
+  main network, layer 8                                  262656             0.0020                     1.79e-03
+  main network, final layer (512 to 1)                      513             0.9710                     8.95e-01
+  final layer: typical weight 0.0026; typical input to it (last hidden value) 0.089; ratio input/weight 34
+  share of last-hidden units that are switched off (value < 0.01) at a typical point: 0.89
+
+W1_J4_recipe_weight_norm_1k (update 1000); mean pair difference 0.0738
+  layer                                                 weights  share of gradient  typical gradient per weight
+  side network, layer 1 (64 to 256)                       16640             0.0000                     2.47e-02
+  side network, layer 2 (256 to 256)                      65792             0.0001                     1.83e-02
+  side network, last layer (to scales and shifts)       2105344             0.0000                     4.94e-04
+  main network, layer 1                                   11776             0.0000                     2.15e-03
+  main network, layer 2                                  263168             0.0000                     1.74e-03
+  main network, layer 3                                  263168             0.0000                     1.78e-03
+  main network, layer 4                                  263168             0.0000                     1.69e-03
+  main network, layer 5                                  273920             0.0000                     1.45e-03
+  main network, layer 6                                  263168             0.0000                     1.33e-03
+  main network, layer 7                                  263168             0.0000                     1.25e-03
+  main network, layer 8                                  263168             0.0000                     1.81e-03
+  main network, final layer (512 to 1)                      514             0.9999                     2.88e+01
+  final layer: typical weight 0.0001; typical input to it (last hidden value) 3.770; ratio input/weight 73684
+  share of last-hidden units that are switched off (value < 0.01) at a typical point: 0.67
+== unit activity
+
+J4_d64_nocentre_procedural96_even_code_leak05_beta100_fourier3_5k (update 1000)
+  layer    dead units  always on  mean share of pairs on   median   units in use per code (of 512)
+  1              0.00       0.00                   0.503    0.518                              498
+  2              0.03       0.00                   0.369    0.339                              465
+  3              0.06       0.00                   0.283    0.185                              427
+  4              0.04       0.00                   0.288    0.201                              425
+  5              0.06       0.00                   0.299    0.233                              414
+  6              0.06       0.00                   0.295    0.215                              397
+  7              0.08       0.00                   0.294    0.195                              367
+  8              0.10       0.00                   0.129    0.044                              237
+
+  the same network, freshly initialised
+  layer    dead units  always on  mean share of pairs on   median   units in use per code (of 512)
+  1              0.00       0.00                   0.531    0.531                              512
+  2              0.00       0.00                   0.560    0.567                              512
+  3              0.00       0.00                   0.542    0.556                              511
+  4              0.00       0.00                   0.528    0.534                              507
+  5              0.01       0.01                   0.509    0.514                              506
+  6              0.00       0.02                   0.553    0.582                              503
+  7              0.01       0.02                   0.524    0.557                              496
+  8              0.04       0.04                   0.510    0.522                              476
+
+W1_J4_recipe_weight_norm_1k (update 1000)
+  layer    dead units  always on  mean share of pairs on   median   units in use per code (of 512)
+  1              0.00       0.00                   0.481    0.480                              491
+  2              0.02       0.01                   0.394    0.327                              458
+  3              0.07       0.02                   0.375    0.294                              427
+  4              0.07       0.02                   0.395    0.286                              408
+  5              0.11       0.02                   0.377    0.242                              383
+  6              0.10       0.02                   0.392    0.291                              388
+  7              0.12       0.02                   0.376    0.224                              365
+  8              0.17       0.02                   0.340    0.160                              327
+
+  the same network, freshly initialised
+  layer    dead units  always on  mean share of pairs on   median   units in use per code (of 512)
+  1              0.00       0.00                   0.531    0.531                              512
+  2              0.00       0.00                   0.560    0.567                              512
+  3              0.00       0.00                   0.542    0.556                              511
+  4              0.00       0.00                   0.528    0.534                              507
+  5              0.01       0.01                   0.509    0.514                              506
+  6              0.00       0.02                   0.553    0.582                              503
+  7              0.01       0.02                   0.524    0.557                              496
+  8              0.04       0.04                   0.510    0.522                              476
+== field quality
+
+W1_J4_recipe_weight_norm_1k (update 1000)
+  anchor codes  slope error mean 0.128 (within 0.1 of the surface 0.182; share of points off by more than 0.2: 0.213); trainer's eikonal term 0.0403; consistency miss mean 0.0799, median 0.0444; field against the object's true distance: mean error 0.0854
+  random codes  slope error mean 0.129 (within 0.1 of the surface 0.229; share of points off by more than 0.2: 0.203); trainer's eikonal term 0.0416; consistency miss mean 0.0560, median 0.0369
+== sheets
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_random_shapes_W1_1000.png
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_anchor_fit_W1_1000.png
+== done Sat 14 Nov 2026 04:51:53 PM CST

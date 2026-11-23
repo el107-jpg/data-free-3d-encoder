@@ -1,0 +1,6 @@
+[gpu_capped] memory capped at 60% (~9.3 of 15.5 GiB); busy time throttled to ~70%
+F6_2500 spectrum: {'total_variance': 0.175, 'effective_directions': 8.7891, 'above_0.02': 13, 'above_0.01': 16, 'above_0.005': 21} | top 16: 0.222 0.177 0.140 0.129 0.118 0.106 0.095 0.088 0.077 0.064 0.051 0.037 0.025 0.019 0.014 0.010
+F6_2500 pose: {'centroid_offset_mean': 0.0093, 'centroid_offset_max': 0.0234, 'common_shift': 0.0038, 'trace_mean': 0.1544, 'trace_target': 0.1555, 'trace_rel_std': 0.0354}
+F6_2500 topology: {'codes': 128, 'clean_at_96': 128, 'flagged': 0, 'defective_at_128_and_160': 0, 'clean_on_fine_grids': 128}
+F6_2500 anchors: {'distance_mean': 0.015, 'distance_max': 0.05, 'iou_mean': 0.867, 'iou_min': 0.518, 'code_cos_abs_mean': 0.031, 'code_cos_max': 0.171}
+saved /home/eric-luo/.claude/jobs/8dde3c62/tmp/followup/F6_2500.json

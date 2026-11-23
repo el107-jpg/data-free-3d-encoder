@@ -1,0 +1,5 @@
+[gpu_capped] memory capped at 75% (~11.6 of 15.5 GiB); busy time throttled to ~70%
+shape 0 {'uncertified': 9013, 'enclosed': 1008, 'pockets': 11, 'pocket_cells': 977} -> {'uncertified': 8586, 'enclosed': 806, 'pockets': 26, 'pocket_cells': 753}
+shape 1 {'uncertified': 8667, 'enclosed': 911, 'pockets': 5, 'pocket_cells': 887} -> {'uncertified': 8194, 'enclosed': 731, 'pockets': 14, 'pocket_cells': 691}
+shape 2 {'uncertified': 8802, 'enclosed': 1127, 'pockets': 11, 'pocket_cells': 1088} -> {'uncertified': 8336, 'enclosed': 993, 'pockets': 31, 'pocket_cells': 957}
+saved /home/eric-luo/.claude/jobs/f264ef61/tmp/seed_gap/blind_smoke.json

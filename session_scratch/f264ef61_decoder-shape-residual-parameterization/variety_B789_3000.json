@@ -1,0 +1,89 @@
+{
+ "B7": {
+  "update": 3000,
+  "overlap": {
+   "mean_pair": 0.670585572719574,
+   "nearest_mean": 0.47940269112586975,
+   "nearest_se": 0.004999622860712331
+  },
+  "surface": {
+   "mean_pair": 0.1168270466734835,
+   "nearest_mean": 0.06860185135155916,
+   "nearest_se": 0.0007106350564256501
+  },
+  "field": {
+   "mean_pair": 0.1223100870847702,
+   "nearest_mean": 0.07043948024511337,
+   "nearest_se": 0.0008923466879692316
+  },
+  "shape": {
+   "fill_mean": 0.10182861493485924,
+   "area_mean": 3.229959199184505,
+   "compactness_median": 0.3262825188933136,
+   "compactness_p10": 0.24513248850436356,
+   "half_thickness_median": 0.2517530471086502,
+   "half_thickness_p10": 0.2039189264178276,
+   "volume_rel_std": 0.16678327777681468,
+   "area_rel_std": 0.10442746805236444,
+   "compactness_std": 0.06749977684037477
+  }
+ },
+ "B8": {
+  "update": 3000,
+  "overlap": {
+   "mean_pair": 0.6268802285194397,
+   "nearest_mean": 0.43252459168434143,
+   "nearest_se": 0.004688382639966839
+  },
+  "surface": {
+   "mean_pair": 0.10981199828082729,
+   "nearest_mean": 0.06546824584559847,
+   "nearest_se": 0.000692478855336716
+  },
+  "field": {
+   "mean_pair": 0.11514902114868164,
+   "nearest_mean": 0.06680452823638916,
+   "nearest_se": 0.0007955048935801705
+  },
+  "shape": {
+   "fill_mean": 0.11187525965435414,
+   "area_mean": 3.2361963771124658,
+   "compactness_median": 0.38460479767438394,
+   "compactness_p10": 0.30227017046103816,
+   "half_thickness_median": 0.2537979632616043,
+   "half_thickness_p10": 0.20616286993026733,
+   "volume_rel_std": 0.15551358771824927,
+   "area_rel_std": 0.0927109495068885,
+   "compactness_std": 0.07379276298728946
+  }
+ },
+ "B9": {
+  "update": 3000,
+  "overlap": {
+   "mean_pair": 0.7091257572174072,
+   "nearest_mean": 0.4649832248687744,
+   "nearest_se": 0.008567916886609355
+  },
+  "surface": {
+   "mean_pair": 0.11705341756654282,
+   "nearest_mean": 0.06417118307823937,
+   "nearest_se": 0.0010538313955870881
+  },
+  "field": {
+   "mean_pair": 0.13009463250637054,
+   "nearest_mean": 0.0668896734714508,
+   "nearest_se": 0.0011440041616273579
+  },
+  "shape": {
+   "fill_mean": 0.09616324760148105,
+   "area_mean": 2.974791762189305,
+   "compactness_median": 0.3485413429211833,
+   "compactness_p10": 0.2497960036693153,
+   "half_thickness_median": 0.26282036304473877,
+   "half_thickness_p10": 0.21085454523563385,
+   "volume_rel_std": 0.34689343105530135,
+   "area_rel_std": 0.18027669180013403,
+   "compactness_std": 0.09054336451653713
+  }
+ }
+}

@@ -1,0 +1,14 @@
+Mass rule is the default again; far-reaching anchors are scaled down to fit
+
+pose_power 6 does not train with the anchor recipe: three runs (P1, P2, X2) ended with a quarter to a half
+of the random codes decoding to an empty shape, with either size-weight ceiling, while the same recipe
+and anchors with pose_power 2 stayed clean (X1). Under the extent rule a shape that is too small can only
+grow by reaching further out, which the decoder does last; shapes were at 0.69 of the target size by
+update 100 and never recovered. pose_power stays as an option, with the finding recorded next to it.
+
+To admit far-reaching anchor shapes anyway: build_data_free_procedural_anchors.py --fit-reach scales a
+shape that would leave the outer radius down until it fits (it is then smaller than the size target), and
+anchor_exempt_size leaves the anchor rows out of the size term. repose_data_free_anchors.py puts an
+existing anchor file into another pose rule from its stored grids.
+
+Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>

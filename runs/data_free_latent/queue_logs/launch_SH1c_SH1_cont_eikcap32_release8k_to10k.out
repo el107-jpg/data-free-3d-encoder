@@ -1,0 +1,1 @@
+Terminated                 PYTHONPATH=. $ROOT/.venv/bin/python $ROOT/scripts/gpu_capped.py --gpu-fraction 0.75 --gpu-util 0.7 scripts/train_data_free_latent.py --output-dir "$OUT" --device cuda --resume --steps 10000 --set field_cap=32 --set field_cap_until=8000 --set field_cap_release_steps=1500 --set field_cap_release_to=100 >> "$OUT/train.log" 2>&1

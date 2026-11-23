@@ -1,0 +1,2 @@
+0 %, 678 MiB
+11265, /snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration, 8 MiB

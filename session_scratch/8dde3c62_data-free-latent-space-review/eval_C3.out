@@ -1,0 +1,25 @@
+== sharpness
+J4_1000 (update 1000, 187191 surface pairs): median bend 6.90 (radius 0.14); flat 1.8%, gently bent 62.9%, tight 35.3%; mean cost 0.757
+C3_1000 (update 1000, 186712 surface pairs): median bend 5.91 (radius 0.17); flat 2.3%, gently bent 70.3%, tight 27.3%; mean cost 0.717
+== evalrun
+C3_1000 spectrum: {'total_variance': 0.6268, 'effective_directions': 5.3841, 'above_0.02': 21, 'above_0.01': 42, 'above_0.005': 62} | top 16: 0.558 0.362 0.244 0.196 0.155 0.129 0.107 0.091 0.076 0.066 0.052 0.041 0.037 0.033 0.030 0.028
+C3_1000 pose: {'centroid_offset_mean': 0.0276, 'centroid_offset_max': 0.0607, 'common_shift': 0.0086, 'trace_mean': 0.1375, 'trace_target': 0.1555, 'trace_rel_std': 0.1147}
+C3_1000 topology: {'codes': 128, 'clean_at_96': 83, 'flagged': 45, 'defective_at_128_and_160': 44, 'clean_on_fine_grids': 84}
+C3_1000 anchors: {'distance_mean': 0.04, 'distance_max': 0.108, 'iou_mean': 0.538, 'iou_min': 0.0, 'code_cos_abs_mean': 0.007, 'code_cos_max': 0.0}
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/analysis_scripts/followup/C3_1000.json
+== variance on 96 codes
+J4_d64_nocentre_procedural96_even_ @ 1000: total variance over 96 codes: mean 0.497; between codes: std 0.223 (range 0.15 to 1.24); standard error with 24 codes 0.045, with 96 codes 0.023; four groups of 24 would report 0.522, 0.489, 0.519, 0.458; solid directions from the pooled spectrum 20, per code 19.5 (std 3.6)
+C3_J4_recipe_crease2_1k @ 1000: total variance over 96 codes: mean 0.514; between codes: std 0.221 (range 0.14 to 1.14); standard error with 24 codes 0.045, with 96 codes 0.023; four groups of 24 would report 0.540, 0.481, 0.525, 0.511; solid directions from the pooled spectrum 20, per code 19.9 (std 3.5)
+== field quality
+
+J4_d64_nocentre_procedural96_even_code_leak05_beta100_fourier3_5k (update 1000)
+  anchor codes  slope error mean 0.087 (within 0.1 of the surface 0.148; share of points off by more than 0.2: 0.095); trainer's eikonal term 0.0182; consistency miss mean 0.0407, median 0.0266; field against the object's true distance: mean error 0.0398
+  random codes  slope error mean 0.094 (within 0.1 of the surface 0.161; share of points off by more than 0.2: 0.109); trainer's eikonal term 0.0218; consistency miss mean 0.0319, median 0.0228
+
+C3_J4_recipe_crease2_1k (update 1000)
+  anchor codes  slope error mean 0.085 (within 0.1 of the surface 0.153; share of points off by more than 0.2: 0.093); trainer's eikonal term 0.0214; consistency miss mean 0.0418, median 0.0272; field against the object's true distance: mean error 0.0403
+  random codes  slope error mean 0.094 (within 0.1 of the surface 0.169; share of points off by more than 0.2: 0.111); trainer's eikonal term 0.0223; consistency miss mean 0.0348, median 0.0250
+== sheets
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_random_shapes_C3_1000.png
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_anchor_fit_C3_1000.png
+== done Sat 14 Nov 2026 04:18:41 PM CST

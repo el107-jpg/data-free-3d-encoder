@@ -1,0 +1,6 @@
+[gpu_capped] memory capped at 25% (~3.9 of 15.5 GiB); busy time throttled to ~70%
+F2_settle_5300 spectrum: {'total_variance': 0.1933, 'effective_directions': 7.3268, 'above_0.02': 14, 'above_0.01': 15, 'above_0.005': 18} | top 16: 0.267 0.190 0.145 0.127 0.113 0.098 0.088 0.077 0.067 0.058 0.048 0.038 0.028 0.021 0.012 0.009
+F2_settle_5300 pose: {'centroid_offset_mean': 0.013, 'centroid_offset_max': 0.0315, 'common_shift': 0.0076, 'trace_mean': 0.1602, 'trace_target': 0.1555, 'trace_rel_std': 0.037}
+F2_settle_5300 topology: {'codes': 128, 'clean_at_96': 128, 'flagged': 0, 'defective_at_128_and_160': 0, 'clean_on_fine_grids': 128}
+F2_settle_5300 anchors: {'distance_mean': 0.005, 'distance_max': 0.009, 'iou_mean': 0.95, 'iou_min': 0.873, 'code_cos_abs_mean': 0.067, 'code_cos_max': 0.278}
+saved /home/eric-luo/.claude/jobs/8dde3c62/tmp/followup/F2_settle_5300.json

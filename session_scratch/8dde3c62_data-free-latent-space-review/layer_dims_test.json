@@ -1,0 +1,80 @@
+{
+ "S5 at 1,000": {
+  "update": 1000,
+  "side network, layer 1": {
+   "effective": 52.31472984615949,
+   "n90": 50.0,
+   "above1pct": 63.0
+  },
+  "side network, layer 2": {
+   "effective": 46.557649854635315,
+   "n90": 48.875,
+   "above1pct": 63.0
+  },
+  "scale and shift, all layers": {
+   "effective": 51.09664557910681,
+   "n90": 49.625,
+   "above1pct": 63.0
+  },
+  "scale and shift for main layer 1": {
+   "effective": 23.00478722495474,
+   "n90": 40.75,
+   "above1pct": 63.0
+  },
+  "scale and shift for main layer 8": {
+   "effective": 47.91779951009232,
+   "n90": 44.375,
+   "above1pct": 63.0
+  },
+  "main network, hidden layer 1": {
+   "effective": 15.926903464655414,
+   "n90": 32.5,
+   "above1pct": 63.0
+  },
+  "main network, hidden layer 2": {
+   "effective": 8.403249401887988,
+   "n90": 17.625,
+   "above1pct": 63.0
+  },
+  "main network, hidden layer 3": {
+   "effective": 5.824485072618309,
+   "n90": 9.5,
+   "above1pct": 63.0
+  },
+  "main network, hidden layer 4": {
+   "effective": 4.376228636701464,
+   "n90": 7.875,
+   "above1pct": 63.0
+  },
+  "main network, hidden layer 5": {
+   "effective": 3.5317494577548443,
+   "n90": 6.375,
+   "above1pct": 63.0
+  },
+  "main network, hidden layer 6": {
+   "effective": 3.2390800153157384,
+   "n90": 5.5,
+   "above1pct": 63.0
+  },
+  "main network, hidden layer 7": {
+   "effective": 3.140395175630003,
+   "n90": 4.625,
+   "above1pct": 63.0
+  },
+  "main network, hidden layer 8": {
+   "effective": 3.321082770910725,
+   "n90": 4.0,
+   "above1pct": 63.0
+  },
+  "field at points in the ball": {
+   "effective": 2.889375805053628,
+   "n90": 3.0,
+   "above1pct": 19.875
+  },
+  "surface motion (pose removed)": {
+   "effective": 2.2422712776348046,
+   "n90": 2.25,
+   "above1pct": 14.875
+  }
+ }
+}

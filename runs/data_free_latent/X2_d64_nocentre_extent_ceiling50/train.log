@@ -1,0 +1,59 @@
+[gpu_capped] memory capped at 75% (~11.6 of 15.5 GiB); busy time throttled to ~70%
+diag      0  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 0.0  wobble 0.05  descriptor spread 0.007  probe distance 0.0010  7.1 s  anchors iou 0.23 (min 0.03) code cos max 0.00
+step      0  loss 35.69  div 22.62 (ratio 0.003, dead zone 0.00)  eik 3.49e-06  cons 0.00146  pose c -2.3e-05 s -2.9e-05 a -2e-05  e 0.00102  graph full [frag 0.0+0.0 cav 0.0 gap 0.0 wall 0.0]  lr 5.09e-06  |g| 1.09e+03  2043 ms  anchors d 0.1621 iou 0.24
+step     25  loss 25.36  div 12.56 (ratio 0.049, dead zone 0.00)  eik 0.00674  cons 0.0903  pose c -0.00014 s 0.004 a 0.00018  e 0.0788  graph off [frag 0.0+0.0 cav 0.0 gap 0.0 wall 0.0]  lr 1.32e-04  |g| 268  1345 ms  anchors d 0.1118 iou 0.31
+step     50  loss 16.98  div 6.5 (ratio 0.238, dead zone 0.00)  eik 0.0124  cons 0.0592  pose c 0.0016 s 0.0086 a 0.00016  e 0.0467  graph sign [frag 0.0+0.0 cav 0.0 gap 228.5 wall 371.0]  lr 2.60e-04  |g| 203  1538 ms  anchors d 0.0977 iou 0.17
+step     75  loss 14.73  div 6.891 (ratio 0.217, dead zone 0.00)  eik 0.00364  cons 0.0506  pose c 0.0012 s 0.0079 a 9.6e-05  e 0.0381  graph sign [frag 0.0+0.0 cav 0.0 gap 7.0 wall 42.5]  lr 3.87e-04  |g| 196  1567 ms  anchors d 0.0802 iou 0.32
+step    100  loss 14.99  div 7.102 (ratio 0.209, dead zone 0.00)  eik 0.00412  cons 0.0572  pose c 0.0019 s 0.0087 a 1.7e-06  e 0.0453  graph sign [frag 0.0+0.0 cav 0.0 gap 64.25 wall 177.5]  lr 5.14e-04  |g| 54.2  1622 ms  anchors d 0.0921 iou 0.34
+step    125  loss 15.26  div 6.894 (ratio 0.216, dead zone 0.00)  eik 0.0051  cons 0.0588  pose c 0.0029 s 0.0067 a 0.00012  e 0.0456  graph sign [frag 0.0+0.0 cav 0.0 gap 61.75 wall 193.75]  lr 6.36e-04  |g| 210  1570 ms  anchors d 0.0947 iou 0.27
+step    150  loss 11.27  div 5.664 (ratio 0.308, dead zone 0.00)  eik 0.00702  cons 0.0681  pose c 0.0018 s 0.0068 a 5.6e-05  e 0.0465  graph sign [frag 0.0+0.0 cav 0.0 gap 110.0 wall 241.5]  lr 6.36e-04  |g| 58.5  1543 ms  anchors d 0.0981 iou 0.28
+step    175  loss 15.85  div 6.794 (ratio 0.229, dead zone 0.00)  eik 0.0051  cons 0.0368  pose c 0.0012 s 0.004 a 3.9e-05  e 0.0257  graph sign [frag 0.0+0.0 cav 0.0 gap 86.0 wall 171.25]  lr 6.36e-04  |g| 319  1581 ms  anchors d 0.0775 iou 0.43
+step    200  loss 16.85  div 5.84 (ratio 0.291, dead zone 0.00)  eik 0.00578  cons 0.0547  pose c 0.002 s 0.0062 a 0.00018  e 0.0375  graph sign [frag 0.0+0.0 cav 0.0 gap 183.75 wall 385.75]  lr 6.36e-04  |g| 147  1744 ms  anchors d 0.0718 iou 0.32
+step    225  loss 12.99  div 5.921 (ratio 0.284, dead zone 0.00)  eik 0.00407  cons 0.0358  pose c 0.0012 s 0.0044 a 0.0001  e 0.0248  graph sign [frag 0.0+0.0 cav 0.0 gap 70.25 wall 195.75]  lr 6.36e-04  |g| 240  1708 ms  anchors d 0.0701 iou 0.37
+diag    250  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 3.0  wobble 0.13  descriptor spread 1.393  probe distance 0.1235  6.8 s  anchors iou 0.41 (min 0.00) code cos max 0.00
+step    250  loss 12.88  div 5.486 (ratio 0.326, dead zone 0.00)  eik 0.00747  cons 0.0525  pose c 0.0021 s 0.0052 a 0.00012  e 0.037  graph sign [frag 0.0+0.0 cav 0.0 gap 163.25 wall 354.0]  lr 6.36e-04  |g| 200  2206 ms  anchors d 0.0606 iou 0.49
+step    275  loss 18.69  div 4.377 (ratio 0.425, dead zone 0.00)  eik 0.0168  cons 0.181  pose c 0.0028 s 0.0044 a 0.00054  e 0.124  graph off [frag 0.0+0.0 cav 0.0 gap 0.0 wall 0.0]  lr 6.36e-04  |g| 610  1349 ms  anchors d 0.1183 iou 0.22
+step    300  loss 13.14  div 5.74 (ratio 0.298, dead zone 0.00)  eik 0.00614  cons 0.0409  pose c 0.002 s 0.006 a 4.4e-05  e 0.0283  graph sign [frag 0.0+0.0 cav 0.0 gap 108.75 wall 265.25]  lr 6.36e-04  |g| 312  1747 ms  anchors d 0.0700 iou 0.35
+step    325  loss 11.38  div 4.693 (ratio 0.393, dead zone 0.00)  eik 0.01  cons 0.0716  pose c 0.002 s 0.0046 a 0.0002  e 0.0487  graph sign [frag 0.25+0.0 cav 0.0 gap 328.5 wall 470.0]  lr 6.36e-04  |g| 124  1691 ms  anchors d 0.0669 iou 0.35
+step    350  loss 11.84  div 5.012 (ratio 0.376, dead zone 0.00)  eik 0.00795  cons 0.0559  pose c 0.0015 s 0.0031 a 0.00013  e 0.0357  graph sign [frag 0.5+0.0 cav 0.0 gap 253.5 wall 446.75]  lr 6.36e-04  |g| 59.2  1761 ms  anchors d 0.0592 iou 0.41
+step    375  loss 14.15  div 4.804 (ratio 0.393, dead zone 0.00)  eik 0.00881  cons 0.0964  pose c 0.002 s 0.0084 a 8.1e-05  e 0.0574  graph off [frag 0.0+0.0 cav 0.0 gap 0.0 wall 0.0]  lr 6.36e-04  |g| 233  1346 ms  anchors d 0.0840 iou 0.33
+step    400  loss 12.41  div 5.888 (ratio 0.301, dead zone 0.00)  eik 0.0073  cons 0.0585  pose c 0.0025 s 0.0047 a 0.00014  e 0.0327  graph sign [frag 0.25+0.0 cav 0.0 gap 99.75 wall 278.5]  lr 6.36e-04  |g| 233  2084 ms  anchors d 0.0622 iou 0.43
+step    425  loss 11.62  div 5.263 (ratio 0.356, dead zone 0.00)  eik 0.00706  cons 0.0729  pose c 0.0018 s 0.0062 a 4.8e-05  e 0.0371  graph sign [frag 0.0+0.0 cav 0.0 gap 202.5 wall 347.25]  lr 6.36e-04  |g| 71.8  1813 ms  anchors d 0.0699 iou 0.35
+step    450  loss 12.53  div 6.241 (ratio 0.276, dead zone 0.00)  eik 0.00591  cons 0.0572  pose c 0.0018 s 0.0094 a 4.1e-05  e 0.0397  graph sign [frag 0.0+0.0 cav 0.0 gap 101.75 wall 282.25]  lr 6.36e-04  |g| 89.1  1971 ms  anchors d 0.0655 iou 0.42
+step    475  loss 14.09  div 5.555 (ratio 0.324, dead zone 0.00)  eik 0.00913  cons 0.0974  pose c 0.002 s 0.0057 a 7.1e-05  e 0.0503  graph sign [frag 0.25+0.0 cav 0.0 gap 76.75 wall 196.5]  lr 6.36e-04  |g| 83.8  1775 ms  anchors d 0.0749 iou 0.34
+diag    500  clean 0.75 (1 piece 0.75, no cavity 1.00, no handle 1.00)  graph=grid 0.88  live 3.5  wobble 0.10  descriptor spread 18.438  probe distance 0.2020  6.8 s  anchors iou 0.42 (min 0.03) code cos max 0.00
+step    500  loss 14.23  div 5.124 (ratio 0.352, dead zone 0.00)  eik 0.0121  cons 0.142  pose c 0.0024 s 0.0071 a 0.00018  e 0.0639  graph off [frag 0.0+0.0 cav 0.0 gap 0.0 wall 0.0]  lr 6.36e-04  |g| 180  1942 ms  anchors d 0.0585 iou 0.44
+Traceback (most recent call last):
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/scripts/gpu_capped.py", line 102, in <module>
+    main()
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/scripts/gpu_capped.py", line 98, in main
+    runpy.run_path(script, run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "scripts/train_data_free_latent.py", line 22, in <module>
+    main()
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/procedural-anchors/arm_planner/data_free/train.py", line 1526, in main
+    trainer.run(verbose=not args.quiet)
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/procedural-anchors/arm_planner/data_free/train.py", line 1379, in run
+    record = self.step()
+             ^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/procedural-anchors/arm_planner/data_free/train.py", line 972, in step
+    return self._accumulated_step()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/procedural-anchors/arm_planner/data_free/train.py", line 781, in _accumulated_step
+    fb = evaluate_field(model, batch.codes, batch.cluster, batch.x, cfg)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/procedural-anchors/arm_planner/data_free/field.py", line 100, in evaluate_field
+    f, g = field_and_grad(decoder, mod, x, create_graph=create_graph)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/procedural-anchors/arm_planner/data_free/field.py", line 70, in field_and_grad
+    (g,) = torch.autograd.grad(f.sum(), x, create_graph=create_graph, retain_graph=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.venv/lib/python3.12/site-packages/torch/autograd/__init__.py", line 502, in grad
+    result = _engine_run_backward(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.venv/lib/python3.12/site-packages/torch/autograd/graph.py", line 824, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 15.47 GiB of which 3.48 GiB is free. Including non-PyTorch memory, this process has 11.97 GiB memory in use. 11.60 GiB allowed; Of the allocated memory 11.49 GiB is allocated by PyTorch, and 90.97 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

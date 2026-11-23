@@ -1,0 +1,13 @@
+Add distillation into a changed decoder form (scripts/distill_data_free.py)
+
+arm_planner/data_free/distill.py trains a student decoder to reproduce a
+teacher's field, value and slope, at fresh random codes and the anchor codes,
+on points half uniform and half near the teacher's surface. The script loads
+the teacher's checkpoint with changed settings (e.g. sphere_base=False) as the
+student, so it starts from the teacher's weights, anchor codes and
+multipliers, distils, clears the optimiser state and saves a checkpoint that
+training continues from. Used to give the base-free decoder a start with the
+fixed-base model's shapes and code directions.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01JY9553aZqm8NEgVcz5aYHQ

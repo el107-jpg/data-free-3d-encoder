@@ -1,0 +1,10 @@
+[gpu_capped] memory capped at 75% (~11.6 of 15.5 GiB); busy time throttled to ~70%
+shape 0 {'uncertified': 8193, 'enclosed': 265, 'pockets': 9, 'pocket_cells': 252} -> {'uncertified': 7866, 'enclosed': 54, 'pockets': 11, 'pocket_cells': 28}
+shape 1 {'uncertified': 16269, 'enclosed': 746, 'pockets': 6, 'pocket_cells': 733} -> {'uncertified': 15763, 'enclosed': 403, 'pockets': 23, 'pocket_cells': 368}
+shape 2 {'uncertified': 17217, 'enclosed': 845, 'pockets': 5, 'pocket_cells': 819} -> {'uncertified': 16649, 'enclosed': 510, 'pockets': 31, 'pocket_cells': 430}
+shape 3 {'uncertified': 8923, 'enclosed': 284, 'pockets': 5, 'pocket_cells': 269} -> {'uncertified': 8592, 'enclosed': 65, 'pockets': 10, 'pocket_cells': 28}
+shape 4 {'uncertified': 8689, 'enclosed': 334, 'pockets': 9, 'pocket_cells': 298} -> {'uncertified': 8220, 'enclosed': 102, 'pockets': 20, 'pocket_cells': 48}
+shape 5 {'uncertified': 14052, 'enclosed': 427, 'pockets': 11, 'pocket_cells': 401} -> {'uncertified': 12105, 'enclosed': 199, 'pockets': 32, 'pocket_cells': 139}
+shape 6 {'uncertified': 16558, 'enclosed': 846, 'pockets': 8, 'pocket_cells': 831} -> {'uncertified': 16006, 'enclosed': 508, 'pockets': 29, 'pocket_cells': 459}
+shape 7 {'uncertified': 15118, 'enclosed': 696, 'pockets': 8, 'pocket_cells': 678} -> {'uncertified': 14580, 'enclosed': 319, 'pockets': 47, 'pocket_cells': 271}
+saved /home/eric-luo/.claude/jobs/f264ef61/tmp/seed_gap/mix_core_thingi.json

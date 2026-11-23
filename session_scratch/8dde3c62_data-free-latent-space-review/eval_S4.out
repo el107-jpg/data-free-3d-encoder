@@ -1,0 +1,78 @@
+S4_J4_recipe_sphere_start_no_base_outer_min_1k finished: diag   1000  clean 0.00 (1 piece 1.00, no cavity 1.00, no handle 0.00)  graph=grid 0.94  live 0.0  wobble 0.04  descriptor spread 0.264  probe distance 0.0417  7.8 s  anchors iou 0.29 (min 0.03) code cos max 0.00
+diag      0  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 0.0  wobble 0.26  descriptor spread 0.009  probe distance 0.0009  8.3 s  anchors iou 0.29 (min 0.02) code cos max 0.00
+diag    250  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 0.0  wobble 0.07  descriptor spread 0.107  probe distance 0.0158  7.8 s  anchors iou 0.31 (min 0.03) code cos max 0.00
+diag    500  clean 0.00 (1 piece 0.88, no cavity 1.00, no handle 0.12)  graph=grid 0.88  live 0.0  wobble 0.07  descriptor spread 0.196  probe distance 0.0231  8.0 s  anchors iou 0.24 (min 0.00) code cos max 0.00
+diag    750  clean 0.00 (1 piece 1.00, no cavity 1.00, no handle 0.00)  graph=grid 1.00  live 0.0  wobble 0.04  descriptor spread 0.154  probe distance 0.0226  8.2 s  anchors iou 0.26 (min 0.02) code cos max 0.00
+diag   1000  clean 0.00 (1 piece 1.00, no cavity 1.00, no handle 0.00)  graph=grid 0.94  live 0.0  wobble 0.04  descriptor spread 0.264  probe distance 0.0417  7.8 s  anchors iou 0.29 (min 0.03) code cos max 0.00
+== evalrun
+S4_1000 spectrum: {'total_variance': 0.0517, 'effective_directions': 4.168, 'above_0.02': 7, 'above_0.01': 9, 'above_0.005': 11} | top 16: 0.151 0.131 0.065 0.055 0.049 0.029 0.024 0.016 0.010 0.007 0.006 0.005 0.004 0.003 0.003 0.003
+S4_1000 pose: {'centroid_offset_mean': 0.0195, 'centroid_offset_max': 0.0448, 'common_shift': 0.0108, 'trace_mean': 0.1557, 'trace_target': 0.1555, 'trace_rel_std': 0.0836}
+S4_1000 topology: {'codes': 128, 'clean_at_96': 31, 'flagged': 97, 'defective_at_128_and_160': 97, 'clean_on_fine_grids': 31}
+S4_1000 anchors: {'distance_mean': 0.089, 'distance_max': 0.13, 'iou_mean': 0.286, 'iou_min': 0.0, 'code_cos_abs_mean': 0.007, 'code_cos_max': 0.0}
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/analysis_scripts/followup/S4_1000.json
+== variance on 96 codes
+S4_J4_recipe_sphere_start_no_base_ @ 1000: total variance over 96 codes: mean 0.053; between codes: std 0.007 (range 0.04 to 0.08); standard error with 24 codes 0.001, with 96 codes 0.001; four groups of 24 would report 0.052, 0.051, 0.056, 0.051; solid directions from the pooled spectrum 7, per code 6.9 (std 0.3)
+== field quality
+
+S4_J4_recipe_sphere_start_no_base_outer_min_1k (update 1000)
+  anchor codes  slope error mean 0.111 (within 0.1 of the surface 0.222; share of points off by more than 0.2: 0.138); trainer's eikonal term 0.0273; consistency miss mean 0.0458, median 0.0359; field against the object's true distance: mean error 0.0883
+  random codes  slope error mean 0.111 (within 0.1 of the surface 0.223; share of points off by more than 0.2: 0.138); trainer's eikonal term 0.0285; consistency miss mean 0.0396, median 0.0317
+== sharpness
+S4_1000 (update 1000, 183222 surface pairs): median bend 6.48 (radius 0.15); flat 2.4%, gently bent 64.7%, tight 32.9%; mean cost 0.733
+== sheets
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_random_shapes_S4_1000.png
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_anchor_fit_S4_1000.png
+== done Sat 14 Nov 2026 09:25:27 PM CST
+== facing
+
+S4_J4_recipe_sphere_start_no_base_outer_min_ (update 1000); 113717 points within 0.03 of the surface; slope error 0.340, median slope 1.29; surface below facing 0: 0.080
+    faces outward    : share 0.380, mean radius 0.51, slope error 0.344, median slope 1.33
+    tilted           : share 0.372, mean radius 0.45, slope error 0.288, median slope 1.23
+    nearly side-on   : share 0.168, mean radius 0.35, slope error 0.321, median slope 1.20
+    past side-on     : share 0.066, mean radius 0.27, slope error 0.529, median slope 1.44
+    faces the centre : share 0.013, mean radius 0.17, slope error 0.951, median slope 1.94
+== field error over the run
+S4
+    updates    0- 100: field error median 0.055 (10% to 90%: 0.042 to 0.097); topology terms on 0%; variety loss 17.8; consistency weight 15, slope weight 69
+    updates  100- 250: field error median 0.065 (10% to 90%: 0.038 to 0.137); topology terms on 0%; variety loss 14.5; consistency weight 20, slope weight 200
+    updates  250- 500: field error median 0.066 (10% to 90%: 0.038 to 0.143); topology terms on 0%; variety loss 12.7; consistency weight 20, slope weight 200
+    updates  500- 750: field error median 0.059 (10% to 90%: 0.039 to 0.114); topology terms on 0%; variety loss 11.5; consistency weight 20, slope weight 200
+    updates  750-1000: field error median 0.056 (10% to 90%: 0.032 to 0.114); topology terms on 0%; variety loss 10.3; consistency weight 20, slope weight 200
+off 649 sign 348 full 3
+== variance at 500
+S4_J4_recipe_sphere_start_no_base_ @ 500: total variance over 96 codes: mean 0.013; between codes: std 0.002 (range 0.01 to 0.03); standard error with 24 codes 0.001, with 96 codes 0.000; four groups of 24 would report 0.013, 0.013, 0.014, 0.013; solid directions from the pooled spectrum 5, per code 5.0 (std 0.0)
+== gradient by term
+
+S4_J4_recipe_sphere_start_no_base_outer_min_ (update 500); whole gradient 540.5 (logged 540.5, clipped to 1.0); field error 0.048; topology terms: sign
+  topology findings per pass: {'graph/fragments_kind0': 0.0, 'graph/fragments_kind1': 0.0, 'graph/cavities': 0.0, 'graph/gap_sites': 2.2, 'graph/wall_sites': 18.5, 'graph/extra_pieces': 0.0, 'graph/cavities_uncapped': 0.0, 'graph/confirm_dropped_kind0': 0.0, 'graph/confirm_dropped_kind1': 0.0, 'graph/confirm_dropped_cavities': 0.0, 'graph/build_ms': 41.3}; action weights: bridge 1764, delete 165, fill 1, widen 1, thicken 1
+  part of the loss                     size  share  along the update   value x weight
+  consistency                         359.8   0.46              0.66   consistency 0.0567 x 20
+  anchor pull                         218.7   0.28              0.37   anchor 0.0722 x 100
+  size and position                    81.0   0.10             -0.13   pose_centroid -6.13e-05 x 50, pose_scale 0.00111 x 500, pose_axes 5.66e-05 x 1
+  slope (eikonal)                      51.8   0.07             -0.02   eikonal 0.0115 x 200
+  variety push                         39.9   0.05              0.07   variety 12.6 x 1
+  other (barrier, volume, origin)      27.1   0.03              0.04   barrier 6.15e-06 x 5.81e+03, origin 0 x 1, volume 6.17e-09 x 200
+  evenness of the code                  2.7   0.00              0.00   iso 0.00724 x 100
+  topology actions                      0.0   0.00             -0.00   widen 2.05e-06 x 1, thicken 2.83e-05 x 1
+
+S4_J4_recipe_sphere_start_no_base_outer_min_ (update 1000); whole gradient 728.8 (logged 728.8, clipped to 1.0); field error 0.050; topology terms: sign
+  topology findings per pass: {'graph/fragments_kind0': 0.0, 'graph/fragments_kind1': 0.0, 'graph/cavities': 0.0, 'graph/gap_sites': 10.2, 'graph/wall_sites': 29.8, 'graph/extra_pieces': 0.0, 'graph/cavities_uncapped': 0.0, 'graph/confirm_dropped_kind0': 0.0, 'graph/confirm_dropped_kind1': 0.0, 'graph/confirm_dropped_cavities': 0.0, 'graph/build_ms': 25.0}; action weights: bridge 206, delete 1, fill 1, widen 1, thicken 1
+  part of the loss                     size  share  along the update   value x weight
+  anchor pull                         394.4   0.51              0.53   anchor 0.0938 x 100
+  slope (eikonal)                     190.6   0.24              0.24   eikonal 0.0166 x 200
+  consistency                         142.5   0.18              0.19   consistency 0.0807 x 20
+  variety push                         35.8   0.05              0.05   variety 9.13 x 1
+  size and position                     9.4   0.01             -0.01   pose_centroid -0.000448 x 50, pose_scale 9.61e-05 x 500, pose_axes -3.16e-05 x 1
+  other (barrier, volume, origin)       5.1   0.01              0.00   barrier 3.5e-06 x 3.49e+03, origin 0 x 1, volume 0 x 81.5
+  evenness of the code                  2.6   0.00             -0.00   iso 0.00839 x 100
+  topology actions                      0.0   0.00             -0.00   widen 1.77e-05 x 1, thicken 2.47e-05 x 1
+== contours
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_field_sphere_start_S4_update25.png
+  code 1: mean |error| in the slice 0.1422, within 0.1 of the surface 0.0254, worst 0.221
+  code 2: mean |error| in the slice 0.1435, within 0.1 of the surface 0.0252, worst 0.220
+  code 3: mean |error| in the slice 0.1487, within 0.1 of the surface 0.0256, worst 0.226
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_field_sphere_start_S4_update1000.png
+  code 1: mean |error| in the slice 0.0258, within 0.1 of the surface 0.0172, worst 0.084
+  code 2: mean |error| in the slice 0.0224, within 0.1 of the surface 0.0187, worst 0.098
+  code 3: mean |error| in the slice 0.0280, within 0.1 of the surface 0.0217, worst 0.121
+== done Sat 14 Nov 2026 09:27:04 PM CST

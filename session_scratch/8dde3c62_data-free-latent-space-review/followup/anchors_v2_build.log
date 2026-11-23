@@ -1,0 +1,27 @@
+Warp 1.18.0 initialized:
+   CUDA Toolkit 13.4, Driver 13.2
+   Devices:
+     "cpu"      : "CPU"
+     "cuda:0"   : "NVIDIA GeForce RTX 5080" (15 GiB, sm_120, mempool enabled)
+   Kernel cache:
+     /home/eric-luo/.cache/warp/1.18.0
+Module arm_planner.object_geometry.warp_oracle a437ba5 load on device 'cuda:0' took 0.95 ms  (cached)
+100 candidates, 17 eligible, 142 s
+200 candidates, 29 eligible, 310 s
+300 candidates, 49 eligible, 510 s
+400 candidates, 69 eligible, 705 s
+500 candidates, 86 eligible, 826 s
+600 candidates, 106 eligible, 952 s
+700 candidates, 117 eligible, 1078 s
+800 candidates, 132 eligible, 1231 s
+900 candidates, 145 eligible, 1412 s
+1000 candidates, 160 eligible, 1640 s
+1100 candidates, 177 eligible, 1782 s
+1200 candidates, 194 eligible, 1922 s
+1300 candidates, 211 eligible, 2043 s
+1400 candidates, 231 eligible, 2178 s
+1425 candidates with good metadata; 234 eligible; rejected: {'centre too shallow': 826, 'metadata': 2144, 'thin features': 170, 'too long for the outer radius': 68, 'no mesh file': 140, 'thin gaps': 56, 'too few faces': 13, 'not one simple piece on the grid': 29, 'outside the outer radius': 29}
+chosen 64: pairwise distance min 0.0628 median 0.1187 max 0.3009; distance to the ball median 0.0996
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/datasets/data_free_anchors_20261111_v2/anchors.pt
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/datasets/data_free_anchors_20261111_v2/eligible.pt
+saved /home/eric-luo/Downloads/data_free_anchor_objects_v2.png

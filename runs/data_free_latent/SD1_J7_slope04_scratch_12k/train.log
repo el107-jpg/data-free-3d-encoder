@@ -1,0 +1,82 @@
+phase 0 -> 5000; lr 0.0006364; scratch origin seed=0; cuda allocator fraction=0.70
+diag      0  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 0.0  wobble 0.27  descriptor spread 0.010  probe distance 0.0013  15.5 s  anchors iou 0.28 (min 0.02) code cos max 0.00
+step      0  loss 34.29  div 20.91 (ratio 0.005, dead zone 0.00)  eik 0.000201  cons 0.00575  pose c -0.0003 s 1.8e-06 a 2.3e-05  e 0.00398  graph full [frag 0.0+0.0 cav 0.0 gap 0.0 wall 0.0]  lr 5.09e-06  |g| 1.03e+03  4889 ms  anchors d 0.1272 iou 0.34
+verified first five updates and saved the initial resume checkpoint
+step     25  loss 22.08  div 12.63 (ratio 0.051, dead zone 0.00)  eik 0.0141  cons 0.0497  pose c -0.00064 s 0.0042 a 8.5e-05  e 0.0376  graph sign [frag 0.0+0.0 cav 0.0 gap 1.0 wall 5.5]  lr 1.32e-04  |g| 107  5268 ms  anchors d 0.0909 iou 0.29
+step     50  loss 20.81  div 7.829 (ratio 0.190, dead zone 0.00)  eik 0.0478  cons 0.0691  pose c 0.0074 s 0.0038 a 0.00011  e 0.057  graph off [frag 0.0+0.0 cav 0.0 gap 0.0 wall 0.0]  lr 2.60e-04  |g| 107  4277 ms  anchors d 0.0914 iou 0.16
+step     75  loss 23.14  div 11.22 (ratio 0.074, dead zone 0.00)  eik 0.00939  cons 0.0425  pose c -0.00065 s 0.0024 a 6e-05  e 0.0325  graph sign [frag 0.0+0.0 cav 0.0 gap 0.0 wall 0.5]  lr 3.87e-04  |g| 473  4615 ms  anchors d 0.0939 iou 0.31
+step    100  loss 26.81  div 11.2 (ratio 0.076, dead zone 0.00)  eik 0.00792  cons 0.0546  pose c 0.0016 s 0.0045 a -9.5e-05  e 0.042  graph sign [frag 0.0+0.0 cav 0.0 gap 0.0 wall 1.5]  lr 5.14e-04  |g| 372  4669 ms  anchors d 0.0968 iou 0.32
+step    125  loss 23.01  div 11.24 (ratio 0.079, dead zone 0.00)  eik 0.00467  cons 0.0325  pose c -0.0002 s 0.0026 a -2.5e-05  e 0.0233  graph sign [frag 0.0+0.0 cav 0.0 gap 0.75 wall 0.25]  lr 6.36e-04  |g| 228  4742 ms  anchors d 0.0903 iou 0.40
+step    150  loss 21.4  div 9 (ratio 0.144, dead zone 0.00)  eik 0.00753  cons 0.0395  pose c -0.00033 s 0.00098 a -7.3e-05  e 0.029  graph sign [frag 0.0+0.0 cav 0.0 gap 0.0 wall 2.0]  lr 6.36e-04  |g| 683  4681 ms  anchors d 0.0939 iou 0.38
+step    175  loss 18.41  div 7.88 (ratio 0.198, dead zone 0.00)  eik 0.0102  cons 0.0461  pose c -0.00041 s 0.0038 a 9.8e-06  e 0.0349  graph sign [frag 0.0+0.0 cav 0.0 gap 32.0 wall 84.75]  lr 6.36e-04  |g| 334  4681 ms  anchors d 0.0775 iou 0.37
+step    200  loss 18.8  div 8.017 (ratio 0.197, dead zone 0.01)  eik 0.0075  cons 0.0412  pose c 0.00052 s 0.0017 a 1.5e-05  e 0.0304  graph sign [frag 0.5+0.0 cav 0.0 gap 7.5 wall 22.5]  lr 6.36e-04  |g| 138  4709 ms  anchors d 0.0730 iou 0.40
+step    225  loss 16.15  div 8.044 (ratio 0.189, dead zone 0.00)  eik 0.00828  cons 0.0387  pose c 0.0013 s 0.0015 a 2.4e-05  e 0.0285  graph sign [frag 0.5+0.0 cav 0.0 gap 12.75 wall 41.25]  lr 6.36e-04  |g| 204  4774 ms  anchors d 0.0846 iou 0.32
+diag    250  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 2.0  wobble 0.08  descriptor spread 0.448  probe distance 0.0865  15.1 s  anchors iou 0.39 (min 0.00) code cos max 0.00
+step    250  loss 16.86  div 7.214 (ratio 0.229, dead zone 0.00)  eik 0.0124  cons 0.0443  pose c 2.1e-05 s 0.0011 a -4.3e-05  e 0.0339  graph sign [frag 0.0+0.0 cav 0.0 gap 38.25 wall 82.5]  lr 6.36e-04  |g| 228  4686 ms  anchors d 0.0793 iou 0.46
+step    275  loss 16.56  div 7.062 (ratio 0.248, dead zone 0.00)  eik 0.00895  cons 0.0485  pose c 0.00045 s 0.0023 a 4.1e-06  e 0.0394  graph sign [frag 0.0+0.0 cav 0.0 gap 93.75 wall 139.5]  lr 6.36e-04  |g| 215  4782 ms  anchors d 0.0842 iou 0.34
+step    300  loss 16.08  div 7.102 (ratio 0.238, dead zone 0.00)  eik 0.00836  cons 0.038  pose c -0.00069 s 0.0012 a -5.5e-06  e 0.0285  graph sign [frag 0.0+0.0 cav 0.0 gap 34.0 wall 78.0]  lr 6.36e-04  |g| 161  4799 ms  anchors d 0.0664 iou 0.52
+step    325  loss 15.12  div 7.101 (ratio 0.229, dead zone 0.00)  eik 0.00589  cons 0.0362  pose c -7e-05 s 0.002 a -4.7e-05  e 0.0285  graph sign [frag 0.0+0.0 cav 0.0 gap 6.25 wall 24.5]  lr 6.36e-04  |g| 163  4859 ms  anchors d 0.0695 iou 0.42
+step    350  loss 15.13  div 7.483 (ratio 0.208, dead zone 0.00)  eik 0.00782  cons 0.0431  pose c 0.0023 s 0.0014 a -5.6e-05  e 0.0338  graph sign [frag 0.25+0.0 cav 0.0 gap 41.25 wall 74.25]  lr 6.36e-04  |g| 223  4793 ms  anchors d 0.0645 iou 0.51
+step    375  loss 16.95  div 8.438 (ratio 0.168, dead zone 0.00)  eik 0.00444  cons 0.0246  pose c -0.00027 s 0.00014 a -2.8e-05  e 0.0177  graph full [frag 0.0+0.25 cav 0.0 gap 0.0 wall 1.75]  lr 6.36e-04  |g| 812  4757 ms  anchors d 0.0831 iou 0.44
+step    400  loss 15.5  div 6.441 (ratio 0.269, dead zone 0.00)  eik 0.00956  cons 0.0501  pose c 0.0026 s 0.0015 a 6.2e-06  e 0.0389  graph sign [frag 0.0+0.0 cav 0.0 gap 32.5 wall 102.0]  lr 6.36e-04  |g| 191  4725 ms  anchors d 0.0607 iou 0.49
+step    425  loss 16.15  div 5.918 (ratio 0.309, dead zone 0.00)  eik 0.0128  cons 0.0518  pose c 0.0015 s 0.0026 a 6.3e-06  e 0.0399  graph sign [frag 0.0+0.0 cav 0.0 gap 73.25 wall 170.75]  lr 6.36e-04  |g| 296  4806 ms  anchors d 0.0712 iou 0.41
+step    450  loss 14.96  div 6.113 (ratio 0.290, dead zone 0.00)  eik 0.0124  cons 0.0466  pose c 0.0022 s 0.0006 a 4e-05  e 0.0348  graph sign [frag 0.25+0.0 cav 0.0 gap 86.75 wall 170.5]  lr 6.36e-04  |g| 144  4809 ms  anchors d 0.0581 iou 0.39
+step    475  loss 13.53  div 5.988 (ratio 0.298, dead zone 0.00)  eik 0.00848  cons 0.0378  pose c -0.00022 s 0.00044 a 4.4e-05  e 0.0273  graph sign [frag 0.5+0.0 cav 0.0 gap 32.25 wall 79.25]  lr 6.36e-04  |g| 58.6  4851 ms  anchors d 0.0569 iou 0.51
+Traceback (most recent call last):
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/SD1_J7_slope04_scratch_12k/launcher/worker.py", line 55, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/SD1_J7_slope04_scratch_12k/launcher/worker.py", line 50, in main
+    runner.run(steps=end-step)
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/j7-slope-diversity/arm_planner/data_free/train.py", line 1527, in run
+    diag_done = self._diagnose(verbose)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/j7-slope-diversity/arm_planner/data_free/train.py", line 1546, in _diagnose
+    record = self.run_diagnostics()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/j7-slope-diversity/arm_planner/data_free/train.py", line 1212, in run_diagnostics
+    check = D.graph_vs_grid(model, codes, cfg, resolution=int(cfg.diag_resolution),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/j7-slope-diversity/arm_planner/data_free/diagnostics.py", line 213, in graph_vs_grid
+    grid_counts = decoder_grid_topology(decoder, codes, cfg, resolution=resolution)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/j7-slope-diversity/arm_planner/data_free/diagnostics.py", line 127, in decoder_grid_topology
+    mod = decoder.prepare(codes[i : i + 1])
+                          ~~~~~^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/SD1_J7_slope04_scratch_12k/launcher/gpu_budget.py", line 47, in __torch_dispatch__
+    torch.cuda.synchronize()
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py", line 1040, in synchronize
+    return torch._C._cuda_synchronize()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: the launch timed out and was terminated
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+phase 500 -> 5000; lr 0.0006364; scratch origin seed=0; cuda allocator fraction=0.70
+CPU diagnostic at step 500
+diag    500  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 2.2  wobble 0.07  descriptor spread 0.513  probe distance 0.0984  219.4 s  anchors iou 0.44 (min 0.00) code cos max 0.00
+step    500  loss 13.71  div 5.656 (ratio 0.320, dead zone 0.00)  eik 0.0108  cons 0.0439  pose c 0.0014 s 0.0017 a 2.2e-05  e 0.0328  graph sign [frag 0.0+0.0 cav 0.0 gap 41.25 wall 119.0]  lr 6.36e-04  |g| 231  5549 ms  anchors d 0.0580 iou 0.52
+step    525  loss 14.65  div 5.603 (ratio 0.332, dead zone 0.00)  eik 0.0087  cons 0.0416  pose c 0.001 s 0.0012 a 6.2e-05  e 0.0321  graph sign [frag 0.75+0.0 cav 0.0 gap 34.5 wall 120.5]  lr 6.36e-04  |g| 156  4643 ms  anchors d 0.0588 iou 0.47
+step    550  loss 15.32  div 5.984 (ratio 0.301, dead zone 0.00)  eik 0.011  cons 0.0388  pose c -0.0002 s 0.00013 a 4.5e-05  e 0.0279  graph sign [frag 0.0+0.0 cav 0.0 gap 12.25 wall 43.5]  lr 6.36e-04  |g| 356  4557 ms  anchors d 0.0659 iou 0.45
+step    575  loss 15.6  div 6.173 (ratio 0.288, dead zone 0.00)  eik 0.00879  cons 0.0405  pose c 0.0022 s 0.00099 a -4.7e-05  e 0.0304  graph sign [frag 0.0+0.0 cav 0.0 gap 16.0 wall 36.0]  lr 6.36e-04  |g| 153  4548 ms  anchors d 0.0621 iou 0.44
+step    600  loss 14.31  div 6.239 (ratio 0.280, dead zone 0.00)  eik 0.00749  cons 0.0331  pose c 0.0013 s 0.00021 a 5.6e-05  e 0.0249  graph sign [frag 0.0+0.0 cav 0.0 gap 12.25 wall 27.25]  lr 6.36e-04  |g| 276  4682 ms  anchors d 0.0607 iou 0.47
+step    625  loss 13.87  div 6.263 (ratio 0.273, dead zone 0.00)  eik 0.00653  cons 0.0319  pose c 0.00015 s 0.00031 a -2.5e-05  e 0.0232  graph sign [frag 0.0+0.0 cav 0.0 gap 0.0 wall 3.0]  lr 6.36e-04  |g| 244  4628 ms  anchors d 0.0703 iou 0.45
+step    650  loss 11.83  div 5.69 (ratio 0.319, dead zone 0.00)  eik 0.00819  cons 0.0396  pose c 0.0028 s 0.0015 a -1.3e-07  e 0.0306  graph sign [frag 0.0+0.0 cav 0.0 gap 38.75 wall 109.75]  lr 6.36e-04  |g| 70.2  4560 ms  anchors d 0.0617 iou 0.42
+step    675  loss 12.92  div 5.748 (ratio 0.313, dead zone 0.00)  eik 0.00731  cons 0.032  pose c 0.00029 s 0.00049 a 9.5e-06  e 0.0237  graph sign [frag 0.0+0.0 cav 0.0 gap 17.25 wall 45.25]  lr 6.36e-04  |g| 174  4644 ms  anchors d 0.0533 iou 0.46
+step    700  loss 12.95  div 5.31 (ratio 0.352, dead zone 0.00)  eik 0.00901  cons 0.0457  pose c 0.00027 s 0.0013 a -1.3e-05  e 0.0361  graph sign [frag 0.0+0.0 cav 0.0 gap 61.0 wall 178.25]  lr 6.36e-04  |g| 245  4602 ms  anchors d 0.0605 iou 0.43
+step    725  loss 10.82  div 4.821 (ratio 0.391, dead zone 0.00)  eik 0.0106  cons 0.0432  pose c 0.0024 s 0.00057 a -2e-05  e 0.0321  graph sign [frag 0.0+0.0 cav 0.0 gap 80.0 wall 198.0]  lr 6.36e-04  |g| 112  4891 ms  anchors d 0.0449 iou 0.61
+CPU diagnostic at step 750
+diag    750  clean 0.94 (1 piece 0.94, no cavity 1.00, no handle 1.00)  graph=grid 0.94  live 2.5  wobble 0.05  descriptor spread 0.532  probe distance 0.0982  231.4 s  anchors iou 0.41 (min 0.00) code cos max 0.00
+step    750  loss 13.8  div 5.336 (ratio 0.348, dead zone 0.00)  eik 0.0116  cons 0.0482  pose c 0.0014 s 0.00066 a 2.6e-05  e 0.0375  graph sign [frag 0.0+0.0 cav 0.0 gap 113.0 wall 214.75]  lr 6.36e-04  |g| 99.3  4650 ms  anchors d 0.0689 iou 0.38
+step    775  loss 10.68  div 4.897 (ratio 0.387, dead zone 0.00)  eik 0.0123  cons 0.0437  pose c 0.0018 s 0.00035 a 5.8e-06  e 0.033  graph sign [frag 1.25+0.0 cav 0.0 gap 82.25 wall 231.0]  lr 6.36e-04  |g| 63.3  5110 ms  anchors d 0.0464 iou 0.46
+step    800  loss 11.65  div 5.829 (ratio 0.309, dead zone 0.00)  eik 0.00764  cons 0.0339  pose c 0.00083 s 0.00053 a -2.7e-05  e 0.0255  graph sign [frag 0.0+0.0 cav 0.0 gap 59.75 wall 96.0]  lr 6.36e-04  |g| 117  4640 ms  anchors d 0.0512 iou 0.51
+step    825  loss 12.28  div 4.935 (ratio 0.387, dead zone 0.00)  eik 0.0122  cons 0.0429  pose c -0.00046 s 0.00014 a 2.5e-05  e 0.0328  graph sign [frag 1.0+0.0 cav 0.0 gap 80.25 wall 186.25]  lr 6.36e-04  |g| 100  4595 ms  anchors d 0.0510 iou 0.50
+step    850  loss 10.98  div 4.844 (ratio 0.388, dead zone 0.00)  eik 0.00999  cons 0.0409  pose c 0.00019 s 0.00063 a 2.3e-05  e 0.0313  graph sign [frag 0.0+0.0 cav 0.0 gap 34.25 wall 94.25]  lr 6.36e-04  |g| 82.9  5057 ms  anchors d 0.0484 iou 0.54
+step    875  loss 11.48  div 5.172 (ratio 0.358, dead zone 0.00)  eik 0.00758  cons 0.0326  pose c 0.0014 s 0.00078 a -2.8e-05  e 0.0231  graph sign [frag 0.25+0.0 cav 0.0 gap 13.75 wall 53.0]  lr 6.36e-04  |g| 73.1  5008 ms  anchors d 0.0452 iou 0.59
+step    900  loss 10.49  div 4.878 (ratio 0.382, dead zone 0.00)  eik 0.00942  cons 0.0375  pose c -0.00096 s 0.00063 a -1.1e-05  e 0.0281  graph sign [frag 0.0+0.0 cav 0.0 gap 44.5 wall 99.75]  lr 6.36e-04  |g| 87  4652 ms  anchors d 0.0506 iou 0.51
+step    925  loss 12.04  div 5.251 (ratio 0.356, dead zone 0.00)  eik 0.00817  cons 0.0356  pose c 0.0019 s 0.00043 a 2.3e-05  e 0.0266  graph sign [frag 0.0+0.0 cav 0.0 gap 22.5 wall 65.25]  lr 6.36e-04  |g| 94.6  5035 ms  anchors d 0.0517 iou 0.46
+step    950  loss 11.26  div 4.999 (ratio 0.376, dead zone 0.00)  eik 0.00826  cons 0.0359  pose c 0.00029 s 0.00037 a -2.6e-05  e 0.0265  graph sign [frag 0.0+0.0 cav 0.0 gap 30.0 wall 77.0]  lr 6.36e-04  |g| 119  4629 ms  anchors d 0.0499 iou 0.48
+step    975  loss 10.49  div 4.519 (ratio 0.418, dead zone 0.00)  eik 0.0105  cons 0.0433  pose c 0.0034 s 0.00045 a 2.2e-05  e 0.0329  graph sign [frag 0.25+0.0 cav 0.0 gap 109.5 wall 266.25]  lr 6.36e-04  |g| 121  4536 ms  anchors d 0.0470 iou 0.49
+CPU diagnostic at step 1000

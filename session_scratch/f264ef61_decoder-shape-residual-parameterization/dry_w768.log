@@ -1,0 +1,36 @@
+[gpu_capped] memory capped at 75% (~11.6 of 15.5 GiB); busy time throttled to ~70%
+diag      0  clean 1.00 (1 piece 1.00, no cavity 1.00, no handle 1.00)  graph=grid 1.00  live 0.0  wobble 0.28  descriptor spread 0.008  probe distance 0.0014  16.4 s  anchors iou 0.30 (min 0.02) code cos max 0.00
+Traceback (most recent call last):
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/scripts/gpu_capped.py", line 102, in <module>
+    main()
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/scripts/gpu_capped.py", line 98, in main
+    runpy.run_path(script, run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "scripts/train_data_free_latent.py", line 22, in <module>
+    main()
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/rounded-box-base/arm_planner/data_free/train.py", line 2183, in main
+    trainer.run(verbose=not args.quiet)
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/rounded-box-base/arm_planner/data_free/train.py", line 2024, in run
+    record = self.step()
+             ^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/rounded-box-base/arm_planner/data_free/train.py", line 1383, in step
+    return self._accumulated_step()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/rounded-box-base/arm_planner/data_free/train.py", line 1163, in _accumulated_step
+    grad_change = L.grad_change(model, fb, cfg, generator=self.generator)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/rounded-box-base/arm_planner/data_free/losses.py", line 185, in grad_change
+    _, g1 = field_and_grad(decoder, mod, x1, create_graph=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.claude/worktrees/rounded-box-base/arm_planner/data_free/field.py", line 121, in field_and_grad
+    (g,) = torch.autograd.grad(f.sum(), x, create_graph=create_graph, retain_graph=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.venv/lib/python3.12/site-packages/torch/autograd/__init__.py", line 502, in grad
+    result = _engine_run_backward(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/eric-luo/Downloads/pointcloud-motion-planning/.venv/lib/python3.12/site-packages/torch/autograd/graph.py", line 824, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 24.00 MiB. GPU 0 has a total capacity of 15.47 GiB of which 3.46 GiB is free. Including non-PyTorch memory, this process has 11.99 GiB memory in use. 11.60 GiB allowed; Of the allocated memory 11.46 GiB is allocated by PyTorch, and 135.97 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

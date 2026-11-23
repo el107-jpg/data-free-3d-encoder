@@ -1,0 +1,89 @@
+{
+ "SH3_1000": {
+  "update": 1000,
+  "overlap": {
+   "mean_pair": 0.6088963150978088,
+   "nearest_mean": 0.36979198455810547,
+   "nearest_se": 0.006608684298559461
+  },
+  "surface": {
+   "mean_pair": 0.10430788561587402,
+   "nearest_mean": 0.05575164364806066,
+   "nearest_se": 0.0007433716071710497
+  },
+  "field": {
+   "mean_pair": 0.10462375730276108,
+   "nearest_mean": 0.052934642881155014,
+   "nearest_se": 0.0008433707779879358
+  },
+  "shape": {
+   "fill_mean": 0.09839105711867634,
+   "area_mean": 2.6607079967794953,
+   "compactness_median": 0.5313203669814982,
+   "compactness_p10": 0.3802921350299776,
+   "half_thickness_median": 0.2558422386646271,
+   "half_thickness_p10": 0.20007456839084625,
+   "volume_rel_std": 0.2380318987127854,
+   "area_rel_std": 0.11525542113176415,
+   "compactness_std": 0.1109627410117418
+  }
+ },
+ "SH3_2500": {
+  "update": 2500,
+  "overlap": {
+   "mean_pair": 0.5574926733970642,
+   "nearest_mean": 0.35886868834495544,
+   "nearest_se": 0.006459281966305136
+  },
+  "surface": {
+   "mean_pair": 0.0994887274256989,
+   "nearest_mean": 0.05756587236343572,
+   "nearest_se": 0.0007176512824475328
+  },
+  "field": {
+   "mean_pair": 0.10189034044742584,
+   "nearest_mean": 0.05662594363093376,
+   "nearest_se": 0.0008159532984060729
+  },
+  "shape": {
+   "fill_mean": 0.11659141757300294,
+   "area_mean": 2.9943481057448884,
+   "compactness_median": 0.5187582891398276,
+   "compactness_p10": 0.398226358080199,
+   "half_thickness_median": 0.29045046865940094,
+   "half_thickness_p10": 0.21356552094221115,
+   "volume_rel_std": 0.22154339777528853,
+   "area_rel_std": 0.10719290546601239,
+   "compactness_std": 0.11350411873718225
+  }
+ },
+ "SH3_5000": {
+  "update": 5000,
+  "overlap": {
+   "mean_pair": 0.6236017346382141,
+   "nearest_mean": 0.4244150221347809,
+   "nearest_se": 0.005845591239220342
+  },
+  "surface": {
+   "mean_pair": 0.10287074157232909,
+   "nearest_mean": 0.06172767200041562,
+   "nearest_se": 0.0007691956095344167
+  },
+  "field": {
+   "mean_pair": 0.10687610507011414,
+   "nearest_mean": 0.06229590252041817,
+   "nearest_se": 0.0008886400124027481
+  },
+  "shape": {
+   "fill_mean": 0.0987250989249202,
+   "area_mean": 2.980020700698874,
+   "compactness_median": 0.3763750281505266,
+   "compactness_p10": 0.2591851534248386,
+   "half_thickness_median": 0.24249712377786636,
+   "half_thickness_p10": 0.19301172345876694,
+   "volume_rel_std": 0.17142602381056438,
+   "area_rel_std": 0.09671562782014924,
+   "compactness_std": 0.10923633457803823
+  }
+ }
+}

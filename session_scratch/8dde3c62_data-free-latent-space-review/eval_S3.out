@@ -1,0 +1,19 @@
+== evalrun
+S3_1000 spectrum: {'total_variance': 0.0717, 'effective_directions': 7.1285, 'above_0.02': 11, 'above_0.01': 26, 'above_0.005': 50} | top 16: 0.166 0.131 0.108 0.060 0.045 0.041 0.036 0.027 0.025 0.023 0.021 0.020 0.018 0.017 0.016 0.015
+S3_1000 pose: {'centroid_offset_mean': 0.0535, 'centroid_offset_max': 0.1189, 'common_shift': 0.0441, 'trace_mean': 0.0963, 'trace_target': 0.1555, 'trace_rel_std': 0.0916}
+S3_1000 topology: {'codes': 128, 'clean_at_96': 5, 'flagged': 123, 'defective_at_128_and_160': 123, 'clean_on_fine_grids': 5}
+S3_1000 anchors: {'distance_mean': 0.107, 'distance_max': 0.165, 'iou_mean': 0.098, 'iou_min': 0.0, 'code_cos_abs_mean': 0.007, 'code_cos_max': 0.0}
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/analysis_scripts/followup/S3_1000.json
+== variance on 96 codes
+S3_J4_recipe_sphere_start_usual_sp @ 1000: total variance over 96 codes: mean 0.076; between codes: std 0.023 (range 0.05 to 0.19); standard error with 24 codes 0.005, with 96 codes 0.002; four groups of 24 would report 0.081, 0.080, 0.075, 0.070; solid directions from the pooled spectrum 11, per code 11.1 (std 0.8)
+== field quality
+
+S3_J4_recipe_sphere_start_usual_spread_anchor_ramp_1k (update 1000)
+  anchor codes  slope error mean 0.344 (within 0.1 of the surface 0.259; share of points off by more than 0.2: 0.567); trainer's eikonal term 0.2394; consistency miss mean 0.3031, median 0.1888; field against the object's true distance: mean error 0.1074
+  random codes  slope error mean 0.312 (within 0.1 of the surface 0.261; share of points off by more than 0.2: 0.533); trainer's eikonal term 0.1703; consistency miss mean 0.1806, median 0.1173
+== sharpness
+S3_1000 (update 1000, 126085 surface pairs): median bend 12.98 (radius 0.08); flat 0.6%, gently bent 30.9%, tight 68.5%; mean cost 0.881
+== sheets
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_random_shapes_S3_1000.png
+saved /home/eric-luo/Downloads/pointcloud-motion-planning/figures/data_free_anchor_fit_S3_1000.png
+== done Sat 14 Nov 2026 08:41:44 PM CST

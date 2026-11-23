@@ -1,0 +1,4 @@
+grep: /home/eric-luo/Downloads/pointcloud-motion-planning/runs/data_free_latent/S10_S9_continued_to_20k/train.log: binary file matches
+S10_S9_continued_to_20k finished: 
+training done Wed 18 Nov 2026 01:07:13 AM CST
+evaluation done Wed 18 Nov 2026 03:05:03 AM CST

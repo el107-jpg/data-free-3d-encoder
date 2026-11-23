@@ -1,0 +1,12 @@
+# Observed source-host versions; partial snapshot, not a platform-independent lock.
+torch==2.7.0+cu128
+numpy==1.26.4
+tensorboard==2.20.0
+pytest==9.1.1
+trimesh==4.12.2
+rtree==1.4.1
+manifold3d==3.5.4
+scikit-image==0.25.2
+scipy==1.17.1
+pymeshlab==2025.7.post1
+scikit-learn==1.9.0

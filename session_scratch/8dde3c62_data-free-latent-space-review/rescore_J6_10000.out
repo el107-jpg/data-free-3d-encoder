@@ -1,0 +1,28 @@
+[gpu_capped] memory capped at 60% (~9.3 of 15.5 GiB); busy time throttled to ~70%
+fit_J6_10000: 225 unseen objects
+  overlap 0.799 | surface distance mean 0.0226, median 0.0224 | missed (95th pct) 0.0705 | extra (95th pct) 0.0552 | F-score at 0.02: 0.596, at 0.04: 0.852 | attempt in one piece: 222 of 225
+  thinnest third  overlap 0.710 | surface distance 0.0273 | missed 0.0857 | extra 0.0670 | F at 0.02 0.503 | F at 0.04 0.790 | one piece 72 of 75
+  middle third    overlap 0.787 | surface distance 0.0255 | missed 0.0849 | extra 0.0606 | F at 0.02 0.542 | F at 0.04 0.825 | one piece 75 of 75
+  thickest third  overlap 0.900 | surface distance 0.0152 | missed 0.0409 | extra 0.0382 | F at 0.02 0.741 | F at 0.04 0.942 | one piece 75 of 75
+  rank correlation with thickness / solidity / volume / star-shaped:
+    overlap                              +0.72 / +0.78 / +0.73 / +0.60
+    surface distance (lower is better)   +0.59 / +0.76 / +0.33 / +0.62   (sign flipped so that + means thicker fits better)
+    F-score at 0.02                      +0.56 / +0.71 / +0.31 / +0.51
+    F-score at 0.04                      +0.58 / +0.76 / +0.36 / +0.57
+  the 16 worst by surface distance:
+    distance 0.063  missed 0.176  extra 0.133  F02 0.19  pieces 1  overlap 0.55  Eraser ball                thickness 0.19 solidity 0.37
+    distance 0.048  missed 0.155  extra 0.091  F02 0.28  pieces 1  overlap 0.58  Lynx Building Toy          thickness 0.13 solidity 0.63
+    distance 0.047  missed 0.175  extra 0.090  F02 0.30  pieces 1  overlap 0.70  PHIL                       thickness 0.18 solidity 0.63
+    distance 0.044  missed 0.140  extra 0.113  F02 0.30  pieces 1  overlap 0.63  Bedlam cube                thickness 0.30 solidity 0.58
+    distance 0.044  missed 0.216  extra 0.067  F02 0.35  pieces 1  overlap 0.73  Lynx Building Toy          thickness 0.20 solidity 0.79
+    distance 0.043  missed 0.099  extra 0.114  F02 0.27  pieces 1  overlap 0.41  Creatures of Thingiverse   thickness 0.15 solidity 0.35
+    distance 0.042  missed 0.167  extra 0.077  F02 0.42  pieces 1  overlap 0.64  Lynx Building Toy          thickness 0.13 solidity 0.69
+    distance 0.040  missed 0.120  extra 0.109  F02 0.34  pieces 1  overlap 0.61  Printable Interlocking Puz thickness 0.30 solidity 0.54
+    distance 0.037  missed 0.114  extra 0.112  F02 0.41  pieces 1  overlap 0.65  Rubiks Void Cube           thickness 0.11 solidity 0.61
+    distance 0.037  missed 0.156  extra 0.075  F02 0.46  pieces 1  overlap 0.72  Lynx Building Toy          thickness 0.14 solidity 0.79
+    distance 0.037  missed 0.122  extra 0.096  F02 0.39  pieces 1  overlap 0.72  Ozo 1x2x3 Puzzle Bear      thickness 0.17 solidity 0.67
+    distance 0.037  missed 0.116  extra 0.090  F02 0.36  pieces 1  overlap 0.62  Almost Impossible Heart    thickness 0.20 solidity 0.55
+    distance 0.036  missed 0.097  extra 0.089  F02 0.34  pieces 1  overlap 0.67  Bedlam cube                thickness 0.33 solidity 0.58
+    distance 0.035  missed 0.066  extra 0.128  F02 0.40  pieces 1  overlap 0.44  Skully the 8 Bit Organizer thickness 0.11 solidity 0.44
+    distance 0.035  missed 0.164  extra 0.083  F02 0.50  pieces 1  overlap 0.69  croco-bike 2040            thickness 0.17 solidity 0.60
+    distance 0.035  missed 0.139  extra 0.081  F02 0.44  pieces 1  overlap 0.63  JEFF: THE WORLD'S MOST POW thickness 0.15 solidity 0.53

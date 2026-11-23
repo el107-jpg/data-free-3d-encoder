@@ -1,0 +1,34 @@
+[gpu_capped] memory capped at 75% (~11.6 of 15.5 GiB); busy time throttled to ~70%
+shape 0 {'uncertified': 9013, 'enclosed': 1008, 'pockets': 11, 'pocket_cells': 977} -> {'uncertified': 8586, 'enclosed': 806, 'pockets': 26, 'pocket_cells': 753}
+shape 1 {'uncertified': 8667, 'enclosed': 911, 'pockets': 5, 'pocket_cells': 887} -> {'uncertified': 8194, 'enclosed': 731, 'pockets': 14, 'pocket_cells': 691}
+shape 2 {'uncertified': 8802, 'enclosed': 1127, 'pockets': 11, 'pocket_cells': 1088} -> {'uncertified': 8336, 'enclosed': 993, 'pockets': 31, 'pocket_cells': 957}
+shape 3 {'uncertified': 8853, 'enclosed': 819, 'pockets': 7, 'pocket_cells': 805} -> {'uncertified': 8502, 'enclosed': 673, 'pockets': 27, 'pocket_cells': 631}
+shape 4 {'uncertified': 8500, 'enclosed': 788, 'pockets': 13, 'pocket_cells': 764} -> {'uncertified': 8161, 'enclosed': 649, 'pockets': 23, 'pocket_cells': 616}
+shape 5 {'uncertified': 8902, 'enclosed': 967, 'pockets': 10, 'pocket_cells': 948} -> {'uncertified': 8490, 'enclosed': 767, 'pockets': 22, 'pocket_cells': 732}
+shape 6 {'uncertified': 9689, 'enclosed': 1413, 'pockets': 10, 'pocket_cells': 1383} -> {'uncertified': 9192, 'enclosed': 1268, 'pockets': 29, 'pocket_cells': 1230}
+shape 7 {'uncertified': 10010, 'enclosed': 1324, 'pockets': 8, 'pocket_cells': 1301} -> {'uncertified': 9425, 'enclosed': 1213, 'pockets': 14, 'pocket_cells': 1179}
+shape 8 {'uncertified': 8117, 'enclosed': 834, 'pockets': 10, 'pocket_cells': 816} -> {'uncertified': 7733, 'enclosed': 724, 'pockets': 21, 'pocket_cells': 694}
+shape 9 {'uncertified': 8511, 'enclosed': 858, 'pockets': 8, 'pocket_cells': 831} -> {'uncertified': 8113, 'enclosed': 684, 'pockets': 31, 'pocket_cells': 634}
+shape 10 {'uncertified': 9122, 'enclosed': 911, 'pockets': 10, 'pocket_cells': 894} -> {'uncertified': 8764, 'enclosed': 742, 'pockets': 20, 'pocket_cells': 712}
+shape 11 {'uncertified': 8806, 'enclosed': 976, 'pockets': 11, 'pocket_cells': 947} -> {'uncertified': 8381, 'enclosed': 764, 'pockets': 30, 'pocket_cells': 715}
+shape 12 {'uncertified': 8713, 'enclosed': 1016, 'pockets': 10, 'pocket_cells': 986} -> {'uncertified': 8316, 'enclosed': 887, 'pockets': 16, 'pocket_cells': 854}
+shape 13 {'uncertified': 9107, 'enclosed': 1053, 'pockets': 5, 'pocket_cells': 1030} -> {'uncertified': 8680, 'enclosed': 868, 'pockets': 19, 'pocket_cells': 832}
+shape 14 {'uncertified': 9583, 'enclosed': 1350, 'pockets': 15, 'pocket_cells': 1314} -> {'uncertified': 9150, 'enclosed': 1202, 'pockets': 18, 'pocket_cells': 1153}
+shape 15 {'uncertified': 8100, 'enclosed': 549, 'pockets': 14, 'pocket_cells': 526} -> {'uncertified': 7782, 'enclosed': 398, 'pockets': 23, 'pocket_cells': 364}
+shape 16 {'uncertified': 9210, 'enclosed': 1079, 'pockets': 10, 'pocket_cells': 1053} -> {'uncertified': 8806, 'enclosed': 981, 'pockets': 19, 'pocket_cells': 947}
+shape 17 {'uncertified': 9111, 'enclosed': 1169, 'pockets': 16, 'pocket_cells': 1145} -> {'uncertified': 8702, 'enclosed': 968, 'pockets': 29, 'pocket_cells': 926}
+shape 18 {'uncertified': 7897, 'enclosed': 849, 'pockets': 8, 'pocket_cells': 827} -> {'uncertified': 7501, 'enclosed': 698, 'pockets': 18, 'pocket_cells': 662}
+shape 19 {'uncertified': 9028, 'enclosed': 1013, 'pockets': 7, 'pocket_cells': 982} -> {'uncertified': 8620, 'enclosed': 889, 'pockets': 21, 'pocket_cells': 846}
+shape 20 {'uncertified': 8680, 'enclosed': 902, 'pockets': 10, 'pocket_cells': 882} -> {'uncertified': 8297, 'enclosed': 741, 'pockets': 21, 'pocket_cells': 705}
+shape 21 {'uncertified': 8798, 'enclosed': 1038, 'pockets': 8, 'pocket_cells': 1006} -> {'uncertified': 8377, 'enclosed': 958, 'pockets': 21, 'pocket_cells': 916}
+shape 22 {'uncertified': 8708, 'enclosed': 809, 'pockets': 8, 'pocket_cells': 771} -> {'uncertified': 8319, 'enclosed': 632, 'pockets': 18, 'pocket_cells': 590}
+shape 23 {'uncertified': 9543, 'enclosed': 1137, 'pockets': 7, 'pocket_cells': 1108} -> {'uncertified': 9253, 'enclosed': 999, 'pockets': 16, 'pocket_cells': 963}
+shape 24 {'uncertified': 8580, 'enclosed': 868, 'pockets': 10, 'pocket_cells': 843} -> {'uncertified': 8197, 'enclosed': 660, 'pockets': 21, 'pocket_cells': 627}
+shape 25 {'uncertified': 8713, 'enclosed': 894, 'pockets': 11, 'pocket_cells': 882} -> {'uncertified': 8313, 'enclosed': 728, 'pockets': 22, 'pocket_cells': 695}
+shape 26 {'uncertified': 8956, 'enclosed': 1014, 'pockets': 12, 'pocket_cells': 986} -> {'uncertified': 8484, 'enclosed': 878, 'pockets': 19, 'pocket_cells': 830}
+shape 27 {'uncertified': 8811, 'enclosed': 1054, 'pockets': 7, 'pocket_cells': 1030} -> {'uncertified': 8348, 'enclosed': 900, 'pockets': 21, 'pocket_cells': 876}
+shape 28 {'uncertified': 8556, 'enclosed': 1014, 'pockets': 9, 'pocket_cells': 996} -> {'uncertified': 8112, 'enclosed': 905, 'pockets': 15, 'pocket_cells': 876}
+shape 29 {'uncertified': 8154, 'enclosed': 889, 'pockets': 9, 'pocket_cells': 854} -> {'uncertified': 7791, 'enclosed': 693, 'pockets': 23, 'pocket_cells': 646}
+shape 30 {'uncertified': 8877, 'enclosed': 1038, 'pockets': 9, 'pocket_cells': 1013} -> {'uncertified': 8440, 'enclosed': 893, 'pockets': 22, 'pocket_cells': 853}
+shape 31 {'uncertified': 8899, 'enclosed': 966, 'pockets': 12, 'pocket_cells': 945} -> {'uncertified': 8522, 'enclosed': 794, 'pockets': 26, 'pocket_cells': 753}
+saved /home/eric-luo/.claude/jobs/f264ef61/tmp/seed_gap/nearF32_decoded.json

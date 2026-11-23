@@ -1,0 +1,122 @@
+run	updates_logged	first_file	last_file	config_json	recorded_commit	launcher_in_queue_logs	checkpoints_left_behind	checkpoints_GB
+A1_d64_follow_capped_even_code_leak05		2026-11-13	2026-11-13	yes			0	0.00
+A1b_d64_follow_capped_even_code_leak05	1000	2026-11-13	2026-11-13	yes			1	0.05
+B10_B9_cont_baselr01_to5k	5000	2026-11-15	2026-11-16	no		launch_B10_B9_cont_baselr01_to5k.sh	3	0.16
+B11_B10_cont_corrcost25_to7k	7000	2026-11-16	2026-11-16	no		launch_B11_B10_cont_corrcost25_to7k.sh	3	0.16
+B12_B11_cont_corrcost50_to9k	9000	2026-11-16	2026-11-16	no		launch_B12_B11_cont_corrcost50_to9k.sh	3	0.16
+B12c_B11_cont_corrcost25_to9k_control	9000	2026-11-16	2026-11-16	no			3	0.16
+B13_B12_cont_corrcost100_to11k	11000	2026-11-16	2026-11-16	no			3	0.16
+B14_scratch_box_bend_taper_corrcost50_2k	2000	2026-11-16	2026-11-16	yes		launch_B14_scratch_box_bend_taper_corrcost50_2k.sh	2	0.11
+B15_B12_cont_bend_taper_to11k	11000	2026-11-16	2026-11-16	no		launch_B15_B12_cont_bend_taper_to11k.sh	3	0.16
+B16_B12_cont_bend_taper_repel01_to11k	11000	2026-11-17	2026-11-17	no		launch_B16_B12_cont_bend_taper_repel01_to11k.sh	3	0.16
+B17_B12_cont_bend_taper_repel03_bendscale01_fulllr_to11k	11000	2026-11-17	2026-11-17	no		launch_B17_B12_cont_bend_taper_repel03_bendscale01_fulllr_to11k.sh, resume_B17_B12_cont_bend_taper_repel03_bendscale01_fulllr_to11k.sh	3	0.16
+B1_J4_5000_box_base_ramp200_1k	1000	2026-11-14	2026-11-14	yes			1	0.05
+B3_J4_5000_box_linear_head_budget02_1k	1000	2026-11-15	2026-11-15	yes			1	0.05
+B4_scratch_box_linear_sepnet_budget02_1k	1000	2026-11-15	2026-11-15	yes		launch_B4_scratch_box_linear_sepnet_budget02_1k.sh	1	0.05
+B5_scratch_box_linear_head_budget02_1k	1000	2026-11-15	2026-11-15	yes			1	0.05
+B6_scratch_box_linear_sharedmlp_budget02_1k	1000	2026-11-15	2026-11-15	yes		launch_B6_scratch_box_linear_sharedmlp_budget02_1k.sh	1	0.05
+B7_B6_continued_to_5k_budget05	5000	2026-11-15	2026-11-15	no		launch_B7_B6_continued_to_5k_budget05.sh	5	0.27
+B8_B6_cont_fieldgrad01_to3k	3000	2026-11-15	2026-11-15	no			3	0.16
+B9_B6_cont_basespread_to3k	3000	2026-11-15	2026-11-15	no			3	0.16
+C1_J4_recipe_crease10_1k	1000	2026-11-14	2026-11-14	yes			3	0.16
+C2_J7_11000_crease10_to_12k	12000	2026-11-14	2026-11-14	no			2	0.11
+C3_J4_recipe_crease2_1k	1000	2026-11-14	2026-11-14	yes			1	0.05
+D0_distill_J4_5000_no_base		2026-11-17	2026-11-17	no			1	0.02
+D1_d64_nocentre_dial03	167	2026-11-11	2026-11-11	yes			1	0.05
+E1_d64_eikonal_only	1000	2026-11-12	2026-11-12	yes			1	0.05
+F1_d64_anchors_only_fourier3	1500	2026-11-13	2026-11-13	yes			1	0.05
+F2_d64_anchors_only_fourier5	1500	2026-11-13	2026-11-13	yes			1	0.05
+F2_settle	5300	2026-11-11	2026-11-11	no			2	0.10
+F3_control	6000	2026-11-11	2026-11-11	no			2	0.10
+F3_tol008	6000	2026-11-11	2026-11-11	no			2	0.10
+F4_inner005	2500	2026-11-11	2026-11-11	yes			2	0.10
+F5_seed1	1000	2026-11-11	2026-11-11	yes			1	0.05
+F5_seed2	1000	2026-11-11	2026-11-11	yes			1	0.05
+F6_dim64	2500	2026-11-11	2026-11-11	yes			2	0.11
+G1_d64_tol008_free	2500	2026-11-11	2026-11-11	yes			3	0.16
+G2_d64_tol008_frozen	2500	2026-11-11	2026-11-11	yes			3	0.16
+G3_d64_tol008_frozen_long	5000	2026-11-11	2026-11-11	no			2	0.11
+G3s_settle	5300	2026-11-11	2026-11-11	no			2	0.11
+G5_d32_unpaired32_tol008_frozen	375	2026-11-11	2026-11-11	yes			1	0.05
+H2_d64_nocentre_follow_capped	2500	2026-11-12	2026-11-12	yes			1	0.05
+H3_nocentre_follow_capped_7k	7000	2026-11-12	2026-11-12	no			4	0.21
+I1_d64_follow_capped_even_code	1000	2026-11-12	2026-11-12	yes			1	0.05
+I2_even_code_5k	5000	2026-11-12	2026-11-12	no			5	0.26
+J1_d64_nocentre_procedural_even_code_5k	1196	2026-11-13	2026-11-13	yes			2	0.11
+J2_d64_nocentre_procedural_even_code_leak05_5k	5000	2026-11-13	2026-11-13	yes			4	0.21
+J3_d64_nocentre_procedural_even_code_leak05_beta100_fourier3_5k	36	2026-11-13	2026-11-13	yes			0	0.00
+J4_d64_nocentre_procedural96_even_code_leak05_beta100_fourier3_5k	5000	2026-11-13	2026-11-13	yes			4	0.21
+J5_d64_nocentre_procedural96_nothicken_anchorfield_5k	5000	2026-11-13	2026-11-13	yes			4	0.21
+J6_J4_continued_to_10k	10000	2026-11-13	2026-11-13	no			5	0.26
+J7_J6_lower_lr_to_12k	12000	2026-11-14	2026-11-14	no			5	0.26
+K1_d64_anchors_only_capacity	1500	2026-11-13	2026-11-13	yes			1	0.05
+K2_d64_anchors_only_beta100	1500	2026-11-13	2026-11-13	yes			1	0.05
+L1_J4_5000_final_layer_lr_tenth_to_10k	8500	2026-11-14	2026-11-14	no			7	0.42
+L1_r05_exempt_pull30	5000	2026-11-11	2026-11-11	yes			3	0.16
+L2_r05_exempt_pull100	5000	2026-11-11	2026-11-11	yes			1	0.05
+N1_d64_follow_capped_even_code_layernorm_last	1000	2026-11-13	2026-11-13	yes			1	0.05
+N2_d64_follow_capped_even_code_layernorm_all		2026-11-13	2026-11-13	yes			0	0.00
+N2c_d64_follow_capped_even_code_layernorm_all_p1024	1000	2026-11-13	2026-11-13	yes			1	0.05
+P1_d64_nocentre_extent_procedural	1138	2026-11-12	2026-11-12	yes	870fcd6		2	0.11
+P2_d64_nocentre_extent_procedural	1048	2026-11-12	2026-11-12	yes	700cea2		3	0.16
+P3_d64_nocentre_procedural_fit	1557	2026-11-12	2026-11-12	yes	b9257eb		3	0.16
+P4_d64_nocentre_procedural_thick	2500	2026-11-12	2026-11-12	yes	7f19302		3	0.16
+R1_d64_field_ramp500	1500	2026-11-12	2026-11-12	yes			3	0.16
+S0_sphere_fit_20261114		2026-11-14	2026-11-14	no			2	0.03
+S10_S9_continued_to_20k	20000	2026-11-17	2026-11-18	no			6	0.32
+S1_J4_recipe_sphere_start_no_base_1k	1000	2026-11-14	2026-11-14	yes			3	0.16
+S1x_aborted_shells_biased_pose_500	512	2026-11-21	2026-11-21	yes			1	0.05
+S2_J4_recipe_sphere_start_no_base_lr_third_1k	1000	2026-11-14	2026-11-14	yes			3	0.16
+S2_d64_fixed_surface	874	2026-11-11	2026-11-11	yes			1	0.05
+S3_J4_recipe_sphere_start_usual_spread_anchor_ramp_1k	1000	2026-11-14	2026-11-14	yes			4	0.21
+S3_d64_fixed_surface_follow	418	2026-11-11	2026-11-11	yes			1	0.05
+S4_J4_recipe_sphere_start_no_base_outer_min_1k	1000	2026-11-14	2026-11-14	yes			4	0.21
+S4_d64_follow_capped	1000	2026-11-11	2026-11-12	yes			1	0.05
+S5_J4_recipe_sphere_start_no_base_anchor_hold_surface_slope_2500	2500	2026-11-14	2026-11-14	yes			5	0.26
+S5_follow_capped_long	1016	2026-11-12	2026-11-12	no			2	0.11
+S5b_follow_capped_long	2500	2026-11-12	2026-11-12	no			2	0.11
+S6_S5_continued_to_5k	5000	2026-11-14	2026-11-15	no			5	0.26
+S7_S6_continued_to_10k	10000	2026-11-15	2026-11-15	no			7	0.37
+S8_distilled_no_base_continued_to_10k	10000	2026-11-17	2026-11-17	no			7	0.34
+S9_S8_lower_lr_to_12k	12000	2026-11-17	2026-11-17	no			6	0.32
+SD1_J7_slope04_scratch_12k	997	2026-11-18	2026-11-18	yes	cb51ea4		4	0.21
+SD2_J7_shell2048_surface256_scratch_12k	5999	2026-11-18	2026-11-19	yes	5f40367		9	0.48
+SH1_J4_scratch_shells2048_shared_volw_5k	5000	2026-11-21	2026-11-21	yes		launch_SH1_J4_scratch_shells2048_shared_volw_5k.sh	3	0.16
+SH1c_SH1_cont_eikcap16_from6700_release8k_to10k	10000	2026-11-21	2026-11-22	no		resume_SH1c_SH1_cont_eikcap16_from6700_release8k_to10k.sh	6	0.32
+SH2_S5_recipe_no_sphere_base_shells2048_2500	2500	2026-11-21	2026-11-21	yes		queue_SH2_S5_recipe_no_sphere_base_shells2048_2500_then_continue.sh	5	0.26
+SH2c_SH2_continued_to_5k	5000	2026-11-21	2026-11-21	yes			4	0.21
+SH3_SH1_recipe_width768_5k	5000	2026-11-22	2026-11-22	yes		launch_SH3_SH1_recipe_width768_5k.sh	3	0.28
+SH3c_SH3_cont_variety_controller_to10k		2026-11-22	2026-11-22	no		launch_SH3c_SH3_cont_variety_controller_to10k.sh	0	0.00
+T1_tidy_100	1100	2026-11-12	2026-11-12	no			2	0.11
+T2_tidy_100_strong_hold	1100	2026-11-12	2026-11-12	no			2	0.11
+T3_tidy_300_surface_pin	1300	2026-11-12	2026-11-12	no			2	0.11
+TA1_J4_trainable_codes_5k	5000	2026-11-14	2026-11-14	yes	45a21f9		4	0.21
+TA1s_settle_6k	6000	2026-11-14	2026-11-14	no	45a21f9		3	0.16
+TA2_J4_trainable_codes_surface_band_5k	5000	2026-11-14	2026-11-14	yes	45a21f9		4	0.21
+TA2s_settle_6k	6000	2026-11-14	2026-11-14	no	45a21f9		3	0.16
+V1_d64_follow_capped_even_code_leak05_surface_variety	1000	2026-11-13	2026-11-13	yes			1	0.05
+W1_J4_recipe_weight_norm_1k	1000	2026-11-14	2026-11-14	yes			3	0.16
+X1_d64_nocentre_massrule_procedural	1000	2026-11-12	2026-11-12	yes	700cea2		2	0.11
+X2_d64_nocentre_extent_ceiling50	504	2026-11-12	2026-11-12	yes	700cea2		1	0.05
+X3_d64_nocentre_extent_trajectory	400	2026-11-12	2026-11-12	yes	700cea2		4	0.21
+d1_radius05_pull30	1000	2026-11-11	2026-11-11	yes			1	0.05
+d2_radius05_exempt	1000	2026-11-11	2026-11-11	yes			1	0.05
+g_pose_invariant	4000	2026-11-10	2026-11-10	yes			1	0.06
+h2_acc64	5000	2026-11-10	2026-11-10	yes			1	0.05
+i_acc128	2500	2026-11-10	2026-11-10	yes			1	0.05
+j_spread64	5000	2026-11-10	2026-11-10	yes			1	0.05
+k_ordinal64	5000	2026-11-10	2026-11-10	yes			1	0.05
+m_ordinal_spread64	5000	2026-11-10	2026-11-10	yes			1	0.05
+n_phase2	9000	2026-11-10	2026-11-10	no			1	0.05
+o_repulsion	9000	2026-11-10	2026-11-10	no			1	0.05
+p_repel_spread64	5000	2026-11-10	2026-11-10	yes			1	0.05
+q_chamfer_look	6500	2026-11-10	2026-11-10	no			1	0.05
+r_global_nearest64	5000	2026-11-10	2026-11-10	yes			1	0.05
+s_global_pool128_partial	740	2026-11-10	2026-11-10	yes			1	0.05
+t_batchwide128	4540	2026-11-10	2026-11-11	yes			5	0.26
+u_weakpairs_from2500	3000	2026-11-11	2026-11-11	no			1	0.05
+v_frame_from2500	3000	2026-11-11	2026-11-11	no			1	0.05
+w_anchors64	2500	2026-11-11	2026-11-11	yes			3	0.16
+x_weakpull_frame	1000	2026-11-11	2026-11-11	yes			1	0.05
+y_neighbourhood	1000	2026-11-11	2026-11-11	yes			1	0.05
+z_neighbourhood_wide	1000	2026-11-11	2026-11-11	yes			1	0.05

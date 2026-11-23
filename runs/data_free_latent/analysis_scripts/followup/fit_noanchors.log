@@ -1,0 +1,4 @@
+[gpu_capped] memory capped at 25% (~3.9 of 15.5 GiB); busy time throttled to ~70%
+fit_noanchors held-out objects: {"count": 86, "mean": 0.7879192233085632, "median": 0.7991735339164734, "worst": 0.5911329984664917, "best": 0.8802435994148254, "share_at_or_above_0.70": 0.9069767594337463}
+fit_noanchors the 64 anchor objects, found by search from random starts: {"count": 64, "mean": 0.7085262537002563, "median": 0.716312050819397, "worst": 0.44410693645477295, "best": 0.8656716346740723, "share_at_or_above_0.70": 0.640625}
+saved /home/eric-luo/.claude/jobs/8dde3c62/tmp/followup/fit_noanchors.json
